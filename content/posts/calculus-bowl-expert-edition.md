@@ -26,4 +26,4 @@ You can view the presentation [here] (PDF, ~300 KB, 99 slides). For
 more information about how it was created, see the [About] page.
 
 [here]: /files/CalculusBowlExpertEdition.pdf
-[about]: /articles/about-this-site
+[about]: /posts/about-this-site

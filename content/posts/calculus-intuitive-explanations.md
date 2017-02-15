@@ -21,4 +21,4 @@ You can read *Intuitive Explanations* [here] (PDF, ~5 MB, 67 pages).
 For more information about how it was created, see the [About] page.
 
 [here]: /files/CalculusIntuitiveExplanations.pdf
-[about]: /articles/about-this-site
+[about]: /posts/about-this-site

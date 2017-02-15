@@ -12,4 +12,4 @@ You can read the proof [here] (PDF, ~200 KB, 7 pages). For more
 information about how it was created, see the [About] page.
 
 [here]: /files/PicardLindelofTheorem.pdf
-[about]: /articles/about-this-site
+[about]: /posts/about-this-site

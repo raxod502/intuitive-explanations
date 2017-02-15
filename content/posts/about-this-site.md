@@ -12,31 +12,31 @@ another.
   complex concepts in calculus, take a look at [Intuitive
   Explanations]. **I recommend starting here!**
 
-[intuitive explanations]: /articles/calculus-intuitive-explanations
+[intuitive explanations]: /posts/calculus-intuitive-explanations
 
 * If you want to review Linear Algebra or Differential Equations,
   check out my [Linear Algebra Summary Sheet][linalg]
   or [Differential Equation Solution Strategies][diffeqs].
 
-[linalg]: /articles/linear-algebra-summary-sheet
-[diffeqs]: /articles/differential-equation-solution-strategies
+[linalg]: /posts/linear-algebra-summary-sheet
+[diffeqs]: /posts/differential-equation-solution-strategies
 
 * If you want some fun calculus trivia questions,
   try [these ones][calc bowl] that I came up with.
 
-[calc bowl]: /articles/calculus-bowl-expert-edition
+[calc bowl]: /posts/calculus-bowl-expert-edition
 
 * If you're interested in proofs, I have
   the [existence-uniqueness theorem from Differential Equations][p-l]
   and [some derivations from Statistics][stats].
 
-[p-l]: /articles/picard-lindelof-theorem
-[stats]: /articles/probability-distributions-means-and-variances
+[p-l]: /posts/picard-lindelof-theorem
+[stats]: /posts/probability-distributions-means-and-variances
 
 * I also do things other than math. What, you ask? Find
   out [here][other].
 
-[other]: /articles/other-projects
+[other]: /posts/other-projects
 
 You can access everything on this website via the navigation bar at
 the top of this page.
