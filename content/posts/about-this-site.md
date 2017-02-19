@@ -41,7 +41,7 @@ another.
 You can access everything on this website via the navigation bar at
 the top of this page.
 
-# About the Documents
+## About the Documents
 
 I typeset all of my documents using [LaTeX], a system for professional
 typesetting that is used almost universally by mathematicians,
@@ -71,14 +71,14 @@ for changes, though, I would love to hear them—simply email me at
 [source]: /files/LaTeXSource.zip
 [email]: mailto:radon.rosborough@gmail.com
 
-# The Future
+## The Future
 
 Occasionally I may post new documents here. I will also generally
 correct any mistakes in the documents already posted as soon as they
 come to my attention. I don't keep a version history of any sort, but
 if you downloaded a document and want to check if it is the most
 recent version, the first page of each document includes a line "Build
-#" that uniquely identifies its version.
+\#" that uniquely identifies its version.
 
 I am very conscientious about avoiding the creation of dead links, so
 if I ever move a page or file, the old URL will redirect to the new
