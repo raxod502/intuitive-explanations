@@ -1,6 +1,7 @@
 +++
 title = "Calculus Bowl: Expert Edition"
-date = "2017-02-14T21:07:03-08:00"
+date = "2016-04-21T22:25:00-08:00"
+type = "post"
 +++
 
 After participating in the [Rocky Mountain Area Calculus Bowl], I
@@ -22,8 +23,8 @@ projecting the current slide. This way, you can see the answer to the
 question that contestants are trying to solve, without having to write
 down the solutions on paper.
 
-You can view the presentation [here] (PDF, ~300 KB, 99 slides). For
+You can view the presentation [here][] (PDF, ~300 KB, 99 slides). For
 more information about how it was created, see the [About] page.
 
 [here]: /files/CalculusBowlExpertEdition.pdf
-[about]: /posts/about-this-site
+[about]: /about-this-site

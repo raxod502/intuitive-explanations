@@ -1,3 +1,62 @@
-languageCode = "en-us"
-title = "Intuitive Explanations"
 baseurl = "https://intuitiveexplanations.com"
+copyright = "Radon Rosborough"
+languageCode = "en-us"
+theme = "ghostwriter"
+title = "Intuitive Explanations"
+
+[Author]
+    name = "Radon Rosborough"
+
+[Taxonomies]
+    tag = "tags"
+
+[Params]
+    intro = true
+    headline = "Intuitive Explanations"
+    description = "Understand, don't memorize"
+    github = "https://github.com/raxod502/intuitive-explanations"
+    email = "radon.rosborough@gmail.com"
+    dateFormat = "Mon, Jan 2, 2006"
+
+[Permalinks]
+    post = "/:filename/"
+
+[[menu.main]]
+    name = "About"
+    url = "/about-this-site"
+    weight = 1
+
+[[menu.main]]
+    name = "Calculus: Intuitive Explanations"
+    url = "/calculus-intuitive-explanations"
+    weight = 2
+
+[[menu.main]]
+    name = "Linear Algebra Summary Sheet"
+    url = "/linear-algebra-summary-sheet"
+    weight = 3
+
+[[menu.main]]
+    name = "Differential Equation Solution Strategies"
+    url = "/differential-equation-solution-strategies"
+    weight = 4
+
+[[menu.main]]
+    name = "Calculus Bowl: Expert Edition"
+    url = "/calculus-bowl-expert-edition"
+    weight = 5
+
+[[menu.main]]
+    name = "Probability Distributions: Means and Variances"
+    url = "/probability-distributions-means-and-variances"
+    weight = 6
+
+[[menu.main]]
+    name = "Picard-Lindelöf Theorem"
+    url = "/picard-lindelof-theorem"
+    weight = 7
+
+[[menu.main]]
+    name = "Other Projects"
+    url = "/other-projects"
+    weight = 8

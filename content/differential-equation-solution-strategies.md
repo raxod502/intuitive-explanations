@@ -1,6 +1,7 @@
 +++
 title = "Differential Equation Solution Strategies"
-date = "2017-02-14T20:43:57-08:00"
+date = "2016-02-14T13:28:00-08:00"
+type = "post"
 +++
 
 As anyone in a Differential Equations class could tell you, there are
@@ -16,8 +17,8 @@ exact equations, reduction of order, variation of parameters,
 judicious guessing (undetermined coefficients), the method of
 Frobenius, Laplace transforms, and higher-order equations.
 
-You can read the document [here] (PDF, ~400 KB, 35 pages). For more
+You can read the document [here][] (PDF, ~400 KB, 35 pages). For more
 information about how it was created, see the [About] page.
 
 [here]: /files/DifferentialEquationSolutionStrategies.pdf
-[about]: /posts/about-this-site
+[about]: /about-this-site

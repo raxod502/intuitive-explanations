@@ -1,6 +1,7 @@
 +++
 title = "Other Projects"
-date = "2017-02-14T21:17:58-08:00"
+date = "2016-05-26T19:48:00-08:00"
+type = "post"
 +++
 
 This page displays some of my non-mathematical projects. You can view

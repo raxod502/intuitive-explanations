@@ -1,6 +1,7 @@
 +++
 title = "Calculus: Intuitive Explanations"
-date = "2017-02-14T20:43:57-08:00"
+date = "2016-01-28T00:56:00-08:00"
+type = "post"
 +++
 
 Calculus is one of my favorite areas of math, primarily because it is
@@ -17,8 +18,8 @@ and the definitions and theorems of vector analysis. The document also
 includes links to many other resources helpful for learning calculus
 around the Web.
 
-You can read *Intuitive Explanations* [here] (PDF, ~5 MB, 67 pages).
+You can read *Intuitive Explanations* [here][] (PDF, ~5 MB, 67 pages).
 For more information about how it was created, see the [About] page.
 
 [here]: /files/CalculusIntuitiveExplanations.pdf
-[about]: /posts/about-this-site
+[about]: /about-this-site

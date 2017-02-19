@@ -1,6 +1,7 @@
 +++
 title = "About This Site"
-date = "2017-02-14T21:09:03-08:00"
+date = "2016-01-28T00:36:00-08:00"
+type = "post"
 +++
 
 Hi! My name is Radon Rosborough, and I like to write about math. This
@@ -12,31 +13,31 @@ another.
   complex concepts in calculus, take a look at [Intuitive
   Explanations]. **I recommend starting here!**
 
-[intuitive explanations]: /posts/calculus-intuitive-explanations
+[intuitive explanations]: /calculus-intuitive-explanations
 
 * If you want to review Linear Algebra or Differential Equations,
   check out my [Linear Algebra Summary Sheet][linalg]
   or [Differential Equation Solution Strategies][diffeqs].
 
-[linalg]: /posts/linear-algebra-summary-sheet
-[diffeqs]: /posts/differential-equation-solution-strategies
+[linalg]: /linear-algebra-summary-sheet
+[diffeqs]: /differential-equation-solution-strategies
 
 * If you want some fun calculus trivia questions,
   try [these ones][calc bowl] that I came up with.
 
-[calc bowl]: /posts/calculus-bowl-expert-edition
+[calc bowl]: /calculus-bowl-expert-edition
 
 * If you're interested in proofs, I have
   the [existence-uniqueness theorem from Differential Equations][p-l]
   and [some derivations from Statistics][stats].
 
-[p-l]: /posts/picard-lindelof-theorem
-[stats]: /posts/probability-distributions-means-and-variances
+[p-l]: /picard-lindelof-theorem
+[stats]: /probability-distributions-means-and-variances
 
 * I also do things other than math. What, you ask? Find
   out [here][other].
 
-[other]: /posts/other-projects
+[other]: /other-projects
 
 You can access everything on this website via the navigation bar at
 the top of this page.
@@ -60,13 +61,15 @@ copyright notice, and build counter. For [Intuitive Explanations], I
 used the article class, and for
 my [Calculus Bowl questions][calc bowl], I used the beamer class.
 
+[document class]: https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes
+[amsart]: https://www.ctan.org/pkg/amsart?lang=en
+
 You can download all of the source code and associated files used to
 generate the documents on this website [here][source]. If you want to
 share it with others, please refer them to this website, which will
-always have an up-to-date copy. I would appreciate it if you did not
-distribute modified versions of the documents; if you have suggestions
-for changes, though, I would love to hear them—simply email me at
-[radon.rosborough@gmail.com][email]!
+always have an up-to-date copy. If you have suggestions for changes, I
+would love to hear them—simply email me
+at [radon.rosborough@gmail.com][email]!
 
 [source]: /files/LaTeXSource.zip
 [email]: mailto:radon.rosborough@gmail.com
