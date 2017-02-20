@@ -1,0 +1,1520 @@
+% Copyright © 2016 by Radon Rosborough.
+% This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+% See http://creativecommons.org/licenses/by-nc-nd/4.0/ for more details.
+% Please visit https://intuitiveexplanations.com/
+
+\documentclass{myart}
+\usepackage{etoolbox}
+
+\allowdisplaybreaks
+
+\newcommand{\term}[1]{\textbf{#1}}
+\newcommand{\eq}[1]{(\ref{eq:#1})}
+
+\newcommand{\deriv}[3][]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\pderiv}[3][]{\frac{\partial^{#1}#2}{\partial#3^{#1}}}
+\newcommand{\ppderiv}[5]{\frac{\partial^{\the\numexpr \ifstrempty{#3}{1}{#3} + \ifstrempty{#5}{1}{#5} \relax}#1}{\partial#4^{#5} \partial#2^{#3}}}
+\newcommand{\fderiv}[3][]{d^{#1}#2/d#3^{#1}}
+\newcommand{\fpderiv}[3][]{\partial^{#1}#2/\partial#3^{#1}}
+\DeclareMathOperator{\OpRe}{Re}
+\DeclareMathOperator{\OpIm}{Im}
+\renewcommand{\Re}[1]{\OpRe\left\{#1\right\}}
+\renewcommand{\Im}[1]{\OpIm\left\{#1\right\}}
+\renewcommand{\L}[1]{\mathcal{L}\left\{#1\right\}}
+\newcommand{\Li}[1]{\mathcal{L}^{-1}\left\{#1\right\}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\vect}[1]{\left\langle#1\right\rangle}
+\newcommand{\Vect}[2]{\begin{bmatrix*} #1 \\ #2 \end{bmatrix*}}
+\newcommand{\Vector}[3]{\begin{bmatrix*} #1 \\ #2 \\ #3 \end{bmatrix*}}
+\newcommand{\mat}[2][r]{\begin{bmatrix*}[#1] #2 \end{bmatrix*}}
+\newcommand{\cvdots}[1][=]{\mathrel{\makebox[\widthof{#1}]{\vdots}}}
+\newcommand{\dmat}[2][r]{\begin{vmatrix*}[#1] #2 \end{vmatrix*}}
+\newcommand{\W}[2][]{W_{#1}\left[#2\right]}
+
+\begin{document}
+
+\titlepage{Differential Equation Solution Strategies}{differential-equation-solution-strategies}{This document is a compilation of various strategies for solving differential equations. Proofs or derivations are presented for most of the methods discussed. The relevant definitions and properties concerning the various types of differential equations are also presented. At the end of each section, there is a subsection that explains when the different methods are usually applicable. Many of the methods presented in this document are based on the textbook I used in my Differential Equations class (\textit{Differential Equations and Their Applications} by Martin Braun, fourth edition).}
+
+\tableofcontents
+
+\section{First-Order Differential Equations} \label{sec:first order}
+
+\subsection{Characterization of First-Order Equations} \label{subsec:first order characterization}
+
+A \term{first-order differential equation} is an equation of the form
+\begin{equation*}
+\deriv{y}{t} = f(t, y).
+\end{equation*}
+If an additional equation of the form
+\begin{equation*}
+y(t_0) = y_0
+\end{equation*}
+is also given, then the two equations together are called an \term{initial-value problem}. Every initial-value problem has a unique solution; if an initial condition is not provided, the general solution will have one arbitrary constant.\footnote{This requires that $f$ be sufficiently well-behaved.} A first-order differential equation of the form
+\begin{equation} \label{eq:first order nonhomogeneous}
+\deriv{y}{t} + p(t)y = q(t)
+\end{equation}
+is called \term{linear}. If $q(t) = 0$ then the equation is of the form
+\begin{equation} \label{eq:first order homogeneous}
+\deriv{y}{t} + p(t)y = 0
+\end{equation}
+and it is called \term{homogeneous}; otherwise, it is called \term{nonhomogeneous}.
+
+If $y_1(t)$ is a solution of \eq{first order homogeneous} that is not always equal to zero, then the general solution to \eq{first order homogeneous} is
+\begin{equation*}
+y(t) = Cy_1(t).\footnote{This requires that $p$ be sufficiently well-behaved.}
+\end{equation*}
+If $y_1(t)$ is a solution of \eq{first order homogeneous} that is not always equal to zero and $\psi(t)$ is a solution of \eq{first order nonhomogeneous}, then the general solution to \eq{first order nonhomogeneous} is
+\begin{equation*}
+y(t) = Cy_1(t) + \psi(t).\footnote{This requires that $p$ and $q$ be sufficiently well-behaved.}
+\end{equation*}
+
+\subsection{Direct Integration} \label{subsec:direct integration}
+
+The simplest possible differential equation is of the form
+\begin{equation*}
+\deriv{y}{t} = f(t).
+\end{equation*}
+Integrating both sides with respect to $t$ gives the general solution
+\begin{equation*}
+y(t) = \int f(t) \,dt + C.
+\end{equation*}
+If we are given the initial condition $y(t_0) = y_0$, then we may find a particular solution immediately, without first finding the general solution, in the following manner:
+\begin{align*}
+\int_{t_0}^t y(t) \,dt &= \int_{t_0}^t f(t) \,dt \\
+y(t) - y_0 &= \int_{t_0}^t f(t) \,dt \\
+y(t) &= y_0 + \int_{t_0}^t f(t) \,dt.
+\end{align*}
+
+\subsection{Homogeneous Linear Equations} \label{subsec:first order homogeneous}
+
+To solve the general homogeneous first-order linear differential equation, we may proceed in the following manner:
+\begin{align*}
+\deriv{y}{t} + p(t)y &= 0 \\
+\deriv{y}{t} &= -p(t)y \\
+\frac{\fderiv{y}{t}}{y} &= -p(t) \\
+\int \frac{\fderiv{y}{t}}{y} \,dt &= -\int p(t) \,dt + C \\
+\int \frac{dy}{y} &= -\int p(t) \,dt + C \\
+\ln |y| &= -\int p(t) \,dt + C \\
+|y| &= e^{-\int p(t) \,dt + C} \\
+|y| &= Ce^{-\int p(t) \,dt}. \\
+\end{align*}
+Now, $y$ must have the same sign for all $t$, because otherwise the integral on the left-hand side would cross the singularity at $y = 0$. Consequently, by adjusting the value of $C$ appropriately, we may still eliminate the absolute value bars from $y$. The general solution is then
+\begin{equation*}
+y = Ce^{-\int p(t) \,dt}.
+\end{equation*}
+If we are given the initial condition $y(t_0) = y_0$, then we may find a particular solution immediately, without first finding the general solution, in the following manner:
+\begin{align*}
+\deriv{y}{t} + p(t)y &= 0 \\
+\frac{\fderiv{y}{t}}{y} &= -p(t) \\
+\int_{t_0}^t \frac{\fderiv{y}{t}}{y} \,dt &= -\int_{t_0}^t p(t) \,dt \\
+\int_{y_0}^y \frac{dy}{y} &= -\int_{t_0}^t p(t) \,dt \\
+\ln \left|\frac{y}{y_0}\right| &= -\int_{t_0}^t p(t) \,dt \\
+\left|\frac{y}{y_0}\right| &= e^{-\int_{t_0}^t p(t) \,dt}.
+\end{align*}
+Now, $y_0$ and $y$ must have the same sign, because otherwise the integral on the left-hand side would cross the singularity at $y = 0$. Thus the quantity $y/y_0$ is positive, and since the right-hand side is also positive it follows that we may eliminate the absolute value bars. Multiplying by $y_0$ then gives the general solution:
+\begin{equation*}
+y = y_0e^{-\int_{t_0}^t p(t) \,dt}.
+\end{equation*}
+
+\subsection{Nonhomogeneous Linear Equations} \label{subsec:first order nonhomogeneous}
+
+We will now solve the general nonhomogeneous first-order linear differential equation
+\begin{equation} \label{eq:first order nonhomogeneous solution}
+\deriv{y}{t} + p(t)y = q(t).
+\end{equation}
+First, note that
+\begin{equation*}
+\deriv{}{t}\Big[ye^{f(t)}\Big] = e^{f(t)}\Big[\deriv{y}{t} + f'(t)y\Big].
+\end{equation*}
+If we let $f(t) = \int p(t) \,dt$ then we obtain
+\begin{equation*}
+\deriv{}{t}\Big[ye^{\int p(t) \,dt}\Big] = e^{\int p(t) \,dt}\Big[\deriv{y}{t} + p(t)y\Big].
+\end{equation*}
+This suggests multiplying both sides of \eq{first order nonhomogeneous solution} by the quantity $e^{\int p(t) \,dt}$. Doing so allows us to proceed in the following manner:
+\begin{align*}
+e^{\int p(t) \,dt}\Big[\deriv{y}{t} + p(t)y\Big] &= e^{\int p(t) \,dt} q(t) \\
+\deriv{}{t} \Big[ye^{\int p(t) \,dt}\Big] &= e^{\int p(t) \,dt} q(t) \\
+ye^{\int p(t) \,dt} &= \int e^{\int p(t) \,dt} q(t) \,dt + C \\
+y &= e^{-\int p(t) \,dt} \left[\int e^{\int p(t) \,dt} q(t) \,dt + C\right].
+\end{align*}
+If we are given the initial condition $y(t_0) = y_0$, then we may find a particular solution immediately, without first finding the general solution, in the following manner:
+\begin{align*}
+e^{\int p(t) \,dt}\Big[\deriv{y}{t} + p(t)y\Big] &= e^{\int p(t) \,dt} q(t) \\
+\deriv{}{t} \Big[ye^{\int p(t) \,dt}\Big] &= e^{\int p(t) \,dt} q(t) \\
+ye^{\int p(t) \,dt} - y_0\left[e^{\int p(t) \,dt}\right]_{t=t_0} &= \int_{t_0}^t e^{\int p(t) \,dt} q(t) \,dt \\
+ye^{\left[\int p(t) \,dt\right]_{t=t}} &= y_0e^{\left[\int p(t) \,dt\right]_{t=t_0}} + \int_{t_0}^t e^{\int p(t) \,dt} q(t) \,dt \\
+y &= y_0e^{\left[\int p(t) \,dt\right]_{t=t_0} - \left[\int p(t) \,dt\right]_{t=t}} + e^{\int p(t) \,dt} \int_{t_0}^t e^{\int p(t) \,dt} q(t) \,dt \\
+y &= y_0e^{-\int_{t_0}^t p(t) \,dt} + e^{-\int p(t) \,dt} \int_{t_0}^t e^{\int p(t) \,dt} q(t) \,dt.
+\end{align*}
+
+\subsection{Separable Equations} \label{subsec:separable}
+
+A first-order differential equation of the form
+\begin{equation*}
+\deriv{y}{t} = \frac{g(t)}{f(y)}
+\end{equation*}
+is called \term{separable}. This equation may be solved easily by moving the $f(y)$ term to the left-hand side and integrating:
+\begin{align*}
+f(y) \deriv{y}{t} &= g(t) \\
+\int f(y) \deriv{y}{t} \,dt &= \int g(t) \,dt \\
+\int f(y) \,dy &= \int g(t) \,dt.
+\end{align*}
+In general, it is not possible to find an explicit formula for $y$ in terms of $t$.
+
+If we are given the initial condition $y(t_0) = y_0$, then we may find a particular solution immediately, without first finding the general solution, in the following manner:
+\begin{align*}
+f(y) \deriv{y}{t} &= g(t) \\
+\int_{t_0}^t f(y) \deriv{y}{t} \,dt &= \int_{t_0}^t g(t) \,dt \\
+\int_{y_0}^y f(y) \,dy &= \int_{t_0}^t g(t) \,dt.
+\end{align*}
+Again, it is not possible in general to find an explicit formula for $y$ in terms of $t$.
+
+\subsection{Exact Equations} \label{subsec:exact}
+
+Consider the first-order differential equation
+\begin{equation*}
+f_t(t, y) + f_y(t, y) \deriv{y}{t} = 0,
+\end{equation*}
+where $f_t$ and $f_y$ are functions of two variables. To solve this differential equation, observe that
+\begin{equation*}
+\deriv{}{t} f(t, y) = \pderiv{f}{t} + \pderiv{f}{y} \deriv{y}{t}
+\end{equation*}
+according to the multivariable chain rule. Hence, if there exists a function $f(t, y)$ such that $\fpderiv{f}{t} = f_t$ and $\fpderiv{f}{y} = f_y$, then we may rewrite the differential equation as
+\begin{equation*}
+\deriv{}{t} f(t, y) = 0.
+\end{equation*}
+Integrating both sides then easily gives the general solution as
+\begin{equation*}
+f(t, y) = C.
+\end{equation*}
+In general, it is not possible to find an explicit formula for $y$ in terms of $t$.
+
+Differential equations for which this strategy works---that is, for which such an $f$ exists---are called \term{exact}.
+
+\subsubsection{Finding a function $f$} \label{subsubsec:finding f}
+
+From vector analysis, we know that such a function $f$ exists if and only if
+\begin{equation*}
+\pderiv{f_t}{y} = \pderiv{f_y}{t}.\footnote{This requires that $f_t$ and $f_y$ be sufficiently well-behaved.}
+\end{equation*}
+If this equation is satisfied, then we may find $f$ in three different ways. The first way, which is typically the easiest, is to note that
+\begin{align*}
+f(t, y) &= \int f_t(t, y) \,dt + C(y) \\
+&= \int f_y(t, y) \,dy + C(t)
+\end{align*}
+and then determine the functions $C(y)$ and $C(t)$, up to a constant, by pattern recognition.
+
+The second way, which is useful if the integral $\int f_y(t, y) \,dy$ is difficult to compute, is to start with the first relation from the first method,
+\begin{equation*}
+f(t, y) = \int f_t(t, y) \,dt + C(y),
+\end{equation*}
+and differentiate both sides with respect to $y$:
+\begin{equation*}
+f_y(t, y) = \pderiv{}{y} \int f_t(t, y) \,dt + C'(y).
+\end{equation*}
+Subtracting the quantity $\pderiv{}{y} \int f_t(t, y) \,dt$ from both sides gives the equation
+\begin{equation*}
+C'(y) = f_y(t, y) - \pderiv{}{y} \int f_t(t, y) \,dt,
+\end{equation*}
+which may be integrated to find
+\begin{equation*}
+C(y) = \int f_y(t, y) - \pderiv{}{y} \int f_t(t, y) \,dt \,dy + C.
+\end{equation*}
+Thus, we find that
+\begin{equation*}
+f(t, y) = \int f_t(t, y) \,dt + \int f_y(t, y) - \pderiv{}{y} \int f_t(t, y) \,dt \,dy + C.
+\end{equation*}
+Any terms of $f_y(t, y)$ containing both $t$ and $y$ will be canceled by the term $\pderiv{}{y} \int f_t(t, y) \,dt$, which may simplify the integration. Note also that this formula will give an incorrect answer if $\fpderiv{f_t}{y} \neq \fpderiv{f_y}{t}$, so check this first.
+
+On the other hand, if the integral $\int f_t(t, y) \,dt$ is difficult to compute, we may use the third method, which is analogous to the second. We start with the second relation from the first method,
+\begin{equation*}
+f(t, y) = \int f_y(t, y) \,dy + C(t),
+\end{equation*}
+and differentiate both sides with respect to $t$:
+\begin{equation*}
+f_t(t, y) = \pderiv{}{t} \int f_y(t, y) \,dy + C'(t).
+\end{equation*}
+Subtracting the quantity $\pderiv{}{t} \int f_y(t, y) \,dy$ from both sides gives the equation
+\begin{equation*}
+C'(t) = f_t(t, y) - \pderiv{}{t} \int f_y(t, y) \,dy,
+\end{equation*}
+which may be integrated to find
+\begin{equation*}
+C(t) = \int f_t(t, y) - \pderiv{}{t} \int f_y(t, y) \,dy \,dt.
+\end{equation*}
+Thus, we find that
+\begin{equation*}
+f(t, y) = \int f_y(t, y) \,dy + \int f_t(t, y) - \pderiv{}{t} \int f_y(t, y) \,dy \,dt.
+\end{equation*}
+Any terms of $f_t(t, y)$ containing both $t$ and $y$ will be canceled by the term $\pderiv{}{t} \int f_y(t, y) \,dt$, which may simplify the integration. Note also that this formula will give an incorrect answer if $\fpderiv{f_t}{y} \neq \fpderiv{f_y}{t}$, so check this first.
+
+\subsubsection{Making an equation exact} \label{subsubsec:making an equation exact}
+
+The obvious shortcoming of our work in the previous section is that if there is no function $f(t, y)$ such that $\fpderiv{f}{t} = f_t$ and $\fpderiv{f}{y} = f_y$, then we are stuck. In particular, as we stated earlier, if
+\begin{equation*}
+\pderiv{f_t}{y} \neq \pderiv{f_y}{t},
+\end{equation*}
+then the differential equation is not exact. However, consider multiplying both sides of the equation by an arbitrary function $\mu(t, y)$, to obtain
+\begin{equation*}
+f_t(t, y) \mu(t, y) + f_y(t, y) \mu(t, y) \deriv{y}{t} = 0.
+\end{equation*}
+This differential equation is exact if
+\begin{align*}
+\pderiv{}{y} \Big[f_t(t, y) \mu(t, y)\Big] &= \pderiv{}{t} \Big[f_y(t, y) \mu(t, y)\Big] \\
+\pderiv{f_t}{y} \mu + f_t \pderiv{\mu}{y} &= \pderiv{f_y}{t} \mu + f_y \pderiv{\mu}{t}.
+\end{align*}
+Unfortunately, this is a partial differential equation that we cannot solve for $\mu(t, y)$ in general. However, there are two special cases: if $\mu$ is a function of $t$ alone or a function of $y$ alone. If we assume that $\mu$ is a function of $t$ alone, then $\fpderiv{\mu}{y} = 0$ and we obtain
+\begin{equation*}
+\pderiv{f_t}{y} \mu = \pderiv{f_y}{t} \mu + f_y \pderiv{\mu}{t},
+\end{equation*}
+which can be solved for $\fpderiv{\mu}{t}$ to find
+\begin{equation*}
+\pderiv{\mu}{t} = \left(\frac{\fpderiv{f_t}{y} - \fpderiv{f_y}{t}}{f_y}\right) \mu.
+\end{equation*}
+If the right-hand side is not a function of $t$ alone, then this equation has no solution. If it is, however, then this is a homogeneous first-order linear differential equation that can be solved to obtain
+\begin{equation*}
+\mu(t) = \exp\left(\int \frac{\fpderiv{f_t}{y} - \fpderiv{f_y}{t}}{f_y} \,dt\right).
+\end{equation*}
+On the other hand, if we assume that $\mu$ is a function of $y$ alone, then $\fpderiv{\mu}{t} = 0$ and we obtain
+\begin{equation*}
+\pderiv{f_t}{y} \mu + f_t \pderiv{\mu}{y} = \pderiv{f_y}{t} \mu,
+\end{equation*}
+which can be solved for $\fpderiv{\mu}{y}$ to find
+\begin{equation*}
+\pderiv{\mu}{y} = \left(\frac{\fpderiv{f_y}{t} - \fpderiv{f_t}{y}}{f_t}\right) \mu.
+\end{equation*}
+If the right-hand side is not a function of $y$ alone, then this equation has no solution. If it is, however, then this is a homogeneous first-order linear differential equation that can be solved to obtain
+\begin{equation*}
+\mu(y) = \exp\left(\frac{\fpderiv{f_y}{t} - \fpderiv{f_t}{y}}{f_t}\right).
+\end{equation*}
+Having solved for $\mu$, we can multiply both sides of the original differential equation by it to make the equation exact. Then we may find a function $f$ as before.
+
+\subsection{What to Do in General} \label{subsec:first order strategy}
+
+The strategies discussed in sections \ref{subsec:first order homogeneous}--\ref{subsec:separable} are all special cases of the strategy in section \ref{subsec:exact}. Hence, all first-order linear differential equations that can be solved with the strategies discussed in section \ref{sec:first order} may be solved according to section \ref{subsec:exact}. However, to minimize work, the following strategy is advisable:
+\begin{enumerate}
+\item If the equation is linear and homogeneous, use the strategy of section \ref{subsec:first order homogeneous}.
+\item If the equation is linear and nonhomogeneous, use the strategy of section \ref{subsec:first order nonhomogeneous}.
+\item If the equation is separable, use the strategy of section \ref{subsec:separable}.
+\item Otherwise, use the strategy of section \ref{subsec:exact}.
+\end{enumerate}
+
+\section{Second-Order Differential Equations} \label{sec:second order}
+
+\subsection{Characterization of Second-Order Equations} \label{subsec:second order characterization}
+
+A \term{second-order differential equation} is an equation of the form
+\begin{equation*}
+\deriv[2]{y}{t} = f\left(t, y, \deriv{y}{t}\right).
+\end{equation*}
+If two additional equations of the form
+\begin{align*}
+y(t_0) &= y_0 \\
+y'(t_0) &= y'_0
+\end{align*}
+are also given, then the three equations together are called an \term{initial-value problem}. Every initial-value problem has a unique solution; however, if initial conditions are not provided, the general solution will have two arbitrary constants.\footnote{This requires that $f$ be sufficiently well-behaved.} A second-order differential equation of the form
+\begin{equation} \label{eq:second order nonhomogeneous}
+\deriv[2]{y}{t} + p(t)\deriv{y}{t} + q(t)y = g(t)
+\end{equation}
+is called \term{linear}. If $g(t) = 0$ then the equation is of the form
+\begin{equation} \label{eq:second order homogeneous}
+\deriv[2]{y}{t} + p(t)\deriv{y}{t} + q(t)y = 0
+\end{equation}
+and it is called \term{homogeneous}; otherwise, it is called \term{nonhomogeneous}.
+
+Two functions $y_1(t)$ and $y_2(t)$ are called \term{linearly independent} if neither is a scalar multiple of the other.\footnote{As the scalar multiple may be $0$, this means that neither function may be the zero function.} The \term{Wronskian} of two functions $y_1(t)$ and $y_2(t)$ is the quantity
+\begin{equation*}
+\W{y_1, y_2}(t) = \dmat{y_1(t) & y_2(t) \\ y'_1(t) & y'_2(t)}.
+\end{equation*}
+The Wronskian of two linearly independent solutions of \eq{second order homogeneous} is nonzero for all $t$, while the Wronskian of two linearly dependent solutions of \eq{second order homogeneous} is zero for all $t$.
+
+If $y_1(t)$ and $y_2(t)$ are two linearly independent solutions of \eq{second order homogeneous}, then the general solution to \eq{second order homogeneous} is
+\begin{equation*}
+y(t) = C_1y_1(t) + C_2y_2(t).\footnote{This requires that $p$ and $q$ be sufficiently well-behaved.}
+\end{equation*}
+If $y_1(t)$ and $y_2(t)$ are two linearly independent solutions of \eq{second order homogeneous} and $\psi(t)$ is a solution of \eq{second order nonhomogeneous}, then the general solution to \eq{second order nonhomogeneous} is
+\begin{equation*}
+y(t) = C_1y_1(t) + C_2y_2(t) + \psi(t).\footnote{This requires that $p$, $q$, and $g$ be sufficiently well-behaved.}
+\end{equation*}
+
+\subsection{Direct Reduction of Order} \label{subsec:direct reduction}
+
+If $y$ does not appear in a second-order differential equation, i.e. it is of the form
+\begin{equation*}
+\deriv[2]{y}{t} = f\left(t, \deriv{y}{t}\right),
+\end{equation*}
+then letting $v = \fderiv{y}{t}$ converts it to a first-order equation:
+\begin{equation*}
+\deriv{v}{t} = f(t, v).
+\end{equation*}
+One constant of integration is introduced in the solution of this first-order equation, and a second is introduced in recovering $y$:
+\begin{equation*}
+y(t) = \int v(t) \,dt.
+\end{equation*}
+In the context of an initial-value problem, the initial condition $y'(t_0) = y'_0$ is used in the solution of the first-order equation and the initial condition $y(t_0) = y_0$ is used in recovering $y$.
+
+\subsection{Reduction of Order} \label{subsec:reduction of order}
+
+Suppose that $y_1(t)$ is a nonzero solution of the homogeneous second-order linear differential equation
+\begin{equation} \label{eq:second order homogeneous reduction of order}
+\deriv[2]{y}{t} + p(t)\deriv{y}{t} + q(t)y = 0,
+\end{equation}
+and suppose that we would like to find a second, linearly independent, solution $y_2(t)$. Since both $y_1(t)$ and $y_2(t)$ are nonzero, it follows that
+\begin{equation*}
+y_2(t) = y_1(t)v(t)
+\end{equation*}
+for some function $v(t)$. The first and second derivatives of $y_2(t)$ follow from the product rule:
+\begin{align*}
+\deriv{y_2}{t} &= y_1'(t)v(t) + y_1(t)v'(t) \\
+\deriv[2]{y_2}{t} &= y_1''(t)v(t) + y_1'(t)v'(t) + y_1'(t)v'(t) + y_1(t)v''(t) \\
+&= y_1''(t)v(t) + 2y_1'(t)v'(t) + y_1(t)v''(t).
+\end{align*}
+Plugging these into \eq{second order homogeneous reduction of order}, we find that:
+\begin{align*}
+y_1''(t)v(t) + 2y_1'(t)v'(t) + y_1(t)v''(t) + p(t)y_1'(t)v(t) + p(t)y_1(t)v'(t) + q(t)y_1(t)v(t) &= 0 \\
+y_1(t)v''(t) + \Big[2y_1'(t) + p(t)y_1(t)\Big]v'(t) + \Big[y_1''(t) + p(t)y_1'(t) + q(t)y_1(t)\Big]v(t) &= 0.
+\end{align*}
+Now, since $y_1(t)$ is a solution of \eq{second order homogeneous reduction of order}, we know that $y_1''(t) + p(t)y_1'(t) + q(t)y_1(t) = 0$, and hence
+\begin{equation*}
+y_1(t)v''(t) + \Big[2y_1'(t) + p(t)y_1(t)\Big]v'(t) = 0.
+\end{equation*}
+To put the equation in standard form, we divide through by $y_1(t)$, which is nonzero:
+\begin{equation*}
+v''(t) + \left[2\left(\frac{y_1'(t)}{y_1(t)}\right) + p(t)\right]v'(t) = 0.
+\end{equation*}
+Using the strategy of section \ref{subsec:direct reduction}, we let $w(t) = v'(t)$ and obtain:
+\begin{equation*}
+w'(t) + \left[2\left(\frac{y_1'(t)}{y_1(t)}\right) + p(t)\right]w(t) = 0.
+\end{equation*}
+This is a homogeneous first-order linear differential equation, and its solution\footnote{We only need one, nonzero, solution, so we set $C = 1$.} via the techniques of section \ref{subsec:first order homogeneous} is:
+\begin{align*}
+w(t) &= \exp\left(-\int 2\left(\frac{y_1'(t)}{y_1(t)}\right) + p(t) \,dt\right) \\
+&= \frac{\exp\left(-\int p(t) \,dt\right)}{\exp\left(2 \int \frac{y_1'(t)}{y_1(t)} \,dt\right)} \\
+&= \frac{\exp\left(-\int p(t) \,dt\right)}{\Big[\exp\big(\ln|y_1(t)|\big)\Big]^2} \\
+&= \frac{\exp\left(-\int p(t) \,dt\right)}{y_1^2(t)}.
+\end{align*}
+Hence,
+\begin{equation*}
+v(t) = \int w(t) \,dt = \int \frac{\exp\left(-\int p(t) \,dt\right)}{y_1^2(t)} \,dt,
+\end{equation*}
+where we have set $C = 0$ since we need only one solution, and
+\begin{equation*}
+y_2(t) = y_1(t)v(t) = y_1(t) \int \frac{\exp\left(-\int p(t) \,dt\right)}{y_1^2(t)} \,dt.
+\end{equation*}
+is a second solution of \eq{second order homogeneous reduction of order}. Since $v(t)$ is obtained by integrating a nonzero function, it cannot be a constant function; it then follows that $y_1(t)$ and $y_2(t)$ are linearly independent.
+
+\subsection{Homogeneous Linear Equations with Constant Coefficients} \label{subsec:constant coefficients}
+
+Consider now the general homogeneous second-order linear differential equation with constant coefficients,
+\begin{equation} \label{eq:constant coefficients}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + cy = 0.
+\end{equation}
+The trick to solving this equation is to guess that solutions may be of the form $y(t) = e^{rt}$. In that case, we have $y'(t) = re^{rt}$ and $y''(t) = r^2e^{rt}$; plugging these into \eq{constant coefficients} gives
+\begin{equation*}
+(ar^2 + br + c)e^{rt} = 0.
+\end{equation*}
+Since $e^{rt}$ is never zero, we can divide through by it, leaving us with a quadratic equation for $r$:
+\begin{equation*}
+ar^2 + br + c = 0.
+\end{equation*}
+The quadratic formula then yields
+\begin{equation*}
+r = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}.
+\end{equation*}
+Depending on the value of $b^2 - 4ac$, we may obtain two real roots, two complex roots, or one real root.
+
+\subsubsection{Two Real Roots \texorpdfstring{$(b^2 - 4ac > 0)$}{(b^2 - 4ac > 0)}} \label{subsubsec:constant coefficients real roots}
+
+In this case, we have the two linearly independent solutions
+\begin{align*}
+y_1(t) &= e^{r_1t} \\
+y_2(t) &= e^{r_2t},
+\end{align*}
+where
+\begin{align*}
+r_1 &= \frac{-b + \sqrt{b^2 - 4ac}}{2a} \\
+r_2 &= \frac{-b - \sqrt{b^2 - 4ac}}{2a}.
+\end{align*}
+The general solution is
+\begin{equation*}
+y(t) = C_1e^{r_1t} + C_2e^{r_2t}.
+\end{equation*}
+
+\subsubsection{Two Complex Roots \texorpdfstring{$(b^2 - 4ac < 0)$}{(b^2 - 4ac < 0)}} \label{subsubsec:constant coefficients complex roots}
+
+In this case, we have the two linearly independent solutions
+\begin{align*}
+z_1(t) &= e^{(\lambda + i\mu)t} \\
+z_2(t) &= e^{(\lambda - i\mu)t},
+\end{align*}
+where
+\begin{align*}
+\lambda &= -\frac{b}{2a}, \\
+\mu &= \frac{\sqrt{4ac - b^2}}{2a}.
+\end{align*}
+However, these solutions are complex-valued and we only want real solutions. To remedy this problem, suppose that $z(t) = u(t) + iv(t)$ is a complex-valued solution of \eq{constant coefficients}, which is reprinted here:
+\begin{equation*}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + cy = 0.
+\end{equation*}
+Then we would have:
+\begin{align*}
+a \deriv[2]{u}{t} + ia \deriv[2]{v}{t} + b \deriv{u}{t} + ib \deriv{v}{t} + cu + icv &= 0 \\
+\left[a \deriv[2]{u}{t} + b \deriv{u}{t} + cu\right] + i\left[a \deriv[2]{v}{t} + b \deriv{v}{t} + cv\right] &= 0.
+\end{align*}
+For the complex-valued left-hand side to equal $0$, both its real and imaginary parts would have to equal zero. This means that both $u$ and $v$ are real-valued solutions of \eq{constant coefficients}.
+
+In other words, if $z(t)$ is a complex-valued solution of \eq{constant coefficients}, then both $\Re{z(t)}$ and $\Im{z(t)}$ are real-valued solutions of \eq{constant coefficients}. Since, by Euler's formula,
+\begin{equation*}
+z_1(t) = e^{(\lambda + i\mu)t} = e^{\lambda t + i\mu t} = e^{\lambda t}\big[\cos(\mu t) + i \sin(\mu t)\big],
+\end{equation*}
+we have
+\begin{align*}
+y_1(t) &= e^{\lambda t} \cos(\mu t) \\
+y_2(t) &= e^{\lambda t} \sin(\mu t)
+\end{align*}
+as linearly independent real-valued solutions of \eq{constant coefficients}. According to the discussion of section \ref{subsec:second order characterization}, this is sufficient to characterize the general solution of \eq{constant coefficients}. However, it is natural to wonder why we are allowed to discard $z_2(t)$: might it not provide additional solutions? This turns out not to be the case: we have
+\begin{equation*}
+z_2(t) = e^{(\lambda - i\mu)t} = e^{\lambda t - i\mu t} = e^{\lambda t} \big[\cos(\mu t) - i \sin(\mu t)\big],
+\end{equation*}
+and thus
+\begin{align*}
+\Re{z_2(t)} &= y_1(t) \\
+\Im{z_2(t)} &= -y_2(t).
+\end{align*}
+Thus, the components of $z_2(t)$ are just scalar multiples of the components of $z_1(t)$, and are already accounted for in the general solution,
+\begin{equation*}
+y(t) = e^{\lambda t} \big[C_1 \cos(\mu t) + C_2 \sin(\mu t)\big].
+\end{equation*}
+
+\subsubsection{One Real Root \texorpdfstring{$(b^2 - 4ac = 0)$}{(b^2 - 4ac = 0)}} \label{subsubsec:constant coefficients equal roots}
+
+In this case, we have one solution $y_1(t) = e^{r_1t}$, where $r_1 = -b/(2a)$, and can use two different methods to find a second.
+
+The first method is reduction of order. To use the results of section \ref{subsec:reduction of order}, we must first divide through by $a$ in order to put \eq{constant coefficients} in standard form:
+\begin{equation*}
+\deriv[2]{y}{t} + \left(\frac{b}{a}\right) \deriv{y}{t} + \left(\vphantom{\frac{b}{a}}\frac{c}{a}\right)y = 0.
+\end{equation*}
+We now have $p(t) = b/a$, so from our work in section \ref{subsec:reduction of order} we have:
+\begin{align*}
+y_2(t) &= y_1(t) \int \frac{\exp\left(-\int p(t) \,dt\right)}{y_1^2(t)} \,dt \\
+&= e^{r_1t} \int \frac{\exp\left(-\int b/a \,dt\right)}{\big[e^{-b/(2a)}\big]^2} \,dt \\
+&= e^{r_1t} \int \frac{e^{-b/a}}{e^{-b/a}} \,dt \\
+&= e^{r_1t} \int dt \\
+&= te^{r_1t}.
+\end{align*}
+We now have two linearly independent solutions $y_1(t)$ and $y_2(t)$.
+
+To use the second method, we can define the operator $L$ as
+\begin{equation} \label{eq:constant coefficients operator}
+L\big[y\big] = a \deriv[2]{y}{t} + b \deriv{y}{t} + cy.
+\end{equation}
+Plugging $y = e^{rt}$ into \eq{constant coefficients operator} gives us
+\begin{equation*}
+L\big[e^{rt}\big] = (ar^2 + br + c)e^{rt},
+\end{equation*}
+and since $r = r_1$ is a root of the quadratic equation $ar^2 + br + c$, it follows that
+\begin{equation*}
+L\big[e^{r_1t}\big] = 0,
+\end{equation*}
+which shows that $y_1(t) = e^{r_1t}$ is a solution of \eq{constant coefficients}. However, we already knew this. To find a second solution, first notice that we can use the equality of mixed partials to conclude:
+\begin{align*}
+\pderiv{}{r} L\big[y\big] &= \pderiv{}{r} \left[a \deriv[2]{y}{t} + b \pderiv{y}{t} + cy\right] \\
+&= a \ppderiv{y}{t}{2}{r}{} + b \ppderiv{y}{t}{}{r}{} + c \pderiv{y}{r} \\
+&= a \ppderiv{y}{r}{}{t}{2} + b \ppderiv{y}{r}{}{t}{} + c \pderiv{y}{r} \\
+&= a \pderiv[2]{}{t} \left[\pderiv{y}{r}\right] + b \pderiv{}{t} \left[\pderiv{y}{r}\right] + c \pderiv{y}{r} \\
+&= L\left[\pderiv{y}{r}\right].
+\end{align*}
+Now observe that because $r = r_1$ is a double root of $ar^2 + br + c$, we can factor the latter expression to $a(r - r_1)^2$. Thus,
+\begin{equation*}
+L\big[e^{rt}\big] = a(r - r_1)^2e^{rt}.
+\end{equation*}
+Differentiating both sides of this relation with respect to $r$ gives:
+\begin{align*}
+L\left[\pderiv{}{r} e^{rt}\right] &= a(r - r_1)^2 \pderiv{}{r} \Big[e^{rt}\Big] + ae^{rt} \pderiv{}{r} \Big[(r - r_1)^2\Big] \\
+L\big[te^{rt}\big] &= at(r - r_1)^2e^{rt} + 2a(r - r_1)e^{rt}.
+\end{align*}
+Finally, by letting $r = r_1$, we see that
+\begin{equation*}
+L\big[te^{r_1t}\big] = 0,
+\end{equation*}
+which means that $y_2(t) = te^{r_1t}$ is a second solution of \eq{constant coefficients}. To be honest, there is no reason in particular why one might be inspired to differentiate the general form of a solution with respect to $r$. However, it turns out that this technique works in many other cases as well, and it is often much, much easier than the method of reduction of order.
+
+Either way, the general solution is
+\begin{equation*}
+y(t) = (C_1 + C_2t)e^{r_1t}.
+\end{equation*}
+
+\subsection{Variation of Parameters} \label{subsec:variation of parameters}
+
+Consider the nonhomogeneous second-order linear differential equation
+\begin{equation} \label{eq:variation of parameters nonhomogeneous}
+\deriv[2]{y}{t} + p(t) \deriv{y}{t} + q(t)y = g(t)
+\end{equation}
+and the corresponding homogeneous equation
+\begin{equation} \label{eq:variation of parameters homogeneous}
+\deriv[2]{y}{t} + p(t) \deriv{y}{t} + q(t)y = 0.
+\end{equation}
+
+Suppose that we have two linearly independent solutions $y_1(t)$ and $y_2(t)$ of \eq{variation of parameters homogeneous}. Then the general solution of \eq{variation of parameters homogeneous} is
+\begin{equation*}
+y(t) = C_1y_1(t) + C_2y_2(t).
+\end{equation*}
+Suppose that we now wish to find a particular solution $\psi(t)$ to \eq{variation of parameters nonhomogeneous}. We may do this by supposing such a solution is of the form
+\begin{equation}
+\psi(t) = u_1(t)y_1(t) + u_2(t)y_2(t);
+\end{equation}
+that is, by letting the parameters $C_1$ and $C_2$ vary with time. Notice that we have replaced the problem of finding an appropriate single function $\psi(t)$ by the problem of finding two appropriate functions $u_1(t)$ and $u_2(t)$; in a sense, we have added an additional degree of freedom to our problem. As such, we are justified in adding an additional constraint on $u_1(t)$ and $u_2(t)$ without making it so that the solution set of our problem is empty.
+
+We now compute
+\begin{equation*}
+\deriv{\psi}{t} = u_1'(t)y_1(t) + u_1(t)y_1'(t) + u_2'(t)y_2(t) + u_2(t)y_2'(t).
+\end{equation*}
+Note that if
+\begin{equation} \label{eq:variation of parameters condition}
+u_1'(t)y_1(t) + u_2'(t)y_2(t) = 0,
+\end{equation}
+then the second derivative of $\psi(t)$ will have no second-order derivatives of $u_1(t)$ or $u_2(t)$. In accordance with our discussion above, we arbitrarily assume that \eq{variation of parameters condition} holds. In this case,
+\begin{equation*}
+\deriv{\psi}{t} = u_1(t)y_1'(t) + u_2(t)y_2'(t),
+\end{equation*}
+and
+\begin{equation*}
+\deriv[2]{\psi}{t} = u_1'(t)y_1'(t) + u_1(t)y_1''(t) + u_2'(t)y_2'(t) + u_2(t)y_2''(t).
+\end{equation*}
+Plugging these expressions into \eq{variation of parameters nonhomogeneous} gives
+\begin{align*}
+&\phantom{{}+{}} u_1'(t)y_1'(t) + u_1(t)y_1''(t) + u_2'(t)y_2'(t) + u_2(t)y_2''(t) \\
+&+ p(t)u_1(t)y_1'(t) + p(t)u_2(t)y_2'(t) + q(t)u_1(t)y_1(t) + q(t)u_2(t)y_2(t) = g(t),
+\end{align*}
+which may be factored to
+\begin{align*}
+&\phantom{{}+{}} u_1(t)\Big[y_1''(t) + p(t)y_1'(t) + q(t)y_1(t)\Big] + u_2(t)\Big[y_2''(t) + p(t)y_2'(t) + q(t)y_2(t)\Big] \\
+&+ u_1'(t)y_1'(t) + u_2'(t)y_2'(t) = g(t).
+\end{align*}
+Because $y_1(t)$ and $y_2(t)$ are solutions of \eq{variation of parameters homogeneous}, the first two terms cancel and we are left with
+\begin{equation*}
+u_1'(t)y_1'(t) + u_2'(t)y_2'(t) = g(t).
+\end{equation*}
+Surprisingly, when we combine this relation with \eq{variation of parameters condition}, we find that we can solve algebraically for $u_1'(t)$ and $u_2'(t)$. Doing so gives:
+\begin{align*}
+u_1'(t) &= \frac{-g(t)y_2(t)}{y_1(t)y_2'(t) - y_1'(t)y_2(t)}, \\
+u_2'(t) &= \frac{g(t)y_1(t)}{y_1(t)y_2'(t) - y_1'(t)y_2(t)}.
+\end{align*}
+Hence, a particular solution of \eq{variation of parameters nonhomogeneous} is given by:
+\begin{equation*}
+\psi(t) = y_1(t) \int \frac{-g(t)y_2(t)}{y_1(t)y_2'(t) - y_1'(t)y_2(t)} \,dt + y_2(t) \int \frac{g(t)y_1(t)}{y_1(t)y_2'(t) - y_1'(t)y_2(t)} \,dt.
+\end{equation*}
+The method of variation of parameters will solve any nonhomogeneous second-order linear differential equation, assuming that the general solution to the corresponding homogeneous equation has already been computed, but it is often impractical because of the difficulty of the integrals it requires.
+
+\subsection{Method of Judicious Guessing}\footnote{This is also known as the method of undetermined coefficients.} \label{subsec:judicious guessing}
+
+In this section we will develop a method for solving any nonhomogeneous second-order linear differential equation of the form
+\begin{equation*}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + cy = \sum_{i=1}^N p_i(t)e^{\lambda_i t}q_i(t),
+\end{equation*}
+where each of the $p_i(t)$ is a polynomial in $t$ and each of the $q_i(t)$ is either $\cos(\mu_i t)$ or $\sin(\mu_i t)$.
+
+\subsubsection{Polynomial} \label{subsubsec:judicious guessing polynomial}
+
+We will start with the simple case where the right-hand side is just a polynomial:
+\begin{equation} \label{eq:judicious guessing polynomial}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + cy = a_0 + a_1t + a_2t^2 + \cdots + a_nt^n.
+\end{equation}
+Notice that if $y$ is a polynomial of degree $n$, then the left-hand side will also be a polynomial of degree $n$. Thus it is reasonable to suppose that
+\begin{equation} \label{eq:judicious guessing solution form}
+y(t) = A_0 + A_1t + A_2t^2 + \cdots + A_{n-2}t^{n-2} + A_{n-1}t^{n-1} + A_nt^n.
+\end{equation}
+Then,
+\begin{align*}
+y'(t) &= A_1 + 2A_2t + 3A_3t^2 + \cdots + (n-1)A_{n-1}t^{n-2} + nA_nt^{n-1} \\
+y''(t) &= 2A_2 + 6A_3t + 12A_4t^2 + \cdots + n(n-1)A_nt^{n-2},
+\end{align*}
+and plugging these into \eq{judicious guessing polynomial} gives
+\begin{align*}
+&\phantom{{}+{}} 2aA_2 + 6aA_3t + 12aA_4t^2 + \cdots + n(n-1)aA_nt^{n-2} \\
+&+ bA_1 + 2bA_2t + 3bA_3t^2 + \cdots + (n-1)bA_{n-1}t^{n-2} + nbA_nt^{n-1} \\
+&+ cA_0 + cA_1t + cA_2t^2 + \cdots + cA_{n-2}t^{n-2} + cA_{n-1}t^{n-1} + cA_nt^n \\
+&= a_0 + a_1t + a_2t^2 + \cdots + a_nt^n.
+\end{align*}
+We can group like terms on the left-hand side to obtain:
+\begin{align*}
+&\phantom{{}+{}} \big[cA_0 + bA_1 + 2aA_2\big] + \big[cA_1 + 2bA_2 + 6aA_3\big]t + \big[cA_2 + 3bA_3 + 12aA_4\big]t^2 + \cdots \\
+&+ \big[cA_{n-2} + (n-1)bA_{n-1} + n(n-1)aA_n\big]t^{n-2} + \big[cA_{n-1} + nbA_n\big]t^{n-1} + cA_nt^n \\
+&= a_0 + a_1t + a_2t^2 + \cdots + a_nt^n.
+\end{align*}
+Setting equivalent powers of $t$ equal and solving for the coefficients $A_0, A_1, \ldots, A_n$, we find that:
+\begin{align*}
+A_n &= \frac{a_n}{c} \\
+A_{n-1} &= \frac{a_{n-1} - nbA_n}{c} \\
+A_{n-2} &= \frac{a_{n-2} - (n-1)bA_{n-1} - n(n-1)aA_n}{c} \\
+&\cvdots \\
+A_2 &= \frac{a_2 - 3bA_3 - 12aA_4}{c} \\
+A_1 &= \frac{a_1 - 2bA_2 - 6aA_3}{c} \\
+A_0 &= \frac{a_0 - bA_1 - 2aA_2}{c}.
+\end{align*}
+If $c \neq 0$, then we have a particular solution of \eq{judicious guessing polynomial} given by \eq{judicious guessing solution form}. On the other hand, if $c = 0$, we may apply the reasoning of section \ref{subsec:direct reduction} and let $v = \fderiv{y}{t}$. On doing so, \eq{judicious guessing polynomial} becomes
+\begin{equation} \label{eq:judicious guessing polynomial v}
+a \deriv{v}{t} + bv = a_0 + a_1t + a_2t^2 + \cdots + a_nt^n.
+\end{equation}
+As before, we assume that
+\begin{equation} \label{eq:judicious guessing solution form v}
+v(t) = A_0 + A_1t + \cdots + A_nt^n.
+\end{equation}
+It would be easy to solve for the coefficients as we did before, but to simplify our work note that \eq{judicious guessing polynomial v} can be obtained from \eq{judicious guessing polynomial} by making the replacements
+\begin{align*}
+y &\to v \\
+a &\to 0 \\
+b &\to a \\
+c &\to b.
+\end{align*}
+Thus we can re-use our work from earlier:
+\begin{align*}
+A_n &= \frac{a_n}{b} \\
+A_{n-1} &= \frac{a_{n-1} - naA_n}{b} \\
+A_{n-2} &= \frac{a_{n-2} - (n-1)aA_{n-1}}{b} \\
+&\cvdots \\
+A_2 &= \frac{a_2 - 3aA_3}{b} \\
+A_1 &= \frac{a_1 - 2aA_2}{b} \\
+A_0 &= \frac{a_0 - aA_1}{b}.
+\end{align*}
+This gives us the coefficients for $v(t)$; to obtain $y(t)$ we simply integrate \eq{judicious guessing solution form v}:
+\begin{equation*}
+y(t) = A_0t + \frac{A_1t^2}{2} + \frac{A_2t^3}{3} + \cdots + \frac{a_nt^{n+1}}{n+1}.
+\end{equation*}
+We have set $C = 0$ because we only need one particular solution. (Any constant would be a solution of the homogeneous equation corresponding to \eq{judicious guessing polynomial} if $c = 0$.) Of course, here we run into trouble if $b = 0$. Now, we could re-use our work above, but note that if $b$ and $c$ are both zero, then solving \eq{judicious guessing polynomial} is trivial: we simply integrate twice and divide by $a$. This gives
+\begin{equation*}
+y(t) = \frac{1}{a} \left[\frac{a_0t^2}{2} + \frac{a_1t^3}{6} + \frac{a_2t^4}{12} + \cdots + \frac{a_nt^{n+2}}{(n+1)(n+2)}\right].
+\end{equation*}
+Looking at the results of this section, we may conclude that particular solutions of \eq{judicious guessing polynomial} occur in the forms:
+\begin{align*}
+A_0 + A_1t + \cdots + A_nt^n, && \text{if $c \neq 0$}, \\
+t\Big[A_0 + A_1t + \cdots + A_nt^n\Big], && \text{if $c = 0$ but $b \neq 0$}, \\
+t^2\Big[A_0 + A_1t + \cdots + A_nt^n\Big], && \text{if $c = b = 0$}.
+\end{align*}
+
+\subsubsection{Polynomial with Exponential} \label{subsubsec:judicious guessing exponential}
+
+We now consider equations of the form
+\begin{equation} \label{eq:judicious guessing exponential}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + cy = (a_0 + a_1t + a_2t^2 + \cdots + a_nt^n)e^{\gamma t}.
+\end{equation}
+To reduce \eq{judicious guessing exponential} to \eq{judicious guessing polynomial}, we assume that $y(t) = v(t) e^{\gamma t}$. From this, we have
+\begin{align*}
+\deriv{y}{t} &= \left[\deriv{v}{t} + \gamma v\right] e^{\gamma t} \\
+\deriv[2]{y}{t} &= \left[\deriv[2]{v}{t} + 2\gamma \deriv{v}{t} + \gamma^2 v\right] e^{\gamma t},
+\end{align*}
+and from \eq{judicious guessing exponential} it follows that
+\begin{align*}
+\left[a \deriv[2]{v}{t} + 2a\gamma \deriv{v}{t} + a\gamma^2 v + b \deriv{v}{t} + b\gamma v + cv\right] e^{\gamma t} &= (a_0 + a_1t + a_2t^2 + \cdots + a_nt^n)e^{\gamma t} \\
+a \deriv[2]{v}{t} + \big[2a\gamma + b\big] \deriv{v}{t} + \big[a\gamma^2 + b\gamma + c\big] v &= a_0 + a_1t + a_2t^2 + \cdots + a_nt^n.
+\end{align*}
+This equation can now be solved for $v(t)$ according to the techniques of the previous section; then, $y(t) = v(t)e^{\gamma t}$. From the summary given in the previous section, we may conclude that particular solutions of \eq{judicious guessing exponential} occur in the forms:
+\begin{align*}
+\Big[A_0 + A_1t + \cdots + A_nt^n\Big] e^{\gamma t}, && \text{if $a\gamma^2 + b\gamma + c \neq 0$}, \\
+t\Big[A_0 + A_1t + \cdots + A_nt^n\Big] e^{\gamma t}, && \text{if $a\gamma^2 + b\gamma + c = 0$ but $2a\gamma + b \neq 0$}, \\
+t^2\Big[A_0 + A_1t + \cdots + A_nt^n\Big] e^{\gamma t}, && \text{if $a\gamma^2 + b\gamma + c = 2a\gamma + b = 0$}.
+\end{align*}
+However, notice that the expressions appearing above have an interesting relationship to the homogeneous equation corresponding to \eq{judicious guessing exponential},
+\begin{equation} \label{eq:judicious guessing homogeneous}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + cy = 0.
+\end{equation}
+In particular, as we saw in section \ref{subsec:constant coefficients}, if $a\gamma^2 + b\gamma + c = 0$, then $y = e^{\gamma t}$ is a solution of \eq{judicious guessing homogeneous}. If we also have $2a\gamma + b = 0$, or equivalently $\gamma = -b/(2a)$, then $\gamma$ is a double root of $a\gamma^2 + b\gamma + c = 0$. In this case, both $y = e^{\gamma t}$ and $y = te^{\gamma t}$ are solutions of \eq{judicious guessing homogeneous}. So we may conclude that particular solutions of \eq{judicious guessing exponential} occur in the forms:
+\begin{align*}
+\Big[A_0 + A_1t + \cdots + A_nt^n\Big] e^{\gamma t}, && \text{if $y = e^{\gamma t}$ does not solve \eq{judicious guessing homogeneous}}, \\
+t\Big[A_0 + A_1t + \cdots + A_nt^n\Big] e^{\gamma t}, && \text{if $y = e^{\gamma t}$ solves \eq{judicious guessing homogeneous} but $y = te^{\gamma t}$ does not}, \\
+t^2\Big[A_0 + A_1t + \cdots + A_nt^n\Big] e^{\gamma t}, && \text{if both $y = e^{\gamma t}$ and $y = te^{\gamma t}$ solve \eq{judicious guessing homogeneous}}.
+\end{align*}
+
+\subsubsection{Polynomial with Trigonometric Function} \label{subsubsec:judicious guessing trigonometric}
+
+We now consider equations of the form
+\begin{equation} \label{eq:judicious guessing trigonometric}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + c \deriv{y}{t} = (a_0 + a_1t + a_2t^2 + \cdots + a_nt^n) e^{\lambda t} \cos(\mu t).
+\end{equation}
+To solve this equation, note that
+\begin{equation*}
+\Re{(a_0 + a_1t + a_2t^2 + \cdots + a_nt^n) e^{(\lambda + i \mu) t}} = (a_0 + a_1t + a_2t^2 + \cdots + a_nt^n) e^{\lambda t} \cos(\mu t).
+\end{equation*}
+According to our discussion in section \ref{subsubsec:constant coefficients complex roots}, if we can find a complex-valued solution $z(t)$ of
+\begin{equation*}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + c \deriv{y}{t} = (a_0 + a_1t + a_2t^2 + \cdots + a_nt^n) e^{(\lambda + i \mu) t},
+\end{equation*}
+then $\Re{z(t)}$ will be a real-valued solution of \eq{judicious guessing trigonometric}. If we let $\gamma = \lambda + i \mu$, then the above equation may be solved using the techniques of the previous section, although the coefficients $A_0, A_1, \ldots, A_n$ will now be complex-valued. Taking the real part of the resulting function gives a particular solution to \eq{judicious guessing trigonometric}.
+
+Tracing the calculations of this method allows us to conclude that particular solutions of \eq{judicious guessing trigonometric} occur in the forms:
+\begin{align*}
+\Big[A_0 + A_1t + \cdots + A_nt^n\Big] e^{\lambda t} \cos(\mu t) + \Big[B_0 + B_1t + \cdots + B_nt^n\Big] e^{\lambda t} \sin(\mu t), \qquad \qquad \\
+\text{if $y = e^{\lambda t} \cos(\mu t)$ does not solve \eq{judicious guessing homogeneous}}, \\
+t\Big[A_0 + A_1t + \cdots + A_nt^n\Big] e^{\lambda t} \cos(\mu t) + t\Big[B_0 + B_1t + \cdots + B_nt^n\Big] e^{\lambda t} \sin(\mu t), \qquad \qquad \\
+\text{if $y = e^{\lambda t} \cos(\mu t)$ solves \eq{judicious guessing homogeneous} but $y = te^{\lambda t} \cos(\mu t)$ does not}, \\
+t^2\Big[A_0 + A_1t + \cdots + A_nt^n\Big] e^{\lambda t} \cos(\mu t) + t^2\Big[B_0 + B_1t + \cdots + B_nt^n\Big] e^{\lambda t} \sin(\mu t), \qquad \qquad \\
+\text{if both $y = e^{\lambda t} \cos(\mu t)$ and $y = te^{\lambda t} \cos(\mu t)$ solve \eq{judicious guessing homogeneous}}.
+\end{align*}
+Of course, by replacing $\cos$ with $\sin$ and $\OpRe$ with $\OpIm$, we may instead obtain solutions of equations of the form
+\begin{equation*}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + c \deriv{y}{t} = (a_0 + a_1t + a_2t^2 + \cdots + a_nt^n) e^{\lambda t} \sin(\mu t).
+\end{equation*}
+
+\subsubsection{General Equation} \label{subsubsec:judicious guessing general}
+
+Observe that our work in section \ref{subsubsec:judicious guessing trigonometric} allows us to solve any nonhomogeneous second-order linear differential equation of the form
+\begin{equation} \label{eq:judicious guessing general i}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + cy = p_i(t)e^{\lambda_i t}q_i(t),
+\end{equation}
+where $p_i(t)$ is a polynomial in $t$ and $q_i(t)$ is either $\cos(\mu_i t)$ or $\sin(\mu_i t)$. (We can recover the equations of sections \ref{subsubsec:judicious guessing exponential} and \ref{subsubsec:judicious guessing polynomial} by setting $\mu = 0$ and $\lambda = 0$, respectively.) The procedure for solving the general equation
+\begin{equation} \label{eq:judicious guessing general}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + cy = \sum_{i=1}^N p_i(t)e^{\lambda_i t}q_i(t)
+\end{equation}
+presented at the beginning of section \ref{subsec:judicious guessing} is simple, if tedious for large $N$. For each $i$ from $1$ to $N$, find a particular solution $y_i(t)$ to \eq{judicious guessing general i}. Then, it is easy to see that a particular solution to \eq{judicious guessing general} is given by
+\begin{equation*}
+y(t) = \sum_{i=1}^N y_i(t).
+\end{equation*}
+
+It should also be noted that instead of following the procedures outlined in sections \ref{subsubsec:judicious guessing polynomial}--\ref{subsubsec:judicious guessing general}, we can instead use the summaries given at the end of each of those sections. For instance, if the right-hand side of \eq{judicious guessing general} is $t^3 e^{2t} \sin(3t) + t^2$, and both $e^{2t} \sin(3t)$ and $te^{2t} \sin(3t)$ are solutions of the corresponding homogeneous equation, we may assume that $y(t)$ is of the form
+\begin{equation*}
+y(t) = t^2\Big[A_0 + A_1t + A_2t^2 + A_3t^3\Big] e^{2t} \cos(3t) + t^2\Big[B_0 + B_1t + B_2t^2 + B_3t^3\Big] e^{2t} \sin(3t) + C_0 + C_1t + C_2t^2,
+\end{equation*}
+plug this into \eq{judicious guessing general}, and solve for the parameters $A_i$, $B_i$, $C_i$ by equating the coefficients of linearly independent terms. Which of these two approaches is easier depends on the problem at hand.
+
+\subsection{Power Series Solutions} \label{subsec:power series}
+
+Consider the homogeneous second-order linear differential equation
+\begin{equation} \label{eq:power series homogeneous}
+P(t) \deriv[2]{y}{t} + Q(t) \deriv{y}{t} + R(t) y = 0,
+\end{equation}
+where $P(t)$, $Q(t)$, and $R(t)$ have series expansions given by:
+\begin{align*}
+P(t) = \sum_{n=0}^\infty p_n t^n, && Q(t) = \sum_{n=0}^\infty q_n t^n, && R(t) = \sum_{n=0}^\infty r_n t^n.
+\end{align*}
+It is reasonable to suppose that solutions will be of the same form; that is,
+\begin{equation*}
+y(t) = \sum_{n=0}^\infty a_n t^n.
+\end{equation*}
+Differentiating, we find that
+\begin{align*}
+\deriv{y}{t} &= \sum_{n=1}^\infty n a_n t^{n-1} = \sum_{n=0}^\infty (n+1) a_{n+1} t^n \\
+\deriv[2]{y}{t} &= \sum_{n=2}^\infty n(n-1) a_n t^{n-2} = \sum_{n=0}^\infty (n+2)(n+1) a_{n+2} t^n,
+\end{align*}
+Substituting these series into \eq{power series homogeneous}, we obtain:
+\begin{equation*}
+\sum_{n=0}^\infty p_n t^n \sum_{n=0}^\infty (n+2)(n+1) a_{n+2} t^n + \sum_{n=0}^\infty q_n t^n \sum_{n=0}^\infty (n+1) a_{n+1} t^n + \sum_{n=0}^\infty r_n t^n \sum_{n=0}^\infty a_n t^n = 0.
+\end{equation*}
+Now we may use the following elementary property of power series:
+\begin{equation*}
+\sum_{n=0}^\infty a_n t^n \sum_{n=0}^\infty b_n t^n = \sum_{n=0}^\infty \sum_{k=0}^n a_k b_{n-k} t^n.
+\end{equation*}
+Doing so yields:
+\begin{equation*}
+\sum_{n=0}^\infty \sum_{k=0}^n (k+2)(k+1) p_{n-k} a_{k+2} t^n + \sum_{n=0}^\infty \sum_{k=0}^n (k+1) q_{n-k} a_{k+1} t^n + \sum_{n=0}^\infty \sum_{k=0}^n r_{n-k} a_k t^n = 0.
+\end{equation*}
+Combining the summations, we find that
+\begin{equation*}
+\sum_{n=0}^\infty \left\{\sum_{k=0}^n \bigg[(k+2)(k+1) p_{n-k} a_{k+2} + (k+1) q_{n-k} a_{k+1} + r_{n-k} a_k\bigg]\right\} t^n = 0,
+\end{equation*}
+which implies that for every $n \geq 0$ we have
+\begin{equation}
+\sum_{k=0}^n \bigg[(k+2)(k+1) p_{n-k} a_{k+2} + (k+1) q_{n-k} a_{k+1} + r_{n-k} a_k\bigg] = 0.
+\end{equation}
+For the moment, assume that $p_0 \neq 0$. In that case we can solve for $a_{n+2}$, as follows. Pulling out the last term of the summation, for which $k = n$, we obtain
+\begin{align*}
+&\phantom{{}+{}} \sum_{k=0}^{n-1} \bigg[(k+2)(k+1) p_{n-k} a_{k+2} + (k+1) q_{n-k} a_{k+1} + r_{n-k} a_k\bigg] \\
+&+ (n+2)(n+1) p_0 a_{n+2} + (n+1) q_0 a_{n+1} + r_0 a_n = 0,
+\end{align*}
+and solving for $a_{n+2}$ gives
+\begin{equation*}
+a_{n+2} = -\left\{\frac{\displaystyle \sum_{k=0}^{n-1} \bigg[(k+2)(k+1) p_{n-k} a_{k+2} + (k+1) q_{n-k} a_{k+1} + r_{n-k} a_k\bigg] + (n+1) q_0 a_{n+1} + r_0 a_n}{\displaystyle \vphantom{\sum_0^0}(n+2)(n+1)p_0}\right\}.
+\end{equation*}
+The above equation holds for $n \geq 0$, and it determines the value of $a_{n+2}$ in terms of $a_0, a_1, \ldots, a_{n+1}$. Thus, $a_0$ and $a_1$ are arbitrary, but once their values are specified, the values of $a_2, a_3, \ldots$ follow from the above equation. Any pair of values for $a_0$ and $a_1$, then, will determine a solution
+\begin{equation*}
+y(t) = \sum_{n=0}^\infty a_n t^n
+\end{equation*}
+of \eq{power series homogeneous}. Typically, we want two linearly independent solutions, and typically the easiest way to obtain them is to use $a_0 = 1$, $a_1 = 0$ for the first solution and $a_0 = 0$, $a_1 = 1$ for the second solution.
+
+Notice from the series for $P(t)$ that $p_0 = P(0)$. Thus, the method of power series solution will solve any differential equation \eq{power series homogeneous} for which $P(0) \neq 0$. In particular, it will solve any equation of the form
+\begin{equation} \label{eq:power series frobenius}
+\deriv[2]{y}{t} + p(t) \deriv{y}{t} + q(t) y = 0,
+\end{equation}
+where $p(t)$ and $q(t)$ may be expressed as power series. Of course, we may transform \eq{power series homogeneous} into \eq{power series frobenius} by dividing through by $P(t)$, but the resulting $p(t) = Q(t)/P(t)$ and $q(t) = R(t)/P(t)$ will not necessarily be expressible as power series if $P(0) = 0$. In the next section, we will see how to solve \eq{power series frobenius} when $p(t)$ and $q(t)$ cannot be expressed as power series but can still be expressed as more general series.
+
+We should also note that it is entirely possible to use the above method with power series about any point (say $t = t_0$), not just $t = 0$. Simply expand $P(t)$, $Q(t)$, and $R(t)$ as power series about $t_0$, assume that
+\begin{equation*}
+y(t) = \sum_{n=0}^\infty a_n (t - t_0)^n,
+\end{equation*}
+and follow the same procedure as outlined above. Expanding about a different point may be useful in order to avoid a singularity: for instance, suppose that $P(0) = 0$ and we consequently cannot find a solution $y(t)$ as a power series about $t = 0$. In that case, taking our power series to be centered at a different point would allow us to find a solution. Unfortunately, it is likely that the resulting series for $y(t)$ would not converge near $t = 0$, so to determine the behavior of $y(t)$ near $t = 0$ we would have to use a different technique.
+
+Finally, note that if our power series are centered at $t = t_0$ and we have the initial conditions $y(t_0) = y_0$ and $y'(t_0) = y'_0$, then it follows easily that $a_0 = y_0$ and $a_1 = y'_0$. On the other hand, if our initial conditions are given at a different point than that about which our power series are centered, we will have to solve for the arbitrary constants as usual.
+
+\subsection{Method of Frobenius} \label{subsec:frobenius}
+
+As we discussed in section \ref{subsec:power series}, we can solve any differential equation of the form
+\begin{equation} \label{eq:frobenius homogeneous}
+\deriv[2]{y}{t} + p(t) \deriv{y}{t} + q(t) y = 0,
+\end{equation}
+if $p(t)$ and $q(t)$ can be expressed as power series. However, if $p(t)$ and $q(t)$ can be expressed as series of the form\footnote{To find a series expansion of this type for $p(t)$, divide the power series for $tp(t)$ by $t$. For $q(t)$, divide the power series for $t^2q(t)$ by $t^2$.}:
+\begin{align*}
+p(t) &= \frac{p_0}{t} + p_1 + p_2t + p_3t^2 + \cdots = \sum_{n=0}^\infty p_n t^{n-1} \\
+q(t) &= \frac{q_0}{t^2} + \frac{q_1}{t} + q_2 + q_3t + \cdots = \sum_{n=0}^\infty q_n t^{n-2},
+\end{align*}
+then we may still be able to find a series solution, using what is called the method of Frobenius. The essence of this method is to account for the singularity at $t = 0$ by multiplying our guess for $y(t)$ by an arbitrary factor of $t^r$.\footnote{This is inspired by the fact that fractional powers of $t$ cannot, in general, be expressed as power series centered at $t = 0$.} That is, we assume
+\begin{equation*}
+y(t) = t^r \sum_{n=0}^\infty a_n t^n = \sum_{n=0}^\infty a_n t^{n + r}.
+\end{equation*}
+With a solution of this form, we may run into trouble with negative $t$---for instance, obtaining terms of the form $(-1)^{1/2}$. However, restricting our analysis to $t > 0$ is not really a problem since the differential equation is not even defined for $t = 0$.\footnote{To find solutions for $t < 0$ instead, simply use the change of variables $x = -t$.}
+
+Differentiating, we find:
+\begin{align*}
+\deriv{y}{t} &= \sum_{n=0}^\infty (n+r) a_n t^{n+r-1} \\
+\deriv[2]{y}{t} &= \sum_{n=0}^\infty (n+r)(n+r-1) a_n t^{n+r-2}.
+\end{align*}
+Plugging the series for $p(t)$, $q(t)$, $y(t)$, $y'(t)$, and $y''(t)$ into \eq{frobenius homogeneous} gives
+\begin{equation*}
+\sum_{n=0}^\infty (n+r)(n+r-1) a_n t^{n+r-2} + \sum_{n=0}^\infty p_n t^{n-1} \sum_{n=0}^\infty (n+r) a_n t^{n+r-1} + \sum_{n=0}^\infty q_n t^{n-2} \sum_{n=0}^\infty a_n t^{n+r} = 0.
+\end{equation*}
+Using the same property of multiplication of power series that we used in section \ref{subsec:power series}, we obtain
+\begin{equation*}
+\sum_{n=0}^\infty (n+r)(n+r-1) a_n t^{n+r-2} + \sum_{n=0}^\infty \sum_{k=0}^n p_{n-k} (k+r) a_k t^{n+r-2} + \sum_{n=0}^\infty \sum_{k=0}^n q_{n-k} a_k t^{t+r-2} = 0.
+\end{equation*}
+Grouping then gives
+\begin{equation*}
+\sum_{n=0}^\infty \left\{(n+r)(n+r-1) a_n + \sum_{k=0}^n \Big[p_{n-k} (k+r) a_k + q_{n-k} a_k\Big]\right\} t^{n+r-2} = 0.
+\end{equation*}
+Now we will pull out the last term of the inner summation:
+\begin{equation*}
+\sum_{n=0}^\infty \left\{\Big[(n+r)(n+r-1) + p_0 (n+r) + q_0\Big] a_n + \sum_{k=0}^{n-1} \Big[p_{n-k} (k+r) a_k + q_{n-k} a_k\Big]\right\} t^{n+r-2} = 0.
+\end{equation*}
+Finally, for convenience we introduce the notation $F(r) = r(r-1) + p_0r + q_0$, which gives:
+\begin{equation} \label{eq:frobenius lhs}
+\sum_{n=0}^\infty \left\{F(n + r) a_n + \sum_{k=0}^{n-1} \Big[p_{n-k} (k+r) a_k + q_{n-k} a_k\Big]\right\} t^{n+r-2} = 0.
+\end{equation}
+Setting the coefficient of each power of $t$ to zero, we find that for every $n \geq 0$
+\begin{equation} \label{eq:frobenius coefficients unsolved}
+F(n+r) a_n = -\sum_{k=0}^{n-1} \Big[p_{n-k} (k+r) a_k + q_{n-k} a_k\Big].
+\end{equation}
+For $n = 0$ we have
+\begin{equation*}
+F(r) a_0 = 0.
+\end{equation*}
+We may assume that $a_0 \neq 0$, because if $a_0 = 0$ then we can just relabel $a_1$ as $a_0$, $a_2$ as $a_1$, and so on, and increase $r$ by $1$, to give a solution with $a_0 \neq 0$. Thus we have
+\begin{equation*}
+F(r) = 0.
+\end{equation*}
+This is called the \term{indicial equation} of \eq{frobenius homogeneous}, and it has roots given by
+\begin{align} \label{eq:indicial equation roots}
+r_1 = \frac{-(p_0 - 1) + \sqrt{(p_0 - 1)^2 - 4q_0}}{2}, && r_2 = \frac{-(p_0 - 1) - \sqrt{(p_0 - 1)^2 - 4q_0}}{2}.
+\end{align}
+From here, generally speaking, there are three cases to consider. The first is when $r_1 \neq r_2$ and $r_1 - r_2$ is not an integer; the second is when $r_1 = r_2$; and the third is when $r_1 \neq r_2$ and $r_1 - r_2$ is an integer.
+
+\subsubsection{Roots Not Differing by an Integer} \label{subsubsec:frobenius roots not differing by an integer}
+
+Recall that \eq{frobenius coefficients unsolved} gives us the indicial equation in the case of $n = 0$. For $n \geq 1$, we may solve it for $a_n$ to find:
+\begin{equation} \label{eq:frobenius coefficients}
+a_n(r) = -\left\{\frac{\displaystyle \sum_{k=0}^{n-1} \Big[p_{n-k} (k+r) + q_{n-k}\Big] a_k}{\displaystyle \vphantom{\sum_0^0} F(n + r)}\right\}.
+\end{equation}
+We are assured that $F(n + r)$ is never zero if $r$ is a root of $F(r)$, because in this case the two roots of $F(r)$ do not differ by an integer. Also, we have introduced the notation $a_n(r)$ to emphasize that the value of each $a_n$ depends on the choice of $r$.
+
+The value is $a_0$ is arbitrary; we can select any nonzero value for it. Once we do, however, the values of $a_1(r), a_2(r), \ldots$ are determined by \eq{frobenius coefficients}. Two linearly independent solutions of \eq{frobenius homogeneous} are then given by:
+\begin{align*}
+y_1(t) &= t^{r_1} \sum_{n=0}^\infty a_n(r_1) t^n \\
+y_2(t) &= t^{r_2} \sum_{n=0}^\infty a_n(r_2) t^n.
+\end{align*}
+If $r_1$ and $r_2$ are complex, then in theory two linearly independent solutions are given by:
+\begin{align*}
+y_1(t) &= \Re{t^{r_1} \sum_{n=0}^\infty a_n(r_1) t^n} \\
+y_2(t) &= \Im{t^{r_1} \sum_{n=0}^\infty a_n(r_2) t^n}.
+\end{align*}
+Practically speaking, these computations may be extremely difficult.
+
+\subsubsection{Equal Roots} \label{subsubsec:frobenius equal roots}
+
+As we did in section \ref{subsubsec:constant coefficients equal roots}, we define the operator $L$ as
+\begin{equation*}
+L\big[y\big] = \deriv[2]{y}{t} + p(t) \deriv{y}{t} + q(t) y.
+\end{equation*}
+Our derivation of \eq{frobenius lhs} illustrates that
+\begin{equation*}
+L\left[t^r \sum_{n=0}^\infty a_n t^n\right] = \sum_{n=0}^\infty \left\{F(n + r) a_n + \sum_{k=0}^{n-1} \Big[p_{n-k} (k+r) a_k + q_{n-k} a_k\Big]\right\} t^{n+r-2}.
+\end{equation*}
+Now, if we let $a_0$ be an arbitrary, nonzero constant (independent of the value of $r$) and define the coefficients $a_1, a_2, \ldots$ according to \eq{frobenius coefficients}, then this equation reduces to
+\begin{equation*}
+L\left[t^r \sum_{n=0}^\infty a_n(r) t^n\right] = F(r) a_0 t^{r-2}.
+\end{equation*}
+Since $r = r_1$ is a root of $F(r)$, we see that
+\begin{equation*}
+L\left[t^{r_1} \sum_{n=0}^\infty a_n(r_1) t^n\right] = 0,
+\end{equation*}
+which shows that $y_1(t) = t^{r_1} \sum_{n=0}^\infty a_n(r_1) t^n$ is a solution of \eq{frobenius homogeneous}. However, we already knew this. To find a second solution, first notice that just as in section \ref{subsubsec:constant coefficients equal roots} we can use the equality of mixed partials to conclude
+\begin{equation*}
+\pderiv{}{r} L\big[y\big] = L\left[\pderiv{y}{r}\right].
+\end{equation*}
+Now observe that because $r = r_1$ is a double root of $F(r) = r(r - 1) + p_0r + q_0$, we can factor the latter expression to $(r - r_1)^2$. Thus,
+\begin{equation*}
+L\left[t^r \sum_{n=0}^\infty a_n(r) t^n\right] = (r - r_1)^2 a_0 t^{r-2}.
+\end{equation*}
+Differentiating both sides of this relation with respect to $r$ gives:
+\begin{align*}
+L\left[\pderiv{}{r} t^r \sum_{n=0}^\infty a_n(r) t^n\right] &= \pderiv{}{r} \bigg[(r - r_1)^2 a_0 t^{r-2}\bigg] \\
+L\left[(\ln t) t^r \sum_{n=0}^\infty a_n(r) + t^r \sum_{n=0}^\infty a_n'(r)\right] &= 2(r - r_1) a_0 t^{r-2} + (r - r_1)^2 a_0 (\ln r) t^{r-2}.
+\end{align*}
+Finally, by letting $r = r_1$, we see that
+\begin{equation*}
+L\left[(\ln t) t^{r_1} \sum_{n=0}^\infty a_n(r_1) + t^{r_1} \sum_{n=0}^\infty a_n'(r_1)\right] = 0,
+\end{equation*}
+which means that 
+\begin{equation*}
+y_2(t) = (\ln t) t^{r_1} \sum_{n=0}^\infty a_n(r_1) + t^{r_1} \sum_{n=0}^\infty a_n'(r_1)
+\end{equation*}
+is a second solution of \eq{frobenius homogeneous}.
+
+\subsubsection{Roots Differing by an Integer} \label{subsubsec:frobenius roots differing by an integer}
+
+As we have written them in \eq{indicial equation roots}, $r_1$ is greater than $r_2$. Hence, for all $n \geq 1$, it follows that $F(n + r_1) \neq 0$. Thus we can obtain one solution
+\begin{equation*}
+y_1(t) = t^{r_1} \sum_{n=0}^\infty a_n(r_1) t^n
+\end{equation*}
+via the methods of section \ref{subsubsec:frobenius roots not differing by an integer}. However, if we try to obtain a second solution of the form $t^{r_2} \sum_{n=0}^\infty a_n(r_2) t^n$, we will run into trouble because $F(r_2 + n) = 0$ for $n = r_1 - r_2$. If we are lucky, then for $n = r_1 - r_2$, we will have
+\begin{equation} \label{eq:frobenius lucky}
+\sum_{k=0}^{n-1} \Big[p_{n-k} (k+r) a_k + q_{n-k} a_k\Big] = 0.
+\end{equation}
+In that case, \eq{frobenius coefficients unsolved} tells us that we can pick any value for $a_n$. Then we can proceed onwards using the methods of section \ref{subsubsec:frobenius roots not differing by an integer}, and we will obtain a second solution of the form
+\begin{equation*}
+y_2(t) = t^{r_2} \sum_{n=0}^\infty a_n(r_2) t^n.
+\end{equation*}
+On the other hand, if we are not lucky enough to have \eq{frobenius lucky} hold, then we cannot find a solution of this form. Referring to a more advanced text on differential equations would show that in this case there is a second solution of the form
+\begin{align*}
+y_2(t) = (\ln t) t^{r_2} \sum_{n=0}^\infty a_n(r_2) + t^{r_2} \sum_{n=0}^\infty a_n'(r_2),
+\end{align*}
+where $a_0(r)$, which was previously an arbitrary constant independent of $r$, must now be equal to $r - r_2$.
+
+\subsection{Laplace Transforms} \label{subsec:laplace}
+
+In this section we discuss a unique method for solving nonhomogeneous second-order linear differential equations of the form
+\begin{equation} \label{eq:laplace nonhomogeneous}
+a \deriv[2]{y}{t} + b \deriv{y}{t} + c y = f(t)
+\end{equation}
+for which we are given initial conditions
+\begin{align*}
+y(0) &= y_0 \\
+y'(0) &= y'_0.
+\end{align*}
+If the initial conditions are given at $t = t_0$, then use the transformations $\tau = t - t_0$ and $y(t) = y(\tau + t_0) = z(\tau)$, so that the differential equation becomes
+\begin{equation*}
+a \deriv[2]{z}{\tau} + b \deriv{z}{\tau} + c z = f(\tau + t_0)
+\end{equation*}
+and the initial conditions become
+\begin{align*}
+z(0) &= y_0 \\
+z'(0) &= y'_0.
+\end{align*}
+
+This method depends upon an operator $\mathcal{L}$ called the \term{Laplace transform}. Every function $f(t)$ has a Laplace transform $F(s)$, which is given by
+\begin{equation*}
+F(s) = \L{f(t)} = \int_0^\infty e^{-st} f(t) \,dt
+\end{equation*}
+The reason the Laplace transform is useful in solving differential equations is the following property, which we derive using integration by parts with $u = e^{-st}$, $du = -s e^{-st} \,dt$, $dv = f'(t) \,dt$, $v = f(t)$:
+\begin{equation*}
+\L{y'(t)} = \int_0^\infty e^{-st} y'(t) \,dt = \bigg[e^{-st} y(t)\bigg]_{t=0}^\infty + s \int_0^\infty e^{-st} y(t) \,dt = -y(0) + s \L{y(t)}.
+\end{equation*}
+Applying this property twice, we obtain:
+\begin{equation*}
+\L{y''(t)} = -y'(0) + s \L{y'(t)} = -y'(0) - s y(0) + s^2 \L{y(t)}.
+\end{equation*}
+Thus, taking Laplace transforms of both sides of \eq{laplace nonhomogeneous} gives us
+\begin{align*}
+-a y'(0) - as y(0) + as^2 Y(s) - b y(0) + bs Y(s) + c Y(s) &= F(s) \\
+\big[as^2 + bs + c\big] Y(s) - a y_0 s - y'_0 - b y_0 &= F(s),
+\end{align*}
+and we can then solve algebraically for $Y(s)$:
+\begin{equation*}
+Y(s) = \frac{F(s) + ay_0s + ay'_0 + by_0}{as^2 + bs + c}.
+\end{equation*}
+If we can find a function $y(t)$ such that $\L{y(t)} = Y(s)$, which is called the \term{inverse Laplace transform} of $Y(s)$ and is denoted $\Li{Y(s)}$, then this function is a solution of the original initial-value problem \eq{laplace nonhomogeneous}.
+
+Typically, tables of Laplace transforms are used to compute $\L{f(t)}$ and $\Li{Y(s)}$.
+
+\subsection{Transformation to System} \label{subsec:transformation to system}
+
+Given the general homogeneous second-order linear differential equation
+\begin{equation*}
+y''(t) + p(t) y'(t) + q(t) y(t) = 0,
+\end{equation*}
+we can define
+\begin{equation*}
+\vec y(t) = \Vect{y(t)}{y'(t)}.
+\end{equation*}
+It then follows that
+\begin{align*}
+\vec y'(t) &= \Vect{y'(t)}{y''(t)} \\
+&= \Vect{y'(t)}{-p(t)y'(t) - q(t)y(t)} \\
+&= y(t) \Vect{0}{-q(t)} + y'(t) \Vect{1}{-p(t)} \\
+&= \mat[c]{0 & 1 \\ -q(t) & -p(t)} \Vect{y(t)}{y'(t)} \\
+&= \mat[c]{0 & 1 \\ -q(t) & -p(t)} \vec y(t).
+\end{align*}
+That is, we can transform a homogeneous second-order linear differential equation to a system of two homogeneous first-order linear differential equations.
+
+\subsection{What to Do in General} \label{subsec:second order strategy}
+
+The following strategy is advisable:
+\begin{enumerate}
+\item If the equation is missing a $y$ term, use the strategy of section \ref{subsec:direct reduction}.
+\item If the equation is linear and homogeneous and has constant coefficients, use the strategy of section \ref{subsec:constant coefficients}.
+\item If the equation is linear and homogeneous and has nonconstant coefficients, and you already know one solution, use the strategy of section \ref{subsec:reduction of order} to find another.
+\item If the equation is linear and homogeneous and has nonconstant coefficients that can be expanded as power series, use the strategy of section \ref{subsec:power series}.
+\item If the equation is linear and homogeneous and has nonconstant coefficients that cannot be expanded as power series but can be expanded as an appropriate modified power series, use the strategy of section \ref{subsec:frobenius}.
+\item If the equation is linear and nonhomogeneous, has constant coefficients, and has a right-hand side of the appropriate form, use the strategy of section \ref{subsec:constant coefficients} to find the general solution of the corresponding homogeneous equation and then use the strategy of section \ref{subsec:judicious guessing}.
+\item If the equation is linear and nonhomogeneous and has constant coefficients but does not have a right-hand side admitting of the method of judicious guessing, either (i) use the strategy of section \ref{subsec:constant coefficients} to find the general solution of the corresponding homogeneous equation and then use the strategy of section \ref{subsec:variation of parameters}, or (ii) use the strategy of section \ref{subsec:laplace}.
+\end{enumerate}
+
+\section{Higher-Order Differential Equations} \label{sec:higher order}
+
+\subsection{Characterization of Higher-Order Equations} \label{subsec:higher order characterization}
+
+An \term{$n$th-order differential equation} is an equation of the form
+\begin{equation*}
+\deriv[n]{y}{t} = f\left(t, y, \deriv{y}{t}, \ldots, \deriv[n-1]{y}{t}\right).
+\end{equation*}
+If $n$ additional equations of the form
+\begin{align*}
+y(t_0) &= y_0 \\
+y'(t_0) &= y'_0 \\
+&\cvdots \\
+y^{(n-1)}(t_0) &= y^{(n-1)}_0
+\end{align*}
+are also given, then the $n+1$ equations together are called an \term{initial-value problem}. Every initial-value problem has a unique solution; however, if initial conditions are not provided, the general solution will have $n$ arbitrary constants.\footnote{This requires that $f$ be sufficiently well-behaved.} An $n$th-order differential equation of the form
+\begin{equation} \label{eq:higher order nonhomogeneous}
+\deriv[n]{y}{t} + p_{n-1}(t) \deriv[n-1]{y}{t} + \cdots + p_1(t) \deriv{y}{t} + p_0(t) y = g(t)
+\end{equation}
+is called \term{linear}. If $g(t) = 0$ then the equation is of the form
+\begin{equation} \label{eq:higher order homogeneous}
+\deriv[n]{y}{t} + p_{n-1}(t) \deriv[n-1]{y}{t} + \cdots + p_1(t) \deriv{y}{t} + p_0(t) y = 0
+\end{equation}
+and it is called \term{homogeneous}; otherwise, it is called \term{nonhomogeneous}.
+
+A set of $n$ functions $y_1(t), y_2(t), \ldots, y_n(t)$ is called \term{linearly independent} if there is no set of numbers $c_1, c_2, \ldots, c_n$, not all zero, such that
+\begin{equation*}
+c_1y_1(t) + c_2y_2(t) + \cdots + c_n y_n(t) = 0
+\end{equation*}
+for all $t$.\footnote{Three consequences of this definition are that none of the functions may be the zero function, that none of the functions may be a scalar multiple of another, and that none of the functions may be a linear combination of the others.} The \term{Wronskian} of $n$ functions $y_1(t), y_2(t), \ldots, y_n(t)$ is the quantity
+\begin{equation*}
+\W{y_1, y_2, \ldots, y_n} = \dmat[c]{
+y_1(t) & y_2(t) & \cdots & y_n(t) \\
+y_1'(t) & y_2'(t) & \cdots & y_n'(t) \\
+\vdots & \vdots & \ddots & \vdots \\
+y_1^{(n-1)}(t) & y_2^{(n-1)}(t) & \cdots & y_n^{(n-1)}(t)}.
+\end{equation*}
+The Wronskian of $n$ linearly independent solutions of \eq{higher order homogeneous} is nonzero for all $t$, while the Wronskian of $n$ linearly dependent solutions of \eq{higher order homogeneous} solutions of \eq{higher order homogeneous} is zero for all $t$.
+
+If $y_1(t), y_2(t), \ldots, y_n(t)$ are $n$ linearly independent solutions of \eq{higher order homogeneous}, then the general solution to \eq{higher order homogeneous} is
+\begin{equation*}
+y(t) = C_1y_1(t) + C_2y_2(t) + \cdots + C_n y_n(t).\footnote{This requires that the functions $p_0(t), p_1(t), \ldots, p_n(t)$ are sufficiently well-behaved.}
+\end{equation*}
+If $y_1(t), y_2(t), \ldots, y_n(t)$ are $n$ linearly independent solutions of \eq{higher order homogeneous} and $\psi(t)$ is a solution of \eq{higher order nonhomogeneous}, then the general solution to \eq{higher order nonhomogeneous} is
+\begin{equation*}
+y(t) = C_1y_1(t) + C_2y_2(t) + \cdots + C_n y_n(t) + \psi(t).\footnote{This requires that the functions $p_0(t), p_1(t), \ldots, p_n(t), g(t)$ are sufficiently well-behaved.}
+\end{equation*}
+
+\subsection{Direct Reduction of Order} \label{subsec:higher order direct reduction}
+
+If $y$ does not appear in an $n$th-order differential equation, i.e. it is of the form
+\begin{equation*}
+\deriv[n]{y}{t} = f\left(t, \deriv{y}{t}, \deriv[2]{y}{t}, \ldots, \deriv[n-1]{y}{t}\right),
+\end{equation*}
+then letting $v = \fderiv{y}{t}$ converts it to an $(n-1)$th-order equation:
+\begin{equation*}
+\deriv[n-1]{v}{t} = f\left(t, v, \deriv{v}{t}, \ldots, \deriv[n-2]{v}{t}\right).
+\end{equation*}
+$n-1$ constants of integration are introduced in the solution of this $(n-1)$th-order equation, and an $n$th is introduced in recovering $y$:
+\begin{equation*}
+y(t) = \int v(t) \,dt.
+\end{equation*}
+In the context of an initial-value problem, the initial conditions
+\begin{align*}
+y'(t_0) &= y'_0 \\
+y''(t_0) &= y''_0 \\
+&\cvdots \\
+y^{(n-1)}(t_0) &= y^{(n-1)}_0
+\end{align*}
+are used in the solution of the $(n-1)$th-order equation and the initial condition $y(t_0) = y_0$ is used in recovering $y$.
+
+\subsection{Reduction of Order} \label{subsec:higher order reduction of order}
+
+We rewrite \eq{higher order homogeneous} as
+\begin{equation} \label{eq:higher order reduction of order}
+\sum_{n=0}^N \left[p_n(t) \deriv[n]{y}{t}\right] = 0
+\end{equation}
+by replacing $n$ with $N$ and letting $p_N(t) = 1$. Analogously to our work in section \ref{subsec:reduction of order}, suppose that we have one solution $y_1(t)$ of \eq{higher order reduction of order} and seek $N - 1$ more linearly independent solutions. We assume that any other solutions will be of the form
+\begin{equation*}
+y(t) = y_1(t)v(t).
+\end{equation*}
+Differentiating, we find that
+\begin{align*}
+\deriv{y}{t} &= \deriv{y_1}{t} v + y_1 \deriv{v}{t} \\
+\deriv[2]{y}{t} &= \deriv[2]{y_1}{t} v + 2 \deriv{y_1}{t} \deriv{v}{t} + y_1 \deriv[2]{v}{t} \\
+\deriv[3]{y}{t} &= \deriv[3]{y_1}{t} v + 3 \deriv[2]{y_1}{t} \deriv{v}{t} + 3 \deriv{y_1}{t} \deriv[2]{v}{t} + y_1 \deriv[3]{v}{t},
+\end{align*}
+and in general
+\begin{equation*}
+\deriv[n]{y}{t} = \sum_{k=0}^n \left[\binom{n}{k} \deriv[n-k]{y_1}{t} \deriv[k]{v}{t}\right].
+\end{equation*}
+Hence, from \eq{higher order reduction of order} we have
+\begin{equation*}
+\sum_{n=0}^N \left\{p_n(t) \sum_{k=0}^n \left[\binom{n}{k} \deriv[n-k]{y_1}{t} \deriv[k]{v}{t}\right]\right\} = 0.
+\end{equation*}
+Pulling out each of the $k = 0$ terms gives us
+\begin{equation*}
+v \sum_{n=0}^N \left[p_n(t) \deriv[n-k]{y_1}{t}\right] + \sum_{n=0}^N \left\{p_n(t) \sum_{k=1}^n \left[\binom{n}{k} \deriv[n-k]{y_1}{t} \deriv[k]{v}{t}\right]\right\} = 0,
+\end{equation*}
+and \eq{higher order reduction of order} tells us we can cancel the left-hand term. Using the strategy of section \ref{subsec:higher order direct reduction}, we let $w = \fderiv{v}{t}$ and obtain
+\begin{equation} \label{eq:reduced order}
+\sum_{n=0}^N \left\{p_n(t) \sum_{k=1}^n \left[\binom{n}{k} \deriv[n-k]{y_1}{t} \deriv[k-1]{w}{t}\right]\right\},
+\end{equation}
+which is a homogeneous $(n-1)$th-order linear differential equation for $w(t)$. Upon finding $n-1$ linearly independent solutions $v_1(t), v_2(t), \ldots, v_{n-1}(t)$ of \eq{reduced order}, our $n$ linearly independent solutions of \eq{higher order reduction of order} are then given by:
+\begin{align*}
+y_1(t) &= y_1(t) \\
+y_2(t) &= y_1(t)v_1(t) \\
+y_3(t) &= y_1(t)v_2(t) \\
+&\cvdots \\
+y_n(t) &= y_1(t)v_{n-1}(t).
+\end{align*}
+
+\subsection{Homogeneous Linear Equations with Constant Coefficients} \label{subsec:higher order constant coefficients}
+
+Consider the general homogeneous $n$th-order linear differential equation with constant coefficients,
+\begin{equation} \label{eq:higher order constant coefficients}
+c_n \deriv[n]{y}{t} + c_{n-1} \deriv[n-1]{y}{t} + \cdots + c_1 \deriv{y}{t} + c_0 y = 0.
+\end{equation}
+As in section \ref{subsec:constant coefficients}, we assume that solutions are of the form $y(t) = e^{rt}$. In that case, $\fderiv[k]{y}{t} = r^k e^{rt}$ and we obtain
+\begin{equation*}
+(c_n r^n + c_{n-1} r^{n-1} + \cdots + c_1 r + c_0) e^{rt} = 0,
+\end{equation*}
+or equivalently
+\begin{equation*}
+c_n r^n + c_{n-1} r^{n-1} + \cdots + c_1 r + c_0 = 0.
+\end{equation*}
+This equation has $n$ roots (not necessarily real and not necessary distinct), which give us the solutions
+\begin{align*}
+y_1(t) &= e^{r_1t} \\
+y_2(t) &= e^{r_2t} \\
+&\cvdots \\
+y_n(t) &= e^{r_n t}.
+\end{align*}
+We now address the cases of complex roots and repeated roots.
+
+Suppose that one of the roots $r_i$ is complex; that is, $r_i = \lambda + i \mu$ for real numbers $\lambda$ and $\mu$. It then follows that there is another root $r_j$ such that $r_j = \lambda - i \mu$.\footnote{This result is called the complex conjugate root theorem and is not too difficult to prove.} We then have two complex-valued solutions of \eq{higher order constant coefficients}:
+\begin{align*}
+y_i(t) &= e^{(\lambda + i \mu)t} \\
+y_j(t) &= e^{(\lambda - i \mu)t}.
+\end{align*}
+In this case, we can use the reasoning of section \ref{subsubsec:constant coefficients complex roots} to replace these complex-valued solutions with the real-valued solutions
+\begin{align*}
+y_i(t) &= e^{\lambda t} \cos(\mu t) \\
+y_j(t) &= e^{\lambda t} \sin(\mu t).
+\end{align*}
+
+Now suppose that one of the roots is repeated $m$ times (that is, it has multiplicity $m$). Without loss of generality, we will assume that $r_1 = r_2 = \cdots = r_m$. As we did in section \ref{subsubsec:constant coefficients equal roots}, we define the operator $L$ as
+\begin{equation*}
+L\big[y\big] = c_n \deriv[n]{y}{t} + c_{n-1} \deriv[n-1]{y}{t} + \cdots + c_1 \deriv{y}{t} + c_0 y,
+\end{equation*}
+so that
+\begin{equation*}
+L\big[e^{rt}\big] = p(r) e^{rt},
+\end{equation*}
+where
+\begin{equation*}
+p(r) = c_n r^n + c_{n-1} r^{n-1} + \cdots + c_1 r + c_0.
+\end{equation*}
+As we know, since $r_1$ is a root of $p(r)$, we have
+\begin{equation*}
+L\big[e^{r_1t}\big] = 0,
+\end{equation*}
+but this is old news. What is more interesting is that since $r_1$ is root of $p(r)$ with multiplicity $m$, we can factor $p(r)$ into $(r - r_1)^m q_0(r)$, where $q_0(r)$ is a polynomial of degree $n - m$. Thus we have
+\begin{equation*}
+L\big[e^{rt}\big] = q(r) (r - r_1)^m e^{rt}.
+\end{equation*}
+Differentiating both sides with respect to $r$ and bringing the partial derivative $\fpderiv{}{r}$ within the operator $L$ gives us
+\begin{align*}
+L\big[t e^{rt}\big] &= q_0'(r)(r - r_1)^m e^{rt} + m q_0(r)(r - r_1)^{m-1} e^{rt} + t q_0(r)(r - r_1)^m e^{rt} \\
+&= \Big[q_0'(r)(r - r_1) + m q_0(r) + t q(r)(r - r_1)\Big](r - r_1)^{m-1} e^{rt} \\
+&= q_1(r)(r - r_1)^{m-1} e^{rt},
+\end{align*}
+where $q_1(r)$ is another polynomial. Plugging in $r = r_1$ then shows that
+\begin{equation*}
+L\big[t e^{r_1t}\big] = 0,
+\end{equation*}
+and thus $y_2(t) = t e^{r_1t}$ is another solution of \eq{higher order constant coefficients}. Differentiating a second time will give
+\begin{equation*}
+L\big[t^2 e^{rt}\big] = q_2(r)(r - r_1)^{m-2} e^{rt},
+\end{equation*}
+which produces $y_3(t) = t^2 e^{rt}$ as a third solution of \eq{higher order constant coefficients}. In general, we can repeat this reasoning until we obtain
+\begin{equation*}
+L\big[t^m e^{rt}\big] = q_m(t)e^{rt},
+\end{equation*}
+at which point the $(r - r_1)$ term has disappeared and we can no longer be assured that the right-hand side will be zero at $r = r_1$. This is fine, though, because before we reach this point we obtain $m$ solutions in total:
+\begin{align*}
+y_1(t) &= e^{r_1 t} \\
+y_2(t) &= te^{r_1 t} \\
+y_3(t) &= t^2 e^{r_1 t} \\
+&\cvdots \\
+y_m(t) &= t^{m-1} e^{r_1 t}.
+\end{align*}
+
+\subsection{Variation of Parameters} \label{subsec:higher order variation of parameters}
+
+Suppose that we have $n$ linearly independent solutions of
+\begin{equation} \label{eq:higher order variation of parameters homogeneous}
+\deriv[n]{y}{t} + p_{n-1}(t) \deriv[n-1]{y}{t} + \cdots + p_1(t) \deriv{y}{t} + p_0(t) y = 0
+\end{equation}
+denoted $y_1(t), y_2(t), \ldots, y_n(t)$, and suppose furthermore that we would like to find a particular solution $\psi(t)$ to
+\begin{equation} \label{eq:higher order variation of parameters nonhomogeneous}
+\deriv[n]{y}{t} + p_{n-1}(t) \deriv[n-1]{y}{t} + \cdots + p_1(t) \deriv{y}{t} + p_0(t) y = g(t).
+\end{equation}
+We will assume that the solution is of the form
+\begin{equation*}
+\psi(t) = u_1(t)y_1(t) + u_2(t)y_2(t) + \cdots + u_n(t)y_n(t).
+\end{equation*}
+Similarly to our work in section \ref{subsec:variation of parameters}, we have replaced the problem of finding one function $\psi(t)$ with the problem of finding $n$ functions $y_1(t), \ldots, y_n(t)$; in a sense, we have added $n-1$ additional degrees of freedom to our problem and are therefore justified in adding $n-1$ additional constraints on $u_1(t), \ldots, u_n(t)$ without making it so that there are no solutions.
+Differentiating, we find that
+\begin{equation*}
+\deriv{\psi}{t} = u_1'(t)y_1(t) + u_2'(t)y_2(t) + \cdots + u_n'(t)y_n(t) + u_1(t)y_1'(t) + u_2(t)y_2'(t) + \cdots + u_n(t)y_n'(t).
+\end{equation*}
+To avoid second-order derivatives of $u_1(t), \ldots, u_n(t)$ from appearing when we differentiate this expression, we make the arbitrary assumption that
+\begin{equation*}
+u_1'(t)y_1(t) + u_2'(t)y_2(t) + \cdots + u_n'(t)y_n(t) = 0,
+\end{equation*}
+so that
+\begin{align*}
+\deriv{\psi}{t} &= u_1(t)y_1'(t) + u_2(t)y_2'(t) + \cdots + u_n(t)y_n'(t) \\
+\deriv[2]{\psi}{t} &= u_1'(t)y_1'(t) + u_2'(t)y_2'(t) + \cdots + u_n'(t)y_n'(t) + u_1(t)y_1''(t) + u_2(t)y_2''(t) + \cdots + u_n(t)y_n''(t).
+\end{align*}
+We now make the assumption that
+\begin{equation*}
+u_1'(t)y_1'(t) + u_2'(t)y_2'(t) + \cdots + u_n'(t)y_n'(t) = 0,
+\end{equation*}
+and proceeding in this manner we find that
+\begin{align*}
+\deriv{\psi}{t} &= u_1(t)y_1'(t) + u_2(t)y_2'(t) + \cdots + u_n(t)y_n'(t) \\
+\deriv[2]{\psi}{t} &= u_1(t)y_1''(t) + u_2(t)y_2''(t) + \cdots + u_n(t)y_n''(t) \\
+&\cvdots \\
+\deriv[n-1]{\psi}{t} &= u_1(t)y_1^{(n-1)}(t) + u_2(t)y_2^{(n-1)}(t) + \cdots + u_n(t)y_n^{(n-1)}(t),
+\end{align*}
+assuming that
+\begin{align*}
+u_1'(t)y_1(t) + u_2'(t)y_2(t) + \cdots + u_n'(t)y_n(t) &= 0 \\
+u_1'(t)y_1'(t) + u_2'(t)y_2'(t) + \cdots + u_n'(t)y_n'(t) &= 0 \\
+&\cvdots \\
+u_1'(t)y_1^{(n-2)}(t) + u_2'(t)y_2^{(n-2)}(t) + \cdots + u_n'(t)y_n^{(n-2)}(t) &= 0.
+\end{align*}
+These $n-1$ equations are our constraints on the functions $u_1(t), \ldots, u_n(t)$. Differentiating one final time, we find that
+\begin{align*}
+\deriv[n]{\psi}{t} &= u_1(t)y_1^{(n)}(t) + u_2(t)y_2^{(n)}(t) + \cdots + u_n(t)y_n^{(n)}(t) \\
+&+ u_1'(t)y_1^{(n-1)}(t) + u_2'(t)y_2^{(n-1)}(t) + \cdots + u_n'(t)y_n^{(n-1)}(t).
+\end{align*}
+Now we can plug our formulae for $\psi, \fderiv{\psi}{t}, \ldots, \fpderiv[n]{\psi}{t}$ into \eq{higher order variation of parameters nonhomogeneous}:
+\begin{align*}
+&\phantom{{}+{}}u_1(t)y_1^{(n)}(t) + u_2(t)y_2^{(n)}(t) + \cdots + u_n(t)y_n^{(n)}(t) \\
+&+ u_1'(t)y_1^{(n-1)}(t) + u_2'(t)y_2^{(n-1)}(t) + \cdots + u_n'(t)y_n^{(n-1)}(t) \\
+&+ p_{n-1}(t)\Big[u_1(t)y_1^{(n-1)}(t) + u_2(t)y_2^{(n-1)}(t) + \cdots + u_n(t)y_n^{(n-1)}(t)\Big] \\
+&+ p_{n-2}(t)\Big[u_1(t)y_1^{(n-2)}(t) + u_2(t)y_2^{(n-2)}(t) + \cdots + u_n(t)y_n^{(n-3)}(t)\Big] \\
+&\cvdots[+] \\
+&+ p_1(t)\Big[u_1(t)y_1'(t) + u_2(t)y_2'(t) + \cdots + u_n(t)y_n'(t)\Big] \\
+&+ p_0(t)\Big[u_1(t)y_1(t) + u_2(t)y_2(t) + \cdots + u_n(t)y_n(t)\Big] = g(t).
+\end{align*}
+Rearranging then gives
+\begin{align*}
+&\phantom{{}+{}}u_1'(t)y_1^{(n-1)}(t) + u_2'(t)y_2^{(n-1)}(t) + \cdots + u_n'(t)y_n^{(n-1)}(t) \\
+&+ u_1(t)\Big[y_1^{(n)}(t) + p_{n-1}(t)y_1^{(n-1)}(t) + p_{n-2}(t)y_1^{(n-2)}(t) + \cdots + p_1(t)y_1'(t) + p_0(t)y_1(t)\Big] \\
+&+ u_2(t)\Big[y_2^{(n)}(t) + p_{n-1}(t)y_2^{(n-1)}(t) + p_{n-2}(t)y_2^{(n-2)}(t) + \cdots + p_1(t)y_2'(t) + p_0(t)y_2(t)\Big] \\
+&\cvdots[+] \\
+&+ u_n(t)\Big[y_n^{(n)}(t) + p_{n-1}(t)y_n^{(n-1)}(t) + p_{n-2}(t)y_n^{(n-2)}(t) + \cdots + p_1(t)y_n'(t) + p_0(t)y_n(t)\Big] = g(t),
+\end{align*}
+and since $y_1(t), y_2(t), \ldots, y_n(t)$ are all solutions of \eq{higher order variation of parameters homogeneous}, we obtain
+\begin{equation*}
+u_1'(t)y_1^{(n-1)}(t) + u_2'(t)y_2^{(n-1)}(t) + \cdots + u_n'(t)y_n^{(n-1)}(t) = g(t).
+\end{equation*}
+Combining this equation with the $n-1$ additional constraints we derived above gives us a system of $n$ equations which we can solve algebraically for the functions $u_1'(t), u_2'(t), \ldots, u_n'(t)$. Using Cramer's rule to do so gives us:
+\begin{equation*}
+u_k'(t) = \frac{\W[k]{u_1, u_2, \ldots, u_n}(t)}{\W{u_1, u_2, \ldots, u_n}(t)},
+\end{equation*}
+where $W$ denotes the Wronskian as defined in section \ref{subsec:higher order characterization} and $W_k$ denotes the Wronskian with the $k$th column of the determinant replaced by the column vector $\vect{0, 0, \ldots, 0, g(t)}$. Therefore, a particular solution to \eq{higher order variation of parameters nonhomogeneous} is given by:
+\begin{equation*}
+\psi(t) = \sum_{k=0}^n \left[y_k(t) \int \frac{\W[k]{u_1, u_2, \ldots, u_n}(t)}{\W{u_1, u_2, \ldots, u_n}(t)} \,dt\right].
+\end{equation*}
+
+\subsection{Method of Judicious Guessing} \label{subsec:higher order judicious guessing}
+
+We present the results for the method of judicious guessing for higher-order differential equations without proof.
+
+Particular solutions of
+\begin{equation*}
+c_n \deriv[n]{y}{t} + \cdots + c_1 \deriv{y}{t} + c_0 y = a_0 + a_1 t + \cdots + a_k t^k
+\end{equation*}
+occur in the forms
+\begin{align*}
+A_0 + A_1 t + \cdots + A_k t^k, && \text{if $c_0 \neq 0$}, \\
+t\Big[A_0 + A_1 t + \cdots + A_k t^k\Big], && \text{if $c_0 = 0$ but $c_1 \neq 0$}, \\
+t^2\Big[A_0 + A_1 t + \cdots + A_k t^k\Big], && \text{if $c_0 = c_1 = 0$ but $c_2 \neq 0$}, \\
+\vdots \hspace{52.25pt} && \vdots \hspace{44.5pt} \\
+t^n\Big[A_0 + A_1 t + \cdots + A_k t^k\Big], && \text{if $c_0 = c_1 = \cdots = c_{n-1} = 0$ but $c_n \neq 0$}.
+\end{align*}
+If all the coefficients $c_i$ are zero, the differential equation has no solution, so we need not consider this case.
+
+Considering the homogeneous equation
+\begin{equation} \label{eq:higher order judicious guessing homogeneous}
+c_n \deriv[n]{y}{t} + \cdots + c_1 \deriv{y}{t} + c_0 y = 0,
+\end{equation}
+particular solutions of
+\begin{equation*}
+c_n \deriv[n]{y}{t} + \cdots + c_1 \deriv{y}{t} + c_0 y = \Big[a_0 + a_1 t + \cdots + a_k t^k\Big]e^{\gamma t}
+\end{equation*}
+occur in the forms
+\begin{align*}
+\Big[A_0 + A_1 t + \cdots + A_k t^k\Big]e^{\gamma t}, && \text{if $y = e^{\gamma t}$ does not solve \eq{higher order judicious guessing homogeneous}}, \\
+t\Big[A_0 + A_1 t + \cdots + A_k t^k\Big]e^{\gamma t}, && \text{if $y = e^{\gamma t}$ solves \eq{higher order judicious guessing homogeneous} but $y = te^{\gamma t}$ does not}, \\
+t^2\Big[A_0 + A_1 t + \cdots + A_k t^k\Big]e^{\gamma t}, && \text{if $y = te^{\gamma t}$ solves \eq{higher order judicious guessing homogeneous} but $y = t^2e^{\gamma t}$ does not}, \\
+\vdots \hspace{66.25pt} && \vdots \hspace{44.5pt} \\
+t^n\Big[A_0 + A_1 t + \cdots + A_k t^k\Big]e^{\gamma t}, && \text{if $y = t^{n-1} e^{\gamma t}$ solves \eq{higher order judicious guessing homogeneous} but $y = t^n e^{\gamma t}$ does not}. \\
+\end{align*}
+It is impossible for $y = t^n e^{\gamma t}$ to be a solution of \eq{higher order judicious guessing homogeneous}, but we left this condition in for symmetry.
+
+Particular solutions of
+\begin{equation*}
+c_n \deriv[n]{y}{t} + \cdots + c_1 \deriv{y}{t} + c_0 y = \Big[a_0 + a_1 t + \cdots + a_k t^k\Big]e^{\lambda t} \cos{\mu t}
+\end{equation*}
+occur in the forms
+\begin{align*}
+\Big[A_0 + A_1t + \cdots + A_k t^k\Big] e^{\lambda t} \cos(\mu t) + \Big[B_0 + B_1t + \cdots + B_k t^k\Big] e^{\lambda t} \sin(\mu t), \qquad \qquad \\
+\text{if $y = e^{\lambda t} \cos(\mu t)$ does not solve \eq{higher order judicious guessing homogeneous}}, \\
+t\Big[A_0 + A_1t + \cdots + A_k t^k\Big] e^{\lambda t} \cos(\mu t) + t\Big[B_0 + B_1t + \cdots + B_k t^k\Big] e^{\lambda t} \sin(\mu t), \qquad \qquad \\
+\text{if $y = e^{\lambda t} \cos(\mu t)$ solves \eq{higher order judicious guessing homogeneous} but $y = te^{\lambda t} \cos(\mu t)$ does not}, \\
+t^2\Big[A_0 + A_1t + \cdots + A_k t^k\Big] e^{\lambda t} \cos(\mu t) + t^2\Big[B_0 + B_1t + \cdots + B_k t^k\Big] e^{\lambda t} \sin(\mu t), \qquad \qquad \\
+\text{if $y = te^{\lambda t} \cos(\mu t)$ solves \eq{higher order judicious guessing homogeneous} but $y = t^2e^{\lambda t} \cos(\mu t)$ does not}, \\
+\vdots \hspace{239.5pt} \\
+t^n\Big[A_0 + A_1t + \cdots + A_k t^k\Big] e^{\lambda t} \cos(\mu t) + t^2\Big[B_0 + B_1t + \cdots + B_k t^k\Big] e^{\lambda t} \sin(\mu t), \qquad \qquad \\
+\text{if $y = t^{n-1}e^{\lambda t} \cos(\mu t)$ solves \eq{higher order judicious guessing homogeneous} but $y = t^n e^{\lambda t} \cos(\mu t)$ does not}.
+\end{align*}
+Again, it is impossible for $y = t^n e^{\gamma t} \cos(\mu t)$ to be a solution of \eq{higher order judicious guessing homogeneous}, but we left this condition in for symmetry. The result for
+\begin{equation*}
+c_n \deriv[n]{y}{t} + \cdots + c_1 \deriv{y}{t} + c_0 y = \Big[a_0 + a_1 t + \cdots + a_k t^k\Big]e^{\lambda t} \sin{\mu t}
+\end{equation*}
+is analogous.
+
+The discussion in section \ref{subsubsec:judicious guessing general} also applies to higher-order equations.
+
+\subsection{Power Series Solutions} \label{subsec:higher order power series}
+
+Considering the homogeneous $n$th-order linear differential equation
+\begin{equation*}
+P_n(t) \deriv[n]{y}{t} + P_{n-1}(t) \deriv[n-1]{y}{t} + \cdots + P_1(t) \deriv{y}{t} + P_0(t) y = 0,
+\end{equation*}
+we suppose that solutions will be of the form
+\begin{equation*}
+y(t) = \sum_{n=0}^\infty a_n t^n.
+\end{equation*}
+The analysis is exactly analogous to that of section \ref{subsec:power series}.
+
+\subsection{Laplace Transforms} \label{subsec:higher order laplace}
+
+Suppose that we are given a nonhomogeneous $n$th-other linear differential equation of the form
+\begin{equation} \label{eq:higher order laplace}
+c_n \deriv[n]{y}{t} + c_{n-1} \deriv[n-1]{y}{t} + \cdots + c_1 \deriv{y}{t} + c_0 y = f(t)
+\end{equation}
+and the initial conditions
+\begin{align*}
+y(t_0) &= y_0 \\
+y'(t_0) &= y'_0 \\
+&\cvdots \\
+y^{(n-1)}(t_0) &= y^{(n-1)}_0.
+\end{align*}
+If the initial conditions are not given at $t = 0$, we may use the transformation discussed in section \ref{subsec:laplace}.
+
+It can then be shown, using a simple generalization of the method of section \ref{subsec:laplace}, that a particular solution of \eq{higher order laplace} is given by
+\begin{equation*}
+y(t) = \Li{\frac{\displaystyle \L{f(t)} + \sum_{k=0}^n \sum_{i=0}^{k-1} \Big[c_k s^{k-i-1} y_0^{(i)}\Big]}{\displaystyle \sum_{k=0}^n \Big[c_k s^k\Big]}}.
+\end{equation*}
+
+\subsection{Transformation to System} \label{subsec:higher order transformation to system}
+
+Given the general homogeneous $n$th-order linear differential equation
+\begin{equation*}
+y^{(n)}(t) + p_{n-1}(t) y^{(n-1)}(t) + \cdots + p_1(t) y'(t) + p_0(t) y(t) = 0,
+\end{equation*}
+we can define
+\begin{equation*}
+\vec y(t) = \mat[c]{y(t) \\ y'(t) \\ \vdots \\ y^{(n-1)}(t)}.
+\end{equation*}
+It then follows that
+\begin{align*}
+\vec y'(t) &= \mat[c]{y'(t) \\ y''(t) \\ \vdots \\ y^{(n)}(t)} \\
+&= \mat[c]{y'(t) \\ \vdots \\ y^{(n-1)}(t) \\ -p_{n-1}(t) y^{(n-1)}(t) - \cdots - p_0(t)y(t)} \\
+&= y(t) \mat[c]{0 \\ 0 \\ \vdots \\ -p_0(t)} + y'(t) \mat[c]{1 \\ 0 \\ \vdots \\ -p_1(t)} + y''(t) \mat[c]{0 \\ 1 \\ \vdots \\ -p_2(t)} + \cdots \\
+&\quad + y^{(n-2)}(t) \mat[c]{0 \\ \vdots \\ 0 \\ -p_{n-2}(t)} + y^{(n-1)}(t) \mat[c]{0 \\ \vdots \\ 1 \\ -p_{n-1}(t)} \\
+&= \mat[c]{
+0 & 1 & 0 & 0 & \cdots & 0 \\
+0 & 0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & 0 & \cdots & 1 \\
+-p_0(t) & -p_1(t) & -p_2(t) & -p_3(t) & \cdots & -p_{n-1}(t)
+} \mat[c]{y(t) \\ y'(t) \\ y''(t) \\ \vdots \\ y^{(n-2)}(t) \\ y^{(n-1)}(t)} \\
+&= \mat[c]{
+0 & 1 & 0 & 0 & \cdots & 0 \\
+0 & 0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & 0 & \cdots & 1 \\
+-p_0(t) & -p_1(t) & -p_2(t) & -p_3(t) & \cdots & -p_{n-1}(t)
+} \vec y(t).
+\end{align*}
+That is, we can transform a homogeneous $n$th-order linear differential equation to a system of $n$ homogeneous first-order linear differential equations.
+
+\subsection{What to Do in General} \label{subsec:higher order strategy}
+
+The following strategy is advisable:
+\begin{enumerate}
+\item If the equation is missing a $y$ term, use the strategy of section \ref{subsec:higher order direct reduction}.
+\item If the equation is linear and homogeneous and has constant coefficients, use the strategy of section \ref{subsec:higher order constant coefficients}.
+\item If the equation is linear and homogeneous and has nonconstant coefficients, and you already know one solution, use the strategy of section \ref{subsec:higher order reduction of order} to find another.
+\item If the equation is linear and homogeneous and has nonconstant coefficients that can be expanded as power series, use the strategy of section \ref{subsec:higher order power series}.
+\item If the equation is linear and nonhomogeneous, has constant coefficients, and has a right-hand side of the appropriate form, use the strategy of section \ref{subsec:higher order constant coefficients} to find the general solution of the corresponding homogeneous equation and then use the strategy of section \ref{subsec:higher order judicious guessing}.
+\item If the equation is linear and nonhomogeneous and has constant coefficients but does not have a right-hand side admitting of the method of judicious guessing, either (i) use the strategy of section \ref{subsec:higher order constant coefficients} to find the general solution of the corresponding homogeneous equation and then use the strategy of section \ref{subsec:higher order variation of parameters}, or (ii) use the strategy of section \ref{subsec:higher order laplace}.
+\end{enumerate}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

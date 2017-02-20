@@ -1,0 +1,547 @@
+% Copyright © 2016 by Radon Rosborough.
+% This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+% See http://creativecommons.org/licenses/by-nc-nd/4.0/ for more details.
+% Please visit https://intuitiveexplanations.com/
+
+\documentclass{beamer}
+
+\newcounter{compilation}
+\newwrite\writecompilation
+\newread\readcompilation
+\openin\readcompilation=\jobname.vrs
+\ifeof\readcompilation
+  % no file yet
+  \setcounter{compilation}{1}%
+\else
+  \read\readcompilation to \temp
+  \setcounter{compilation}{\temp}%
+  \stepcounter{compilation}%
+\fi
+\closein\readcompilation
+\immediate\openout\writecompilation=\jobname.vrs
+\immediate\write\writecompilation{\thecompilation}
+\immediate\closeout\writecompilation
+
+\everymath{\displaystyle}
+
+\DeclareMathOperator{\arccot}{arccot}
+
+\newcounter{question}
+\newcommand{\correct}{\only<2>{\color{black!30!green}}}
+\newcommand{\incorrect}{\only<2>{\color{red}}}
+\newcommand{\question}[6]
+	{\stepcounter{question}
+	\begin{frame}
+	\frametitle{Question \thequestion}
+	#1
+	\begin{enumerate}
+	\item {\incorrect #2}
+	\item {\incorrect #3}
+	\item {\incorrect #4}
+	\item {\incorrect #5}
+	\item {\incorrect #6}
+	\end{enumerate}
+	\end{frame}}
+
+\begin{document}
+
+\renewcommand{\theenumi}{\Alph{enumi}}
+
+\begin{frame}
+\title{Calculus Bowl: Expert Edition}
+\author{Radon Rosborough \\ \hfill \\ \href{https://intuitiveexplanations.com/calculus-bowl/}{https://intuitiveexplanations.com/calculus-bowl/}}
+\date{April 2016}
+\titlepage
+{\linespread{1.5}
+\noindent \Tiny Build \thecompilation
+
+\noindent Copyright \textcopyright{} 2016 by Radon Rosborough. This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-nd/4.0/}{Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License}. \par}
+\end{frame}
+
+%CB:BEGIN
+
+\question
+{For what strictly positive number $x$ is $x^x$ the smallest?}
+%CB:IGNORE
+{\correct $1/e$}
+{$\ln 2$}
+{$1$}
+{$e$}
+{There is no such $x$}
+
+\question
+{Find the value of $\sum_{k=0}^\infty e^{-\pi k} \cos(-\pi k)$.}
+{$\frac{1}{1 + e^\pi}$}
+{$\frac{1}{1 - e^\pi}$}
+{\correct $\frac{e^\pi}{1 + e^\pi}$}
+{$\frac{e^{(\pi^2)}}{1 - e^{(\pi^2)}}$}
+{$\frac{e^{(\pi^2)}}{e^{(\pi^2)} - 1}$}
+
+\question
+{What is the area in Quadrant IV above the curve $y = \ln x$?}
+%CB:IGNORE
+{\correct $1$}
+{$\ln 2$}
+{$e - 1$}
+{$e$}
+{$\infty$}
+
+\question
+{Find the slope of the tangent line to $y = \frac{9x^3 - 27x^2 + 5x - 6}{55x^4 + 11x^3 - 7x^2 + 6x + 3}$ at $x = 0$.}
+%CB:IGNORE
+{$1$}
+{\correct $2$}
+{$3$}
+{$4$}
+{$6$}
+
+\question
+{Find $\lim_{x \to \infty} \sin(\arctan x)$.}
+%CB:IGNORE
+{$-1$}
+{$0$}
+{$1/2$}
+{\correct $1$}
+{The limit does not exist}
+
+\question
+{Let $f(x) = \begin{cases}
+mx + b & x \leq 1 \\
+x^2 & x > 1
+\end{cases}$ . If $f$ is everywhere differentiable, what are $m$ and $b$?}
+{$m = -2$, $b = -1$}
+{$m = 3$, $b = -2$}
+{\correct $m = 2$, $b = -1$}
+{$m = 1$, $b = 0$}
+{$m = 2$, $b = -2$}
+
+\question
+{If $x = y^2$, $y = z^3$, and $z = w^4$, then what is $\frac{dx}{dy} + \frac{dx}{dz} + \frac{dx}{dw}$?}
+{\correct $2w^{12} + 6w^{20} + 24w^{23}$}
+{$2w^8 + 3w^6 + 4w^3$}
+{$2w^{12} + 3w^8 + 4w^3$}
+{$2w + 3w^2 + 4w^3$}
+{$2w + 6w^5 + 24w^{23}$}
+
+\question
+{Suppose that $t$ is measured in meters and $v(t)$ is measured in seconds. What are the units of $\int v''(t) \,dt$?}
+{s}
+{m}
+{m/s$^2$}
+{m/s}
+{\correct s/m}
+
+\question
+{Let $f$ be a continuous function such that $f(x) + f(1 - x) \neq 0$ for all $x$. Evaluate $\int_0^1 \frac{f(x)}{f(x) + f(1 - x)} \,dx$.}
+{$0$}
+{Cannot be determined without more information}
+{\correct $1/2$}
+{$1$}
+{$2$}
+
+\question
+{Suppose that $\int_{-3}^4 f(x) \,dx = 3$, $\int_{-1}^7 f(x) \,dx = 7$, and $\int_{-3}^7 f(x) \,dx = 5$. What is $\int_{-1}^4 f(x) \,dx$?}
+{\correct $5$}
+{$8$}
+{$2$}
+{$10$}
+{$-5$}
+
+\question
+{Find the value of $\sum_{n=0}^\infty \frac{\sin(\frac{n\pi}{2})}{n!}$.}
+%CB:IGNORE
+{$\cos 1$}
+{$\ln 2$}
+{\correct $\sin 1$}
+{$1$}
+{$e$}
+
+\question
+{If $x^2 + y^2 = 1$, then what is $\frac{d^2y}{dx^2}$?}
+{$\frac{y^3}{x^2 - y^2}$}
+{\correct $-\frac{1}{y^3}$}
+{$-\frac{x}{y}$}
+{$-\frac{3x}{y^5}$}
+{$\frac{y^2 - x^2}{y^3}$}
+
+\question
+{Which of the following is \alert{not} a correct solution to the problem $\int 2 \tan x \sec^2 x \,dx$?}
+{$\frac{2}{1 + \cos 2x}$}
+{$\sec^2 x$}
+{\correct $\sqrt{\frac{1 - \cos x}{1 + \cos x}}$}
+{$\frac{4}{(e^{ix} + e^{-ix})^2}$}
+{$\frac{1 - \cos 2x}{1 + \cos 2x}$}
+
+\question
+{Rolle's theorem is a special case of which of the following theorems?}
+{Extreme value theorem}
+{\correct Mean value theorem}
+{Fundamental theorem of calculus}
+{Intermediate value theorem}
+{Mean value theorem for integrals}
+
+\question
+{Suppose that the position of a particle is given by the equation $x = \sin(\pi t)$. Find its velocity when $t = 1/6$, given that $x$ is time and $t$ is position.}
+{$\frac{\sqrt{3} \pi}{2}$}
+{\correct $\frac{2}{\sqrt{3} \pi}$}
+{$\frac{4}{3 \sqrt{3} \pi}$}
+{$\frac{6}{\sqrt{35} \pi}$}
+{$0$}
+
+\question
+{What is the behavior of the expression $\lim_{m \to \infty} \lim_{n \to \infty} \cos^{2n}(m! \pi x)$? Assume $m$ and $n$ are integers.}
+%CB:IGNORE
+{It is always zero}
+{It is always one}
+{It does not exist}
+{\correct It is zero if $x$ is irrational and one if $x$ is rational}
+{It is zero if $x$ is not an integer and one if $x$ is an integer}
+
+\question
+{Identify the differential equations whose solutions would be underestimated by Euler's method.
+{\renewcommand{\theenumi}{\Roman{enumi}}
+\begin{enumerate}
+\item $\frac{dx}{dt} = 1$
+\item $\frac{dx}{dt} = t$
+\item $\frac{dx}{dt} = x$
+\end{enumerate}}}
+%CB:IGNORE
+{II only}
+{III only}
+{I and II only}
+{\correct II and III only}
+{I, II, and III}
+
+\question
+{Find $\int_\pi^{\pi^2} \frac{\pi^2 \ln(\pi^\pi)}{\theta(\pi + \pi^2)} \,d\theta$.}
+{$\frac{2\pi(\ln \pi)^2}{1 + \pi}$}
+{$\frac{\pi^2 \ln \pi}{1 + \pi}$}
+{$\frac{2\pi^2(\ln \pi)^2}{1 + \pi}$}
+{\correct $\frac{\pi^2(\ln \pi)^2}{1 + \pi}$}
+{$\frac{\pi^3(\pi - 1)\ln \pi}{\pi + 1}$}
+
+\question
+{Determine the surface area of the solid generated by revolving the curve $y = \sqrt{4 - x^2}$ about the $x$-axis.}
+%CB:IGNORE
+{$2 \pi$}
+{$4 \pi$}
+{$\frac{16}{3} \pi$}
+{$8 \pi$}
+{\correct $16 \pi$}
+
+\question
+{Which of the following integrals, when evaluated, gives the area of one of the regions bounded by the curves $y = \cos x$ and $y = \sin x$?}
+{$\int_{\pi/4}^{5\pi/4} \cos x - \sin x \,dx$}
+{$\int_0^{\pi/4} \cos x - \sin x \,dx$}
+{\correct $\int_{\pi/4}^{-3\pi/4} \sin x - \cos x \,dx$}
+{$\int_0^\pi |\cos x| - |\sin x| \,dx$}
+{$\int_0^\pi \cos x - \sin x \,dx$}
+
+\question
+{What is the $k$th derivative of $x^n$?}
+{$k! x^{n-k}$}
+{$\frac{n!}{(n - k - 1)!} x^{n-k}$}
+{\correct $\frac{n!}{(n - k)!} x^{n-k}$}
+{$n! x^{n-k}$}
+{$(n - k)! x^{n-k}$}
+
+\question
+{What is the average value of the function $f(x) = \sqrt{1 - x^2}$ over its domain?}
+{\correct $\pi/4$}
+{$\pi/6$}
+{$3/4$}
+{$\sqrt{3}/2$}
+{$5/8$}
+
+\question
+{Evaluate $\lim_{x \to \infty} \frac{\sum_{n=3}^{9} nx^n}{\sqrt[3]{\sum_{n=9}^{27} \frac{x^n}{n}}}$.}
+%CB:IGNORE
+{$0$}
+{$3$}
+{$9$}
+{\correct $27$}
+{$\infty$}
+
+\question
+{Evaluate $\frac{d}{dx} \big[\ln \ln \ln \ln x\big]$ at $x = e^{(e^e)}$.}
+{$e^{-e - 1}$}
+{$e^{e^e + e + 1}$}
+{\correct $e^{-e^e - e - 1}$}
+{$e^{-e^{-e - 1} - e}$}
+{$e^{-e^2 - e - 1}$}
+
+\question
+{Find the value of $\lim_{x \to 0} \frac{\ln(1 - x) - \sin x}{1 - \cos^2 x}$.}
+{\correct The limit does not exist!}
+{$\infty$}
+{$1/2$}
+{$-\infty$}
+{$0$}
+
+\question
+{Taken collectively, how many different intervals of convergence do the following series have?
+\begin{align*}
+&\sum_{n=1}^\infty r^n &&\sum_{n=1}^\infty n^{-r} &&\sum_{n=1}^\infty r^{-n} \\
+&\sum_{n=1}^\infty n^r &&\sum_{n=1}^\infty (-r)^n &&\sum_{n=1}^\infty (-r)^{-n}
+\end{align*}}
+%CB:IGNORE
+{$1$}
+{$2$}
+{$3$}
+{\correct $4$}
+{$6$}
+
+\question
+{How many points of inflection can a polynomial of degree $7$ have, at most?}
+%CB:IGNORE
+{$3$}
+{\correct $5$}
+{$6$}
+{$7$}
+{$8$}
+
+\question
+{Evaluate $\frac{d}{dx} \left[(\ln x)^{\ln x}\right]$.}
+{$(\ln x)^{\ln x} \left(\frac{\ln x + \ln \ln x}{x}\right)$}
+{\correct $(\ln x)^{\ln x} \left(\frac{1 + \ln \ln x}{x}\right)$}
+{$(\ln x)^{\ln x} \left(\frac{1 + \ln x}{\ln \ln x}\right)$}
+{$(\ln x)^{\ln x} \left(1 + \frac{\ln \ln x}{x}\right)$}
+{$(\ln x)^{\ln x} \left(\frac{1 + \ln \ln x}{\ln x}\right)$}
+
+\question
+{Evaluate $\int_{-\infty}^0 x^5 e^x \,dx$.}
+%CB:IGNORE
+{\correct $-120$}
+{$-24$}
+{$-5$}
+{$-1$}
+{The integral cannot be expressed in closed form}
+
+\question
+{The power rule states that $\frac{d}{dx} \big[x^n\big] = nx^{n-1}$. In which of the following situations does the power rule \alert{not} hold?
+{\renewcommand{\theenumi}{\Roman{enumi}}
+\begin{enumerate}
+\item $x = 0$ and $n < 1$
+\item $x = 0$ and $n = 1$
+\item $x < 0$ and $n$ is irrational
+\end{enumerate}}}
+%CB:IGNORE
+{None}
+{I only}
+{II only}
+{I and II only}
+{\correct I, II, and III}
+
+\question
+{Compute $\int_0^\infty (e^{-x})^2 \,dx$.}
+%CB:IGNORE
+{\correct $1/2$}
+{$\sqrt{\pi}/2$}
+{$1$}
+{$\sqrt{\pi}$}
+{The integral does not converge}
+
+\question
+{If the arc length of the curve given by $x(t) = \cos \sqrt{t}$ and $y(t) = \sin \sqrt{t}$ from $t = 0$ to $t = T$ is $6\pi$, then what is $T$?}
+%CB:IGNORE
+{$\sqrt{3}$}
+{$\sqrt{6}$}
+{$3$}
+{$6$}
+{\correct $9$}
+
+\question
+{Evaluate $\frac{d}{dx} \Big[x + x^2 + x^3 + \cdots + x^{100}\Big]$ at $x = 1$.}
+%CB:IGNORE
+{$99$}
+{$100$}
+{\correct $5050$}
+{$10100$}
+{$100!$}
+
+\question
+{What is the rate of change of the length of the hypotenuse of an isosceles right triangle with respect to the length of one of its legs?}
+%CB:IGNORE
+{$0$}
+{$1$}
+{\correct $\sqrt{2}$}
+{$2$}
+{$2 \sqrt{2}$}
+
+\question
+{What is $\frac{d}{dA} \big[ABRACADABRA\big]$ when $A = 1$, $B = 2$, $C = 3$, and $D = 4$?}
+%CB:IGNORE
+{$5R^2$}
+{$48R^2$}
+{$120R^2$}
+{$192R^2$}
+{\correct $240R^2$}
+
+\question
+{Determine the value of $\frac{d}{dx} \Big[|\sin x| + |\cos x| + |\tan x|\Big]$ at $x = \frac{\pi}{4}$.}
+%CB:IGNORE
+{$1$}
+{$\sqrt{2}$}
+{$1 + \frac{\sqrt{2}}{2}$}
+{\correct $2$}
+{$1 + \sqrt{2}$}
+
+\question
+{Compute $\frac{d}{dx} \left[\frac{x}{\ln x}\right]$.}
+{$\frac{1}{\ln x} + \frac{1}{(\ln x)^2}$}
+{\correct $\frac{1}{\ln x} - \frac{1}{(\ln x)^2}$}
+{$\frac{1}{x^2} - \frac{\ln x}{x^2}$}
+{$\frac{1}{(\ln x)^2} - \frac{1}{\ln x}$}
+{$\frac{\ln x - 1}{\ln(x^2)}$}
+
+\question
+{Suppose that the radius of a sphere is $1$ inch, and its volume is increasing at a rate of $1$ cubic inch per minute. How fast is its surface area increasing?}
+%CB:IGNORE
+{$1$ in$^2$/min}
+{\correct $2$ in$^2$/min}
+{$2\pi$ in$^2$/min}
+{$4\pi$ in$^2$/min}
+{$8\pi$ in$^2$/min}
+
+\question
+{What is the average value of $\arctan x$ from $x = 0$ to $x = 1$?}
+{$\frac{\pi}{4} - \frac{1}{2}$}
+{\correct $\frac{\pi}{4} - \ln \sqrt{2}$}
+{$\frac{1}{4} + \ln 2$}
+{$\frac{\pi}{2} - \frac{3}{4}$}
+{$\ln\left(\frac{\pi}{2}\right)$}
+
+\question
+{Find the average value of $\tan x$ for $x$ in the interval $[0, \pi/4]$.}
+{$\frac{1}{2}$}
+{$\frac{2}{\pi} + \frac{1}{4}$}
+{$1 - \frac{2}{\pi}$}
+{$\frac{\pi}{4}$}
+{\correct $\frac{4}{\pi} - 1$}
+
+\question
+{Find $\lim_{x \to 0} |x|^x$.}
+%CB:IGNORE
+{$0$}
+{$1/2$}
+{\correct $1$}
+{$\infty$}
+{The limit does not exist}
+
+\question
+{Evaluate $\frac{d}{dx} \int_x^{2x} \frac{x}{t} \,dt$.}
+{$2x$}
+{$\ln x$}
+{\correct $\ln 2$}
+{$1$}
+{$x$}
+
+\question
+{Find $\int_{-1}^2 \frac{dx}{x}$.}
+%CB:IGNORE
+{$0$}
+{$\ln 2$}
+{$1$}
+{$e$}
+{\correct The integral does not converge}
+
+\question
+{For what value of $p$ is the expression $\lim_{n \to \infty} \frac{\sqrt{1} + \sqrt{2} + \sqrt{3} + \cdots + \sqrt{n}}{n^p}$ finite and nonzero?}
+%CB:IGNORE
+{$1/2$}
+{$1$}
+{\correct $3/2$}
+{$2$}
+{$5/2$}
+
+\question
+{Suppose that $x^y = y^x$. Find $\frac{dy}{dx}$.}
+{$\frac{x^2 \ln y - xy}{y^2 \ln x - xy}$}
+{\correct $\frac{xy \ln y - y^2}{xy \ln x - x^2}$}
+{$\frac{xy \ln y - x^2}{xy \ln x - y^2}$}
+{$\frac{x^2 \ln x - y^2}{y^2 \ln y - x^2}$}
+{$\frac{xy \ln x - y^2}{xy \ln y - x^2}$}
+
+\question
+{Consider a collection of spheres with radii given by $\left\{1, \frac{1}{2^p}, \frac{1}{3^p}, \ldots\right\}$. If the total volume is finite but the total surface area is infinite, then what values of $p$ are possible?}
+{$2 \leq p < 3$}
+{\correct $\frac{1}{3} < p \leq \frac{1}{2}$}
+{$2 < p \leq 3$}
+{$\frac{1}{3} < p \leq 1$}
+{$1 < p \leq 3$}
+
+\question
+{Determine the value of $\sqrt{1 + \sqrt{1 + \sqrt{1 + \cdots}}}$ .}
+{$\frac{\sqrt{2}}{5}$}
+{$\frac{1 - \sqrt{5}}{2}$}
+{$\frac{1 - \sqrt{3}}{2}$}
+{\correct $\frac{1 + \sqrt{5}}{2}$}
+{$\frac{1 + \sqrt{3}}{2}$}
+
+\question
+{Determine $\frac{d}{dx} \Big[(\ln x)^e\Big]$.}
+{\correct $\frac{e}{x} (\ln x)^{e-1}$}
+{$(\ln \ln x) (\ln x)^e$}
+{$\frac{e}{x}$}
+{$(\ln x)^e \left(1 + \frac{e}{x}\right)$}
+{$1$}
+
+\question
+{Suppose that $f$ is a function defined on an interval $I$. Which of the following statements \alert{must} be true?
+{\renewcommand{\theenumi}{\Roman{enumi}}
+\begin{enumerate}
+\item If $f$ is continuous on $I$, then $f$ is differentiable on $I$.
+\item If $f$ is differentiable on $I$, then $f$ is continuous on $I$.
+\item If $f$ is integrable on $I$, then $f$ is continuous on $I$.
+\item If $f$ is continuous on $I$, then $f$ is integrable on $I$.
+\end{enumerate}}}
+%CB:IGNORE
+{II only}
+{I and III only}
+{\correct II and IV only}
+{II, III, and IV only}
+{I, II, III, and IV}
+
+%CB:END
+
+{}{}{}{}{}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

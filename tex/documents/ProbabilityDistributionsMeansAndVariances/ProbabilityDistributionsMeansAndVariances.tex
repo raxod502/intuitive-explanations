@@ -1,0 +1,246 @@
+% Copyright © 2016 by Radon Rosborough.
+% This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+% See http://creativecommons.org/licenses/by-nc-nd/4.0/ for more details.
+% Please visit https://intuitiveexplanations.com/
+
+\documentclass{myart}
+
+\allowdisplaybreaks
+
+\newcommand{\intr}{\int_{-\infty}^\infty}
+\newcommand{\du}{\,du}
+\newcommand{\dv}{\,dv}
+\newcommand{\dx}{\,dx}
+\newcommand{\dy}{\,dy}
+\newcommand{\mean}{\mu}
+\newcommand{\sdev}{\sigma}
+\newcommand{\variance}{\sigma^2}
+\newcommand{\sub}[1]{_{\text{#1}}}
+
+\begin{document}
+
+\titlepage{Mean and Variance of Selected Probability Distributions}{probability-distribution-proofs}{This document is a collection of derivations for the formulas for the means and variances of seven different probability distributions commonly encountered in statistics.}
+
+\section{Mean of a Linear Function of a Discrete Probability Distribution}
+
+\begin{align*}
+\mean_{aX+b} &= \sum_{x=0}^\infty (ax + b) p_X(x) \\
+&= a \sum_{x=0}^\infty x p_X(x) + b \sum_{x=0}^\infty p_X(x) \\
+&= a \mean_X + b.
+\end{align*}
+
+\section{Variance of a Linear Function of a Discrete Probability Distribution}
+
+\begin{align*}
+\variance_{aX+b} &= \sum_{x=0}^\infty (ax + b - \mean_{aX+b})^2 p_X(x) \\
+&= \sum_{x=0}^\infty (ax + b - a \mean_X - b)^2 p_X(x) \\
+&= a^2 \sum_{x=0}^\infty (x - \mean_X)^2 p_X(x) \\
+&= a^2 \variance_X.
+\end{align*}
+
+\section{Mean of a Sum of Discrete Probability Distributions}
+
+\begin{align*}
+\mean_{X+Y} &= \sum_{x=0}^\infty \sum_{y=0}^\infty (x + y) p_X(x) p_Y(y) \\
+&= \sum_{x=0}^\infty \sum_{y=0}^\infty x p_X(x) p_Y(y) + \sum_{x=0}^\infty \sum_{y=0}^\infty y p_X(x) p_Y(y) \\
+&= \sum_{x=0}^\infty \left[x p_X(x) \sum_{y=0}^\infty p_Y(y)\right] + \sum_{x=0}^\infty \left[p_X(x) \sum_{y=0}^\infty y p_Y(y)\right] \\
+&= \sum_{x=0}^\infty x p_X(x) + \mean_Y \sum_{x=0}^\infty p_X(x) \\
+&= \mean_X + \mean_Y.
+\end{align*}
+
+\section{Variance of a Sum of Discrete Probability Distributions}
+
+\begin{align*}
+\variance_{x+y} &= \sum_{x=0}^\infty \sum_{y=0}^\infty (x + y - \mean_{X+Y})^2 p_X(x) p_Y(y) \\
+&= \sum_{x=0}^\infty \sum_{y=0}^\infty (x + y - \mean_X - \mean_Y)^2 p_X(x) p_Y(y) \\
+&= \sum_{x=0}^\infty \sum_{y=0}^\infty (x - \mean_X)^2 p_X(x) p_Y(y) + \sum_{x=0}^\infty \sum_{y=0}^\infty (y - \mean_Y)^2 p_X(x) p_Y(y) \\
+&\quad + 2 \sum_{x=0}^\infty \sum_{y=0}^\infty (x - \mean_X)(y - \mean_Y) p_X(x) p_Y(y) \\
+&= \sum_{x=0}^\infty \left[(x - \mean_X)^2 p_X(x) \sum_{y=0}^\infty p_Y(y)\right] + \sum_{x=0}^\infty \left[p_X(x) \sum_{y=0}^\infty (y - \mean_Y)^2 p_Y(y)\right] \\
+&\quad + 2 \sum_{x=0}^\infty \left\{(x - \mean_X) p_X(x) \left[\sum_{y=0}^\infty y p_Y(y) - \mean_Y \sum_{y=0}^\infty p_Y(y) \right]\right\} \\
+&= \sum_{x=0}^\infty (x - \mean_X)^2 p_X(x) + \variance_Y \sum_{x=0}^\infty p_X(x) + 2 \sum_{x=0}^\infty (x - \mean_X) p_x(t) (\mean_Y - \mean_Y) \\
+&= \variance_X + \variance_Y.
+\end{align*}
+
+\section{Mean of a Linear Function of a Continuous Probability Distribution}
+
+\begin{align*}
+\mean_{aX + b} &= \intr (ax + b) p_X(x) \dx \\
+&= a \intr x p_X(x) \dx + b \intr p_X(x) \dx \\
+&= a\mean_X + b.
+\end{align*}
+
+\section{Variance of a Linear Function of a Continuous Probability Distribution}
+
+\begin{align*}
+\variance_{aX+b} &= \intr (ax + b - \mean_{aX+b})^2 p_X(x) \dx \\
+&= \intr (ax + b - a\mean_X - b)^2 p_X(x) \dx \\
+&= a^2 \intr (x - \mean_X)^2 p_X(x) \dx \\
+&= a^2 \variance_X.
+\end{align*}
+
+\section{Mean of a Sum of Continuous Probability Distributions}
+
+\begin{align*}
+\mean_{X+Y} &= \intr \intr (x + y) p_X(x) p_Y(y) \dy \dx \\
+&= \intr \intr x p_X(x) p_Y(y) \dy \dx + \intr \intr y p_X(x) p_Y(y) \dy \dx \\
+&= \intr \left[x p_X(x) \intr p_Y(y) \dy\right] \dx + \intr \left[p_X(x) \intr y p_Y(y) \dy\right] \dx \\
+&= \intr x p_X(x) \dx + \mean_Y \intr p_X(x) \dx \\
+&= \mean_X + \mean_Y.
+\end{align*}
+
+\section{Variance of a Sum of Continuous Probability Distributions}
+
+\begin{align*}
+\variance_{X+Y} &= \intr \intr (x + y - \mean_{X+Y})^2 p_X(x) p_Y(y) \dy \dx \\
+&= \intr \intr (x + y - \mean_X - \mean_Y)^2 p_X(x) p_Y(y) \dy \dx \\
+&= \intr \intr (x - \mean_X)^2 p_X(x) p_Y(y) \dy \dx + \intr \intr (y - \mean_Y)^2 p_X(x) p_Y(y) \dy \dx \\
+&\quad + 2 \intr \intr (x - \mean_X)(y - \mean_Y) p_X(x) p_Y(y) \dy \dx \\
+&= \intr \left[(x - \mean_X)^2 p_X(x) \intr p_Y(y) \dy\right] \dx + \intr \left[p_X(x) \intr (y - \mean_Y)^2 p_Y(y) \dy\right] \dx \\
+&\quad + 2 \intr \left\{(x - \mean_X) p_X(x) \left[\intr y p_Y(y) \dy - \mean_Y \intr p_Y(y) \dy\right]\right\} \dx \\
+&= \intr (x - \mean_X)^2 p_X(x) \dx + \variance_Y \intr p_X(x) \dx + 2 \intr (x - \mean_X) p_X(x) (\mean_Y - \mean_Y) \dx \\
+&= \variance_X + \variance_Y.
+\end{align*}
+
+\section{Mean of a Normal Distribution}
+
+\begin{align*}
+\mean\sub{Normal$[\mean,\sdev]$} &= \frac{1}{\sqrt{2\pi} \sdev} \intr x \exp\left(-\frac{1}{2} \left[\frac{x - \mean}{\sdev}\right]^2\right) \dx \\
+&= \frac{1}{\sqrt{2\pi} \sdev} \intr (u + \mean) \exp\left(-\frac{1}{2} \left[\frac{u}{\sdev}\right]^2\right) \du, && u = x - \mean \\
+&= \frac{1}{\sqrt{2\pi} \sdev} \intr u \exp\left(-\frac{1}{2} \left[\frac{u}{\sdev}\right]^2\right) \du + \frac{\mean}{\sqrt{2\pi} \sdev} \intr \exp\left(-\frac{1}{2} \left[\frac{u}{\sdev}\right]^2\right) \du \\
+&= \frac{\mean}{\sqrt{\pi}} \intr e^{-v^2} \dv, && v = \frac{u}{\sqrt{2} \sdev} \\
+&= \mu.
+\end{align*}
+
+\section{Variance of a Normal Distribution}
+
+\begin{align*}
+\variance\sub{Normal$[\mean,\sdev]$} &= \frac{1}{\sqrt{2\pi} \sdev} \intr (x - \mean\sub{Normal$[\mean,\sdev]$})^2 \exp\left(-\frac{1}{2} \left[\frac{x - \mean}{\sdev}\right]^2\right) \dx \\
+&= \frac{1}{\sqrt{2\pi} \sdev} \intr (x - \mean)^2 \exp\left(-\frac{1}{2} \left[\frac{x - \mean}{\sdev}\right]^2\right) \dx \\
+&= \frac{2\variance}{\sqrt{\pi}} \intr y^2 e^{-y^2} \dy, && y = \frac{x - \mean}{\sqrt{2} \sdev} \\
+&= \frac{2\variance}{\sqrt{\pi}} \left\{\left[-\frac{1}{2} y e^{-y^2}\right]_{-\infty}^\infty + \frac{1}{2} \intr e^{-y^2} \dy\right\}, && u = y, \dv = y e^{-y^2} \\
+&= \frac{\variance}{\sqrt{\pi}} \intr e^{-y^2} \dy \\
+&= \variance.
+\end{align*}
+
+\section{Mean of a Binomial Distribution}
+
+\begin{align*}
+\mean\sub{Binomial$[n,p]$} &= \sum_{k=0}^n k \binom{n}{k} p^k (1-p)^{n-k} \\
+&= \sum_{k=1}^n k \binom{n}{k} p^k (1-p)^{n-k} \\
+&= \sum_{k=1}^n k \left[\frac{n!}{k!(n-k)!}\right] p^k (1-p)^{n-k} \\
+&= \sum_{k=1}^n n \left[\frac{(n-1)!}{(k-1)!(n-k)!}\right] p^k (1-p)^{n-k} \\
+&= n \sum_{k=0}^{n-1} \left[\frac{(n-1)!}{k!(n-1-k)!}\right] p^{k+1} (1-p)^{n-1-k} \\
+&= n p \sum_{k=0}^{n-1} \binom{n-1}{k} p^k (1-p)^{n-1-k} \\
+&= n p (p + 1 - p)^{n-1} \\
+&= n p.
+\end{align*}
+
+\section{Variance of a Binomial Distribution}
+
+\begin{align*}
+\variance\sub{Binomial$[n,p]$} &= \sum_{k=0}^n (k - \mean\sub{Binomial$[n,p]$})^2 \binom{n}{k} p^k (1-p)^{n-k} \\
+&= \sum_{k=0}^n (k - n p)^2 \binom{n}{k} p^k (1-p)^{n-k} \\
+&= n^2 p^2 \sum_{k=0}^n \binom{n}{k} p^k (1-p)^{n-k} - 2n p \sum_{k=0}^n k \binom{n}{k} p^k (1-p)^{n-k} + \sum_{k=0}^n k^2 \binom{n}{k} p^k (1-p)^{n-k} \\
+&= n^2 p^2 (p + 1 - p)^n - 2n p \mean\sub{Binomial$[n,p]$} + \sum_{k=1}^n k^2 \binom{n}{k} p^k (1-p)^{n-k} \\
+&= n^2 p^2 - 2n^2 p^2 + \sum_{k=1}^n k \left[\frac{n!}{(k-1)!(n-k)!}\right] p^k (1-p)^{n-k} \\
+&= -n^2 p^2 + n \sum_{k=1}^n k \left[\frac{(n-1)!}{(k-1)! (n-k)!}\right] p^k (1-p)^{n-k} \\
+&= -n^2 p^2 + n \sum_{k=0}^{n-1} (k+1) \left[\frac{(n-1)!}{k! (n-1-k)!}\right] p^{k+1} (1-p)^{n-1-k} \\
+&= -n^2 p^2 + n p \sum_{k=0}^{n-1} (k+1) \binom{n-1}{k} p^k (1-p)^{n-1-k} \\
+&= -n^2 p^2 + n p \left[\sum_{k=0}^{n-1} k \binom{n-1}{k} p^k (1-p)^{n-1-k} + \sum_{k=0}^{n-1} \binom{n-1}{k} p^k (1-p)^{n-1-k}\right] \\
+&= -n^2 p^2 + n p \big[\mean\sub{Binomial$[n-1,p]$} + (p + 1 - p)^{n-1}\big] \\
+&= -n^2 p^2 + n(n - 1) p^2 + n p \\
+&= n p - n p^2 \\
+&= n p (1 - p).
+\end{align*}
+
+\section{Mean of a Geometric Distribution}
+
+\begin{align*}
+\mean\sub{Geometric$[p]$} &= \sum_{n=1}^\infty n p (1-p)^{n-1} \\
+&= p \sum_{n=1}^\infty n (1-p)^{n-1} \\
+\sum_{n=0}^\infty x^n &= \frac{1}{1-x} \\
+\sum_{n=1}^\infty n x^{n-1} &= \frac{1}{(1-x)^2} \\
+\sum_{n=1}^\infty n (1-p)^{n-1} &= \frac{1}{p^2} \\
+\mean\sub{Geometric$[p]$} &= \frac{1}{p}.
+\end{align*}
+
+\section{Variance of a Geometric Distribution}
+
+\begin{align*}
+\variance\sub{Geometric$[p]$} &= \sum_{n=1}^\infty (n - \mean\sub{Geometric$[p]$})^2 p (1-p)^{n-1} \\
+&= \sum_{n=1}^\infty \left(n - \frac{1}{p}\right)^2 p (1-p)^{n-1} \\
+&= \sum_{n=1}^\infty \left(\frac{1}{p^2} - \frac{2n}{p} + n^2\right) p (1-p)^{n-1} \\
+&= \frac{1}{p} \sum_{n=1}^\infty (1-p)^{n-1} - 2 \sum_{n=1}^\infty n(1-p)^{n-1} + p \sum_{n=1}^\infty n^2 (1-p)^{n-1} \\
+&= \frac{1}{p} \left[\frac{1}{1 - (1-p)}\right] - \frac{2}{p} \sum_{n=1}^\infty n p (1-p)^{n-1} + p \sum_{n=1}^\infty n^2 (1-p)^{n-1} \\
+&= \frac{1}{p^2} - \frac{2 \mean\sub{Geometric$[p]$}}{p} + p \sum_{n=1}^\infty n^2 (1-p)^{n-1} \\
+&= -\frac{1}{p^2} + p \sum_{n=1}^\infty n^2 (1-p)^{n-1} \\
+\sum_{n=0}^\infty x^n &= \frac{1}{1-x} \\
+\sum_{n=1}^\infty n x^{n-1} &= \frac{1}{(1-x)^2} \\
+\sum_{n=1}^\infty n x^n &= \frac{x}{(1-x)^2} \\
+\sum_{n=1}^\infty n^2 x^n &= \frac{(1-x)^2 + 2x(1-x)}{(1-x)^4} \\
+&= \frac{1 - x + 2x}{(1-x)^3} \\
+&= \frac{1+x}{(1-x)^3} \\
+\sum_{n=1}^\infty n^2 (1-p)^{n-1} &= \frac{2-p}{p^3} \\
+\variance\sub{Geometric$[p]$} &= -\frac{1}{p^2} + \frac{2-p}{p^2} \\
+&= \frac{1-p}{p^2}.
+\end{align*}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
