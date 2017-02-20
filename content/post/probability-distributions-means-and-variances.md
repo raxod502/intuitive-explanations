@@ -1,7 +1,7 @@
 +++
 title = "Probability Distributions: Means and Variances"
 date = "2016-03-08T18:18:00-08:00"
-type = "post"
+path = "/"
 +++
 
 This document is simply a collection of proofs of the formulas for the

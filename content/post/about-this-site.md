@@ -1,7 +1,7 @@
 +++
 title = "About This Site"
 date = "2016-01-28T00:36:00-08:00"
-type = "post"
+path = "/"
 +++
 
 Hi! My name is Radon Rosborough, and I like to write about math. This

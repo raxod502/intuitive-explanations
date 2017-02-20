@@ -1,7 +1,7 @@
 +++
 title = "The Picard-Lindelöf Theorem"
 date = "2016-03-08T17:18:00-08:00"
-type = "post"
+path = "/"
 +++
 
 This is my rendition of the proof of the existence-uniqueness theorem

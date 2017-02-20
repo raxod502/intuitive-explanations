@@ -1,7 +1,7 @@
 +++
 title = "Linear Algebra Summary Sheet"
 date = "2016-01-28T17:26:00-08:00"
-type = "post"
+path = "/"
 +++
 
 There are lots of theorems in linear algebra—many more than there are

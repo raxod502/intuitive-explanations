@@ -1,7 +1,7 @@
 +++
 title = "Calculus: Intuitive Explanations"
 date = "2016-01-28T00:56:00-08:00"
-type = "post"
+path = "/"
 +++
 
 Calculus is one of my favorite areas of math, primarily because it is
