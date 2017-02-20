@@ -168,32 +168,32 @@ What, exactly, does it mean for a function to ``have a limit'' at a certain poin
 \begin{figure}[htb!] \centering
 	\begin{subfigure}[t]{0.3\textwidth} \centering
 		\begin{tikzpicture}[scale=3] % Continuous
-		
+
 		\draw [help lines, ->] (-0.2, 0) -- (1, 0);
 		\draw [help lines, ->] (0, -0.1) -- (0, 1);
 		\draw [<->, domain=-0.2:1] plot (\x, \x*\x);
 		\fill (0.7, 0.49) circle (0.5pt);
 		\draw [dashed] (0, 0.49) node [left] {$\ver{L}$} -- (0.7, 0.49) -- (0.7, 0) node [below] {$\hor{c}$};
-		
+
 		\end{tikzpicture}
 		\caption*{$\lim_{\hor{x \to c}} \ver{f(x)} = \ver{L} = f(c)$}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.3\textwidth} \centering
 		\begin{tikzpicture}[scale=3] % Removable discontinuity
-		
+
 		\draw [help lines, ->] (-0.2, 0) -- (1, 0);
 		\draw [help lines, ->] (0, -0.1) -- (0, 1);
 		\draw [<->, domain=-0.2:1] plot (\x, \x*\x);
 		\draw [dashed] (0, 0.49) node [left] {$\ver{L}$} -- (0.7, 0.49) -- (0.7, 0) node [below] {$\hor{c}$};
 		\filldraw [fill=white] (0.7, 0.49) circle (0.5pt);
 		\fill (0.7, 0.7) circle (0.5pt);
-		
+
 		\end{tikzpicture}
 		\caption*{$\lim_{\hor{x \to c}} \ver{f(x)} = \ver{L} \neq f(c)$}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.3\textwidth} \centering
 		\begin{tikzpicture}[scale=3] % Nonremovable discontinuity
-		
+
 		\draw [help lines, ->] (-0.2, 0) -- (1, 0);
 		\draw [help lines, ->] (0, -0.1) -- (0, 1);
 		\draw [<-, domain=-0.2:0.7] plot (\x, \x*\x);
@@ -201,7 +201,7 @@ What, exactly, does it mean for a function to ``have a limit'' at a certain poin
 		\fill (0.7, 0.49) circle (0.5pt);
 		\filldraw [fill=white] (0.7, 0.69) circle (0.5pt);
 		\draw [dashed] (0.7, 0.49) -- (0.7, 0) node [below] {$\hor{c}$};
-		
+
 		\end{tikzpicture}
 		\caption*{$\lim_{\hor{x \to c}} \ver{f(x)}$ does not exist}
 	\end{subfigure}
@@ -234,12 +234,12 @@ This definition probably seems a little off to you: after all, we do not want a 
 
 \begin{figure} \centering
 	\begin{tikzpicture}[every pin edge/.append style=-]
-	
+
 	\draw [dashed] (8, 11) node [left] {$\ver{L}$} -- (10, 11) -- (10, 8) node [below] {$\hor{c}$};
 	\draw [<->] (8, 8) -- (12, 12) node [pos=0.7, pin={-30:$y = f(x) = x$}] {};
 	\fill (10, 10) circle (1.5pt) node [above left] {$(\hor{1}, \ver{1})$};
 	\fill (10, 11) circle (1.5pt) node [above left] {$(\hor{1}, \ver{1.001})$};
-	
+
 	\end{tikzpicture}
 	\caption{According to our second definition, $\lim_{\hor{x \to 1}} \ver{x} = \ver{1.001}$. (Here, $\hor{c = 1}$, $\ver{L = 1.001}$, and $\ver{f(x) = x}$.) This is because near $\hor{x = 1}$, the difference between $\ver{f(x)}$ and $\ver{L = 1.001}$ is approximately $\ver{0.001}$. And according to our definition, all $\ver{f(x)}$ has to do for its limit to exist is come within $\ver{0.01}$ of $\ver{L = 1.001}$ near $\hor{x = c = 1}$. In fact, you can use this same reasoning to show that $\lim_{\hor{x \to 1}} \ver{x}$ is equal to an infinite number of different values, which is clearly ridiculous.}
 	\label{fig:near miss}
@@ -253,14 +253,14 @@ The key principle is that functions that ``pass through'' their limiting point $
 
 \begin{figure}[htb!] \centering
 	\begin{tikzpicture}[scale=3]
-	
+
 	\draw [<->] (0, 0) -- (1, 1.4);
 	\draw [dashed] (0.5, 0) node [below] {$\hor{c}$} -- (0.5, 0.7);
 	\draw [dashed] (0, 0.7) node [left] {$\ver{L}$} -- (0.5, 0.7);
 	\draw [dashed] (0, 0.5) node [left] {$\ver{L - \epsilon}$} -- (0.5/1.4, 0.5);
 	\draw [dashed] (0, 0.9) node [left] {$\ver{L + \epsilon}$} -- (0.9/1.4, 0.9);
 	\filldraw [fill=white] (0.5, 0.7) circle (0.5pt);
-	
+
 	\end{tikzpicture}
 	\caption{A small portion of the second graph in figure \ref{fig:limits}, magnified so much that the graph appears as a straight line. The symbol $\ver{\epsilon}$ represents a very small number, such as $\ver{10^{-1000}}$. You can see from the graph that when $\hor{x}$ is close enough to $\hor{c}$, $\ver{f(x)}$ will come within $\ver{\epsilon}$ of $\ver{L}$ (all of the values between $\ver{L - \epsilon}$ and $\ver{L + \epsilon}$ are within $\ver{\epsilon}$ of $\ver{L}$). Notice that when you zoom in even more, the graph will look exactly the same, but $\ver{\epsilon}$ will become an even smaller number. This shows that no matter how small of a number $\ver{\epsilon}$ you can think of, $\ver{f(x)}$ will eventually get within that distance of $\ver{L}$ (once $\hor{x}$ is close enough to $\hor{c}$).}
 	\label{fig:zoom}
@@ -284,7 +284,7 @@ Make sure you understand this last definition, because it is essentially the sam
 	\renewcommand\L{0.49}
 	\newcommand\e{0.15}
 	\renewcommand\d{0.075}
-	
+
 	\fill [blue!25] (0, {\L-\e}) plot [domain={sqrt(\L-\e)}:{sqrt(\L+\e)}] (\x, \x*\x) -- (0, {\L+\e}) node [left] {$\ver{L + \epsilon}$} -- (0, {\L-\e}) node [left] {$\ver{L - \epsilon}$};
 	\fill [red!25] ({\c-\d}, 0) plot [domain={\c-\d}:{\c+\d}] (\x, \x*\x) -- ({\c+\d}, 0) node [below] {$\hor{\phantom{\delta + {}} c + \delta}$} -- ({\c-\d}, 0) node [below, red] {$\hor{c - \delta \phantom{{} - c}}$};
 	\fill [red!50!green!25] (0, {(\c-\d)*(\c-\d)}) plot [domain={\c-\d}:{\c+\d}] (\x, \x*\x) -- (0, {(\c+\d)*(\c+\d)}) -- (0, {(\c-\d)*(\c-\d)});
@@ -295,7 +295,7 @@ Make sure you understand this last definition, because it is essentially the sam
 	\draw [<->, domain=-0.2:1] plot (\x, \x*\x);
 	\draw [dashed] (0, \L) node [left] {$\ver{L}$} -- (\c, \L) -- (\c, 0) node [below] {$\hor{\vphantom{\delta}c}$};
 	\fill (\c, \L) circle (0.21429pt);
-	
+
 	\end{tikzpicture}
 	\caption{A visual representation of the fact that $\lim_{\hor{x \to 0.7}} \ver{x^2} = \ver{0.49}$. In this figure (to scale), $\ver{f(x) = x^2}$, $\hor{c = 0.7}$, $\hor{\delta = 0.075}$, $\ver{L = 0.49}$, and $\ver{\epsilon = 0.15}$, but many other values would produce a situation similar to the one shown.}
 	\label{fig:ed}
@@ -350,12 +350,12 @@ Figure \ref{fig:linear ed} illustrates the situation for this limit.
 
 \begin{figure}[htb!] \centering
 	\begin{tikzpicture}[every pin edge/.append style=-]
-	
+
 	\renewcommand\c{2}
 	\renewcommand\L{6}
 	\newcommand\e{1.5}
 	\renewcommand\d{1.5/4}
-	
+
 	\fill [red!25] (\c-\d, 0) node [below] {$\hor{c - \delta\phantom{{} - c}}$} -- (\c-\d, {3*(\c-\d)}) -- (\c+\d, {3*(\c+\d)}) -- (\c+\d, 0) node [below] {$\hor{\phantom{\delta + {}}c + \delta}$} -- cycle;
 	\fill [blue!25] (0, \L-\e) node [left] {$\ver{L - \epsilon}$} -- (0, \L+\e) node [left] {$\ver{L + \epsilon}$} -- ({(\L+\e)/3}, \L+\e) -- ({(\L-\e)/3}, \L-\e) -- cycle;
 	\fill [red!50!green!25] (0, {3*(\c-\d)}) -- (0, {3*(\c+\d)}) -- (\c+\d, {3*(\c+\d)}) -- (\c-\d, {3*(\c-\d)}) -- cycle;
@@ -365,7 +365,7 @@ Figure \ref{fig:linear ed} illustrates the situation for this limit.
 	\fill (\c, \L) circle (1.5pt);
 	\draw [dashed] (\c, 0) node [below] {$\hor{\vphantom{\delta}c}$} -- (\c, \L);
 	\draw [dashed] (0, \L) node [left] {$\ver{L}$} -- (\c, \L);
-	
+
 	\end{tikzpicture}
 	\caption{Values of $\ver{\epsilon}$ and $\hor{\delta}$ that satisfy our definition of limit.}
 	\label{fig:linear ed}
@@ -449,12 +449,12 @@ Figure \ref{fig:quadratics} illustrates that the values of $\hor{\delta}$ given 
 \begin{figure}[htb!] \centering
 	\begin{subfigure}[t]{0.3\textwidth} \centering
 		\begin{tikzpicture}[scale=3] % Square
-		
+
 		\renewcommand\c{0.7}
 		\renewcommand\L{0.49}
 		\newcommand\e{0.15}
 		\renewcommand\d{0.05/0.7}
-		
+
 		\fill [blue!25] (0, {\L-\e}) plot [domain={sqrt(\L-\e)}:{sqrt(\L+\e)}] (\x, \x*\x) -- (0, {\L+\e}) -- (0, {\L-\e});
 		\fill [red!25] ({\c-\d}, 0) plot [domain={\c-\d}:{\c+\d}] (\x, \x*\x) -- ({\c+\d}, 0) -- ({\c-\d}, 0);
 		\fill [red!50!green!25] (0, {(\c-\d)*(\c-\d)}) plot [domain={\c-\d}:{\c+\d}] (\x, \x*\x) -- (0, {(\c+\d)*(\c+\d)}) -- (0, {(\c-\d)*(\c-\d)});
@@ -466,18 +466,18 @@ Figure \ref{fig:quadratics} illustrates that the values of $\hor{\delta}$ given 
 		\draw [dashed] (0, \L) node [left] {$\ver{L}$} -- (\c, \L);
 		\draw [dashed] (\c, 0) node [below] {$\hor{\vphantom{\delta}c}$} -- (\c, \L);
 		\fill (\c, \L) circle (0.5pt);
-		
+
 		\end{tikzpicture}
 		\small \begin{tabular}{ll} $\hor{c = 0.7}$ & $\ver{L = 0.49}$ \\ $\hor{\delta = 1/14}$ & $\ver{\epsilon = 0.15}$\\ \end{tabular}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.3\textwidth} \centering
 		\begin{tikzpicture}[scale=0.3] % Vertical
-		
+
 		\renewcommand\c{3}
 		\renewcommand\L{9}
 		\newcommand\e{0.5}
 		\renewcommand\d{0.5/9}
-		
+
 		\fill [blue!25] (0, {\L-\e}) plot [domain={sqrt(\L-\e}:{sqrt(\L+\e))}] (\x, \x*\x) -- (0, {\L+\e}) -- (0, {\L-\e});
 		\fill [red!25] ({\c-\d}, 0) plot [domain={\c-\d}:{\c+\d}] (\x, \x*\x) -- ({\c+\d}, 0) -- ({\c-\d}, 0);
 		\fill [red!50!green!25] (0, {(\c-\d)*(\c-\d)}) plot [domain={\c-\d}:{\c+\d}] (\x, \x*\x) -- (0, {(\c+\d)*(\c+\d)}) -- (0, {(\c-\d)*(\c-\d)});
@@ -489,13 +489,13 @@ Figure \ref{fig:quadratics} illustrates that the values of $\hor{\delta}$ given 
 		\draw [dashed] (0, \L) node [left] {$\ver{L}$} -- (\c, \L);
 		\draw [dashed] (\c, 0) node [below] {$\hor{\vphantom{\delta}c}$} -- (\c, \L);
 		\fill (\c, \L) circle (5pt);
-		
+
 		\end{tikzpicture}
 		\small \begin{tabular}{ll} $\hor{c = 3}$ & $\ver{L = 9}$ \\ $\hor{\delta = 1/18}$ & $\ver{\epsilon = 0.5}$\\ \end{tabular}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.3\textwidth} \centering
 		\begin{tikzpicture}[x=24cm, y=24cm]
-		
+
 		\renewcommand\c{0.2}
 		\renewcommand\L{0.04}
 		\newcommand\e{0.01}
@@ -504,7 +504,7 @@ Figure \ref{fig:quadratics} illustrates that the values of $\hor{\delta}$ given 
 		\newcommand\fr{0.25}
 		\newcommand\fb{0.01}
 		\newcommand\ft{0.09}
-		
+
 		\fill [blue!25] (\fl, {\L-\e}) plot [domain={sqrt(\L-\e)}:{sqrt(\L+\e)}] (\x, \x*\x) -- (\fl, {\L+\e}) -- (\fl, {\L-\e});
 		\fill [red!25] ({\c-\d}, \fb) plot [domain={\c-\d}:{\c+\d}] (\x, \x*\x) -- ({\c+\d}, \fb) -- ({\c-\d}, \fb);
 		\fill [red!50!green!25] (\fl, {(\c-\d)*(\c-\d)}) plot [domain={\c-\d}:{\c+\d}] (\x, \x*\x) -- (\fl, {(\c+\d)*(\c+\d)}) -- (\fl, {(\c-\d)*(\c-\d)});
@@ -512,7 +512,7 @@ Figure \ref{fig:quadratics} illustrates that the values of $\hor{\delta}$ given 
 		\draw [dashed] (\c, \fb) node [below] {$\hor{\vphantom{\delta}c}$} -- (\c, \L);
 		\draw [<->, domain=\fl:\fr] plot (\x, \x*\x);
 		\fill [shift only] (\c, \L) circle (1.5pt);
-		
+
 		\end{tikzpicture}
 		\small \begin{tabular}{ll} $\hor{c = 0.2}$ & $\ver{L = 0.04}$ \\ $\hor{\delta = 1/60}$ & $\ver{\epsilon = 0.01}$ \\ \end{tabular}
 	\end{subfigure}
@@ -532,13 +532,13 @@ You are doubtless already familiar with limits that do not exist, such as the on
 
 \begin{figure}[htb!] \centering
 	\begin{tikzpicture}[x=1cm, y=1cm, every pin edge/.append style=-]
-	
+
 	\draw [<->, help lines] (-3, 0) -- (3, 0);
 	\draw [<->, help lines] (0, -3) -- (0, 3);
 	\draw [<->, domain=-3:-0.33333] plot (\x, 1/\x);
 	\draw [<->, domain=0.33333:3] plot (\x, 1/\x);
 	\path (0.5, 2) node [pin={30:$\ver{f(x) = 1/x}$}] {};
-	
+
 	\end{tikzpicture}
 	\caption{A function that has no limit at $\hor{x = 0}$.}
 	\label{fig:dne}
@@ -573,12 +573,12 @@ The validity of the values of $\ver{\epsilon}$ and $\hor{x}$ produced in this pr
 \begin{figure}[htb!] \centering
 	\begin{subfigure}[t]{0.45\textwidth} \centering
 		\begin{tikzpicture}[x=1cm, y=1cm, every pin edge/.append style=-]
-		
+
 		\renewcommand\L{1}
 		\newcommand\e{1}
 		\renewcommand\d{0.75}
 		\newcommand\x{0.375}
-		
+
 		\fill [blue, opacity=0.25] (-3, \L-\e) rectangle (3, \L+\e);
 		\fill [red, opacity=0.25] (-\d, -3) rectangle (\d, 3);
 		\draw [dashed] (0, \L) node [left] {$\ver{L}$} -- (3, \L);
@@ -588,18 +588,18 @@ The validity of the values of $\ver{\epsilon}$ and $\hor{x}$ produced in this pr
 		\draw [<->, domain=-3:-0.33333] plot (\x, 1/\x);
 		\draw [<->, domain=0.33333:3] plot (\x, 1/\x);
 		\fill (\x, 1/\x) circle (1.5pt);
-		
+
 		\end{tikzpicture}
 		\caption*{$\hor{\delta = 0.75}$, $\hor{x = \delta/2 = 0.375}$}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.45\textwidth} \centering
 		\begin{tikzpicture}[x=1cm, y=1cm, every pin edge/.append style=-]
-		
+
 		\renewcommand\L{1}
 		\newcommand\e{1}
 		\renewcommand\d{1.25}
 		\newcommand\x{0.5}
-		
+
 		\fill [blue, opacity=0.25] (-3, \L-\e) rectangle (3, \L+\e);
 		\fill [red, opacity=0.25] (-\d, -3) rectangle (\d, 3);
 		\draw [dashed] (0, \L) node [left] {$\ver{L}$} -- (3, \L);
@@ -609,7 +609,7 @@ The validity of the values of $\ver{\epsilon}$ and $\hor{x}$ produced in this pr
 		\draw [<->, domain=-3:-0.33333] plot (\x, 1/\x);
 		\draw [<->, domain=0.33333:3] plot (\x, 1/\x);
 		\fill (\x, 1/\x) circle (1.5pt);
-		
+
 		\end{tikzpicture}
 		\caption*{$\hor{\delta = 1.25}$, $\hor{x} = \ver{1/(2|L|)} = \hor{0.5}$}
 		\caption*{(note that because we use $<$ instead of $\leq$ in $\ver{|f(x) - L| < \epsilon}$, being on the edge of a band does not count)}
@@ -2002,19 +2002,3 @@ For any region $R$:
 An elementary consequence of these facts is that $\curl \grad f = \vec{0}$, because $\grad f$ is the gradient of the scalar field $f$, so $\grad f$ is conservative and consequently has no curl.
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
