@@ -11,23 +11,6 @@
 \usepackage{mathtools}
 \usepackage{hyperref}
 
-\newcounter{compilation}
-\newwrite\writecompilation
-\newread\readcompilation
-\openin\readcompilation=\jobname.vrs
-\ifeof\readcompilation
-  % no file yet
-  \setcounter{compilation}{1}%
-\else
-  \read\readcompilation to \temp
-  \setcounter{compilation}{\temp}%
-  \stepcounter{compilation}%
-\fi
-\closein\readcompilation
-\immediate\openout\writecompilation=\jobname.vrs
-\immediate\write\writecompilation{\thecompilation}
-\immediate\closeout\writecompilation
-
 \renewcommand{\titlepage}[3]{%
   \title{#1}%
   \author{Radon Rosborough}%
@@ -39,8 +22,4 @@
   \end{center}
   \vspace{4em}
   #3
-  \vfill
-  {\noindent \scriptsize Build \thecompilation
-
-  \noindent Copyright \textcopyright{} 2016 by Radon Rosborough. This work is licensed under a \href{http://creativecommons.org/licenses/by-nc-nd/4.0/}{Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License}.}
   \clearpage}
