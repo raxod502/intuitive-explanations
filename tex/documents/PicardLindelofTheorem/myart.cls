@@ -1,0 +1,1 @@
+/Users/raxod502/Desktop/Code/Web/intuitive-explanations/tex/documents/../classes/myart.cls
