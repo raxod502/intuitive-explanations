@@ -3,4 +3,10 @@ addons:
     packages:
       - texlive
       - latexmk
+      - hugo
+dist: trusty
+before_script:
+  - latex --version
+  - latexmk --version
+  - hugo --version
 script: make
