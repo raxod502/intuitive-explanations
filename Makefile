@@ -1,6 +1,11 @@
-all:
-	latexmk -pdf -cd tex/documents/*/*.tex
+all: tex
 	hugo
+
+tex:
+	latexmk -pdf -cd tex/documents/*/*.tex
+
+dev: tex
+	hugo server
 
 clean:
 	rm -fr public
@@ -16,4 +21,4 @@ clean:
 	rm -f  tex/documents/*/*.toc
 	rm -fr tex/documents/*/auto
 
-.PHONY: all clean
+.PHONY: all tex dev clean
