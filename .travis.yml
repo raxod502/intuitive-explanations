@@ -10,7 +10,7 @@ install:
   - go get -v github.com/spf13/hugo
   - tlmgr init-usertree
   - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
-  - tlmgr install beamer pgfcore
+  - tlmgr install beamer nag pgf
 before_script:
   - latex --version
   - latexmk --version
