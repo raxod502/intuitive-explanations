@@ -20,5 +20,5 @@ Frobenius, Laplace transforms, and higher-order equations.
 You can read the document [here][] (PDF, ~400 KB, 35 pages). For more
 information about how it was created, see the [About] page.
 
-[here]: /files/DifferentialEquationSolutionStrategies.pdf
+[here]: /DifferentialEquationSolutionStrategies.pdf
 [about]: /about-this-site

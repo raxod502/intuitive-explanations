@@ -35,7 +35,7 @@ on [the cover of my Calculus textbook][cover], using the laser cutter.
 I wrote a [Clojure] library, available [on Github][layerize], to
 generate the schematics.
 
-[cover]: /files/CalculusTextbookCover.pdf
+[cover]: /CalculusTextbookCover.pdf
 [clojure]: https://clojure.org/
 [layerize]: https://github.com/raxod502/layerize
 
@@ -51,5 +51,5 @@ you can find more information about the functionality of Chrono Count
 Count, its contents are archived on Github [here][cc-website].
 
 [cc]: https://github.com/raxod502/chrono-count
-[cc-details]: /files/ChronoCountDetails.pdf
+[cc-details]: /ChronoCountDetails.pdf
 [cc-website]: https://github.com/raxod502/chrono-count/tree/master/Site

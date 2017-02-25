@@ -71,7 +71,7 @@ always have an up-to-date copy. If you have suggestions for changes, I
 would love to hear them—simply email me
 at [radon.rosborough@gmail.com][email]!
 
-[source]: /files/LaTeXSource.zip
+[source]: /LaTeXSource.zip
 [email]: mailto:radon.rosborough@gmail.com
 
 ## The Future

@@ -11,5 +11,5 @@ are important in statistics.
 You can read the document [here][] (PDF, ~200 KB, 7 pages). For more
 information about how it was created, see the [About] page.
 
-[here]: /files/ProbabilityDistributionsMeansAndVariances.pdf
+[here]: /ProbabilityDistributionsMeansAndVariances.pdf
 [about]: /about-this-site

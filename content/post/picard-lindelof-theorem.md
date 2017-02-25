@@ -12,5 +12,5 @@ possible while also making the proof easy to read and comprehend.
 You can read the proof [here][] (PDF, ~200 KB, 7 pages). For more
 information about how it was created, see the [About] page.
 
-[here]: /files/PicardLindelofTheorem.pdf
+[here]: /PicardLindelofTheorem.pdf
 [about]: /about-this-site

@@ -15,5 +15,5 @@ are most closely related are placed next to one another.
 You can read the document [here][] (PDF, ~200 KB, 10 pages). For more
 information about how it was created, see the [About] page.
 
-[here]: /files/LinearAlgebraSummarySheet.pdf
+[here]: /LinearAlgebraSummarySheet.pdf
 [about]: /about-this-site

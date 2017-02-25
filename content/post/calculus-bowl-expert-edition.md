@@ -26,5 +26,5 @@ down the solutions on paper.
 You can view the presentation [here][] (PDF, ~300 KB, 99 slides). For
 more information about how it was created, see the [About] page.
 
-[here]: /files/CalculusBowlExpertEdition.pdf
+[here]: /CalculusBowlExpertEdition.pdf
 [about]: /about-this-site
