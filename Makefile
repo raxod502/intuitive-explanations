@@ -3,7 +3,7 @@ all: tex static public
 dev: tex static server
 
 tex:
-	latexmk -pdf -cd tex/documents/*/*.tex
+	latexmk -pdf -cd -interaction=nonstopmode tex/documents/*/*.tex
 
 static:
 	rm -fr static
