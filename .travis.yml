@@ -1,1 +1,6 @@
+addons:
+  apt:
+    packages:
+      - texlive
+      - latexmk
 script: make
