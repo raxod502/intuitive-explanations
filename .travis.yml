@@ -11,7 +11,8 @@ install:
   - tlmgr option repository
     ftp://tug.org/historic/systems/texlive/2015/tlnet-final
   - tlmgr install beamer chngcntr enumitem environ etoolbox lipsum
-    mdframed nag needspace pgf tikz-3dplot tocloft trimspaces xcolor
+    mdframed nag needspace pgf pgfplots tikz-3dplot tocloft trimspaces
+    xcolor
   - go get -v github.com/spf13/hugo
 before_script:
   - latex --version
