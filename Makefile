@@ -1,4 +1,5 @@
 all: tex
+	rm -fr public
 	hugo
 
 tex:
@@ -8,6 +9,7 @@ tex:
 	cp tex/documents/*/*.pdf static
 
 dev: tex
+	rm -fr public
 	hugo server
 
 clean:
