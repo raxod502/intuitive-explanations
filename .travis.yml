@@ -5,7 +5,8 @@ addons:
       - texlive
       - latexmk
 install:
-  - tlmgr install beamer
+  - tlmgr init-usertree
+  - tlmgr install beamerx
   - wget https://github.com/spf13/hugo/releases/download/v0.14/hugo_0.14_amd64.deb
   - sudo dpkg -i hugo*.deb
 before_script:
