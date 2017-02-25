@@ -1,12 +1,14 @@
+dist: trusty
 addons:
   apt:
     packages:
       - texlive
       - latexmk
-      - hugo
-dist: trusty
+install:
+  - wget https://github.com/spf13/hugo/releases/download/v0.14/hugo_0.14_amd64.deb
+  - sudo dpkg -i hugo*.deb
 before_script:
   - latex --version
   - latexmk --version
-  - hugo --version
+  - hugo version
 script: make
