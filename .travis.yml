@@ -1,4 +1,5 @@
 dist: trusty
+language: go
 addons:
   apt:
     packages:
@@ -6,11 +7,10 @@ addons:
       - texlive
       - latexmk
 install:
+  - go get -v github.com/spf13/hugo
   - tlmgr init-usertree
   - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
   - tlmgr install beamer
-  - wget https://github.com/spf13/hugo/releases/download/v0.14/hugo_0.14_amd64.deb
-  - sudo dpkg -i hugo*.deb
 before_script:
   - latex --version
   - latexmk --version
