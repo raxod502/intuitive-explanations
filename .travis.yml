@@ -1,10 +1,9 @@
 dist: trusty
-addons:
-  apt:
-    packages:
-      - texlive
-      - latexmk
+cache:
+  - /tmp/texlive
+  - $HOME/.texlive
 install:
+  - source tex/travis.sh
   - wget https://github.com/spf13/hugo/releases/download/v0.14/hugo_0.14_amd64.deb
   - sudo dpkg -i hugo*.deb
 before_script:
