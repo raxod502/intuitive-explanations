@@ -1,4 +1,5 @@
 /public/
+/static/
 /tex/classes/auto/
 /tex/documents/*/*.aux
 /tex/documents/*/*.fdb_latexmk

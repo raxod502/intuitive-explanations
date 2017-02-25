@@ -3,12 +3,16 @@ all: tex
 
 tex:
 	latexmk -pdf -cd tex/documents/*/*.tex
+	rm -fr static
+	mkdir static
+	cp tex/documents/*/*.pdf static
 
 dev: tex
 	hugo server
 
 clean:
 	rm -fr public
+	rm -fr static
 	rm -fr tex/classes/auto
 	rm -f  tex/documents/*/*.aux
 	rm -f  tex/documents/*/*.fdb_latexmk
