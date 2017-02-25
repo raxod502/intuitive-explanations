@@ -9,7 +9,7 @@ addons:
 install:
   - tlmgr init-usertree
   - tlmgr option repository ftp://tug.org/historic/systems/texlive/2015/tlnet-final
-  - tlmgr install beamer chngcntr enumitem environ etoolbox lipsum nag pgf tocloft trimspaces xcolor
+  - tlmgr install beamer chngcntr enumitem environ etoolbox lipsum mdframed nag pgf tocloft trimspaces xcolor
   - go get -v github.com/spf13/hugo
 before_script:
   - latex --version
