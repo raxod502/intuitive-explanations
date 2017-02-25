@@ -1,15 +1,20 @@
-all: tex
-	rm -fr public
-	hugo
+all: tex static public
+
+dev: tex static server
 
 tex:
 	latexmk -pdf -cd tex/documents/*/*.tex
+
+static:
 	rm -fr static
 	mkdir static
 	cp tex/documents/*/*.pdf static
 
-dev: tex
+public:
 	rm -fr public
+	hugo
+
+server:
 	hugo server
 
 clean:
@@ -27,4 +32,4 @@ clean:
 	rm -f  tex/documents/*/*.toc
 	rm -fr tex/documents/*/auto
 
-.PHONY: all tex dev clean
+.PHONY: all dev tex static public server clean
