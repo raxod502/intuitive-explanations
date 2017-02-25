@@ -1,16 +1,16 @@
 dist: trusty
-sudo: false
+sudo: required
 language: go
 addons:
   apt:
     packages:
       - xzdec
-      - texlive
       - latexmk
 install:
+  - sudo add-apt-repository ppa:jonathonf/texlive-2016
+  - sudo apt-get update
+  - sudo apt-get install texlive
   - tlmgr init-usertree
-  - tlmgr option repository
-    ftp://tug.org/historic/systems/texlive/2015/tlnet-final
   - tlmgr install beamer chngcntr enumitem environ etoolbox lipsum
     mdframed nag needspace pgf pgfplots tikz-3dplot tocloft trimspaces
     xcolor
