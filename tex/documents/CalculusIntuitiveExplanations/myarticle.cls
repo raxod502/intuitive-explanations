@@ -1,1 +1,1 @@
-/Users/raxod502/Desktop/Code/Web/intuitive-explanations/tex/classes/myarticle.cls
+../../classes/myarticle.cls
