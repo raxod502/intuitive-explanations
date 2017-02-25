@@ -34,7 +34,7 @@ on [the cover of my Calculus textbook][cover], using the laser cutter.
 I wrote a [Clojure] library, available [on Github][layerize], to
 generate the schematics.
 
-[cover]: /CalculusTextbookCover.pdf
+[cover]: /LarsonCalculusOfASingleVariable10eCover.pdf
 [clojure]: https://clojure.org/
 [layerize]: https://github.com/raxod502/layerize
 
