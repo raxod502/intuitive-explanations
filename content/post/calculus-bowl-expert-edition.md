@@ -1,7 +1,6 @@
 +++
 title = "Calculus Bowl: Expert Edition"
 date = "2016-04-21T22:25:00-08:00"
-path = "/"
 +++
 
 After participating in the [Rocky Mountain Area Calculus Bowl], I

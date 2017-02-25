@@ -1,7 +1,6 @@
 +++
 title = "Differential Equation Solution Strategies"
 date = "2016-02-14T13:28:00-08:00"
-path = "/"
 +++
 
 As anyone in a Differential Equations class could tell you, there are
