@@ -45,9 +45,9 @@ generate the schematics.
 During my sophomore year in high school, I wrote an iOS app called
 Chrono Count, which was previously available for download from the iOS
 App Store. The code for this app is now available [on Github][cc], and
-you can find more information about the functionality of Chrono Count
-[cc-details]. If you want to see the original website for Chrono
-Count, its contents are archived on Github [here][cc-website].
+you can find more information about the functionality of Chrono
+Count [here][cc-details]. If you want to see the original website for
+Chrono Count, its contents are archived on Github [here][cc-website].
 
 [cc]: https://github.com/raxod502/chrono-count
 [cc-details]: /ChronoCountDetails.pdf
