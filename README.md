@@ -8,6 +8,7 @@ the new version in [Hugo], which will soon replace it.
 ## Development
 
 The dependencies are:
+* [Git]
 * [Hugo]
 * [LaTeX]
 
@@ -51,6 +52,7 @@ To remove build artifacts, run:
 
     $ make clean
 
+[git]: https://git-scm.com/downloads
 [hugo]: https://gohugo.io/
 [ie]: https://intuitiveexplanations.com
 [latex]: https://www.latex-project.org/get/
