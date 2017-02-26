@@ -33,13 +33,13 @@ title = "Intuitive Explanations"
     weight = 2
 
 [[menu.main]]
-    name = "Differential Equation Solution Strategies"
-    url = "/differential-equation-solution-strategies"
+    name = "Linear Algebra Summary Sheet"
+    url = "/linear-algebra-summary-sheet"
     weight = 3
 
 [[menu.main]]
-    name = "Linear Algebra Summary Sheet"
-    url = "/linear-algebra-summary-sheet"
+    name = "Differential Equation Solution Strategies"
+    url = "/differential-equation-solution-strategies"
     weight = 4
 
 [[menu.main]]
