@@ -15,6 +15,10 @@ public:
 server:
 	hugo server
 
+deploy:
+	rsync --archive --checksum --compress --delete --human-readable --partial --progress \
+	  public/ apprisingsoftware@intuitiveexplanations.com:/home/apprisingsoftware/intuitiveexplanations.com/
+
 clean:
 	rm -fr public
 	rm -fr static
