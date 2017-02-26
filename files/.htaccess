@@ -11,8 +11,8 @@ Redirect 301 /probability-distribution-proofs /probability-distributions-means-a
 #### Files that still exist
 
 Redirect 301 /files/CalcBowl.pdf /CalculusBowlExpertEdition.pdf
-Redirect 301 /files/CalculusTextbookCover.pdf /LarsonCalculusOfASingleVariable10eCover.pdf
-Redirect 301 /files/ChronoCountDetails.pdf /ChronoCountDetails.pdf
+Redirect 301 /files/CalculusTextbookCover.pdf https://github.com/raxod502/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf
+Redirect 301 /files/ChronoCountDetails.pdf https://github.com/raxod502/chrono-count/blob/b08480eff49f6e3b66ae32fe3bb4afe39dc0ce7a/ChronoCountDetails.pdf
 Redirect 301 /files/DifferentialEquationSolutionStrategies.pdf /DifferentialEquationSolutionStrategies.pdf
 Redirect 301 /files/ExistenceUniquenessTheorem.pdf /PicardLindelofTheorem.pdf
 Redirect 301 /files/Intuition /CalculusIntuitiveExplanations.pdf
