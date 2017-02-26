@@ -1,20 +1,15 @@
 # Intuitive Explanations
 
-Check out [my personal website]!
+[![Build Status](https://travis-ci.org/raxod502/intuitive-explanations.svg?branch=master)](https://travis-ci.org/raxod502/intuitive-explanations)
 
-[my personal website]: https://intuitiveexplanations.com
-
-Unfortunately, I made it a long time ago so it's hosted on Wordpress.
-I now hate Wordpress, and am moving it to [Hugo]. It's a work in
-progress!
-
-[hugo]: https://gohugo.io/
+[Here][ie] is my personal website in Wordpress. This repository holds
+the new version in [Hugo], which will soon replace it.
 
 ## Development
 
 The dependencies are:
-* [Hugo](https://gohugo.io/)
-* [LaTeX](https://www.latex-project.org/get/)
+* [Hugo]
+* [LaTeX]
 
 Make sure you clone the submodules of this repository. You can do this
 with a recursive clone:
@@ -55,3 +50,7 @@ To run the development server without running any other steps, run:
 To remove build artifacts, run:
 
     $ make clean
+
+[hugo]: https://gohugo.io/
+[ie]: https://intuitiveexplanations.com
+[latex]: https://www.latex-project.org/get/
