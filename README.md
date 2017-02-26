@@ -2,8 +2,7 @@
 
 [![Build Status](https://travis-ci.org/raxod502/intuitive-explanations.svg?branch=master)](https://travis-ci.org/raxod502/intuitive-explanations)
 
-[Here][ie] is my personal website in Wordpress. This repository holds
-the new version in [Hugo], which will soon replace it.
+[My personal website][ie]!
 
 ## Development
 
