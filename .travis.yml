@@ -1,6 +1,5 @@
 dist: trusty
 sudo: false
-language: go
 addons:
   apt:
     packages:
@@ -30,7 +29,9 @@ install:
       tocloft
       trimspaces
       xcolor
-  - go get -v github.com/spf13/hugo
+  - wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-64bit.tar.gz
+  - tar xzvf hugo_0.18.1_Linux-64bit.tar.gz
+  - mv hugo_0.18.1_Linux-64bit/hugo_0.18.1_linux_amd64 /usr/bin/hugo
 before_script:
   - latex --version
   - latexmk --version
