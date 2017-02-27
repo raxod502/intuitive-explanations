@@ -31,7 +31,7 @@ install:
       xcolor
   - wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-64bit.tar.gz
   - tar xzvf hugo_0.18.1_Linux-64bit.tar.gz
-  - mv hugo_0.18.1_linux_amd64/hugo_0.18.1_linux_amd64 /usr/bin/hugo
+  - mv hugo_0.18.1_linux_amd64/hugo_0.18.1_linux_amd64 /usr/local/bin/hugo
 before_script:
   - latex --version
   - latexmk --version
