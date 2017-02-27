@@ -11,8 +11,22 @@ install:
   - tlmgr init-usertree
   - tlmgr option repository
       ftp://tug.org/historic/systems/texlive/2015/tlnet-final
-  - tlmgr install beamer chngcntr cm-super enumitem environ etoolbox lipsum
-      mdframed nag needspace pgf pgfplots tikz-3dplot tocloft trimspaces
+  - tlmgr install
+      beamer
+      chngcntr
+      cm-super
+      enumitem
+      environ
+      etoolbox
+      lipsum
+      mdframed
+      nag
+      needspace
+      pgf
+      pgfplots
+      tikz-3dplot
+      tocloft
+      trimspaces
       xcolor
   - go get -v github.com/spf13/hugo
 before_script:
@@ -21,8 +35,11 @@ before_script:
   - hugo version
 script: make
 before_deploy:
-  - openssl aes-256-cbc -K $encrypted_0ef4022cd14f_key -iv
-      $encrypted_0ef4022cd14f_iv -in deploy.enc -out ~/.ssh/id_rsa -d
+  - openssl aes-256-cbc
+      -K   $encrypted_0ef4022cd14f_key
+      -iv  $encrypted_0ef4022cd14f_iv
+      -in  rsa/deploy.enc
+      -out ~/.ssh/id_rsa -d
 deploy:
   provider: script
   skip_cleanup: true
