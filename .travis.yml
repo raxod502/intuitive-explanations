@@ -42,6 +42,7 @@ before_deploy:
       -iv  $encrypted_0ef4022cd14f_iv
       -in  rsa/deploy.enc
       -out ~/.ssh/id_rsa -d
+  - chmod 600 ~/.ssh/id_rsa
 deploy:
   provider: script
   skip_cleanup: true
