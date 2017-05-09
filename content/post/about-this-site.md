@@ -54,8 +54,8 @@ comments and suggestions!
 
 ## Licensing
 
-[MIT]. You can do whatever you want with anything here, although I
-prefer that you do good rather than evil.
+[MIT][mit]. You can do whatever you want with anything here, although
+I prefer that you do good rather than evil.
 
 [amsart]: https://www.ctan.org/pkg/amsart
 [calc bowl]: /calculus-bowl-expert-edition
