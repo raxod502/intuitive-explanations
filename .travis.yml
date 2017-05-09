@@ -19,6 +19,7 @@ install:
       enumitem
       environ
       etoolbox
+      fourier
       lipsum
       mdframed
       nag
