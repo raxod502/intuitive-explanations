@@ -57,7 +57,7 @@ comments and suggestions!
 [MIT]. You can do whatever you want with anything here, although I
 prefer that you do good rather than evil.
 
-[amsart]: https://www.ctan.org/pkg/amsart?lang=en
+[amsart]: https://www.ctan.org/pkg/amsart
 [calc bowl]: /calculus-bowl-expert-edition
 [calculus]: /calculus-intuitive-explanations
 [diffeqs]: /differential-equation-solution-strategies
