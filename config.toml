@@ -1,5 +1,4 @@
 baseurl = "https://intuitiveexplanations.com/"
-canonifyURLs = true
 copyright = "Radon Rosborough"
 languageCode = "en-us"
 theme = "ghostwriter"

@@ -1,57 +1,77 @@
 # Intuitive Explanations
 
-[![Build Status](https://travis-ci.org/raxod502/intuitive-explanations.svg?branch=master)](https://travis-ci.org/raxod502/intuitive-explanations)
-
 [My personal website][ie]!
+
+## Dependencies
+
+* [Git](https://git-scm.com/) (to obtain and contribute to the code)
+* [Python 2](https://www.python.org/) (to run SCons)
+* [SCons](http://scons.org/) (to build the project)
+* [LaTeX](https://www.latex-project.org/) (to render the PDFs)
+* [Hugo](https://gohugo.io/) (to build the website)
+
+### Installation on macOS
+
+Install the command-line tools:
+
+    $ xcode-select --install
+
+Install Homebrew:
+
+    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+Install Python 2 from Homebrew:
+
+    $ brew install python
+
+Install SCons:
+
+    $ brew install scons
+
+Install TeX Live:
+
+    $ brew cask install basictex
+
+Make your TeX Live installation customizable (you may need to use a
+different directory than `2016basic`, if you are using a more or less
+recent installation of TeX Live):
+
+    $ sudo chown -R YOUR_USERNAME:staff /usr/local/texlive/2016basic/tlpkg
+
+Install LaTeX packages:
+
+> Open up `.travis.yml` and run the `tlmgr install` command that is
+> listed in the `install` section.
+
+Install Hugo:
+
+    $ brew install hugo
 
 ## Development
 
-The dependencies are:
-* [Git]
-* [Hugo]
-* [LaTeX]
-
-Make sure you clone the submodules of this repository. You can do this
-with a recursive clone:
+Clone the repo:
 
     $ git clone --recursive https://github.com/raxod502/intuitive-explanations.git
 
-If you already cloned the repository, use this command to clone the
-submodules:
+Build the website:
 
-    $ git submodule update --init --recursive
+    $ scons
 
-To start the development server at `localhost:1313`, run:
+Run the development server (this will live-reload changes to the
+primary content of the website, although *not* changes to the
+favicons, redirects, or LaTeX):
 
-    $ make dev
+    $ hugo server
 
-To generate the static site in the `public` directory, run:
+Clean build artifacts:
 
-    $ make
+    $ scons -c
 
-To just build the LaTeX, run:
+Build and deploy to Netlify:
 
-    $ make tex
+    $ scons deploy
 
-To just build the `static` directory, which holds static files to be
-served from the website, run:
+Check out the [Travis build][travis].
 
-    $ make static
-
-To build the static site in `public` without running any other steps,
-run:
-
-    $ make public
-
-To run the development server without running any other steps, run:
-
-    $ make server
-
-To remove build artifacts, run:
-
-    $ make clean
-
-[git]: https://git-scm.com/downloads
-[hugo]: https://gohugo.io/
-[ie]: https://intuitiveexplanations.com
-[latex]: https://www.latex-project.org/get/
+[ie]: https://intuitive-explanations.netlify.com/
+[travis]: https://travis-ci.org/raxod502/intuitive-explanations

@@ -1,35 +1,61 @@
 dist: trusty
 sudo: false
-addons:
-  apt:
-    packages:
-      - texlive
-      - latexmk
-      - xzdec
-  ssh_known_hosts:
-    - intuitiveexplanations.com
 install:
-  - tlmgr init-usertree
-  - tlmgr option repository
-      ftp://tug.org/historic/systems/texlive/2015/tlnet-final
+  # Install Zsh
+  - wget --directory-prefix /tmp
+      https://downloads.sourceforge.net/project/zsh/zsh/5.3.1/zsh-5.3.1.tar.xz
+  - xz --decompress /tmp/zsh-5.3.1.tar.xz
+  - tar -xv -C /tmp -f /tmp/zsh-5.3.1.tar
+  - cd /tmp/zsh-5.3.1
+  - ./configure --prefix=/tmp/zsh-5.3.1
+  - make
+  - make install
+  - export PATH=/tmp/zsh-5.3.1/bin:$PATH
+  - cd -
+  # Install TeX Live
+  - wget --directory-prefix /tmp
+      http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+  - tar -xzv -C /tmp -f /tmp/install-tl-unx.tar.gz
+  - /tmp/install-tl-*/install-tl --profile=./script/texlive.profile
+  - export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
+  # Install packages
   - tlmgr install
+      amscls
+      amsmath
       beamer
+      booktabs
+      caption
       chngcntr
       cm-super
+      collection-fontsrecommended
       enumitem
       environ
       etoolbox
       fourier
+      geometry
+      graphics
+      hyperref
+      l3kernel
+      l3packages
+      latex-bin
+      latexmk
       lipsum
+      mathtools
       mdframed
+      microtype
+      ms
       nag
       needspace
+      oberdiek
       pgf
       pgfplots
       tikz-3dplot
       tocloft
+      tools
       trimspaces
+      url
       xcolor
+  # Install Hugo
   - wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-64bit.tar.gz
       -O /tmp/hugo.tar.gz
   - tar xzvf /tmp/hugo.tar.gz
@@ -40,17 +66,12 @@ before_script:
   - latex --version
   - latexmk --version
   - hugo version
-script: make
-before_deploy:
-  - openssl aes-256-cbc
-      -K   $encrypted_0ef4022cd14f_key
-      -iv  $encrypted_0ef4022cd14f_iv
-      -in  rsa/deploy.enc
-      -out ~/.ssh/id_rsa -d
-  - chmod 600 ~/.ssh/id_rsa
+script: scons
 deploy:
   provider: script
   skip_cleanup: true
-  script: make deploy
+  script: scons deploy
   on:
-    branch: master
+    branch:
+      - master
+      - wip/netlify
