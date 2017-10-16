@@ -2,6 +2,9 @@
 
 cd $0:A:h:h
 
+setopt err_return
+setopt pipefail
+
 if [[ -z $NETLIFY_KEY ]]; then
     echo "Deploy token not set. Please export \$NETLIFY_KEY."
     exit 1
