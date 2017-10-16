@@ -5,7 +5,7 @@ date = "2016-05-26T19:48:00-08:00"
 
 In chronological order:
 
-* [TerraFrame]: My first major project, a clone of [Terraria],
+* [TerrariaClone]: My first major project, a clone of [Terraria],
   preserved as an example of how terrible code can be if you don't pay
   attention to its quality.
 * [Chrono Count]: iOS app to manage countdowns and countups under
@@ -25,7 +25,10 @@ In chronological order:
 * [lazy-map]: Lazy map implementation for [Clojure].
 * [el-patch]: [Emacs] package for future-proofing Emacs Lisp
   customizations.
-* [straight.el]: The straightforward package manager for [Emacs].
+* [straight.el]: Next-generation, purely functional package manager
+  for the [Emacs] hacker.
+* [wdx]: Simpler and more robust alternative to [wd], written in
+  Python.
 
 You can find all my projects on [Github].
 
@@ -45,7 +48,9 @@ You can find all my projects on [Github].
 [radian]: https://github.com/raxod502/radian
 [smarter-playlist]: https://github.com/raxod502/smarter-playlist
 [straight.el]: https://github.com/raxod502/straight.el
-[terraframe]: https://github.com/raxod502/TerraFrame
+[terrariaclone]: https://github.com/raxod502/TerrariaClone
 [terraria]: https://terraria.org/
 [tmux]: https://tmux.github.io/
+[wd]: https://github.com/mfaerevaag/wd
+[wdx]: https://github.com/raxod502/wdx
 [zsh]: http://www.zsh.org/
