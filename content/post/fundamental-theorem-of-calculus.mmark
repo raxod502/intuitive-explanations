@@ -1,0 +1,89 @@
++++
+title = "Fundamental Theorem of Calculus"
+date = "2018-01-04T18:22:06"
++++
+
+The *fundamental theorem of calculus* relates the two fundamental
+operations of calculus, differentiation and integration. It is the
+foundation of many applications of calculus to other fields. However,
+despite its importance, the main idea is very elegant and easy to
+remember once you have learned it. Here is the equation of the
+theorem:
+
+$$
+\int_a^b f'(x) \,dx = f(b) - f(a).
+$$
+
+As you can see, it involves both an integral and a derivative.
+
+There are many different ways to look at the fundamental theorem of
+calculus, so on this page I give a number of different explanations.
+In my experience, it is easiest to start out by finding one
+explanation that seems to make the most sense to you, and then moving
+on to the others.
+
+# Graph-based explanation
+
+For this explanation we start with the graph of a function, $$ y =
+f(x) $$.
+
+![Graph of function y = f(x)](/assets/ftc-graph.png)
+
+The fundamental theorem of calculus,
+
+$$
+\int_a^b f'(x) \,dx = f(b) - f(a).
+$$
+
+says that we can calculate the difference $$ f(b) - f(a) $$ by
+computing an integral, $$ \int_a^b f'(x) \,dx $$. This difference $$
+f(b) - f(a) $$ is a vertical distance, namely the distance between the
+horizontal lines labeled $$ f(a) $$ and $$ f(b) $$ in the figure.
+
+## Approximating a curve with line segments
+
+To begin understanding why the vertical distance is related to an
+integral, look what happens if we overlay some straight lines onto the
+graph from above:
+
+![Graph with straight-line approximation overlaid](/assets/ftc-graph-lines.png)
+
+How were those lines drawn? I started at the point $$ (a, f(a)) $$ at
+the very left, and drew a straight line with the same slope as the
+curve of $$ y = f(x) $$. This straight line starts out looking just
+like the curve, but since the slope of the curve changes, the line and
+curve diverge pretty quickly.
+
+A little to the right of the first point (the actual distance is not
+important), I corrected the slope of the red line. How? I looked
+vertically below the red line at the curve, and took the slope at that
+point to be my new slope. That allowed me to draw a second line
+segment extending farther to the right.
+
+Then I repeated this process a few more times until I got to the
+vertical dashed line marking $$ x = b $$. At this point, notice that
+the red line and black curve do not intersect, but they are pretty
+close. The red line is an *approximation* of the curve.
+
+This technique for approximating a curve using line segments can be
+used to approximate the solution to a differential equation, and it is
+called *Euler's method*.
+
+An important property of Euler's method is that the more line segments
+you use, the more accurate your approximation is. Unless you get very
+lucky, you will never get *exactly* the right answer, but if you have
+(for example) 1,000 line segments, the error will probably be too
+small to notice. Observe:
+
+![Better straight-line approximation](/assets/ftc-graph-lines-many.png)
+
+With this many line segments, you can hardly tell that the red line is
+actually composed of segments rather than being a curve. And the
+approximation is very good; the black curve and red line essentially
+meet at the same place at $$ x = b $$.
+
+## Writing straight-line approximation as an equation
+
+... to be continued
+
+![Labeled straight-line approximation](/assets/ftc-graph-lines-labeled.png)
