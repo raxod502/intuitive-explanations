@@ -2,21 +2,19 @@
 from __future__ import print_function
 
 import os
-import subprocess
-import sys
 
 def ls(path):
     return os.listdir(path)
 
 join = os.path.join
 
-env = Environment(ENV = {
+env = Environment(ENV={
     # for deployment
     "NETLIFY_KEY": os.environ.get("NETLIFY_KEY", ""),
     # so that we can find people's tools
-    "PATH" : os.environ.get("PATH", ""),
+    "PATH": os.environ.get("PATH", ""),
     # otherwise latexmk emits a silly warning
-    "USER" : os.environ.get("USER", "unknown")})
+    "USER": os.environ.get("USER", "unknown")})
 
 static_files = []
 
