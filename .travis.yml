@@ -41,6 +41,7 @@ install:
       tikz-3dplot
       tocloft
       tools
+      translator
       trimspaces
       url
       xcolor
