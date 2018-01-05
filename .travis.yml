@@ -1,17 +1,6 @@
 dist: trusty
 sudo: false
 install:
-  # Install Zsh
-  - wget --directory-prefix /tmp
-      https://downloads.sourceforge.net/project/zsh/zsh/5.3.1/zsh-5.3.1.tar.xz
-  - xz --decompress /tmp/zsh-5.3.1.tar.xz
-  - tar -xv -C /tmp -f /tmp/zsh-5.3.1.tar
-  - cd /tmp/zsh-5.3.1
-  - ./configure --prefix=/tmp/zsh-5.3.1
-  - make
-  - make install
-  - export PATH=/tmp/zsh-5.3.1/bin:$PATH
-  - cd -
   # Install TeX Live
   - wget --directory-prefix /tmp
       http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
