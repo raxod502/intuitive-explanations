@@ -3,10 +3,14 @@ from __future__ import print_function
 
 import os
 
-def ls(path):
-    return os.listdir(path)
-
 join = os.path.join
+ls = os.listdir
+
+def swap_ext(fname, old_ext, new_ext):
+    if fname.endswith(old_ext):
+        fname = fname[:-len(old_ext)]
+    fname += new_ext
+    return fname
 
 env = Environment(ENV={
     # for deployment
@@ -66,7 +70,15 @@ for fname in ls("favicon"):
                 Copy(new_path, old_path))
     static_files.append(new_path)
 
-hugo_deps = static_files + ["content", "layouts", "static", "themes"]
+for fname in ls("assets"):
+    if fname.endswith(".xcf"):
+        old_path = join("assets", fname)
+        new_path = join("static", "assets", swap_ext(fname, ".xcf", ".png"))
+        env.Command(new_path, [old_path, join("scripts", "convert-xcf.bash")],
+                    [[join("scripts", "convert-xcf.bash"), old_path, new_path]])
+        static_files.append(new_path)
+
+hugo_deps = static_files + ["config.toml", "content", "layouts", "static", "themes"]
 env.Command("public", hugo_deps, "hugo")
 env.Clean("public", "public")
 
@@ -74,5 +86,5 @@ env.Zip("public.zip", "public")
 
 env.Alias(
     "deploy", "public.zip",
-    env.Action([["scripts/deploy.bash", "public.zip"]]))
+    env.Action([[join("scripts", "deploy.bash"), "public.zip"]]))
 env.AlwaysBuild("deploy")
