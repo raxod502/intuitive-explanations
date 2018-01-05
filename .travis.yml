@@ -47,7 +47,8 @@ install:
   # Install Hugo
   - wget https://github.com/spf13/hugo/releases/download/v0.30.2/hugo_0.30.2_Linux-64bit.tar.gz
       -O /tmp/hugo.tar.gz
-  - tar xzv -C /tmp -f /tmp/hugo.tar.gz
+  - mkdir /tmp/hugo
+  - tar xzv -C /tmp/hugo -f /tmp/hugo.tar.gz
   - export PATH=$PATH:/tmp/hugo
 before_script:
   - latex --version
