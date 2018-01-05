@@ -45,11 +45,11 @@ install:
       url
       xcolor
   # Install Hugo
-  - wget https://github.com/spf13/hugo/releases/download/v0.18.1/hugo_0.18.1_Linux-64bit.tar.gz
+  - wget https://github.com/spf13/hugo/releases/download/v0.30.2/hugo_0.30.2_Linux-64bit.tar.gz
       -O /tmp/hugo.tar.gz
   - tar xzvf /tmp/hugo.tar.gz
-  - mv hugo_0.18.1_linux_amd64 hugo
-  - mv hugo/hugo_0.18.1_linux_amd64 hugo/hugo
+  - mv hugo_0.30.2_linux_amd64 hugo
+  - mv hugo/hugo_0.30.2_linux_amd64 hugo/hugo
   - export PATH=$PATH:$PWD/hugo
 before_script:
   - latex --version
