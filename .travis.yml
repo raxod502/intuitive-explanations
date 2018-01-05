@@ -5,7 +5,7 @@ install:
   - wget --directory-prefix /tmp
       http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
   - tar -xzv -C /tmp -f /tmp/install-tl-unx.tar.gz
-  - /tmp/install-tl-*/install-tl --profile=./script/texlive.profile
+  - /tmp/install-tl-*/install-tl --profile=./data/texlive.profile
   - export PATH=/tmp/texlive/bin/x86_64-linux:$PATH
   # Install packages
   - tlmgr install
