@@ -1,5 +1,9 @@
 dist: trusty
 sudo: false
+addons:
+  apt:
+    packages:
+      - gimp
 install:
   # Install TeX Live
   - wget --directory-prefix /tmp
