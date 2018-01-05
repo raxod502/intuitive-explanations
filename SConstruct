@@ -74,5 +74,7 @@ env.Clean("public", "public")
 
 env.Zip("public.zip", "public")
 
-env.Alias("deploy", "public.zip", "scripts/deploy.bash")
+env.Alias(
+    "deploy", "public.zip",
+    env.Action([["scripts/deploy.bash", "public.zip"]]))
 env.AlwaysBuild("deploy")
