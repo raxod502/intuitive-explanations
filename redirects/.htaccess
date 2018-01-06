@@ -1,0 +1,36 @@
+################################################################################
+#### Posts that still exist
+
+Redirect 301 /calculus-bowl /calculus-bowl-expert-edition
+Redirect 301 /differential-equations-solution-strategies /differential-equation-solution-strategies
+Redirect 301 /existence-uniqueness-theorem /picard-lindelof-theorem
+Redirect 301 /intuitive-explanations /calculus-intuitive-explanations
+Redirect 301 /probability-distribution-proofs /probability-distributions-means-and-variances
+
+################################################################################
+#### Files that still exist
+
+Redirect 301 /files/CalcBowl.pdf /CalculusBowlExpertEdition.pdf
+Redirect 301 /files/CalculusTextbookCover.pdf https://github.com/raxod502/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf
+Redirect 301 /files/ChronoCountDetails.pdf https://github.com/raxod502/chrono-count/blob/b08480eff49f6e3b66ae32fe3bb4afe39dc0ce7a/ChronoCountDetails.pdf
+Redirect 301 /files/DifferentialEquationSolutionStrategies.pdf /DifferentialEquationSolutionStrategies.pdf
+Redirect 301 /files/ExistenceUniquenessTheorem.pdf /PicardLindelofTheorem.pdf
+Redirect 301 /files/Intuition /CalculusIntuitiveExplanations.pdf
+Redirect 301 /files/Intuition.pdf /CalculusIntuitiveExplanations.pdf
+Redirect 301 /files/IntuitiveExplanations.pdf /CalculusIntuitiveExplanations.pdf
+Redirect 301 /files/LinearAlgebraSummarySheet.pdf /LinearAlgebraSummarySheet.pdf
+Redirect 301 /files/ProbabilityDistributionProofs.pdf /ProbabilityDistributionsMeansAndVariances.pdf
+
+################################################################################
+#### Files that no longer exist
+
+Redirect 301 /files /
+Redirect 301 /files/LaTeXSource.pdf https://github.com/raxod502/intuitive-explanations/tree/master/tex
+
+################################################################################
+#### Server settings
+
+Options -Indexes
+
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html

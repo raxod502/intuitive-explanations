@@ -6,11 +6,21 @@ import os
 join = os.path.join
 ls = os.listdir
 
+def tree(path, absolute=True):
+    paths = []
+    for dirpath, dirnames, filenames in os.walk(path):
+        paths.append(dirpath)
+        paths.extend(join(dirpath, fname) for fname in filenames)
+    return paths
+
 def swap_ext(fname, old_ext, new_ext):
     if fname.endswith(old_ext):
         fname = fname[:-len(old_ext)]
     fname += new_ext
     return fname
+
+############################################################################
+#### Environment
 
 env = Environment(ENV={
     # for deployment
@@ -20,7 +30,36 @@ env = Environment(ENV={
     # otherwise latexmk emits a silly warning
     "USER": os.environ.get("USER", "unknown")})
 
-static_files = []
+############################################################################
+#### Building .htaccess in redirects/ and moving files to static/
+
+env.Command(join("redirects", ".htaccess"),
+            [join("redirects", "_redirects"),
+             join("redirects", ".htaccess.suffix")],
+            # Not portable:
+            [Mkdir("static"),
+             "sed 's#^/#Redirect 301 /#' < redirects/_redirects > redirects/.htaccess",
+             "cat redirects/.htaccess.suffix >> redirects/.htaccess"])
+
+for fname in [".htaccess", "_redirects"]:
+    old_path = join("redirects", fname)
+    new_path = join("static", fname)
+    env.Command(new_path, old_path,
+                Copy(new_path, old_path))
+
+############################################################################
+#### Moving files in assets/ to static/
+
+if os.path.isdir("assets"):
+    for fname in ls("assets"):
+        if fname.endswith(".xcf"):
+            old_path = join("assets", fname)
+            new_path = join("static", "assets", swap_ext(fname, ".xcf", ".png"))
+            env.Command(new_path, [old_path, join("scripts", "convert-xcf.bash")],
+                        [[join("scripts", "convert-xcf.bash"), old_path, new_path]])
+
+############################################################################
+#### Building PDFs in tex/ and moving to static/
 
 shared_tex_dir = join("tex", "documents")
 for document in ls(shared_tex_dir):
@@ -29,15 +68,11 @@ for document in ls(shared_tex_dir):
     pdf_file = join(tex_dir, document + ".pdf")
     deps = [tex_file]
     if "data" in ls(tex_dir):
-        data_dir = join(tex_dir, "data")
-        # If we just declare a dependency on data_dir, then adding
-        # files to it doesn't cause a rebuild. We actually have to
-        # depend on all contents of data_dir. This actually works with
-        # both insertions and deletions, interestingly.
-        deps.extend(join(data_dir, item) for item in ls(data_dir))
+        deps.extend(tree(join(tex_dir, "data")))
     env.Command(pdf_file, deps,
-                "latexmk -pdf -interaction=nonstopmode {}"
-                .format(document + ".tex"),
+                [["latexmk", "-pdf",
+                  "-interaction=nonstopmode",
+                  document + ".tex"]],
                 chdir=tex_dir)
     for ext in ["aux", "fdb_latexmk", "fls", "log", "nav", "out",
                 "snm", "toc"]:
@@ -47,43 +82,21 @@ for document in ls(shared_tex_dir):
     moved_pdf_file = join("static", document + ".pdf")
     env.Command(moved_pdf_file, pdf_file,
                 Copy(moved_pdf_file, pdf_file))
-    static_files.append(moved_pdf_file)
 
-env.Command(join("files", ".htaccess"), [join("files", "_redirects"),
-                                         join("files", ".htaccess.suffix")],
-            # Not portable:
-            ["sed 's#^/#Redirect 301 /#' < files/_redirects > files/.htaccess",
-             "cat files/.htaccess.suffix >> files/.htaccess"])
+############################################################################
+#### Running Hugo
 
-for fname in [".htaccess", "_redirects"]:
-    old_path = join("files", fname)
-    new_path = join("static", fname)
-    env.Command(new_path, old_path,
-                Copy(new_path, old_path))
-    static_files.append(new_path)
+hugo_deps = ["config.toml"]
+for dirname in ["content", "layouts", "static", "themes"]:
+    hugo_deps.extend(tree(dirname))
 
-for fname in ls("favicon"):
-    if fname.endswith(".png") or fname.endswith(".ico"):
-        old_path = join("favicon", fname)
-        new_path = join("static", fname)
-    env.Command(new_path, old_path,
-                Copy(new_path, old_path))
-    static_files.append(new_path)
-
-if os.path.isdir("assets"):
-    for fname in ls("assets"):
-        if fname.endswith(".xcf"):
-            old_path = join("assets", fname)
-            new_path = join("static", "assets", swap_ext(fname, ".xcf", ".png"))
-            env.Command(new_path, [old_path, join("scripts", "convert-xcf.bash")],
-                        [[join("scripts", "convert-xcf.bash"), old_path, new_path]])
-            static_files.append(new_path)
-
-hugo_deps = static_files + ["config.toml", "content", "layouts", "static", "themes"]
 env.Command("public", hugo_deps, "hugo")
 env.Clean("public", "public")
 
 env.Zip("public.zip", "public")
+
+############################################################################
+#### Deployment
 
 env.Alias(
     "deploy", "public.zip",
