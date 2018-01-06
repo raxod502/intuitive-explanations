@@ -31,35 +31,12 @@ env = Environment(ENV={
     "USER": os.environ.get("USER", "unknown")})
 
 ############################################################################
-#### Building .htaccess in redirects/ and moving files to static/
+#### static/
 
-env.Command(join("redirects", ".htaccess"),
-            [join("redirects", "_redirects"),
-             join("redirects", ".htaccess.suffix")],
-            # Not portable:
-            [Mkdir("static"),
-             "sed 's#^/#Redirect 301 /#' < redirects/_redirects > redirects/.htaccess",
-             "cat redirects/.htaccess.suffix >> redirects/.htaccess"])
-
-for fname in [".htaccess", "_redirects"]:
-    old_path = join("redirects", fname)
-    new_path = join("static", fname)
-    env.Command(new_path, old_path,
-                Copy(new_path, old_path))
+env.Clean("static", "static")
 
 ############################################################################
-#### Moving files in assets/ to static/
-
-if os.path.isdir("assets"):
-    for fname in ls("assets"):
-        if fname.endswith(".xcf"):
-            old_path = join("assets", fname)
-            new_path = join("static", "assets", swap_ext(fname, ".xcf", ".png"))
-            env.Command(new_path, [old_path, join("scripts", "convert-xcf.bash")],
-                        [[join("scripts", "convert-xcf.bash"), old_path, new_path]])
-
-############################################################################
-#### Building PDFs in tex/ and moving to static/
+#### tex/ to static/
 
 shared_tex_dir = join("tex", "documents")
 for document in ls(shared_tex_dir):
@@ -84,7 +61,35 @@ for document in ls(shared_tex_dir):
                 Copy(moved_pdf_file, pdf_file))
 
 ############################################################################
-#### Running Hugo
+#### assets/ to static/
+
+if os.path.isdir("assets"):
+    for fname in ls("assets"):
+        if fname.endswith(".xcf"):
+            old_path = join("assets", fname)
+            new_path = join("static", "assets", swap_ext(fname, ".xcf", ".png"))
+            env.Command(new_path, [old_path, join("scripts", "convert-xcf.bash")],
+                        [[join("scripts", "convert-xcf.bash"), old_path, new_path]])
+
+############################################################################
+#### redirects/ to static/
+
+env.Command(join("redirects", ".htaccess"),
+            [join("redirects", "_redirects"),
+             join("redirects", ".htaccess.suffix")],
+            # Not portable:
+            [Mkdir("static"),
+             "sed 's#^/#Redirect 301 /#' < redirects/_redirects > redirects/.htaccess",
+             "cat redirects/.htaccess.suffix >> redirects/.htaccess"])
+
+for fname in [".htaccess", "_redirects"]:
+    old_path = join("redirects", fname)
+    new_path = join("static", fname)
+    env.Command(new_path, old_path,
+                Copy(new_path, old_path))
+
+############################################################################
+#### static/ to public/
 
 hugo_deps = ["config.toml"]
 for dirname in ["content", "layouts", "static", "themes"]:
