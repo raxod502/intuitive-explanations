@@ -65,9 +65,9 @@ vertical dashed line marking $$ x = b $$. At this point, notice that
 the red line and black curve do not intersect, but they are pretty
 close. The red line is an *approximation* of the curve.
 
-This technique for approximating a curve using line segments can be
-used to approximate the solution to a differential equation, and it is
-called *Euler's method*.
+This technique for approximating a curve using line segments can also
+be used to approximate the solution to a differential equation, and it
+is called *Euler's method*.
 
 An important property of Euler's method is that the more line segments
 you use, the more accurate your approximation is. Unless you get very
@@ -84,6 +84,133 @@ meet at the same place at $$ x = b $$.
 
 ## Writing straight-line approximation as an equation
 
-... to be continued
+To make our discussion of Euler's method more quantitative, we can
+label the $$ x $$-coordinates of each vertical line. The left-hand
+side, $$ a $$, we denote also as $$ x_1 $$. The right-hand side, $$ b
+$$, becomes $$ x_8 $$. The points in between are $$ x_2, \ldots, x_7
+$$:
 
 ![Labeled straight-line approximation](/assets/ftc-graph-lines-labeled.png)
+
+We already said that the curve was the graph of $$ y = f(x) $$. Let's
+define a new function $$ g $$, so that the red line is the graph of $$
+y = g(x) $$. Since we drew the first red line segment starting at the
+point $$ (a, f(a)) $$, the graphs must intersect at that point, and $$
+f(a) = g(a) $$. At $$ x = b $$, on the other hand, the graphs do *not*
+intersect. But as we saw earlier, they are pretty close. In other
+words, $$ f(b) \approx g(b) $$. This tells us that
+
+$$
+f(b) - f(a) \approx g(b) - g(a),
+$$
+
+i.e. the vertical displacement from $$ a $$ to $$ b $$ is pretty
+similar for the curve and the line segments, and the approximation
+gets better the more line segments are used.
+
+Why is this fact important? It allows us to use the straight-line
+approximation in order to calculate $$ f(b) - f(a) $$, instead of
+calculating it directly. We will see shortly that this is where the
+integral comes from.
+
+We can start our calculation by writing the difference $$ g(b) - g(a)
+$$ as $$ g(x_8) - g(x_1) $$. This is the *total* vertical displacement
+from $$ x = x_1 $$ to $$ x = x_8 $$. But we can come to the same
+answer by looking at the individual displacements from $$ x = x_1 $$
+to $$ x = x_2 $$, from $$ x = x_2 $$ to $$ x = x_3 $$, and so on, and
+adding them all together. In other words,
+
+$$
+\begin{align}
+g(x_8) - g(x_1)
+&= g(x_2) - g(x_1) \\
+&+ g(x_3) - g(x_2) \\
+&+ g(x_4) - g(x_3) \\
+&+ g(x_5) - g(x_4) \\
+&+ g(x_6) - g(x_5) \\
+&+ g(x_7) - g(x_6) \\
+&+ g(x_8) - g(x_7).
+\end{align}
+$$
+
+For simplicity, I'll abbreviate this to just:
+
+$$
+g(x_8) - g(x_1) = g(x_2) - g(x_1) + \cdots + g(x_8) - g(x_7),
+$$
+
+where all the intermediate terms are replaced by $$ \cdots $$.
+
+Now let us consider the slopes of the individual red line segments. On
+the diagram above, the slope of the first line segment is $$ m_1 $$,
+the slope of the second is $$ m_2 $$, and so on. Now, we know from the
+slope formula that
+
+$$
+m_1 = \frac{g(x_2) - g(x_1)}{x_2 - x_1},
+$$
+
+and similarly for $$ m_2, \ldots, m_7 $$. This means we can express
+the vertical displacement $$ g(x_2) - g(x_1) $$ as the product of the
+slope $$ m_1 $$ and the horizontal displacement $$ x_2 - x_1 $$, like
+so:
+
+$$
+g(x_2) - g(x_1) = \frac{g(x_2) - g(x_1)}{x_2 - x_1} \cdot (x_2 - x_1)
+= m_1 \cdot (x_2 - x_1),
+$$
+
+and similarly for the other vertical displacements. If we sum together
+all of these vertical displacements as before, we obtain
+
+$$
+g(x_8) - g(x_1) = m_1 \cdot (x_2 - x_1) + \cdots + m_7 \cdot (x_8 -
+x_7).
+$$
+
+But remember how we drew the line segments: the first one had the same
+slope as the curve did at $$ x = x_1 $$, the second one had the same
+slope as the curve did at $$ x = x_2 $$, and so on. That means:
+
+$$
+m_1 = f'(x_1), \ldots, m_7 = f'(x_7).
+$$
+
+We can then write
+
+$$
+g(x_8) - g(x_1) = f'(x_1) \cdot (x_2 - x_1) + \cdots + f'(x_7) \cdot
+(x_8 - x_7),
+$$
+
+or in other words
+
+$$
+f(b) - f(a) \approx f'(x_1) \cdot (x_2 - x_1) + \cdots + f'(x_7) \cdot
+(x_8 - x_7).
+$$
+
+This relation means that we can approximate the vertical displacement
+between $$ f(a) $$ and $$ f(b) $$ by splitting the interval from $$ x
+= a $$ to $$ x = b $$ into many small segments, each with a slope
+taken from the curve, and adding up *their* vertical displacements.
+
+As we increase the number of segments, this approximation becomes
+closer and closer to an equality, and the right-hand side becomes an
+integral!
+
+Why an integral? The right-hand side is formed by taking an interval,
+from $$ x = a $$ to $$ x = b $$ (remember that $$ x_1 = a $$ and $$
+x_8 = b $$), splitting it into sub-intervals (from $$ x_1 $$ to $$ x_2
+$$, from $$ x_2 $$ to $$ x_3 $$, and so on), multiplying the size of
+each sub-interval by the magnitude of a function (in this case, the
+derivative $$ f' $$) at that point, and adding the results. This is
+exactly the definition of an integral! As a result, we have:
+
+$$
+f(b) - f(a) = \int_a^b f'(x) \,dx.
+$$
+
+# Area-based explanation
+
+Coming soon.
