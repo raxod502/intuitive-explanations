@@ -35,13 +35,13 @@ def mirror_directory(target_dir, mapping):
     except FileNotFoundError:
         pass
     for src_file, dst_file in mapping.items():
-        directory = os.path.dirname(os.path.join(target_dir, dst_file))
+        directory = os.path.dirname(dst_file)
         try:
             os.makedirs(directory)
         except OSError:
             if not os.path.isdir(directory):
                 raise
-        shutil.copyfile(src_file, os.path.join(target_dir, dst_file))
+        shutil.copyfile(src_file, dst_file)
 
 ## Build configuration
 ### Environment
