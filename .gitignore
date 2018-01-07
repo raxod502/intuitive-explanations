@@ -1,4 +1,5 @@
 /.sconsign.dblite
+/assets/out/
 /public.zip
 /public/
 /redirects/.htaccess
