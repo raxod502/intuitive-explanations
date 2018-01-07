@@ -8,7 +8,6 @@ addons:
 install:
   # Install Python packages
   - pip install -r requirements.txt
-  - pip list --format=columns
   # Install TeX Live
   - wget --directory-prefix /tmp
       http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
@@ -60,6 +59,9 @@ install:
   - tar xzv -C /tmp/hugo -f /tmp/hugo.tar.gz
   - export PATH=$PATH:/tmp/hugo
 before_script:
+  - python --version
+  - pip --version
+  - scons --version
   - latex --version
   - latexmk --version
   - hugo version
