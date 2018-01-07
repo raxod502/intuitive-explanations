@@ -1,7 +1,7 @@
 /.sconsign.dblite
-/files/.htaccess
 /public.zip
 /public/
+/redirects/.htaccess
 /static/
 /tex/classes/auto/
 /tex/documents/*/*.aux
