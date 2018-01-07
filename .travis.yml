@@ -1,15 +1,13 @@
 dist: trusty
 sudo: false
+language: python
 addons:
   apt:
     packages:
       - gimp
 install:
   # Install Python packages
-  - python2 --version
-  - python2 -m venv /tmp/venv
-  - source /tmp/venv/bin/activate
-  - pip install -r requirements.txt
+  - pip2 install -r requirements.txt
   # Install TeX Live
   - wget --directory-prefix /tmp
       http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
