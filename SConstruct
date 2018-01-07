@@ -1,17 +1,21 @@
-# -*- mode: python -*-
+#!/usr/bin/env python
+
+## Preamble
+### Imports
+
 from __future__ import print_function
 
+import json
 import os
+import shutil
+import subprocess
 
-join = os.path.join
-ls = os.listdir
+### Constants
 
-def tree(path, absolute=True):
-    paths = []
-    for dirpath, dirnames, filenames in os.walk(path):
-        paths.append(dirpath)
-        paths.extend(join(dirpath, fname) for fname in filenames)
-    return paths
+MANIFEST_FILE = '.manifest.json'
+
+### Utility functions
+#### Paths
 
 def swap_ext(fname, old_ext, new_ext):
     if fname.endswith(old_ext):
@@ -19,91 +23,187 @@ def swap_ext(fname, old_ext, new_ext):
     fname += new_ext
     return fname
 
-############################################################################
-#### Environment
+#### Filesystem inspection
 
-env = Environment(ENV={
-    # for deployment
-    "NETLIFY_KEY": os.environ.get("NETLIFY_KEY", ""),
-    # so that we can find people's tools
-    "PATH": os.environ.get("PATH", ""),
-    # otherwise latexmk emits a silly warning
-    "USER": os.environ.get("USER", "unknown")})
+def tree(path):
+    paths = []
+    for dirpath, dirnames, filenames in os.walk(path):
+        paths.append(dirpath)
+        paths.extend(os.path.join(dirpath, fname) for fname in filenames)
+    return paths
 
-############################################################################
-#### static/
+#### Filesystem manipulation
 
-env.Clean("static", "static")
+def mirror_directory(target_dir, mapping):
+    try:
+        shutil.rmtree(target_dir)
+    except FileNotFoundError:
+        pass
+    for src_file, dst_file in mapping.items():
+        os.makedirs(os.path.dirname(os.path.join(target_dir, dst_file)), exist_ok=True)
+        shutil.copyfile(src_file, os.path.join(target_dir, dst_file))
+    with open(os.path.join(target_dir, MANIFEST_FILE), 'w') as f:
+        json.dump(mapping, f, sort_keys=True, indent=2)
+        f.write('\n')
 
-############################################################################
-#### tex/ to static/
+## Build configuration
+### Environment
 
-shared_tex_dir = join("tex", "documents")
-for document in ls(shared_tex_dir):
-    tex_dir = join(shared_tex_dir, document)
-    tex_file = join(tex_dir, document + ".tex")
-    pdf_file = join(tex_dir, document + ".pdf")
-    deps = [tex_file]
-    if "data" in ls(tex_dir):
-        deps.extend(tree(join(tex_dir, "data")))
-    env.Command(pdf_file, deps,
-                [["latexmk", "-pdf",
-                  "-interaction=nonstopmode",
-                  document + ".tex"]],
-                chdir=tex_dir)
-    for ext in ["aux", "fdb_latexmk", "fls", "log", "nav", "out",
-                "snm", "toc"]:
-        path = join(tex_dir, document + "." + ext)
-        env.Clean(pdf_file, path)
-    env.Clean(pdf_file, join(tex_dir, "auto"))
-    moved_pdf_file = join("static", document + ".pdf")
-    env.Command(moved_pdf_file, pdf_file,
-                Copy(moved_pdf_file, pdf_file))
+env = Environment()
 
-############################################################################
-#### assets/ to static/
+### Constants
+#### Directories
 
-if os.path.isdir("assets"):
-    for fname in ls("assets"):
-        if fname.endswith(".xcf"):
-            old_path = join("assets", fname)
-            new_path = join("static", "assets", swap_ext(fname, ".xcf", ".png"))
-            env.Command(new_path, [old_path, join("scripts", "convert-xcf.bash")],
-                        [[join("scripts", "convert-xcf.bash"), old_path, new_path]])
+ASSETS_DIR = 'assets'
+ASSETS_SRC_DIR = os.path.join(ASSETS_DIR, 'src')
+ASSETS_OUT_DIR = os.path.join(ASSETS_DIR, 'out')
 
-############################################################################
-#### redirects/ to static/
+CONTENT_DIR = 'content'
 
-env.Command(join("redirects", ".htaccess"),
-            [join("redirects", "_redirects"),
-             join("redirects", ".htaccess.suffix")],
-            # Not portable:
-            [Mkdir("static"),
-             "sed 's#^/#Redirect 301 /#' < redirects/_redirects > redirects/.htaccess",
-             "cat redirects/.htaccess.suffix >> redirects/.htaccess"])
+FAVICON_DIR = 'favicon'
 
-for fname in [".htaccess", "_redirects"]:
-    old_path = join("redirects", fname)
-    new_path = join("static", fname)
-    env.Command(new_path, old_path,
-                Copy(new_path, old_path))
+HUGO_CONFIG_FILE = 'config.toml'
 
-############################################################################
-#### static/ to public/
+LAYOUTS_DIR = 'layouts'
 
-hugo_deps = ["config.toml"]
-for dirname in ["content", "layouts", "static", "themes"]:
-    hugo_deps.extend(tree(dirname))
+PUBLIC_DIR = 'public'
 
-env.Command("public", hugo_deps, "hugo")
-env.Clean("public", "public")
+REDIRECTS_DIR = 'redirects'
 
-env.Zip("public.zip", "public")
+SCRIPTS_DIR = 'scripts'
 
-############################################################################
-#### Deployment
+STATIC_DIR = 'static'
+STATIC_ASSETS_DIR = os.path.join(STATIC_DIR, 'assets')
+STATIC_FAVICON_DIR = STATIC_DIR
+STATIC_MANIFEST_FILE = os.path.join(STATIC_DIR, MANIFEST_FILE)
 
-env.Alias(
-    "deploy", "public.zip",
-    env.Action([[join("scripts", "deploy.bash"), "public.zip"]]))
-env.AlwaysBuild("deploy")
+TEX_DIR = 'tex'
+TEX_CLASSES_DIR = os.path.join(TEX_DIR, 'classes')
+TEX_DOCUMENTS_DIR = os.path.join(TEX_DIR, 'documents')
+
+#### Files
+
+CONVERT_XCF_SCRIPT = os.path.join(SCRIPTS_DIR, 'convert-xcf.bash')
+DEPLOY_SCRIPT = os.path.join(SCRIPTS_DIR, 'deploy.bash')
+NETLIFY_REDIRECTS_FILE = os.path.join(REDIRECTS_DIR, '_redirects')
+HTACCESS_FILE = os.path.join(REDIRECTS_DIR, '.htaccess')
+HTACCESS_SUFFIX_FILE = os.path.join(REDIRECTS_DIR, '.htaccess.suffix')
+PUBLIC_MANIFEST_FILE = os.path.join(PUBLIC_DIR, MANIFEST_FILE)
+PUBLIC_ZIP_FILE = 'public.zip'
+STATIC_HTACCESS_FILE = os.path.join(STATIC_DIR, '.htaccess')
+STATIC_NETLIFY_REDIRECTS_FILE = os.path.join(STATIC_DIR, '_redirects')
+
+#### Commands
+
+HUGO_COMMAND = ['hugo']
+LATEXMK_COMMAND = ['latexmk', '-pdf', '-interaction=nonstopmode']
+
+#### Miscellaneous
+
+AUCTEX_DATA_DIR = 'auto'
+LATEXMK_DATA_EXTENSIONS = [
+    '.aux', '.fdb_latexmk', '.fls', '.log', '.nav', '.out', '.snm', '.toc']
+
+DEPLOY_ALIAS = 'deploy'
+
+### Variables
+
+static_files = {}
+hugo_deps = []
+
+### Subdirectories
+#### Top-level files
+
+hugo_deps.append(HUGO_CONFIG_FILE)
+
+#### assets/
+
+if os.path.isdir(ASSETS_SRC_DIR):
+    for xcf_basename in os.listdir(ASSETS_SRC_DIR):
+        png_basename = swap_ext(xcf_basename, '.xcf', '.png')
+        xcf_file = os.path.join(ASSETS_SRC_DIR, xcf_basename)
+        png_file = os.path.join(ASSETS_OUT_DIR, png_basename)
+        static_png_file = os.path.join(STATIC_ASSETS_DIR, png_basename)
+        env.Command(png_file, [xcf_file, CONVERT_XCF_SCRIPT],
+                    [[CONVERT_XCF_SCRIPT, xcf_file, png_file]])
+        static_files[png_file] = static_png_file
+
+#### content/
+
+hugo_deps.extend(tree(CONTENT_DIR))
+
+#### favicon/
+
+for basename in os.listdir(FAVICON_DIR):
+    filename = os.path.join(FAVICON_DIR, basename)
+    static_filename = os.path.join(STATIC_FAVICON_DIR, basename)
+    static_files[filename] = static_filename
+
+#### layouts/
+
+hugo_deps.extend(tree(LAYOUTS_DIR))
+
+#### redirects/
+
+def build_htaccess_file(target, source, env):
+    with open(HTACCESS_SUFFIX_FILE, 'r') as f:
+        suffix = f.read()
+    shutil.copyfile(NETLIFY_REDIRECTS_FILE, HTACCESS_FILE)
+    with open(HTACCESS_FILE, 'a') as f:
+        f.write(suffix)
+
+env.Command(HTACCESS_FILE, [NETLIFY_REDIRECTS_FILE, HTACCESS_SUFFIX_FILE],
+            build_htaccess_file)
+
+static_files[HTACCESS_FILE] = STATIC_HTACCESS_FILE
+static_files[NETLIFY_REDIRECTS_FILE] = STATIC_NETLIFY_REDIRECTS_FILE
+
+#### tex/
+
+if os.path.isdir(TEX_DOCUMENTS_DIR):
+    for document in os.listdir(TEX_DOCUMENTS_DIR):
+        tex_dir = os.path.join(TEX_DOCUMENTS_DIR, document)
+        tex_file = os.path.join(tex_dir, document + '.tex')
+        pdf_file = os.path.join(tex_dir, document + '.pdf')
+        data_dir = os.path.join(tex_dir, 'data')
+        deps = [tex_file]
+        if os.path.isdir(data_dir):
+            deps.extend(tree(data_dir))
+        env.Command(pdf_file, deps,
+                    [LATEXMK_COMMAND + [document + '.tex']],
+                    chdir=tex_dir)
+        for ext in LATEXMK_DATA_EXTENSIONS:
+            junk_file = os.path.join(tex_dir, document + ext)
+            env.Clean(pdf_file, junk_file)
+        env.Clean(pdf_file, os.path.join(tex_dir, AUCTEX_DATA_DIR))
+        static_tex_file = os.path.join(STATIC_DIR, document + '.pdf')
+        static_files[tex_file] = static_tex_file
+
+### static/
+
+def build_static_dir(target, source, env):
+    mirror_directory(STATIC_DIR, static_files)
+
+env.Command(STATIC_MANIFEST_FILE, static_files.keys(), build_static_dir)
+env.Clean(STATIC_MANIFEST_FILE, STATIC_DIR)
+
+hugo_deps.extend(tree(STATIC_DIR))
+
+### public/
+
+def build_public_dir(target, source, env):
+    subprocess.call(HUGO_COMMAND)
+    open(PUBLIC_MANIFEST_FILE, 'w').close()
+
+env.Command(PUBLIC_MANIFEST_FILE, hugo_deps, build_public_dir)
+env.Clean(PUBLIC_MANIFEST_FILE, PUBLIC_DIR)
+
+### public.zip
+
+env.Zip(PUBLIC_ZIP_FILE, tree(PUBLIC_DIR))
+
+### Deployment
+
+env.Alias(DEPLOY_ALIAS, PUBLIC_ZIP_FILE,
+          env.Action([[DEPLOY_SCRIPT, PUBLIC_ZIP_FILE]]))
+env.AlwaysBuild(DEPLOY_ALIAS)
