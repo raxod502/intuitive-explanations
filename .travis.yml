@@ -5,6 +5,8 @@ addons:
     packages:
       - gimp
 install:
+  # Install Python packages
+  - pip2 install -r requirements.txt
   # Install TeX Live
   - wget --directory-prefix /tmp
       http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
