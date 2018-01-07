@@ -5,7 +5,6 @@
 
 from __future__ import print_function
 
-import json
 import os
 import shutil
 import subprocess
@@ -199,7 +198,7 @@ env.Clean(PUBLIC_SCONS_TARGET, PUBLIC_DIR)
 
 ### public.zip
 
-env.Zip(PUBLIC_ZIP_FILE, tree(PUBLIC_DIR))
+env.Zip(PUBLIC_ZIP_FILE, PUBLIC_DIR)
 
 ### Deployment
 
