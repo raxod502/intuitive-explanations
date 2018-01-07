@@ -5,6 +5,7 @@
 
 from __future__ import print_function
 
+import checksumdir
 import os
 import shutil
 import subprocess
@@ -91,6 +92,7 @@ PUBLIC_SCONS_TARGET = os.path.join(PUBLIC_DIR, '.scons-target')
 PUBLIC_ZIP_FILE = 'public.zip'
 STATIC_HTACCESS_FILE = os.path.join(STATIC_DIR, '.htaccess')
 STATIC_NETLIFY_REDIRECTS_FILE = os.path.join(STATIC_DIR, '_redirects')
+STATIC_SCONS_TARGET = os.path.join(STATIC_DIR, '.scons-target')
 
 #### Commands
 
@@ -182,19 +184,24 @@ if os.path.isdir(TEX_DOCUMENTS_DIR):
 
 def build_static_dir(target, source, env):
     mirror_directory(STATIC_DIR, static_files)
+    checksum = checksumdir.dirhash(STATIC_DIR)
+    with open(STATIC_SCONS_TARGET, 'w') as f:
+        f.write(checksum)
+        f.write('\n')
 
-env.Command(static_files.values(),
-            static_files.keys(), build_static_dir)
-for path in static_files.values():
-    env.Clean(path, STATIC_DIR)
+env.Command(STATIC_SCONS_TARGET, static_files.keys(), build_static_dir)
+env.Clean(STATIC_SCONS_TARGET, STATIC_DIR)
 
-hugo_deps.extend(static_files.values())
+hugo_deps.append(STATIC_SCONS_TARGET)
 
 ### public/
 
 def build_public_dir(target, source, env):
     subprocess.call(HUGO_COMMAND)
-    open(PUBLIC_SCONS_TARGET, 'w').close()
+    checksum = checksumdir.dirhash(PUBLIC_DIR)
+    with open(PUBLIC_SCONS_TARGET, 'w') as f:
+        f.write(checksum)
+        f.write('\n')
 
 env.Command(PUBLIC_SCONS_TARGET, hugo_deps, build_public_dir)
 env.Clean(PUBLIC_SCONS_TARGET, PUBLIC_DIR)
