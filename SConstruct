@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 ## Preamble
 ### Imports
@@ -9,10 +9,6 @@ import json
 import os
 import shutil
 import subprocess
-
-### Constants
-
-MANIFEST_FILE = '.manifest.json'
 
 ### Utility functions
 #### Paths
@@ -40,11 +36,13 @@ def mirror_directory(target_dir, mapping):
     except FileNotFoundError:
         pass
     for src_file, dst_file in mapping.items():
-        os.makedirs(os.path.dirname(os.path.join(target_dir, dst_file)), exist_ok=True)
+        directory = os.path.dirname(os.path.join(target_dir, dst_file))
+        try:
+            os.makedirs(directory)
+        except OSError:
+            if not os.path.isdir(directory):
+                raise
         shutil.copyfile(src_file, os.path.join(target_dir, dst_file))
-    with open(os.path.join(target_dir, MANIFEST_FILE), 'w') as f:
-        json.dump(mapping, f, sort_keys=True, indent=2)
-        f.write('\n')
 
 ## Build configuration
 ### Environment
@@ -75,7 +73,6 @@ SCRIPTS_DIR = 'scripts'
 STATIC_DIR = 'static'
 STATIC_ASSETS_DIR = os.path.join(STATIC_DIR, 'assets')
 STATIC_FAVICON_DIR = STATIC_DIR
-STATIC_MANIFEST_FILE = os.path.join(STATIC_DIR, MANIFEST_FILE)
 
 TEX_DIR = 'tex'
 TEX_CLASSES_DIR = os.path.join(TEX_DIR, 'classes')
@@ -88,7 +85,7 @@ DEPLOY_SCRIPT = os.path.join(SCRIPTS_DIR, 'deploy.bash')
 NETLIFY_REDIRECTS_FILE = os.path.join(REDIRECTS_DIR, '_redirects')
 HTACCESS_FILE = os.path.join(REDIRECTS_DIR, '.htaccess')
 HTACCESS_SUFFIX_FILE = os.path.join(REDIRECTS_DIR, '.htaccess.suffix')
-PUBLIC_MANIFEST_FILE = os.path.join(PUBLIC_DIR, MANIFEST_FILE)
+PUBLIC_SCONS_TARGET = os.path.join(PUBLIC_DIR, '.scons-target')
 PUBLIC_ZIP_FILE = 'public.zip'
 STATIC_HTACCESS_FILE = os.path.join(STATIC_DIR, '.htaccess')
 STATIC_NETLIFY_REDIRECTS_FILE = os.path.join(STATIC_DIR, '_redirects')
@@ -176,27 +173,29 @@ if os.path.isdir(TEX_DOCUMENTS_DIR):
             junk_file = os.path.join(tex_dir, document + ext)
             env.Clean(pdf_file, junk_file)
         env.Clean(pdf_file, os.path.join(tex_dir, AUCTEX_DATA_DIR))
-        static_tex_file = os.path.join(STATIC_DIR, document + '.pdf')
-        static_files[tex_file] = static_tex_file
+        static_pdf_file = os.path.join(STATIC_DIR, document + '.pdf')
+        static_files[pdf_file] = static_pdf_file
 
 ### static/
 
 def build_static_dir(target, source, env):
     mirror_directory(STATIC_DIR, static_files)
 
-env.Command(STATIC_MANIFEST_FILE, static_files.keys(), build_static_dir)
-env.Clean(STATIC_MANIFEST_FILE, STATIC_DIR)
+env.Command(static_files.values(),
+            static_files.keys(), build_static_dir)
+for path in static_files.values():
+    env.Clean(path, STATIC_DIR)
 
-hugo_deps.extend(tree(STATIC_DIR))
+hugo_deps.extend(static_files.values())
 
 ### public/
 
 def build_public_dir(target, source, env):
     subprocess.call(HUGO_COMMAND)
-    open(PUBLIC_MANIFEST_FILE, 'w').close()
+    open(PUBLIC_SCONS_TARGET, 'w').close()
 
-env.Command(PUBLIC_MANIFEST_FILE, hugo_deps, build_public_dir)
-env.Clean(PUBLIC_MANIFEST_FILE, PUBLIC_DIR)
+env.Command(PUBLIC_SCONS_TARGET, hugo_deps, build_public_dir)
+env.Clean(PUBLIC_SCONS_TARGET, PUBLIC_DIR)
 
 ### public.zip
 
