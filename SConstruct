@@ -46,7 +46,10 @@ def mirror_directory(target_dir, mapping):
 ## Build configuration
 ### Environment
 
-env = Environment()
+env = Environment(ENV={
+    'NETLIFY_KEY': os.environ.get('NETLIFY_KEY'),
+    'PATH': os.environ.get('PATH'),
+})
 
 ### Constants
 #### Directories
