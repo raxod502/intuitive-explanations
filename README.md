@@ -24,6 +24,16 @@ Install Python 2 from Homebrew:
 
     $ brew install python
 
+Set up a virtual environment:
+
+    $ pip2 install virtualenv
+    $ python2 -m virtualenv <path-to-virtualenv>
+    $ source <path-to-virtualenv>/bin/activate
+
+Install Python dependencies:
+
+    $ pip install -r requirements.txt
+
 Install SCons:
 
     $ brew install scons
