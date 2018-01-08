@@ -4,7 +4,7 @@ date = "2018-01-07T23:15:56"
 +++
 
 Integration is one of the two most important operations in calculus
-(the other being of course differentiation). It is important both
+(the other being, of course, differentiation). It is important both
 because it has countless applications both inside and outside of
 mathematics, and also because it is extraordinarily versatile.
 
@@ -145,8 +145,111 @@ calculate the answer directly. But by splitting the object apart, the
 calculation for each piece individually is quite easy: just
 multiplication.
 
-Now let's see some *real* uses of integration.
+You may ask why it would ever *actually* useful to find out what
+number you get when you scale a bunch of different parts of the same
+object in different ways. Let's see why.
 
 # Application: using integration to calculate area
+
+![Area under curve colored red](/assets/integration-graph-area.png)
+
+We all learn in geometry class how to calculate the areas of some
+simple shapes: squares, rectangles, triangles, circles, trapezoids,
+and so on. But in the real world, shapes are much more complicated.
+Think of your pen, your car's engine, the wing of an airplane, and so
+on. But calculating the areas of irregular shapes is important if we
+want to know things like the stress experienced by your pen, the heat
+transfer through your car engine, and the lift on the airplane's wing.
+Often all we have to go on is either a mathematical function
+describing the shape of the object or just numerical measurements of
+its outline. But with integration, we can still find its area.
+
+It goes like this. Let's say we want to find the area of the red
+region shaded in the figure above. Then to integrate, we will split
+the red region into many small regions, calculate the area of such
+small region, and add together all the answers.
+
+![Area approximated with rectangles](/assets/integration-graph-area-rectangles.png)
+
+"But wait," you object, "you haven't split the area at all! There are
+little bits that aren't covered by the rectangles, and the rectangles
+stick out in other places."
+
+My answer to that problem? *Use more rectangles.* You can see that the
+difference in area between the rectangles and the curve is not that
+large, because the rectangles are pretty narrow. If we used more
+rectangles, the approximation would be even better. If we want a
+numerical approximation of the area under the curve, we can just use
+"enough" rectangles -- where "enough" means the approximation is good
+enough for whatever we're trying to do. We'll see later how,
+paradoxically, we can use this approximation technique and some
+additional cleverness to get an *exact* answer, with no error at all.
+
+So now let's see how this technique fits into the general outline of
+integration discussed earlier:
+
+* The object (domain) being integrated is not actually the region
+  we're trying to calculate the area of. Instead, it's *the line
+  segment below the region, on the x-axis,* from $$ x = a $$ to $$ x =
+  b \n.$$ We'll see why momentarily.
+* The *partition* is how we have split up the domain of integration.
+  Since the domain is a line segment on the *x*-axis, our partition
+  splits that segment into smaller line segments. Each small line
+  segment is the base of one of our rectangles.
+* The *size* of each small line segment is its length.
+* The *scaling factor* is given by the function $$ f \n.$$
+
+Let's see why this setup works.
+
+From our outline of integration above, our first step is to figure out
+what the scaling factor is for each piece (small line segment). Since
+the scaling factor is given by the function $$ f \n,$$ we can
+calculate it by taking the *x*-coordinate of the segment and then
+finding $$ f(x) \n.$$ Now you may object that a line segment doesn't
+just have one *x*-coordinate, because it's a segment rather than a
+point. But since these are small line segments, the different
+*x*-coordinates aren't *that* different, and you can pick any one.
+Remember, this is an approximation, so there will be a bit of error.
+
+![A single rectangle](/assets/integration-graph-area-rectangle-single.png)
+
+So our scaling factor is $$ f(x) \n.$$ What does this mean, physically?
+It is actually a length: the height of one of our rectangles! Pictured
+above is a single rectangle from the previous figure. Since it goes
+from the *x*-axis up to the curve, its height is the difference of the
+*y*-coordinates, $$ f(x) - 0 = f(x). $$
+
+The next step in our outline is to multiply the size of each piece in
+our partition by its scaling factor. In the figure above, the piece in
+our partition is the line segment on the *x*-axis which forms the base
+of the rectangle. Let's call its length $$ \Delta x, $$ because it is
+a change in *x*-coordinate (a horizontal distance).
+
+Now we can see that the multiplication of our partition piece size by
+its scaling factor is actually a multiplication of a horizontal length
+by a vertical length: we are just calculating the area of our
+rectangle.
+
+The final step in integration is add all the products of sizes and
+scaling factors, which in this case means combining the areas of all
+the rectangles to get an approximation of the area under the curve.
+
+Symbolically, we can write this calculation as:
+
+$$
+\sum_{x=a}^{x=b} f(x) \,\Delta x,
+$$
+
+which means that we take all the rectangles from $$ x = a $$ to $$ x =
+b, $$ for each one we multiply the height $$ f(x) $$ by the width $$
+\Delta x, $$ and then we take all the resultant areas and add them
+together (indicated by the symbol $$ \sum \n{).}$$
+
+So this gives us a way to calculate areas, if we are so inclined. This
+technique is used numerically all the time. However, what is more
+interesting is calculating the area *exactly*. We will come back to
+calculating areas after we know how to integrate exactly.
+
+# Integrating exactly: slope and displacement
 
 ... to be continued

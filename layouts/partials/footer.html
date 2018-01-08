@@ -29,6 +29,20 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">
          MathJax.Hub.Config({
+           styles: {
+             ".MathJax .normal": {
+               // These styles should be the same as those applied to
+               // the main text of the site.
+               "color": "#424242 !important",
+               "font-family": "'Open Sans', arial, sans-serif !important",
+               "font-size": "18px !important",
+             },
+           },
+           TeX: {
+             Macros: {
+               n: ["\\class{normal}{\\text{#1}}", 1],
+             },
+           },
            tex2jax: {
              inlineMath: [['$','$'], ['\\(','\\)']],
            },
