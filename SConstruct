@@ -128,6 +128,7 @@ if os.path.isdir(ASSETS_SRC_DIR):
         env.Command(png_file, [xcf_file, CONVERT_XCF_SCRIPT],
                     [[CONVERT_XCF_SCRIPT, xcf_file, png_file]])
         static_files[png_file] = static_png_file
+    env.Clean(ASSETS_OUT_DIR, ASSETS_OUT_DIR)
 
 #### content/
 
