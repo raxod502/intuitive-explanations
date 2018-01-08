@@ -1,0 +1,152 @@
++++
+title = "Integration"
+date = "2018-01-07T23:15:56"
++++
+
+Integration is one of the two most important operations in calculus
+(the other being of course differentiation). It is important both
+because it has countless applications both inside and outside of
+mathematics, and also because it is extraordinarily versatile.
+
+Some applications of integration include:
+
+* deriving formulas for calculating the area of a circle, volume of a
+  sphere, or in general any measure (weight, density, center of mass,
+  rotational inertia) of a real object of any geometric shape
+* using information about forces to derive the path of motion of an
+  object, or calculating an object's position at any time given its
+  velocity
+* running the mathematical machinery responsible for Laplace
+  transforms, which allow complex circuitry and mechanical systems to
+  be modeled easily, and Lagrangian mechanics, which allow computing
+  the behavior of physical systems for which a direct approach is
+  intractable
+
+As you might guess from its many applications, integration can be used
+in many different situations, so each use can at first seem quite
+different. However, every application of integration follows the same
+general outline.
+
+# Introduction to integration with pizza
+
+One might say that integration is a general form of *rescaling*. Let
+me demonstrate what I mean by that using an analogy. Say we have a
+pizza:
+
+![Pizza](/assets/integration-pizza.png)
+
+We can cut up that pizza in many different ways. For example, into
+four pieces like so:
+
+![Pizza cut into four pieces](/assets/integration-pizza-partition.png)
+
+The exact way doesn't matter. Now suppose we measure how large each of
+these pieces is. For example, maybe in square inches the sizes are:
+
+![Pizza with piece sizes](/assets/integration-pizza-partition-sizes.png)
+
+Of course, you can get the size of the whole pizza by adding together
+the sizes of all the slices. In this case,
+
+$$
+\color{red}{\text{40 in$^2$}} + \color{green}{\text{50 in$^2$}} +
+\color{blue}{\text{70 in$^2$}} + \color{purple}{\text{60 in$^2$}} =
+\text{220 in$^2$}.
+$$
+
+But let's say instead of the size, we want to know how many pepperonis
+are on the pizza. (Bear with me, we'll get to integration eventually.)
+We can still take the same approach, namely to find out how many
+pepperonis are on each slice individually, and add them all together.
+
+But we don't want to count the pepperonis by hand. Instead, we can use
+our knowledge of how common pepperonis are on different types of
+pizza.
+
+* The <span style="color:red">red</span> piece is cheese, so there are
+  no pepperonis. In other words, *zero* pepperonis per square inch.
+* The <span style="color:green">green</span> and <span
+  style="color:blue">blue</span> pieces are pepperoni, so they have an
+  average of 0.15 pepperonis per square inch.
+* The <span style="color:purple">purple</span> piece is mixed, so it
+  has an average of 0.05 pepperonis per square inch.
+
+We can then calculate the total number of pepperonis (p):
+
+$$
+\begin{align}
+&\phantom{{}={}}\color{red}{(\text{40 in$^2$})(\text{0 p/in$^2$})} +
+\color{green}{(\text{50 in$^2$})(\text{0.15 p/in$^2$})} +
+\color{blue}{(\text{70 in$^2$})(\text{0.15 p/in$^2$})} +
+\color{purple}{(\text{60 in$^2$})(\text{0.05 p/in$^2$})} \\
+&= \color{red}{\text{0 p}} + \color{green}{\text{7.5 p}} +
+\color{blue}{\text{10.5 p}} + \color{purple}{\text{3 p}} \\
+&= \text{21 p}.
+\end{align}
+$$
+
+<!-- Note the space between the two closing braces in the next
+paragraph. This fixes a weird problem where the text gets interpreted
+as a template?? -->
+
+What we have done here is essentially *rescaled* each slice of pizza.
+Now instead of a size for each slice, we have a number of pepperonis.
+The <span style="color:red">red</span> piece has been scaled to zero,
+since its *scaling factor*, <span style="color:red">0
+p/in^2^</span>, is zero. Both the <span
+style="color:green">green</span> and <span
+style="color:blue">blue</span> pieces have been scaled by a factor of
+0.15 p/in^2^, which is three times greater than the
+scaling factor for the <span style="color:purple">purple</span> piece
+(<span style="color:purple">0.05 p/in^2^</span>). Note that this
+particular scaling operation also changes the units, from area to
+pepperoni count.
+
+How can we describe the scaling operation? One way is to just use
+English, like I did in the bullet-point list above. However, for
+examples with more complex mathematics than pepperoni counting, it is
+useful to use a *function*. Sort of like this, but more mathy:
+
+![Pizza slice function](/assets/integration-pizza-function.png)
+
+# Generalizing the integration idea
+
+With our pizza example in mind, here is the outline for every form of
+integration:
+
+* We have some object, either concrete or abstract *(e.g. the pizza)*.
+  Usually this object is called the *domain of integration*, because
+  we define a function whose domain is the object *(e.g. the pepperoni
+  density function)*.
+* We have some way to split up the object into pieces *(e.g. the four
+  slices for the pizza)*. This is called a *partition*.
+* We have some way to calculate a *size* for each piece in the
+  partition *(e.g. the area of each pizza slice)*.
+* We have some way of assigning a *scaling factor* to each point in
+  the domain of integration *(e.g. the aforementioned pepperoni
+  density function)*.
+
+Then the procedure is simple:
+
+* split the object (domain) into different pieces, according to the
+  partition
+* figure out what the scaling factor is for each piece
+* multiply the size of each piece by its corresponding scaling factor
+* add up the results.
+
+In the pizza example, we couldn't calculate the number of pepperonis
+directly. Splitting the pizza into different slices, where each slice
+had a single pepperoni density, was a crucial step. This is true in
+general, and it is why integration is so useful.
+
+The reason this is a useful technique is that if the scaling factor is
+different for different parts of the object, you may not be able to
+calculate the answer directly. But by splitting the object apart, the
+calculation for each piece individually is quite easy: just
+multiplication.
+
+Now let's see some *real* uses of integration.
+
+# Application: using integration to calculate area
+
+... to be continued
