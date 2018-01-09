@@ -8,6 +8,11 @@
 /probability-distribution-proofs /probability-distributions-means-and-variances
 
 ################################################################################
+#### Posts that no longer exist
+
+/fundamental-theorem-of-calculus /integration
+
+################################################################################
 #### Files that still exist
 
 /files/CalcBowl.pdf /CalculusBowlExpertEdition.pdf
@@ -24,6 +29,10 @@
 ################################################################################
 #### Files that no longer exist
 
+/assets/ftc-graph.png /integration
+/assets/ftc-graph-lines.png /integration
+/assets/ftc-graph-lines-labeled.png /integration
+/assets/ftc-graph-lines-many.png /integration
 /files /
 /files/LaTeXSource.pdf https://github.com/raxod502/intuitive-explanations/tree/master/tex
 
