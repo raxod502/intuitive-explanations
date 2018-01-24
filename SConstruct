@@ -56,6 +56,7 @@ env = Environment(ENV={
 #### Directories
 
 ASSETS_DIR = 'assets'
+ASSETS_RAW_DIR = os.path.join(ASSETS_DIR, 'raw')
 ASSETS_SRC_DIR = os.path.join(ASSETS_DIR, 'src')
 ASSETS_OUT_DIR = os.path.join(ASSETS_DIR, 'out')
 
@@ -129,6 +130,12 @@ if os.path.isdir(ASSETS_SRC_DIR):
                     [[CONVERT_XCF_SCRIPT, xcf_file, png_file]])
         static_files[png_file] = static_png_file
     env.Clean(ASSETS_OUT_DIR, ASSETS_OUT_DIR)
+
+if os.path.isdir(ASSETS_RAW_DIR):
+    for basename in os.listdir(ASSETS_RAW_DIR):
+        raw_file = os.path.join(ASSETS_RAW_DIR, basename)
+        static_file = os.path.join(STATIC_ASSETS_DIR, basename)
+        static_files[raw_file] = static_file
 
 #### content/
 
