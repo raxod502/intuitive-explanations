@@ -85,10 +85,6 @@ $$
 \end{align}
 $$
 
-<!-- Note the space between the two closing braces in the next
-paragraph. This fixes a weird problem where the text gets interpreted
-as a template?? -->
-
 What we have done here is essentially *rescaled* each slice of pizza.
 Now instead of a size for each slice, we have a number of pepperonis.
 The <span style="color:red">red</span> piece has been scaled to zero,
@@ -391,5 +387,188 @@ small" (or, more realistically, it is part of a limiting process that
 makes it smaller and smaller without bound).
 
 # Integrating exactly: the trick
+
+The equation that we derived in the previous section,
+
+$$
+\int_{x=a}^{x=b} f'(x) \,dx = f(b) - f(a) \n,
+$$
+
+is called the *fundamental theorem of calculus*. Why is it
+fundamental? Because instead of an approximation, we have an equality
+-- and this allows us to find the exact value of any integral (more or
+less).
+
+Let's return to the problem of finding the area under a curve. We
+previously said you could get an approximation of the area under the
+curve $$ y = f(x) $$ by splitting it into tall, thin rectangles and
+then evaluating the sum
+
+$$
+A \approx \sum_{x=a}^{x=b} f(x) \,\Delta x \n.
+$$
+
+As a reminder, it looks like this:
+
+![Area approximated with rectangles](/assets/integration-graph-area-rectangles.png)
+
+Let's now consider applying the same limiting process as we did in the
+previous example (relating slope and displacement). If we split the
+area under the curve into more (thinner) rectangles, we'll get a
+better approximation. And the value of this approximation will get
+closer and closer to the true area under the curve (we call that its
+*limiting value*). So, using the same notation as before, we can say
+that the exact area under the curve is given by
+
+$$
+A = \int_{x=a}^{x=b} f(x) \,dx \n,
+$$
+
+where $$ f(x) $$ is the height of each rectangle and $$ dx $$ is the
+differential corresponding to the width of each rectangle.
+
+But wait: this looks very similar to what we have above. In fact, it's
+exactly the same as the left-hand side of the fundamental theorem of
+calculus, except that we have $$ f(x) $$ instead of $$ f'(x) \n.$$
+
+The trick is to rewrite the expression for the area under the curve so
+that it looks like the fundamental theorem of calculus. In particular,
+let's say that we can find some new function $$ F(x) $$ whose
+*derivative* is $$ f(x) $$ -- in other words, $$ F'(x) = f(x) \n.$$
+This would mean that
+
+$$
+A = \int_{x=a}^{x=b} F'(x) \,dx \n,
+$$
+
+and then the fundamental theorem of calculus would tell us that
+
+$$
+\int_{x=a}^{x=b} F'(x) \,dx = F(b) - F(a) \n.
+$$
+
+The function $$ F(x) $$ is called an *antiderivative* of $$ f(x) \n,$$
+because it's the opposite of a derivative. (The derivative of an
+antiderivative is just the function you started with.)
+
+Because this is a pretty abstract bit of trickery (and because it is a
+very *important* bit of trickery), we'll now spend some time looking
+at examples and discussing the intuitive meaning of our results.
+
+# Example: calculating the area of a triangle
+
+Let's start simple. Shown below is a triangle, with base and height
+equal to 1:
+
+![Triangle](/assets/integration-triangle.png)
+
+I've claimed that we can calculate the area under any curve using
+integration and the fundamental theorem of calculus, so let's apply
+that to the curve $$ y = x \n.$$ If you look at the area under $$ y =
+x $$ from $$ x = 0 $$ to $$ x = 1 \n,$$ shaded in red on the figure
+above, it forms a triangle with area
+
+$$
+\frac{1}{2} \cdot 1 \cdot 1 = \frac{1}{2} \n.
+$$
+
+Now in this case, we have $$ f(x) = x \n,$$ $$ a = 0 \n,$$ and $$ b =
+1 \n,$$ so our area integral looks like:
+
+$$
+A = \int_{x=a}^{x=b} f(x) \,dx = \int_0^1 x \,dx \n.
+$$
+
+The interpretation is that we are splitting the area shaded in red
+into many thin rectangles, and then considering the limiting process
+as those rectangles become thinner and thinner.
+
+![Triangle with rectangle identified](/assets/integration-triangle-rectangle.png)
+
+As shown in the figure above, the quantity $$ x \,dx $$ which appears
+inside the integral corresponds in a very direct way to the *area of a
+rectangle*. The height is $$ x $$ and the width is $$ dx \n.$$ The
+symbol $$ \int_0^1 $$ indicates that we should add up the areas of all
+these rectangles (from $$ x = 0 $$ to $$x = 1 \n{).}$$
+
+Now we can find a function whose derivative is equal to $$ f(x) \n,$$
+i.e. some function $$ F(x) $$ such that $$ F'(x) = f(x) \n.$$ It just
+so happens that we can use $$ F(x) = \frac{1}{2} x^2 $$ in this case,
+since
+
+$$
+\frac{d}{dx} \left( \frac{1}{2} x^2 \right) = x \n.
+$$
+
+According to the fundamental theorem of calculus, we then have
+
+$$
+\int_0^1 x \,dx = F(1) - F(0) = \frac{1}{2} (1)^2 - \frac{1}{2} (0)^2
+= \frac{1}{2} - 0 = \frac{1}{2} \n.
+$$
+
+So our result from integration agrees with basic geometry, which is
+good. Let's discuss the intuition of our calculation. You might notice
+that the expression $$ \frac{1}{2}x^2 $$ actually gives the area of
+the red shaded triangle in the figure below:
+
+![Triangle with accumulated area](/assets/integration-triangle-accumulation.png)
+
+When $$ x = 1 \n,$$ we get the total area of $$ \frac{1}{2} \n.$$ But
+we can view that final answer as the *accumulation* of the areas of
+all the individual rectangles, starting at the left and moving to the
+right. If we interrupt that accumulation at some point in between, we
+get a picture like the one above. Imagine drawing rectangles over the
+shaded area: we've added the areas of all the rectangles on the
+left-hand side, but haven't included any on the right-hand side yet.
+
+So we can view the antiderivative $$ \frac{1}{2}x^2 $$ as a function
+that describes how the areas of rectangles with individual areas $$ x
+\,dx $$ add up from left to right. Why is it an antiderivative? Let's
+look at what happens when we take the derivative. Intuitively, the
+derivative of this area accumulation function will reflect the rate at
+which new area is added as we increase $$ x \n.$$ So, we can calculate
+the derivative as:
+
+$$
+\frac{\text{change in area}}{\text{change in $x$}}
+$$
+
+As usual, we denote the change in $$ x $$ by the differential $$ dx
+\n.$$ In the figure below, you can see that increasing $$ x $$ by some
+amount $$ dx $$ will cause the area to increase by approximately a
+small rectangle (the error in this approximation can be disregarded
+since differentiation is a limiting process, and the approximation may
+be made as precise as desired):
+
+![Triangle area accumulation difference](/assets/integration-triangle-difference.png)
+
+As we've already discussed, the area of such a rectangle is the
+product of its height and width, $$ x \,dx \n.$$ Thus, the derivative
+is
+
+$$
+\frac{x \,dx}{dx} = x = f(x) \n.
+$$
+
+So this tells us that when we take the derivative of our accumulation
+function, we get back the function we started with. Given that the
+accumulation function is the value of our integral, we have found that
+differentiating "cancels out" integration in some sense. The formal
+statement, which is a second form of the fundamental theorem of
+calculus, is written like this:
+
+$$
+\frac{d}{dx} \int_{t=a}^{t=x} f(t) \,dt = f(x) \n.
+$$
+
+You may ask where all the $$ t \n{'s}$$ came from. It is because we
+want to make a distinction between the *x*-coordinate of any arbitrary
+rectangle (since we are dealing with *all* the rectangles that make up
+the triangles above) and the *x*-coordinate of the specific rectangle
+at the right-hand side. We use the variable *t* for the former, and
+*x* for the latter. The use of $$ t $$ specifically isn't important.
+It's just that we'd like to pick two different letters, to avoid
+confusion.
 
 ... to be continued

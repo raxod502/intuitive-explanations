@@ -19,13 +19,18 @@ def swap_ext(fname, old_ext, new_ext):
     fname += new_ext
     return fname
 
+def should_ignore_file(fname):
+    return os.path.basename(fname).startswith(".#")
+
 #### Filesystem inspection
 
-def tree(path):
+def tree(path, should_ignore_file=should_ignore_file):
     paths = []
     for dirpath, dirnames, filenames in os.walk(path):
+        dirnames[:] = [name for name in dirnames if not should_ignore_file(name)]
         paths.append(dirpath)
         paths.extend(os.path.join(dirpath, fname) for fname in filenames)
+    paths = [name for name in paths if not should_ignore_file(name)]
     return paths
 
 #### Filesystem manipulation
@@ -77,6 +82,9 @@ SCRIPTS_DIR = 'scripts'
 STATIC_DIR = 'static'
 STATIC_ASSETS_DIR = os.path.join(STATIC_DIR, 'assets')
 STATIC_FAVICON_DIR = STATIC_DIR
+STATIC_STYLES_DIR = os.path.join(STATIC_DIR, 'styles')
+
+STYLES_DIR = 'styles'
 
 TEX_DIR = 'tex'
 TEX_CLASSES_DIR = os.path.join(TEX_DIR, 'classes')
@@ -166,6 +174,13 @@ env.Command(HTACCESS_FILE, [NETLIFY_REDIRECTS_FILE, HTACCESS_SUFFIX_FILE],
 
 static_files[HTACCESS_FILE] = STATIC_HTACCESS_FILE
 static_files[NETLIFY_REDIRECTS_FILE] = STATIC_NETLIFY_REDIRECTS_FILE
+
+#### styles/
+
+for basename in os.listdir(STYLES_DIR):
+    filename = os.path.join(STYLES_DIR, basename)
+    static_filename = os.path.join(STATIC_STYLES_DIR, basename)
+    static_files[filename] = static_filename
 
 #### tex/
 
