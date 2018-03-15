@@ -29,17 +29,23 @@ In chronological order:
   for the [Emacs] hacker.
 * [wdx]: Simpler and more robust alternative to [wd], written in
   Python.
+* [Hyperschedule]: Fast and powerful course scheduler for the
+  Claremont Colleges.
+* [diary-manager]: Command-line tool and Emacs package for managing
+  daily (encrypted, version-controlled) diary entries.
 
 You can find all my projects on [Github].
 
 [chrono count]: https://github.com/raxod502/chrono-count
 [clojure]: https://clojure.org/
 [cortex.optimise]: https://github.com/thinktopic/cortex/tree/master/examples/optimise
+[diary-manager]: https://github.com/raxod502/diary-manager
 [el-patch]: https://github.com/raxod502/el-patch
 [emacs]: https://www.gnu.org/software/emacs/
 [git]: https://git-scm.com/
 [github]: https://github.com/raxod502
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
+[hyperschedule]: https://github.com/MuddCreates/hyperschedule
 [java]: https://www.java.com/
 [layerize]: https://github.com/raxod502/layerize
 [lazy-map]: https://github.com/thinktopic/lazy-map
