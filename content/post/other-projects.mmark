@@ -27,8 +27,8 @@ In chronological order:
   customizations.
 * [straight.el]: Next-generation, purely functional package manager
   for the [Emacs] hacker.
-* [mla-tex]: [LaTeX] [document class] for typesetting papers to [MLA]
-  formatting standards.
+* [mla-tex]: [LaTeX][latex] [document class] for typesetting papers to
+  [MLA] formatting standards.
 * [wdx]: Simpler and more robust alternative to [wd], written in
   Python.
 * [Hyperschedule]: Fast and powerful course scheduler for the
