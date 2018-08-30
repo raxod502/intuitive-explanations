@@ -59,6 +59,11 @@
 % Number subsubsubsections.
 \setcounter{secnumdepth}{4} % number subsubsubsections
 
+% Temporary patch to fix bug in chngcntr, see
+% https://tex.stackexchange.com/a/425603/54018.
+\let\counterwithout\relax
+\let\counterwithin\relax
+
 % Number figures by section.
 \usepackage{chngcntr}
 \counterwithin{figure}{section}
