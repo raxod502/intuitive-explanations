@@ -19,12 +19,17 @@ fatal() {
     exit 1
 }
 
+resolve() {
+    cd "$(dirname "$1")"
+    echo "$PWD/$(basename "$1")"
+}
+
 if (( $# != 2 )); then
     usage
 fi
 
-xcf_file=$1
-png_file=$2
+xcf_file="$(resolve "$1")"
+png_file="$(resolve "$2")"
 
 if [[ $xcf_file != *.xcf ]]; then
     warn "does not end in .xcf: $xcf_file"
