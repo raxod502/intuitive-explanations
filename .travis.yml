@@ -7,7 +7,8 @@ addons:
       - gimp
 install:
   # Install Python packages
-  - pip install -r requirements.txt
+  - pip2 install pipenv
+  - pipenv install
   # Install TeX Live
   - wget --directory-prefix /tmp
       http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
@@ -65,11 +66,11 @@ before_script:
   - latex --version
   - latexmk --version
   - hugo version
-script: scons
+script: pipenv run scons
 deploy:
   provider: script
   skip_cleanup: true
-  script: scons deploy
+  script: pipenv run scons deploy
   on:
     branch:
       - master
