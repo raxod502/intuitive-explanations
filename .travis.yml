@@ -62,7 +62,9 @@ install:
 before_script:
   - python --version
   - pip --version
+  - pipenv --version
   - scons --version
+  - gimp --version
   - latex --version
   - latexmk --version
   - hugo version
