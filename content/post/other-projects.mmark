@@ -3,7 +3,8 @@ title = "Other Projects"
 date = "2016-05-26T19:48:00-08:00"
 +++
 
-In chronological order:
+In chronological order, and counting only the reasonably
+feature-complete ones:
 
 * [TerrariaClone]: My first major project, a clone of [Terraria],
   preserved as an example of how terrible code can be if you don't pay
@@ -23,10 +24,10 @@ In chronological order:
 * [cortex.optimise]: General-purpose library for analyzing,
   visualizing, and comparing [gradient descent] algorithms.
 * [lazy-map]: Lazy map implementation for [Clojure].
-* [el-patch]: [Emacs] package for future-proofing Emacs Lisp
-  customizations.
-* [straight.el]: Next-generation, purely functional package manager
-  for the [Emacs] hacker.
+* [`el-patch`][el-patch]: [Emacs] package for future-proofing Emacs
+  Lisp customizations.
+* [`straight.el`][straight.el]: Next-generation, purely functional
+  package manager for the [Emacs] hacker.
 * [mla-tex]: [LaTeX][latex] [document class] for typesetting papers to
   [MLA] formatting standards.
 * [wdx]: Simpler and more robust alternative to [wd], written in
@@ -35,27 +36,47 @@ In chronological order:
   [Claremont Colleges].
 * [diary-manager]: Command-line tool and [Emacs] package for managing
   daily (encrypted, version-controlled) diary entries.
-* [prescient.el]: Simple but effective sorting and filtering for [Emacs].
+* [`prescient.el`][prescient.el]: Simple but effective sorting and
+  filtering for [Emacs].
+* [Madeline]: Novel approach to directory syncing, used to maintain
+  complementary mirroring of two filesystem trees via SSH.
+* [Blackout]: Unified replacement for [`diminish.el`][diminish.el],
+  [`delight.el`][delight.el], and [`dim.el`][dim.el]; allows hiding or
+  customizing major and minor mode lighters in [Emacs].
+* [heroku-buildpack-emacs]: [Heroku] buildpack to install [Emacs].
+* [GNU ELPA Mirror][gnu-elpa-mirror]: GitHub mirror of the [GNU
+  ELPA][gnu-elpa] package repository for use with
+  [`straight.el`][straight.el].
 
-You can find all my projects on [Github].
+You can find all of these projects and more in development on
+[GitHub].
 
+[blackout]: https://github.com/raxod502/blackout
 [chrono count]: https://github.com/raxod502/chrono-count
 [claremont colleges]: http://www.claremont.edu/
 [clojure]: https://clojure.org/
-[cortex.optimise]: https://github.com/thinktopic/cortex/tree/master/examples/optimise
+[cortex.optimise]: https://github.com/raxod502/cortex/tree/master/examples/optimise
+[delight.el]: https://elpa.gnu.org/packages/delight.html
 [diary-manager]: https://github.com/raxod502/diary-manager
+[dim.el]: https://github.com/alezost/dim.el
+[diminish.el]: https://github.com/myrjola/diminish.el
 [document class]: https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes
 [el-patch]: https://github.com/raxod502/el-patch
 [emacs]: https://www.gnu.org/software/emacs/
 [git]: https://git-scm.com/
 [github]: https://github.com/raxod502
+[gnu-elpa]: https://elpa.gnu.org/
+[gnu-elpa-mirror]: https://github.com/raxod502/gnu-elpa-mirror
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
+[heroku]: https://www.heroku.com/
+[heroku-buildpack-emacs]: https://github.com/raxod502/heroku-buildpack-emacs
 [hyperschedule]: https://github.com/MuddCreates/hyperschedule
 [java]: https://www.java.com/
 [latex]: https://www.latex-project.org/
 [layerize]: https://github.com/raxod502/layerize
-[lazy-map]: https://github.com/thinktopic/lazy-map
+[lazy-map]: https://github.com/raxod502/lazy-map
 [leiningen]: https://leiningen.org/
+[madeline]: https://github.com/raxod502/madeline
 [mazegen]: https://github.com/raxod502/MazeGen
 [mla]: https://owl.english.purdue.edu/owl/resource/747/24/
 [mla-tex]: https://github.com/raxod502/mla-tex
