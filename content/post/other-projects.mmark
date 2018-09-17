@@ -12,7 +12,7 @@ feature-complete ones:
 * [Chrono Count]: iOS app to manage countdowns and countups under
   arbitrarily complex schedules, previously available from the iOS App
   Store.
-* [Mazegen]: [Java] application to generate and visualize laser-cutter
+* [MazeGen]: [Java] application to generate and visualize laser-cutter
   schematics for three-dimensional marble mazes.
 * [layerize]: [Clojure] application to generate and visualize
   laser-cutter schematics for a cross-sectional model of a "Möbius
