@@ -6,8 +6,11 @@
 
 * [Git](https://git-scm.com/) (to obtain and contribute to the code)
 * [Python 2](https://www.python.org/) (to run SCons)
+* [Pipenv](https://pipenv.readthedocs.io/en/latest/) (to install the
+  Python dependencies)
 * [SCons](http://scons.org/) (to build the project)
-* [LaTeX](https://www.latex-project.org/) (to render the PDFs)
+* [LaTeX](https://www.latex-project.org/) (to render the TeX files to PDFs)
+* [GIMP](https://www.gimp.org/) (to render the XCF files to PNGs)
 * [Hugo](https://gohugo.io/) (to build the website)
 
 ### Installation on macOS
@@ -26,13 +29,7 @@ Install Python 2 from Homebrew:
 
 Set up a virtual environment:
 
-    $ pip2 install virtualenv
-    $ python2 -m virtualenv <path-to-virtualenv>
-    $ source <path-to-virtualenv>/bin/activate
-
-Install Python dependencies:
-
-    $ pip install -r requirements.txt
+    $ pipenv install --two
 
 Install SCons:
 
@@ -40,18 +37,17 @@ Install SCons:
 
 Install TeX Live:
 
-    $ brew cask install basictex
+    $ brew cask install mactex
 
-Make your TeX Live installation customizable (you may need to use a
-different directory than `2016basic`, if you are using a more or less
-recent installation of TeX Live):
+Install GIMP:
 
-    $ sudo chown -R YOUR_USERNAME:staff /usr/local/texlive/2016basic/tlpkg
-
-Install LaTeX packages:
-
-> Open up `.travis.yml` and run the `tlmgr install` command that is
-> listed in the `install` section.
+    $ brew cask install gimp
+    $ cd /Applications/GIMP-2.10.app/Contents/MacOS
+    $ ln python python2
+    $ cat > ~/.local/bin/gimp <<"EOF"
+    #!/bin/sh
+    /Applications/GIMP-2.10.app/Contents/MacOS/gimp "$@"
+    EOF
 
 Install Hugo:
 
@@ -62,10 +58,11 @@ Install Hugo:
 Clone the repo:
 
     $ git clone --recursive https://github.com/raxod502/intuitive-explanations.git
+    $ cd intuitive-explanations
 
 Build the website:
 
-    $ scons
+    $ pipenv run scons
 
 Run the development server (this will live-reload changes to the
 primary content of the website, although *not* changes to the
@@ -75,11 +72,11 @@ favicons, redirects, or LaTeX):
 
 Clean build artifacts:
 
-    $ scons -c
+    $ pipenv run scons -c
 
 Build and deploy to Netlify:
 
-    $ scons deploy
+    $ pipenv run scons deploy
 
 Check out the [Travis build][travis].
 

@@ -14,6 +14,9 @@ feature-complete ones:
   Store.
 * [MazeGen]: [Java] application to generate and visualize laser-cutter
   schematics for three-dimensional marble mazes.
+* [*Calculus: Intuitive Explanations*][cie]: 67 pages of [LaTeX]
+  content, from limits to vector analysis, with 35 [Ti*k*Z][tikz]
+  figures.
 * [layerize]: [Clojure] application to generate and visualize
   laser-cutter schematics for a cross-sectional model of a "Möbius
   solid".
@@ -28,6 +31,9 @@ feature-complete ones:
   Lisp customizations.
 * [`straight.el`][straight.el]: Next-generation, purely functional
   package manager for the [Emacs] hacker.
+* [`intuitiveexplanations.com`][ie]: Personal website built on [Travis
+  CI/CD][travis] using [SCons], [Hugo], [LaTeX], [GIMP] and hosted on
+  [Netlify].
 * [mla-tex]: [LaTeX][latex] [document class] for typesetting papers to
   [MLA] formatting standards.
 * [wdx]: Simpler and more robust alternative to [wd], written in
@@ -53,6 +59,7 @@ You can find all of these projects and more in development on
 
 [blackout]: https://github.com/raxod502/blackout
 [chrono count]: https://github.com/raxod502/chrono-count
+[cie]: https://www.intuitiveexplanations.com/calculus-intuitive-explanations/
 [claremont colleges]: http://www.claremont.edu/
 [clojure]: https://clojure.org/
 [cortex.optimise]: https://github.com/raxod502/cortex/tree/master/examples/optimise
@@ -63,6 +70,7 @@ You can find all of these projects and more in development on
 [document class]: https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes
 [el-patch]: https://github.com/raxod502/el-patch
 [emacs]: https://www.gnu.org/software/emacs/
+[gimp]: https://www.gimp.org/
 [git]: https://git-scm.com/
 [github]: https://github.com/raxod502
 [gnu-elpa]: https://elpa.gnu.org/
@@ -70,7 +78,9 @@ You can find all of these projects and more in development on
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
 [heroku]: https://www.heroku.com/
 [heroku-buildpack-emacs]: https://github.com/raxod502/heroku-buildpack-emacs
+[hugo]: https://gohugo.io/
 [hyperschedule]: https://github.com/MuddCreates/hyperschedule
+[ie]: https://github.com/raxod502/intuitive-explanations
 [java]: https://www.java.com/
 [latex]: https://www.latex-project.org/
 [layerize]: https://github.com/raxod502/layerize
@@ -82,11 +92,14 @@ You can find all of these projects and more in development on
 [mla-tex]: https://github.com/raxod502/mla-tex
 [prescient.el]: https://github.com/raxod502/prescient.el
 [radian]: https://github.com/raxod502/radian
+[scons]: https://scons.org/
 [smarter-playlist]: https://github.com/raxod502/smarter-playlist
 [straight.el]: https://github.com/raxod502/straight.el
 [terrariaclone]: https://github.com/raxod502/TerrariaClone
 [terraria]: https://terraria.org/
+[tikz]: https://en.wikipedia.org/wiki/PGF/TikZ
 [tmux]: https://tmux.github.io/
+[travis]: https://travis-ci.org/
 [wd]: https://github.com/mfaerevaag/wd
 [wdx]: https://github.com/raxod502/wdx
 [zsh]: http://www.zsh.org/
