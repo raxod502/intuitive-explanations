@@ -33,7 +33,7 @@ echo "Deploying..."
 
 curl -H "Content-Type: application/zip" \
      -H "Authorization: Bearer ${NETLIFY_KEY}" \
-     --data-binary @${zip_file} \
+     --data-binary "@${zip_file}" \
      https://api.netlify.com/api/v1/sites/intuitive-explanations.netlify.com/deploys
 
-echo "Deployed to intuitiveexplanations.com"
+echo "Finished."
