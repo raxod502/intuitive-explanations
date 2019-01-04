@@ -52,10 +52,19 @@ def mirror_directory(target_dir, mapping):
 ## Build configuration
 ### Environment
 
-env = Environment(ENV={
-    'NETLIFY_KEY': os.environ.get('NETLIFY_KEY'),
-    'PATH': os.environ.get('PATH'),
-})
+ENV_VARS = ['NETLIFY_KEY', 'PATH']
+
+# Do it this way instead of using dict.get because apparently if you
+# pass None as the value of an environment variable then it gets
+# converted to the string "None".
+def make_environment_map(env_vars):
+    env_map = {}
+    for env_var in env_vars:
+        if env_var in os.environ:
+            env_map[env_var] = os.environ[env_var]
+    return env_map
+
+env = Environment(ENV=make_environment_map(ENV_VARS))
 
 ### Constants
 #### Directories
