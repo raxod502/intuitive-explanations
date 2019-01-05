@@ -36,4 +36,5 @@ curl -H "Content-Type: application/zip" \
      --data-binary "@${zip_file}" \
      https://api.netlify.com/api/v1/sites/intuitive-explanations.netlify.com/deploys
 
+echo
 echo "Finished."
