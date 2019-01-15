@@ -18,8 +18,8 @@ feature-complete ones:
   content, from limits to vector analysis, with 35 [Ti*k*Z][tikz]
   figures.
 * [layerize]: [Clojure] application to generate and visualize
-  laser-cutter schematics for a cross-sectional model of a "Möbius
-  solid".
+  laser-cutter schematics for a cross-sectional model of a "[Möbius
+  solid][layerize-inspiration]".
 * [smarter-playlist]: [Clojure] application to generate iTunes
   playlists combining variety, cohesiveness, and novelty.
 * [Radian]: Elegant but practical configurations for [Emacs], [Zsh],
@@ -84,6 +84,7 @@ You can find all of these projects and more in development on
 [java]: https://www.java.com/
 [latex]: https://www.latex-project.org/
 [layerize]: https://github.com/raxod502/layerize
+[layerize-inspiration]: https://github.com/raxod502/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf
 [lazy-map]: https://github.com/raxod502/lazy-map
 [leiningen]: https://leiningen.org/
 [madeline]: https://github.com/raxod502/madeline
