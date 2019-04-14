@@ -53,6 +53,10 @@ feature-complete ones:
 * [GNU ELPA Mirror][gnu-elpa-mirror]: GitHub mirror of the [GNU
   ELPA][gnu-elpa] package repository for use with
   [`straight.el`][straight.el].
+* [heroku-buildpack-git-lfs]: [Heroku] buildpack to install [Git LFS]
+  and download assets transparently during build.
+* [Tidier]: Small application to auto-close abandoned GitHub issues by
+  label and activity.
 
 You can find all of these projects and more in development on
 [GitHub].
@@ -72,12 +76,14 @@ You can find all of these projects and more in development on
 [emacs]: https://www.gnu.org/software/emacs/
 [gimp]: https://www.gimp.org/
 [git]: https://git-scm.com/
+[git lfs]: https://git-lfs.github.com/
 [github]: https://github.com/raxod502
 [gnu-elpa]: https://elpa.gnu.org/
 [gnu-elpa-mirror]: https://github.com/raxod502/gnu-elpa-mirror
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
 [heroku]: https://www.heroku.com/
 [heroku-buildpack-emacs]: https://github.com/raxod502/heroku-buildpack-emacs
+[heroku-buildpack-git-lfs]: https://github.com/raxod502/heroku-buildpack-git-lfs
 [hugo]: https://gohugo.io/
 [hyperschedule]: https://github.com/MuddCreates/hyperschedule
 [ie]: https://github.com/raxod502/intuitive-explanations
@@ -99,6 +105,7 @@ You can find all of these projects and more in development on
 [straight.el]: https://github.com/raxod502/straight.el
 [terrariaclone]: https://github.com/raxod502/TerrariaClone
 [terraria]: https://terraria.org/
+[tidier]: https://github.com/raxod502/tidier
 [tikz]: https://en.wikipedia.org/wiki/PGF/TikZ
 [tmux]: https://tmux.github.io/
 [travis]: https://travis-ci.org/
