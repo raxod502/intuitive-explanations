@@ -10,3 +10,10 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+
+# Page configuration
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
