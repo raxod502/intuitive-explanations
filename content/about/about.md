@@ -1,5 +1,6 @@
 ---
 title: About
+permalink: /about
 ---
 
 Hi! My name is Radon Rosborough, and I like to write about math. This
