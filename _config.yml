@@ -16,6 +16,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - Makefile
+include:
+  - _redirects
 
 # Theme configuration
 header_pages:
