@@ -36,7 +36,10 @@ xcf:
 
 .PHONY: clean
 clean:
-	git clean -ffdX -e "!/_vendor/"
+	git ls-files --others --ignored --exclude-standard 	\
+		| grep -v '^_vendor/'				\
+		| xargs rm -v					\
+		| sed 's/^/Removed: /'
 
 .PHONY: deploy
 deploy:
