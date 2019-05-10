@@ -6,8 +6,8 @@ set -o pipefail
 raw=_src/xcf/raw
 out=_src/xcf/out
 
-ls "$raw" | readarray raw_names
-ls "$out" | readarray out_names
+readarray -t raw_names < <(ls "$raw")
+readarray -t out_names < <(ls "$out")
 
 # Delete files from 'out' that have been removed from 'raw'.
 for out_name in "${out_names[@]}"; do
@@ -18,26 +18,28 @@ for out_name in "${out_names[@]}"; do
 done
 
 # Re-generate files in 'out' that have been updated in 'raw'.
-for raw_name in "${raw_names[@]}"; do
-    out_name="${raw_name%.xcf}.png"
-    if [[ ! -f "${out}/${out_name}" ]]; then
-        echo "$raw_name"
-    elif [[ "${raw}/${raw_name}" -nt "${out}/${out_name}" ]]; then
-        echo "$raw_name"
-    fi
-done | readarray raw_names_updated
+readarray -t raw_names_updated < <(
+    for raw_name in "${raw_names[@]}"; do
+        out_name="${raw_name%.xcf}.png"
+        if [[ ! -f "${out}/${out_name}" ]]; then
+            echo "$raw_name"
+        elif [[ "${raw}/${raw_name}" -nt "${out}/${out_name}" ]]; then
+            echo "$raw_name"
+        fi
+    done
+)
 
 if (( "${#raw_names_updated[@]}" != 0 )); then
-    read -r -d "" code <<EOF
+    read -r -d "" code <<EOF || true
 (gimp-message-set-handler 1) ; print to stdout
 EOF
-    all_code=$"${code}\n"
+    all_code="${code}"$'\n'
     for raw_name in "${raw_names_updated[@]}"; do
         out_name="${raw_name%.xcf}.png"
-        read -r -d "" code <<EOF
+        read -r -d "" code <<EOF || true
 (let ((mode RUN-NONINTERACTIVE)
-      (in-fname "${raw_name}")
-      (out-fname "${out_name}"))
+      (in-fname "${PWD}/${raw}/${raw_name}")
+      (out-fname "${PWD}/${out}/${out_name}"))
   (gimp-message (string-append "Reading " in-fname))
   (let* ((image (car (gimp-file-load mode in-fname in-fname)))
          (drawable (car (gimp-image-merge-visible-layers image CLIP-TO-IMAGE))))
@@ -53,12 +55,13 @@ EOF
     (gimp-message (string-append "Wrote " out-fname))
     (gimp-image-delete image)))
 EOF
-        all_code=$"${all_code}${code}\n"
+        all_code="${all_code}${code}"$'\n'
     done
-    read -r -d "" code <<EOF
+    read -r -d "" code <<EOF || true
 (gimp-quit 0)
 EOF
-    all_code=$"${all_code}${code}\n"
+    all_code="${all_code}${code}"$'\n'
+    gimp -i -b "$all_code"
 else
     echo "Up to date!" 1>&2
 fi
