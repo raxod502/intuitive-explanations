@@ -34,6 +34,8 @@ xcf:
 .PHONY: clean
 clean:
 	rm -rf						\
+		.jekyll-metadata			\
+		.sass-cache				\
 		_site					\
 		_src/tex/classes/auto			\
 		_src/tex/documents/*/auto		\
