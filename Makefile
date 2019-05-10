@@ -37,3 +37,7 @@ xcf:
 .PHONY: clean
 clean:
 	git clean -ffdX -e "!/_vendor/"
+
+.PHONY: deploy
+deploy:
+	_scripts/deploy.bash
