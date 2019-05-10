@@ -1,5 +1,8 @@
 ---
 title: "Integration"
+redirect_from:
+  - /fundamental-theorem-of-calculus/
+  - /integration/
 ---
 
 {% raw %}

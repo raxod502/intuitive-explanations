@@ -1,6 +1,7 @@
 ---
 title: "Probability Distributions: Means and Variances"
 redirect_from:
+  - /probability-distributions-proofs/
   - /probability-distributions-means-and-variances/
 ---
 

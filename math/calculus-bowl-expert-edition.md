@@ -1,6 +1,7 @@
 ---
 title: "Calculus Bowl: Expert Edition"
 redirect_from:
+  - /calculus-bowl/
   - /calculus-bowl-expert-edition/
 ---
 

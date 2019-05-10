@@ -1,6 +1,7 @@
 ---
 title: "Calculus: Intuitive Explanations"
 redirect_from:
+  - /intuitive-explanations/
   - /calculus-intuitive-explanations/
 ---
 

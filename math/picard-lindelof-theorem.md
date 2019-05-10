@@ -1,6 +1,7 @@
 ---
 title: "The Picard-Lindelöf Theorem"
 redirect_from:
+  - /existence-uniqueness-theorem/
   - /picard-lindelof-theorem/
 ---
 

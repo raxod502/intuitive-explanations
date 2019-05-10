@@ -1,0 +1,30 @@
+# Files that still exist
+/files/CalcBowl.pdf /CalculusBowlExpertEdition.pdf
+/files/CalculusTextbookCover.pdf https://github.com/raxod502/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf
+/files/ChronoCountDetails.pdf https://github.com/raxod502/chrono-count/blob/b08480eff49f6e3b66ae32fe3bb4afe39dc0ce7a/ChronoCountDetails.pdf
+/files/DifferentialEquationSolutionStrategies.pdf /DifferentialEquationSolutionStrategies.pdf
+/files/ExistenceUniquenessTheorem.pdf /PicardLindelofTheorem.pdf
+/files/Intuition /CalculusIntuitiveExplanations.pdf
+/files/Intuition.pdf /CalculusIntuitiveExplanations.pdf
+/files/IntuitiveExplanations.pdf /CalculusIntuitiveExplanations.pdf
+/files/LinearAlgebraSummarySheet.pdf /LinearAlgebraSummarySheet.pdf
+/files/ProbabilityDistributionProofs.pdf /ProbabilityDistributionsMeansAndVariances.pdf
+
+/CalculusBowlExpertEdition.pdf /assets/CalculusBowlExpertEdition.pdf
+/CalculusIntuitiveExplanations.pdf /assets/CalculusIntuitiveExplanations.pdf
+/DifferentialEquationSolutionStrategies.pdf /assets/DifferentialEquationSolutionStrategies.pdf
+/LinearAlgebraSummarySheet.pdf /assets/LinearAlgebraSummarySheet.pdf
+/PicardLindelofTheorem.pdf /assets/PicardLindelofTheorem.pdf
+/ProbabilityDistributionsMeansAndVariances.pdf /assets/ProbabilityDistributionsMeansAndVariances.pdf
+
+# Files that no longer exist
+/assets/ftc-graph.png /wip/integration/
+/assets/ftc-graph-lines.png /wip/integration/
+/assets/ftc-graph-lines-labeled.png /wip/integration/
+/assets/ftc-graph-lines-many.png /wip/integration/
+/files/ /
+/files/LaTeXSource.pdf https://github.com/raxod502/intuitive-explanations/tree/master/tex
+
+# Local Variables:
+# mode: conf
+# End:

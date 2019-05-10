@@ -1,6 +1,7 @@
 ---
 title: "Differential Equation Solution Strategies"
 redirect_from:
+  - /differential-equations-solution-strategies/
   - /differential-equation-solution-strategies/
 ---
 
