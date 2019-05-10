@@ -1,12 +1,7 @@
-LATEX := latexmk -cd -interaction=nonstopmode
+LATEX := tectonic
 JEKYLL := bundle exec jekyll
 
-LATEX_DOCS := $(wildcard _src/tex/documents/*/*.tex)
-LATEX_DOCS_NORMAL := $(filter-out %/resume.tex,$(LATEX_DOCS))
-LATEX_DOCS_RESUME := $(filter     %/resume.tex,$(LATEX_DOCS))
-
-LATEX_FLAGS_NORMAL := -pdf
-LATEX_FLAGS_RESUME := -pdfxe -shell-escape -jobname=resume-nophone
+LATEX_DOCS := $(filter-out %/resume.tex,$(wildcard _src/tex/documents/*/*.tex))
 
 .PHONY: all
 all: tex resume xcf build
@@ -24,11 +19,11 @@ build:
 
 .PHONY: tex
 tex:
-	$(LATEX) $(LATEX_FLAGS_NORMAL) $(LATEX_DOCS_NORMAL)
+	for doc in $(LATEX_DOCS); do $(LATEX) $$doc; done
 
 .PHONY: resume
 resume:
-	$(LATEX) $(LATEX_FLAGS_RESUME) $(LATEX_DOCS_RESUME)
+	$(LATEX) _src/tex/documents/resume/resume.tex
 
 .PHONY: xcf
 xcf:

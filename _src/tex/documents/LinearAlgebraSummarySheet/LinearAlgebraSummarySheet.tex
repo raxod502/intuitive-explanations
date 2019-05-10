@@ -125,7 +125,7 @@
 \DeclareMathOperator{\Im}{Im}
 
 % dot product
-\renewcommand{\dot}{\cdot}
+\newcommand{\dt}{\cdot}
 
 % orthogonal complement
 \newcommand{\comp}{^\bot}
@@ -614,16 +614,16 @@
   \item Let \set{\many{\vec u}} be an orthogonal basis for an inner
     product space $V$, and let \vec y be a vector in $V$. Then
     \begin{equation*}
-      \vec y = \frac{\vec y \dot \vec u_1}{\vec u_1 \dot \vec u_1} \vec u_1
+      \vec y = \frac{\vec y \dt \vec u_1}{\vec u_1 \dt \vec u_1} \vec u_1
              + \cdots
-             + \frac{\vec y \dot \vec u_n}{\vec u_n \dot \vec u_n} \vec u_n.
+             + \frac{\vec y \dt \vec u_n}{\vec u_n \dt \vec u_n} \vec u_n.
     \end{equation*}
   \item Let \set{\many{\vec u}} be an orthonormal basis for an inner
     product space $V$, and let \vec y be a vector in $V$. Then
     \begin{equation*}
-      \vec y = (\vec y \dot \vec u_1) \vec u_1
+      \vec y = (\vec y \dt \vec u_1) \vec u_1
              + \cdots
-             + (\vec y \dot \vec u_n) \vec u_n.
+             + (\vec y \dt \vec u_n) \vec u_n.
     \end{equation*}
   \end{enumerate}
 \end{thm}
@@ -645,18 +645,18 @@
     y$ has a unique solution, and $\vec{\hat y} = \mat \vec x$.
   \item If \basis U is an orthogonal basis for $W$, then
     \begin{equation*}
-      \vec{\hat y} = \frac{\vec y \dot \vec u_1}{\vec u_1 \dot \vec u_1}
+      \vec{\hat y} = \frac{\vec y \dt \vec u_1}{\vec u_1 \dt \vec u_1}
                      \vec u_1
                    + \cdots
-                   + \frac{\vec y \dot \vec u_n}{\vec u_n \dot \vec u_n}
+                   + \frac{\vec y \dt \vec u_n}{\vec u_n \dt \vec u_n}
                      \vec u_n.
     \end{equation*}
   \item If \basis U is an orthonormal basis for $W$, i.e. \mat U is an
     orthogonal matrix, then
     \begin{equation*}
-      \vec{\hat y} = (\vec y \dot \vec u_1) \vec u_1
+      \vec{\hat y} = (\vec y \dt \vec u_1) \vec u_1
                    + \cdots
-                   + (\vec y \dot \vec u_n) \vec u_n
+                   + (\vec y \dt \vec u_n) \vec u_n
                    = \mat U \mat U\trans \vec y.
     \end{equation*}
   \item If \basis U is an orthonormal basis for \R[m], i.e. \mat U is
@@ -692,9 +692,9 @@
     angles, and orthogonality. That is:
     \begin{enumerate}
     \item $\norm{\mat U \vec x} = \norm{\vec x}$.
-    \item $(\mat U \vec x) \dot (\mat U \vec y) = \vec x \dot \vec y$.
-    \item $(\mat U \vec x) \dot (\mat U \vec y) = 0$ if and only if
-      $\vec x \dot \vec y = 0$.
+    \item $(\mat U \vec x) \dt (\mat U \vec y) = \vec x \dt \vec y$.
+    \item $(\mat U \vec x) \dt (\mat U \vec y) = 0$ if and only if
+      $\vec x \dt \vec y = 0$.
     \end{enumerate}
   \item Let \mat A be an $m \by n$ matrix with linearly independent
     columns, and let $\mat U = \MAT{ \vec u_1 & \cdots & \vec u_n }$
@@ -714,8 +714,8 @@
   Let \vec u and \vec v be vectors in an inner product space. Then:
   \begin{enumerate}
   \item $\norm{\vec u + \vec v}^2 = \norm{\vec u}^2 + \norm{\vec v}^2$
-    if and only if $\vec u \dot \vec v = 0$.
-  \item $|\vec u \dot \vec v| \leq \norm{\vec u} \norm{\vec v}$.
+    if and only if $\vec u \dt \vec v = 0$.
+  \item $|\vec u \dt \vec v| \leq \norm{\vec u} \norm{\vec v}$.
   \item $\norm{\vec u + \vec v} \leq \norm{\vec u} + \norm{\vec v}$.
   \end{enumerate}
 \end{thm}

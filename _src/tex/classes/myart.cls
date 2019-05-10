@@ -10,6 +10,8 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage[hidelinks]{hyperref}
+% Needed as per <https://tex.stackexchange.com/a/416351/54018>
+\usepackage{fontspec}
 
 \renewcommand{\titlepage}[3]{%
   \title{#1}%
