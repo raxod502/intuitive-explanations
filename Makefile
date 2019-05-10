@@ -13,6 +13,10 @@ build:
 tex:
 	$(LATEX) _src/tex/documents/*/*.tex
 
+.PHONY: xcf
+xcf:
+	_scripts/convert_xcf.bash
+
 .PHONY: clean
 clean:
 	rm -rf                                     \
