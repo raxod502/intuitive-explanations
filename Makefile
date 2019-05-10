@@ -33,17 +33,4 @@ xcf:
 
 .PHONY: clean
 clean:
-	rm -rf						\
-		.jekyll-metadata			\
-		.sass-cache				\
-		_site					\
-		_src/tex/classes/auto			\
-		_src/tex/documents/*/auto		\
-		_src/tex/documents/*/*.aux		\
-		_src/tex/documents/*/*.fdb_latexmk	\
-		_src/tex/documents/*/*.fls		\
-		_src/tex/documents/*/*.log		\
-		_src/tex/documents/*/*.out		\
-		_src/tex/documents/*/*.pdf		\
-		_src/tex/documents/*/*.toc		\
-		_src/xcf/out
+	git clean -ffdX -e "!/_vendor/"
