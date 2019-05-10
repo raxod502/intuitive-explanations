@@ -1,5 +1,10 @@
 ---
 title: Welcome to Intuitive Explanations
+redirect_from:
+  - /files/
+  - /page/1/
+  - /post/
+  - /post/page/1/
 ---
 
 Hi, I'm Radon and this is my personal website.

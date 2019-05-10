@@ -18,7 +18,7 @@
   \maketitle
   \thispagestyle{empty}
   \begin{center}
-    \href{https://intuitiveexplanations.com/#2/}{https://intuitiveexplanations.com/#2/}
+    \href{https://intuitiveexplanations.com/math/#2/}{https://intuitiveexplanations.com/math/#2/}
   \end{center}
   \vspace{4em}
   #3
