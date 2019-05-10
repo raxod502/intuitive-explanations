@@ -1,15 +1,32 @@
 # Site settings
 title: Intuitive Explanations
-email: your-email@example.com
+email: radon.neon@gmail.com
 description: Understand, don't memorize.
-url: "https://www.intuitiveexplanations.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.intuitiveexplanations.com"
 github_username: raxod502
 
 # Build settings
 markdown: kramdown
 theme: minima
 plugins:
-  - jekyll-feed
+  - jekyll-redirect-from
+exclude:
+  - _src
+
+# Theme configuration
+header_pages:
+  - title: Projects
+    url: /about/projects/
+  - title: Math
+    url: /math/
+  - title: Resume
+    url: /assets/Resume.pdf
+  - title: About
+    url: /about/site/
+minima:
+  social_links:
+    github: raxod502
+google_analytics: UA-111346837-2
 
 # Page configuration
 defaults:

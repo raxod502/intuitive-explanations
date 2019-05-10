@@ -1,0 +1,831 @@
+\documentclass{myart}
+\usepackage{environ}
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Hacky stuff
+
+% change formatting of amsthms
+\makeatletter
+\def\th@definition{%
+  \thm@notefont{}%
+  \normalfont%
+}
+\makeatother
+
+% macro to check for empty argument to command
+\makeatletter
+\def\ifemptyarg#1{%
+  \if\relax\detokenize{#1}\relax%
+  \expandafter\@firstoftwo
+  \else
+  \expandafter\@secondoftwo
+  \fi}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Convenience macros
+
+% vdots centered within the width of another symbol
+\newcommand{\cvdots}[1][=]{\mathrel{\makebox[\widthof{#1}]{\vdots}}}
+
+% term being defined
+\newcommand{\term}[1]{\textbf{#1}}
+
+% name of vector
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}
+
+% name of matrix
+\newcommand{\mat}[1]{\ensuremath{#1}}
+
+% set of all n-tuples of real numbers
+\newcommand{\R}[1][]{\ensuremath{\mathbb{R}^{#1}}}
+
+% $2 \by 3$ matrix => $2 \times 3$ matrix
+\newcommand{\by}{\ensuremath{\times}}
+
+% matrix
+\newcommand{\MAT}[2][r]{\ensuremath{\begin{bmatrix*}[#1]#2\end{bmatrix*}}}
+
+% matrix
+\NewEnviron{matr}[1][r]{\ensuremath{\begin{bmatrix*}[#1]\BODY\end{bmatrix*}}}
+
+% span of a set of vectors
+\DeclareMathOperator{\OpSpan}{Span}
+
+% span of a set of vectors
+\newcommand{\Span}[1]{\ensuremath{\OpSpan\{#1\}}}
+
+% set
+\newcommand{\set}[1]{\ensuremath{\{#1\}}}
+
+% inverse of a matrix
+\newcommand{\inv}{\ensuremath{^{-1}}}
+
+% transpose of a matrix
+\newcommand{\trans}{\ensuremath{^T}}
+
+% adjugate (classical adjoint) of a matrix
+\DeclareMathOperator{\adj}{adj}
+
+% null space of a matrix
+\DeclareMathOperator{\Nul}{Nul}
+
+% column space of a matrix
+\DeclareMathOperator{\Col}{Col}
+
+% row space of a matrix
+\DeclareMathOperator{\Row}{Row}
+
+% basis for a vector space
+\newcommand{\basis}[1]{\ensuremath{\mathcal{#1}}}
+
+% rank of a matrix
+\DeclareMathOperator{\rank}{rank}
+
+% row equivalence
+\newcommand{\eq}{\sim}
+
+% used in names of change-of-coordinates matrices
+\newcommand{\from}{\leftarrow}
+
+% coordinates of a vector relative to a basis
+\newcommand{\coord}[2]{\ensuremath{\left[#1\right]_{#2}}}
+
+% change-of-coordinates matrix from a basis to the standard basis
+\newcommand{\chcoordr}[1]{\ensuremath{P_{#1}}}
+
+% change-of-coordinates matrix between two bases
+\newcommand{\chcoord}[2]{\ensuremath{P_{#1 \from #2}}}
+
+% matrix for a linear transformation relative to a basis
+\newcommand{\transmat}[2]{\coord{#1}{#2}}
+
+% matrix for a linear transformation relative to two bases
+\newcommand{\transmatb}[3]{\coord{#1}{#2 \from #3}}
+
+% sequence
+\newcommand{\seq}[3][]{\ifemptyarg{#1}{\ensuremath{\{{#2}_{#3}\}}}{\ensuremath{\{{#2}_{#3}^{(#1)}\}}}}
+
+% set of all signals
+\newcommand{\Signals}{\ensuremath{\mathbb{S}}}
+
+% \many[k]{\vec v} => $\vec v_1, \ldots, \vec v_k$
+\newcommand{\many}[2][n]{\ensuremath{{#2}_1, \ldots, {#2}_{#1}}}
+
+% complex conjugate
+\newcommand{\conj}[1]{\overline{#1}}
+\let\Re\relax
+
+% real component
+\DeclareMathOperator{\Re}{Re}
+\let\Im\relax
+
+% imaginary component
+\DeclareMathOperator{\Im}{Im}
+
+% dot product
+\renewcommand{\dot}{\cdot}
+
+% orthogonal complement
+\newcommand{\comp}{^\bot}
+
+% magnitude of a vector
+\newcommand{\norm}[1]{\left|\left|#1\right|\right|}
+
+% orthogonal projection of a vector onto a subspace
+\DeclareMathOperator{\proj}{proj}
+
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Actual document
+
+\begin{document}
+
+\titlepage
+{Linear Algebra Summary Sheet}
+{linear-algebra-summary-sheet}
+{This document is a concise collection of many of the important
+  theorems of linear algebra, organized so that making connections
+  between different concepts and theorems is as easy as possible. The
+  material here is primarily based on the textbook I used in my Linear
+  Algebra class (\textit{Linear Algebra and Its Applications} by David
+  C. Lay, fourth edition).}
+
+\section{Notation}
+
+\begin{enumerate}
+\item $I$ denotes an identity matrix, the size of which is dependent
+  on context.
+\item If \basis B is a basis for \R[n], then \chcoordr{\basis B}
+  denotes the change-of-coordinates matrix from \basis B to \R[n],
+  which satisfies $\vec x = \chcoordr{\basis B}\coord{\vec x}{\basis
+    B}$ for all \vec x in \R[n].
+\item If \basis B and \basis C are bases for a vector space $V$, then
+  \chcoord{\basis C}{\basis B} denotes the change-of-coordinates
+  matrix from \basis B to \basis C, which satisfies $\coord{\vec
+    x}{\basis C} = \chcoord{\basis C}{\basis B}\coord{\vec x}{\basis
+    B}$ for all \vec x in $V$.
+\item If \basis B is a basis for a vector space $V$ and $T: V \to V$
+  is a linear transformation, then \transmat{T}{\basis B} denotes the
+  matrix for $T$ relative to \basis B, or the \basis B-matrix for $T$,
+  which satisfies $\coord{T(\vec x)}{\basis B} = \transmat{T}{\basis
+    B}\coord{\vec x}{\basis B}$ for all \vec x in $V$.
+\item If \basis B and \basis C are bases for the vectors spaces $V$
+  and $W$, respectively, and $T: V \to W$ is a linear transformation,
+  then \transmatb{T}{\basis C}{\basis B} denotes the matrix for $T$
+  relative to \basis B and \basis C, which satisfies $\coord{T(\vec
+    x)}{\basis C} = \transmatb{T}{\basis C}{\basis B}\coord{\vec
+    x}{\basis C}$ for all \vec x in $V$.
+\end{enumerate}
+
+\section{Theorems}
+
+\begin{thm}[Solution Sets of Linear Systems] \hfill
+  \begin{enumerate}
+  \item A linear system either is inconsistent, has exactly one
+    solution, or has infinitely many solutions.
+  \item Let \mat A be an $m \by n$ matrix and let \vec b be a vector
+    in \R[m]. If the equation $\mat A\vec x = \vec b$ is consistent,
+    then the mapping $\vec x \mapsto \vec x + \vec b$ is a bijection
+    from the solution set of $\mat A\vec x = \vec 0$ to the solution
+    set of $\mat A\vec x = \vec b$.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Consistent Linear Systems]
+  Let \mat A = \MAT{\vec a_1 & \cdots & \vec a_n} be an $m \by n$
+  matrix, let \vec b be a vector in \R[m], let $M$ be the augmented
+  matrix \MAT{\mat A & \vec b}, and let $L$ be the linear system with
+  augmented matrix $M$. Then the following statements are logically
+  equivalent:
+  \begin{enumerate}
+  \item The linear system $L$ is consistent.
+  \item The last column of $M$ is not a pivot column.
+  \item The echelon form of $M$ has no row of the form \MAT{0 & \cdots
+      & 0 & b}, where $b \neq 0$.
+  \item The equation $x_1\vec a_1 + \cdots + x_n\vec a_n = \vec b$ has
+    at least one solution.
+  \item The vector \vec b is a linear combination of \many{\vec a}.
+  \item The vector \vec b is an element of \Span{\many{\vec a}}.
+  \item The equation $\mat A\vec x = \vec b$ has at least one
+    solution.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Always-Consistent Linear Systems]
+  Let \mat A = \MAT{\vec a_1 & \cdots & \vec a_n} be an $m \by n$
+  matrix and let $T : \R[n] \to \R[m]$ be the linear transformation
+  given by $\vec x \mapsto \mat A\vec x$. Then the following
+  statements are logically equivalent:
+  \begin{enumerate}
+  \item For each \vec b in \R[m], the equation $\mat A\vec x = \vec b$
+    has at least one solution.
+  \item Each \vec b in \R[m] is a linear combination of \many{\vec a}.
+  \item The vectors \many{\vec a} span \R[m].
+  \item The matrix \mat A has a pivot position in every row.
+  \item The linear transformation $T$ is onto (it maps \R[n] onto
+    \R[m]).
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Linear Systems with Unique Solutions]
+  Let \mat A = \MAT{\vec a_1 & \cdots & \vec a_n} be an $m \by n$
+  matrix, let \vec b be a vector in \R[m], let $L$ be the linear
+  system with augmented matrix \MAT{\mat A & \vec b}, and let $T :
+  \R[n] \to \R[m]$ be the linear transformation given by $\vec x
+  \mapsto \mat A\vec x$. Then the following statements are logically
+  equivalent:
+  \begin{enumerate}
+  \item The linear system $L$ has at most one solution.
+  \item The linear system $L$ either is inconsistent or has no free
+    variables.
+  \item The matrix \mat A has a pivot position in every column.
+  \item The equation $x_1\vec a_1 + \cdots + x_n\vec a_n = \vec b$ has
+    at most one solution.
+  \item The equation $\mat A\vec x = \vec b$ has at most one solution.
+  \item The equation $\mat A\vec x = \vec 0$ has only the trivial
+    solution.
+  \item The vectors \many{\vec a} are linearly independent.
+  \item The linear transformation $T$ is one-to-one.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Square Linear Systems]
+  Let \mat A = \MAT{\vec a_1 & \cdots & \vec a_n} be an $n \by n$
+  matrix, and let $T : \R[n] \to \R[n]$ be the linear transformation
+  given by $\vec x \mapsto \mat A\vec x$. Then the following
+  statements are logically equivalent:
+  \begin{enumerate}
+  \item The matrix \mat A is invertible.
+  \item The matrix \mat A is row equivalent to the $n \by n$ identity
+    matrix.
+  \item The matrix \mat A has $n$ pivot positions.
+  \item For each \vec b in \R[n], the equation $\mat A\vec x = \vec b$
+    has at least one solution.
+  \item The vectors \many{\vec a} span \R[n].
+  \item The linear transformation $T$ is onto (it maps \R[n] onto
+    \R[n]).
+  \item For each \vec b in \R[m], the equation $\mat A\vec x = \vec b$
+    has at most one solution.
+  \item The equation $\mat A\vec x = \vec 0$ has only the trivial
+    solution.
+  \item The vectors \many{\vec a} are linearly independent.
+  \item The linear transformation $T$ is one-to-one.
+  \item $\det \mat A \neq 0$.
+  \item The vectors \many{\vec a} are a basis for \R[n].
+  \item $\Col \mat A = \R[n]$.
+  \item $\Row \mat A = \R[n]$.
+  \item $\rank \mat A = n$.
+  \item $\Nul \mat A = \set{\vec 0}$.
+  \item $\Nul \mat A\trans = \set{\vec 0}$.
+  \item $\dim \Nul \mat A = 0$.
+  \item $\dim \Nul \mat A\trans = 0$.
+  \item $0$ is not an eigenvalue of \mat A.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Inversion of a Matrix]
+  Let \mat A be an invertible matrix. Then \MAT{\mat A & \mat I} is
+  row equivalent to \MAT{\mat I & \mat A\inv}.
+\end{thm}
+
+\begin{thm}[LU Factorization]
+  Let \mat A be an $m \by n$ matrix, let \mat U be an echelon form of
+  \mat A obtained only by adding multiples of rows to rows below them,
+  and let \mat L be an $m \by m$ matrix that is reduced to $\mat I_m$
+  by the same sequence of elementary row operations that reduces \mat
+  A to \mat U. Then $\mat A = \mat L \mat U$, where \mat L is lower
+  triangular and \mat U is upper triangular.
+\end{thm}
+
+\begin{thm}[Properties of Linear Dependence]
+  Let \set{\many[p]{\vec a}} be a set of vectors in \R[n]. Then the
+  following statements are true:
+  \begin{enumerate}
+  \item Suppose that $p = 1$. Then the set of vectors is linearly
+    dependent if and only if $\vec a_1 = \vec 0$.
+  \item Suppose that $p = 2$. Then the set of vectors is linearly
+    dependent if and only if at least one of the vectors is a scalar
+    multiple of the other.
+  \item The set of vectors is linearly dependent if and only if at
+    least one of the vectors is a linear combination of the other
+    vectors.
+  \item If the set of vectors is linearly dependent and $\vec a_1 \neq
+    \vec 0$, then at least one of the vectors $\vec a_2, \ldots, \vec
+    a_p$ is a linear combination of the preceding vectors.
+  \item If $p > n$, then the set of vectors is linearly dependent.
+  \item If at least one of the vectors is \vec 0, then the set of
+    vectors is linearly dependent.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Linear Transformations] \hfill
+  \begin{enumerate}
+  \item A transformation $T$ is linear if and only if both $T(\vec u +
+    \vec v) = T(\vec u) + T(\vec v)$ and $T(c \vec u) = c\, T(\vec u)$
+    for all vectors $\vec u, \vec v$ and all scalars $c$.
+  \item A transformation $T$ is linear if and only if $T(c\vec u +
+    d\vec v) = c\,T(\vec u) + d\,T(\vec v)$ for all vectors $\vec u,
+    \vec v$ and all scalars $c, d$.
+  \item If a transformation $T$ is given by $\vec x \mapsto \mat A\vec
+    x$ for some $m \by n$ matrix \mat A, then $T$ is a linear
+    transformation from \R[m] to \R[n].
+  \item Let $T : \R[n] \to \R[m]$ be a linear transformation. Then $T$
+    is given by $\vec x \mapsto \mat A \vec x$, where $\mat A = \MAT{
+      T(\vec e_1) & \cdots & T(\vec e_n) }$.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Matrix Operations] \hfill
+  \begin{enumerate}
+  \item Let \mat A, \mat B, and \mat C be $m \by p$, $p \by q$, and $q
+    \by n$ matrices respectively. Then:
+    \begin{enumerate}
+    \item $\mat A (\mat B \mat C) = (\mat A \mat B) \mat C$.
+    \item $\mat A (\mat B + \mat C) = \mat A \mat B + \mat A \mat C$.
+    \item $(\mat A + \mat B) \mat C = \mat A \mat C + \mat B \mat C$.
+    \end{enumerate}
+  \item Let \mat A and \mat B be $m \by n$ matrices. Then:
+    \begin{enumerate}
+    \item $(\mat A\trans)\trans = \mat A$.
+    \item $(\mat A + \mat B)\trans = \mat A\trans + \mat B\trans$.
+    \end{enumerate}
+  \item Let \many{\mat A} be matrices such that the product $\mat A_1
+    \cdots \mat A_n$ is defined. Then $(\mat A_1 \cdots \mat
+    A_n)\trans = \mat A_n\trans \cdots \mat A_1\trans$.
+  \item Let \many{\mat A} be $n \by n$ matrices. Then $\mat A_1 \cdots
+    \mat A_n$ is invertible if and only if each of \many{\mat A} are
+    invertible. If $\mat A_1 \cdots \mat A_n$ is invertible, then
+    $(\mat A_1 \cdots \mat A_n)\inv = \mat A_n\inv \cdots \mat
+    A_1\inv$.
+  \item Let \mat A be an $n \by n$ matrix. Then $\mat A\trans$ is
+    invertible if and only if \mat A is invertible. If $\mat A\trans$
+    is invertible, then $(\mat A\trans)\inv = (\mat A\inv)\trans$.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Determinants] \hfill
+  \begin{enumerate}
+  \item If \mat A is a triangular matrix, then $\det \mat A$ is the
+    product of the entries on the main diagonal of \mat A.
+  \item If \mat A is a square matrix, and the matrix \mat B is
+    obtained from \mat A by performing one elementary row
+    operation\footnote{The same applies to elementary column
+      operations.}, then:
+    \begin{enumerate}
+    \item If a multiple of one row of \mat A is added to another row,
+      then $\det \mat B = \det \mat A$.
+    \item If two rows of \mat A are interchanged, then $\det \mat B =
+      -\det \mat A$.
+    \item If one row of \mat A is multiplied by $k$, then $\det \mat B
+      = k \det \mat A$.
+    \end{enumerate}
+  \item If \mat A and \mat B are square matrices, then $\det \mat
+    A\mat B = (\det \mat A)(\det \mat B)$.
+  \item If \mat A is invertible, then $\det \mat A$ is $(-1)^n$
+    multiplied by the product of the pivots in any echelon form of
+    \mat A, where $n$ is the number of row interchanges necessary to
+    reduce \mat A to echelon form.
+  \item If \mat A is an $n \by n$ matrix, \vec b is a vector in \R[n],
+    $\det \mat A \neq 0$, and $\mat A\vec x = \vec b$, then
+    \begin{equation*}
+      \vec x = \frac{1}{\det \mat A} \MAT[c]{
+        \det \mat A_1(\vec b) \\ \vdots \\ \det \mat A_n(\vec b)
+      },
+    \end{equation*}
+    where $\mat A_i(\vec b)$ denotes the matrix obtained by replacing
+    column $i$ of \mat A with \vec b.
+  \item If \mat A is an $n \by n$ matrix and $\det \mat A \neq 0$,
+    then
+    \begin{equation*}
+      \mat A\inv = \frac{\adj \mat A}{\det \mat A},
+    \end{equation*}
+    where
+    \begin{align*}
+      \adj \mat A &= \MAT[c]{
+                       C_{11} & C_{12} & \cdots & C_{1n} \\
+                       C_{21} & C_{22} & \cdots & C_{2n} \\
+                       \vdots & \vdots & \ddots & \vdots \\
+                       C_{n1} & C_{n2} & \cdots & C_{nn}
+                     }\trans, \\
+           C_{ij} &= (-1)^{i+j}\det \mat A_{ij},
+    \end{align*}
+    and $\mat A_{ij}$ denotes the matrix obtained by removing row $i$
+    and column $j$ from \mat A.
+  \item If $\mat A = \MAT{\vec a_1 & \vec a_2}$ is a $2 \by 2$ matrix,
+    then $|\det \mat A|$ is the area of the parallelogram determined
+    by $\vec a_1$ and $\vec a_2$. If $\mat A = \MAT{\vec a_1 & \vec
+      a_2 & \vec a_3}$ is a $3 \by 3$ matrix, then $|\det \mat A|$ is
+    the volume of the parallelepiped determined by $\vec a_1$, $\vec
+    a_2$, and $\vec a_3$.
+  \item If \mat A is a $2 \by 2$ matrix, $T : \R[2] \to \R[2]$ is the
+    linear transformation defined by $\vec x \mapsto \mat A\vec x$,
+    and $S$ is a region in \R[2] with finite area, then the area of
+    $T(S)$ is the area of $S$ multiplied by $|\det \mat A\,|$. If \mat
+    A is a $3 \by 3$ matrix, $T : \R[3] \to \R[3]$ is the linear
+    transformation defined by $\vec x \mapsto \mat A\vec x$, and $S$
+    is a region in \R[3] with finite volume, then the volume of $T(S)$
+    is the volume of $S$ multiplied by $|\det \mat A\,|$.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Subspaces] \hfill
+  \begin{enumerate}
+  \item If \many{\vec v} are vectors in a vector space $V$, then
+    \Span{\many{\vec v}} is a subspace of $V$.
+  \item If \mat A is an $m \by n$ matrix, then $\Nul \mat A$ is a
+    subspace of \R[n].
+  \item If \mat A is an $m \by n$ matrix, then $\Col \mat A$ is a
+    subspace of \R[m].
+  \item If \mat A is an $m \by n$ matrix, then $\Row \mat A$ is a
+    subspace of \R[n].
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Bases] \hfill
+  \begin{enumerate}
+  \item Let $S$ be a finite subset of a vector space and let $H =
+    \OpSpan S$. If one of the vectors, \vec v, in $S$ is a linear
+    combination of the others, then the set formed by removing \vec v
+    from $S$ still spans $H$.
+  \item Let $S \neq \set{\vec 0}$ be a subset of a vector space $V$.
+    If $S$ spans $V$, then some subset of $S$ is a basis for $V$, and
+    if $S$ is linearly independent, then some superset of $S$ is a
+    basis for $V$.
+  \item If a vector space $V$ has a basis containing $n$ vectors, then
+    every basis of $V$ must contain exactly $n$ vectors. Furthermore,
+    any subset of $V$ containing more than $n$ vectors must be
+    linearly dependent, and any subset of $V$ containing more than $n$
+    elements cannot span $V$.
+  \item If $V$ is an $n$-dimensional vector space, then any subset of
+    $V$ containing exactly $n$ vectors that either spans $V$ or is
+    linearly independent must be a basis for $V$.
+  \item If $H$ is a subspace of a finite-dimensional vector space $V$,
+    then $\dim H \leq \dim V$.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Coordinates] \hfill
+  \begin{enumerate}
+  \item Let \basis B be a basis with $n$ vectors for a vector space
+    $V$. Then the transformation $\vec x \mapsto \coord{\vec x}{\basis
+      B}$ is an isomorphism from $V$ to \R[n].
+  \item Let $\basis B = \set{\many{\vec b}}$ be a basis for \R[n].
+    Then $\chcoordr{\basis B} = \MAT{\vec b_1 & \cdots & \vec b_n}$.
+  \item Let $\basis B = \set{\many{\vec b}}$ and \basis C be bases for
+    a vector space $V$. Then $\chcoord{\basis C}{\basis B} =
+    \MAT{\coord{\vec b_1}{\basis C} \cdots \coord{\vec b_n}{\basis
+        C}}$.
+  \item Let \basis B and \basis C be bases for a vector space $V$.
+    Then $\chcoord{\basis C}{\basis B} = \left(\chcoord{\basis
+        B}{\basis C}\right)\inv$.
+  \item Let \basis B, \basis C, and \basis D be bases for a vector
+    space $V$. Then $\chcoord{\basis D}{\basis C} \chcoord{\basis
+      C}{\basis B} = \chcoord{\basis D}{\basis B}$.
+  \item Let $\basis B = \set{\many{\vec b}}$ and $\basis C =
+    \set{\many{\vec c}}$ be bases for \R[n]. Then \MAT{\vec c_1 &
+      \cdots & \vec c_n & \vec b_1 & \cdots & \vec b_n} is row
+    equivalent to \MAT{\mat I & \chcoord{\basis C}{\basis B}}.
+  \item Let $\basis B = \set{\many{\vec b}}$ and $\basis C =
+    \set{\many{\vec c}}$ be bases for a subspace $H$ of \R[m]. Then
+    the matrix \MAT{\vec c_1 & \cdots & \vec c_n & \vec b_1 & \cdots &
+      \vec b_n} is row equivalent to
+    \begin{equation*}
+      \begin{matr}[c]
+        I_n & \chcoord{\basis C}{\basis B} \\
+        0 & 0
+      \end{matr}
+    \end{equation*}
+  \item Let $\basis B = \set{\many{\vec b}}$ be a basis for a vector
+    space $V$, and let $T: V \to V$ be a linear transformation. Then
+    \begin{equation*}
+      \transmat{T}{\basis B} = \MAT{
+        \coord{T(\vec b_1)}{\basis B} &
+        \cdots &
+        \coord{T(\vec b_n)}{\basis B}
+      }.
+    \end{equation*}
+  \item Let $\basis B = \set{\many{\vec b}}$ and \basis C =
+    \set{\many{\vec c}} be bases for the vector spaces $V$ and $W$,
+    respectively, and let $T: V \to W$ be a linear transformation.
+    Then
+    \begin{equation*}
+      \transmatb{T}{\basis C}{\basis B} = \MAT{
+        \coord{T(\vec b_1)}{\basis C} &
+        \cdots &
+        \coord{T(\vec b_n)}{\basis C}
+      }.
+    \end{equation*}
+  \item Let \mat A, \mat P, and \mat B be $n \by n$ matrices such that
+    $\mat A = \mat P\mat B\mat P\inv$, let \basis B be the basis for
+    \R[n] formed from the columns of \mat P, and let $T$ be the
+    transformation given by $\vec x \mapsto \mat A\vec x$. Then
+    $\transmat{T}{\basis B} = \mat B$. In particular, if \mat B is a
+    diagonal matrix, then \basis B is the eigenvector basis and the
+    diagonal entries of \mat B are the corresponding eigenvalues.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of the Null Space, Row Space, and Column Space]
+  Let \mat A be an $n \by m$ matrix.
+  \begin{enumerate}
+  \item The pivot columns of \mat A are a basis for $\Col \mat A$,
+    while the pivot rows of any echelon form of \mat A are a basis for
+    $\Row \mat A$.
+  \item The equalities $\Col \mat A = \Row \mat A\trans$ and $\Row
+    \mat A = \Col \mat A\trans$ hold.
+  \item The dimension of $\Nul \mat A$ is equal to the number of free
+    variables in the equation $\mat A\vec x = \vec 0$ (or equivalently
+    the number of nonpivot columns of \mat A), while the dimension of
+    $\Nul \mat A\trans$ is equal to the number of free variables in
+    the equation $\mat A\trans\vec x = \vec 0$ (or equivalently the
+    number of nonpivot columns of \mat A\trans).
+  \item The dimension of $\Col \mat A$, the dimension of $\Row \mat
+    A$, the number of pivot positions in \mat A, and the number of
+    pivot positions in $\mat A\trans$ are all equal.
+  \item The equalities $\rank \mat A + \dim \Nul \mat A = n$ and
+    $\rank \mat A + \dim \Nul \mat A\trans = m$ hold.
+  \item $\Row \mat A$ and $\Nul \mat A$ are orthogonal complements,
+    and $\Col \mat A$ and $\Nul \mat A\trans$ are orthogonal
+    complements.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Eigenvectors and Eigenvalues] \hfill
+  \begin{enumerate}
+  \item A number $\lambda$ is an eigenvalue of a matrix \mat A if and
+    only if $\det(\mat A - \lambda\mat I) = 0$.
+  \item The eigenvalues of a triangular matrix are the entries on its
+    main diagonal, with the number of times an entry is repeated being
+    equal to its multiplicity as an eigenvalue.
+  \item Any set of $n$ eigenvectors corresponding to $n$ unique
+    eigenvalues of a matrix is linearly independent.
+  \item Let \mat A be a matrix with at least $n$ distinct eigenvalues
+    \many{\lambda}. If $S_k$ is a linearly independent set of
+    eigenvectors corresponding to $\lambda_k$, for $1 \leq k \leq n$,
+    then the union of \many{S} is also linearly independent.
+  \item The eigenspace for any given eigenvalue of a matrix is a
+    subspace of \R[n].
+  \item The dimension of the eigenspace for any given eigenvalue of a
+    matrix cannot exceed the multiplicity of the eigenvalue.
+  \item The eigenspaces for any two distinct eigenvalues of a matrix
+    are disjoint except at \vec 0.
+  \item If an $n \by n$ matrix is diagonalizable and \many[m]{\basis
+      B} are bases for the $m$ distinct eigenvalues of \mat A, then
+    the union of \many[m]{\basis B} is a basis for \R[n].
+  \item If two matrices are similar, then they have the same
+    eigenvalues with the same multiplicities.
+  \item Let \mat A be an $n \by n$ matrix. Then the following
+    statements are logically equivalent:
+    \begin{enumerate}
+    \item The matrix \mat A is diagonalizable.
+    \item The matrix \mat A has $n$ linearly independent eigenvectors.
+    \item The sum of the dimensions of the eigenspaces of \mat A
+      equals $n$.
+    \item The dimension of the eigenspace for each eigenvalue of \mat
+      A equals the multiplicity of the eigenvalue.
+    \end{enumerate}
+  \item If an $n \by n$ matrix \mat A has $n$ distinct eigenvalues,
+    then it is diagonalizable.
+  \item If a matrix \mat A is diagonalizable, then $\mat A = \mat
+    P\mat D\mat P\inv$, where the columns of \mat P are linearly
+    independent eigenvectors and the diagonal entries of \mat D are
+    the corresponding eigenvalues.
+  \item Let \mat A be a real $2 \by 2$ matrix with a complex
+    eigenvalue $a - bi$ and an associated complex eigenvector \vec v.
+    Then $\mat A = \mat P\mat C\mat P\inv$, where $\mat P = \MAT{\Re
+      \vec v & \Im \vec v}$,
+    \begin{equation*}
+      \mat C = \MAT{a & -b \\ b & a}
+             = \MAT{r & 0 \\ 0 & r}
+               \MAT{\cos \phi & -\sin \phi \\ \sin \phi & \cos \phi},
+    \end{equation*}
+    and $r$ and $\phi$ are the magnitude and complex argument of $a +
+    bi$.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Orthogonal Coordinates] \hfill
+  \begin{enumerate}
+  \item Let \set{\many{\vec u}} be an orthogonal basis for an inner
+    product space $V$, and let \vec y be a vector in $V$. Then
+    \begin{equation*}
+      \vec y = \frac{\vec y \dot \vec u_1}{\vec u_1 \dot \vec u_1} \vec u_1
+             + \cdots
+             + \frac{\vec y \dot \vec u_n}{\vec u_n \dot \vec u_n} \vec u_n.
+    \end{equation*}
+  \item Let \set{\many{\vec u}} be an orthonormal basis for an inner
+    product space $V$, and let \vec y be a vector in $V$. Then
+    \begin{equation*}
+      \vec y = (\vec y \dot \vec u_1) \vec u_1
+             + \cdots
+             + (\vec y \dot \vec u_n) \vec u_n.
+    \end{equation*}
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Orthogonal Projections]
+  Let $W$ be a subspace of \R[m], let \basis U = \set{\many{\vec u}}
+  be a basis for $W$, let $\mat U = \MAT{ \vec u_1 & \cdots & \vec u_n
+  }$ be an $m \by n$ matrix, and let \vec y be a vector in \R[m].
+  Then:
+  \begin{enumerate}
+  \item There is a unique representation of \vec y in the form $\vec y
+    = \vec{\hat y} + \vec z$, where \vec{\hat y} is in $W$ and \vec z
+    is in $W\comp$. Typically \vec{\hat y} is denoted by $\proj_W \vec
+    y$.
+  \item The closest point in $W$ to \vec y is \vec{\hat y}, i.e.
+    $\norm{\vec y - \vec{\hat y}} < \norm{\vec y - \vec v}$ if $\vec v
+    \neq \vec{\hat y}$.
+  \item The equation $\mat U\trans \mat U \vec x = \mat U\trans \vec
+    y$ has a unique solution, and $\vec{\hat y} = \mat \vec x$.
+  \item If \basis U is an orthogonal basis for $W$, then
+    \begin{equation*}
+      \vec{\hat y} = \frac{\vec y \dot \vec u_1}{\vec u_1 \dot \vec u_1}
+                     \vec u_1
+                   + \cdots
+                   + \frac{\vec y \dot \vec u_n}{\vec u_n \dot \vec u_n}
+                     \vec u_n.
+    \end{equation*}
+  \item If \basis U is an orthonormal basis for $W$, i.e. \mat U is an
+    orthogonal matrix, then
+    \begin{equation*}
+      \vec{\hat y} = (\vec y \dot \vec u_1) \vec u_1
+                   + \cdots
+                   + (\vec y \dot \vec u_n) \vec u_n
+                   = \mat U \mat U\trans \vec y.
+    \end{equation*}
+  \item If \basis U is an orthonormal basis for \R[m], i.e. \mat U is
+    a square orthogonal matrix, then $\vec{\hat y} = \vec y$.
+  \item Let
+    \begin{align*}
+      \vec v_1 &= \vec u_1, \\
+      \vec v_2 &= \vec u_2 - \proj_{\Span{\vec v_1}} u_2, \\
+               &\cvdots \\
+      \vec v_n &= \vec u_n - \proj_{\Span{\many{\vec v}}} u_n.
+    \end{align*}
+    Then \set{\many{\vec v}} is an orthogonal basis for $W$, and
+    \begin{align*}
+      \Span{\vec v_1} &= \Span{\vec u_1} \\
+      \Span{\vec v_1, \vec v_2} &= \Span{\vec u_1, \vec u_2} \\
+                      &\cvdots \\
+      \Span{\many{\vec v}} &= \Span{\many{\vec u}}.
+    \end{align*}
+    This method of obtaining an orthogonal basis for $W$ is called the
+    Gram-Schmidt process.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Orthogonal Matrices] \hfill
+  \begin{enumerate}
+  \item Let \mat U be a matrix. Then \mat U has orthonormal columns if
+    and only if $\mat U \mat U\trans = \mat I$, and \mat U has
+    orthonormal rows if and only if $\mat U\trans \mat U = \mat I$.
+  \item Let \mat U be a square matrix. Then \mat U has orthonormal
+    columns if and only if it has orthonormal rows.
+  \item Let \mat U be an $m \by n$ orthogonal matrix, and let \vec x
+    and \vec y be vectors in \R[m]. Then \mat U preserves lengths,
+    angles, and orthogonality. That is:
+    \begin{enumerate}
+    \item $\norm{\mat U \vec x} = \norm{\vec x}$.
+    \item $(\mat U \vec x) \dot (\mat U \vec y) = \vec x \dot \vec y$.
+    \item $(\mat U \vec x) \dot (\mat U \vec y) = 0$ if and only if
+      $\vec x \dot \vec y = 0$.
+    \end{enumerate}
+  \item Let \mat A be an $m \by n$ matrix with linearly independent
+    columns, and let $\mat U = \MAT{ \vec u_1 & \cdots & \vec u_n }$
+    be the $m \by n$ orthogonal matrix obtained by finding an
+    orthogonal basis for $\Col \mat A$ using the Gram-Schmidt process,
+    normalizing the vectors, and using them as the columns of \mat U.
+    Let \mat R be the $n \by n$ matrix equal to $\mat Q\trans \mat A$.
+    Also, for $1 \leq i \leq n$, if the $(i, i)$ entry of \mat R is
+    negative, multiply the $i$th row of \mat R and the $i$th column of
+    \mat U by $-1$. Then $\mat A = \mat P \mat Q$, and \mat R is an
+    upper triangular invertible matrix with positive entries on its
+    diagonal.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Properties of Inner Products]
+  Let \vec u and \vec v be vectors in an inner product space. Then:
+  \begin{enumerate}
+  \item $\norm{\vec u + \vec v}^2 = \norm{\vec u}^2 + \norm{\vec v}^2$
+    if and only if $\vec u \dot \vec v = 0$.
+  \item $|\vec u \dot \vec v| \leq \norm{\vec u} \norm{\vec v}$.
+  \item $\norm{\vec u + \vec v} \leq \norm{\vec u} + \norm{\vec v}$.
+  \end{enumerate}
+\end{thm}
+
+\begin{thm}[Applications] \hfill
+  \begin{enumerate}
+  \item Let \mat C be a square matrix whose entries are nonnegative
+    and whose column sums are each less than $1$. Then $\mat I + \mat
+    C + \mat C^2 + \mat C^3 + \cdots = (\mat I - \mat C)\inv$.
+  \item Let $\seq[1]uk, \seq[2]uk, \ldots, \seq[n]uk$ be vectors in
+    \Signals. If the matrix
+    \begin{equation*}
+      \begin{matr}[c]
+        \seq[1]uk & \seq[2]uk & \cdots & \seq[n]uk \\
+        \seq[1]u{k+1} & \seq[2]u{k+1} & \cdots & \seq[n]u{k+1} \\
+        \vdots & \vdots & \ddots & \vdots \\
+        \seq[1]u{k+n-1} & \seq[2]u{k+n-1} & \cdots & \seq[n]u{k+n-1}
+      \end{matr}
+    \end{equation*}
+    is invertible for at least one value of $k$, then the vectors are
+    linearly independent. Furthermore, if the vectors are solutions to
+    the same homogeneous linear difference equation and the matrix is
+    not invertible for any value of $k$, then the vectors are linearly
+    dependent.
+  \item The set of all solutions to the homogeneous linear difference
+    equation
+    \begin{equation*}
+      y_{k+n} + a_1y_{k+n-1} + \cdots + a_{n-1}y_{k+1} + a_ny_k = 0,
+    \end{equation*}
+    is an $n$-dimensional subspace of \Signals.
+  \item Let \seq zk be a vector in \Signals. If the nonhomogeneous
+    linear difference equation
+    \begin{equation*}
+      y_{k+n} + a_1y_{k+n-1} + \cdots + a_{n-1}y_{k+1} + a_ny_k = z_k
+    \end{equation*}
+    is consistent, then the mapping $\seq yk \mapsto \seq{y_k +
+      z_k}{}$ is a bijection from the solution set of the homogeneous
+    linear difference equation
+    \begin{equation*}
+      y_{k+n} + a_1y_{k+n-1} + \cdots + a_{n-1}y_{k+1} + a_ny_k = 0
+    \end{equation*}
+    to the solution set of the nonhomogeneous equation.
+  \item The solutions of the homogeneous linear difference equation
+    \begin{equation*}
+      y_{k+n} + a_1y_{k+n-1} + \cdots + a_{n-1}y_{k+1} + a_ny_k = 0
+    \end{equation*}
+    are given by the dynamical system $\vec x_{k+1} = \mat A\vec x_k$,
+    where
+    \begin{equation*}
+      \vec x_k = \MAT[c]{y_k \\ y_{k+1} \\ \vdots \\ y_{k+n-1}},
+      \mat A =
+      \begin{matr}[c]
+        0      & 1        & 0       & \cdots & 0      \\
+        0      & 0        & 1       & \cdots & 0      \\
+        \vdots & \vdots   & \vdots  & \ddots & \vdots \\
+        0      & 0        & 0       & \cdots & 1      \\
+        -a_n   & -a_{n-1} & a_{n-2} & \cdots & -a_1
+      \end{matr}.
+    \end{equation*}
+  \item Call a vector a \term{probability vector} if its entries are
+    nonnegative and sum to $1$. Let \mat P be a square matrix whose
+    columns are probability vectors. Then there is a unique
+    probability vector \vec q such that $\mat P\vec q = \vec q$.
+    Furthermore, $\lim_{k \to \infty} \mat A^k\vec x = \vec q$ for any
+    probability vector \vec x.
+  \item Let \mat A be an $n \by n$ matrix with $n$ linearly
+    independent eigenvectors \many{\vec v}, let \many{\lambda} be the
+    corresponding eigenvalues, possibly with repetition, and let
+    \many{c} be the coordinates of a vector \vec x in the eigenvector
+    basis. Then
+    \begin{equation*}
+      \mat A^k\vec x = c_1\lambda_1^k\vec v_1 + \cdots + c_n\lambda_n^k\vec v_n.
+    \end{equation*}
+  \item Let \mat A be a matrix. If $\mat A = \mat P\mat D\mat P\inv$,
+    with \mat D a diagonal matrix, then $\mat A^k = \mat P\mat D^k\mat
+    P\inv$.
+  \item If \mat A is an $n \by n$ diagonalizable matrix with $n$
+    linearly independent eigenvectors \many{\vec v} and corresponding
+    eigenvalues \many{\lambda}, then the general solution to the
+    system of differential equations given by $\vec x'(t) = \mat A\vec
+    x(t)$ is $\vec x(t) = c_1\vec v_1e^{\lambda_1t} + \cdots + c_n\vec
+    v_ne^{\lambda_nt}$.
+  \item Suppose \mat A is an $n \by n$ matrix, the general solution to
+    the system of differential equations given by $\vec x'(t) = \mat
+    A\vec x(t)$ is an arbitrary linear combination of a collection of
+    linearly independent eigenfunctions $\vec y_1(t), \ldots, \vec
+    y_n(t)$, and two of those solutions, say $\vec y_1(t)$ and $\vec
+    y_2(t)$, are complex conjugates. If $\vec y_1(t)$ and $\vec
+    y_2(t)$ are replaced by either $\Re \vec y_1(t)$ and $\Im \vec
+    y_1(t)$ or $\Re \vec y_2(t)$ and $\Im \vec y_2(t)$, the collection
+    of eigenfunctions will still be linearly independent and an
+    arbitrary linear combination of them will still give the general
+    solution to the system.
+  \item Let \mat A be an $m \by n$ matrix, and let \vec b be a vector
+    in \R[m]. Then \vec{\hat x} is a least-squares solution of $\mat A
+    \vec x = \vec b$ if and only if $\mat A\trans \mat A \vec{\hat x}
+    = \mat A\trans \vec b$.
+  \item Let \mat A be an $m \by n$ matrix. Then the following
+    statements are logically equivalent:
+    \begin{enumerate}
+    \item The equation $\mat A \vec x = \vec b$ has a unique solution
+      for each \vec b in \R[m].
+    \item The columns of \mat A are linearly independent.
+    \item The matrix $\mat A\trans \mat A$ is invertible.
+    \end{enumerate}
+    When these statements are true, \mat A has a QR factorization and
+    the least-squares solution is given by $\vec{\hat x} = (\mat
+    A\trans \mat A)\inv \mat A\trans \vec b = \mat R\inv \mat Q\trans
+    \vec b$.
+  \end{enumerate}
+\end{thm}
+
+\end{document}

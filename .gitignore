@@ -1,4 +1,15 @@
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.nav
+*.out
+*.pdf
+!data/*.pdf
+*.snm
+*.toc
 _site
+_vendor
 .sass-cache
 .jekyll-metadata
-vendor
+auto
