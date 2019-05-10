@@ -11,7 +11,10 @@ theme: minima
 plugins:
   - jekyll-redirect-from
 exclude:
+  - _vendor
   - _src
+  - Gemfile
+  - Gemfile.lock
 
 # Theme configuration
 header_pages:
