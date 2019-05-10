@@ -6,8 +6,8 @@ set -o pipefail
 raw=_src/xcf/raw
 out=_src/xcf/out
 
-readarray -t raw_names < <(ls "$raw")
-readarray -t out_names < <(ls "$out")
+readarray -t raw_names < <(ls "$raw" 2>/dev/null)
+readarray -t out_names < <(ls "$out" 2>/dev/null)
 
 # Delete files from 'out' that have been removed from 'raw'.
 for out_name in "${out_names[@]}"; do
@@ -61,6 +61,7 @@ EOF
 (gimp-quit 0)
 EOF
     all_code="${all_code}${code}"$'\n'
+    mkdir -p "$out"
     gimp -i -b "$all_code"
 else
     echo "Up to date!" 1>&2
