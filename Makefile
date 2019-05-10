@@ -12,7 +12,10 @@ LATEX_FLAGS_RESUME := -pdfxe -shell-escape -jobname=resume-nophone
 all: tex resume xcf build
 
 .PHONY: dev
-dev:
+dev: tex resume xcf serve
+
+.PHONY: serve
+serve:
 	$(JEKYLL) serve
 
 .PHONY: build
