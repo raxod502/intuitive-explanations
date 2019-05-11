@@ -11,7 +11,7 @@ cache:
 git:
   submodules: false
 before_install:
-  - sed -i "s#git@github.com:#https://${GITHUB_ACCESS_TOKEN}@github.com/" .gitmodules
+  - sed -i "s#git@github.com:#https://${GITHUB_ACCESS_TOKEN}@github.com/#" .gitmodules
   - git submodule update --init --recursive
 install:
   # Thanks to <https://malramsay.com/post/compiling_latex_on_travis/>
@@ -20,6 +20,9 @@ install:
   - export PATH="$HOME/miniconda/bin:$PATH"
   - hash -r
   - conda install -y -c conda-forge tectonic==0.1.11
+  - echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | sudo debconf-set-selections
+  - sudo apt-get install ttf-mscorefonts-installer
+  - bundle install
 script:
   - make
 deploy:
