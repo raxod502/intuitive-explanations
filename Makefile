@@ -23,7 +23,7 @@ tex:
 
 .PHONY: resume
 resume:
-	$(LATEX) _src/tex/documents/resume/resume.tex
+	make -C _src/tex/documents/resume resume-without-phone.pdf
 
 .PHONY: xcf
 xcf:
