@@ -8,6 +8,11 @@ addons:
 cache:
   directories:
     - $HOME/.cache/Tectonic
+git:
+  submodules: false
+before_install:
+  - sed -i "s#git@github.com:#https://${GITHUB_ACCESS_TOKEN}@github.com/" .gitmodules
+  - git submodule update --init --recursive
 install:
   # Thanks to <https://malramsay.com/post/compiling_latex_on_travis/>
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O $HOME/miniconda.sh
