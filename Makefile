@@ -19,7 +19,7 @@ build:
 
 .PHONY: tex
 tex:
-	for doc in $(LATEX_DOCS); do $(LATEX) $$doc; done
+	for doc in $(LATEX_DOCS); do echo $$doc && $(LATEX) $$doc || exit 1; done
 
 .PHONY: resume
 resume:
