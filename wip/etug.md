@@ -28,6 +28,39 @@ customize Emacs. I will cover:
 * suggestions on specific (internal and) external packages to use, and
   comparisons between the available alternatives
 
+## Table of contents
+
+<!-- toc -->
+
+- [Emacs Lisp: the language](#emacs-lisp-the-language)
+  * [Emacs Lisp: the highlights](#emacs-lisp-the-highlights)
+    + [Syntax and evaluation](#syntax-and-evaluation)
+    + [Data types](#data-types)
+    + [Comparison](#comparison)
+    + [Variable binding](#variable-binding)
+    + [Function and variable namespaces](#function-and-variable-namespaces)
+    + [Errors](#errors)
+    + [Macros](#macros)
+  * [How to accomplish common tasks in Emacs Lisp](#how-to-accomplish-common-tasks-in-emacs-lisp)
+- [Patterns for your Emacs configuration](#patterns-for-your-emacs-configuration)
+  * [Variables and user options](#variables-and-user-options)
+  * [Modes and hooks](#modes-and-hooks)
+  * [The advice system](#the-advice-system)
+  * [Patching internal functions](#patching-internal-functions)
+  * [Directory-local variables](#directory-local-variables)
+  * [use-package](#use-package)
+- [Finding out what code you need to write](#finding-out-what-code-you-need-to-write)
+- [Debugging your Emacs configuration](#debugging-your-emacs-configuration)
+- [Scaling your Emacs configuration](#scaling-your-emacs-configuration)
+  * [Source layout](#source-layout)
+  * [Avoiding code repetition](#avoiding-code-repetition)
+  * [Package management](#package-management)
+  * [Performance optimization](#performance-optimization)
+    + [Byte-compilation](#byte-compilation)
+- [Package suggestions](#package-suggestions)
+
+<!-- tocstop -->
+
 ## Emacs Lisp: the language
 
 Emacs Lisp:
