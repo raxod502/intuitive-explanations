@@ -48,6 +48,7 @@ customize Emacs. I will cover:
   * [The advice system](#the-advice-system)
   * [Patching internal functions](#patching-internal-functions)
   * [Directory-local variables](#directory-local-variables)
+  * [Features](#features)
   * [use-package](#use-package)
 - [Finding out what code you need to write](#finding-out-what-code-you-need-to-write)
 - [Debugging your Emacs configuration](#debugging-your-emacs-configuration)
@@ -553,6 +554,10 @@ It also has some more complex data types built from the simpler ones:
 
 
 ### Directory-local variables
+
+
+
+### Features
 
 
 
