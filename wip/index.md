@@ -11,3 +11,4 @@ avoid waiting forever to get started on a new idea.
   * [Integration](integration/)
   * [Limits](limits/)
 * [Big Dictionary of Developer Tooling](tooling/)
+* [Emacs: The Technical User Guide](etug/)
