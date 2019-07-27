@@ -10,3 +10,4 @@ avoid waiting forever to get started on a new idea.
   but more friendly and in web format.
   * [Integration](integration/)
   * [Limits](limits/)
+* [Big Dictionary of Developer Tooling](tooling/)
