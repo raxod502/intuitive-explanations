@@ -38,6 +38,6 @@ of intent" than any actual content :)
 
 * Partition tables
 * Boot process
-* Shells
+* [Shells](shells/)
 * Package managers
 * ...
