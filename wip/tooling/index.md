@@ -36,8 +36,11 @@ of intent" than any actual content :)
 
 ## Table of contents
 
-* Partition tables
-* Boot process
+* [Partitions](partitions/)
+* [Boot](boot/)
 * [Shells](shells/)
-* Package managers
+* [Processes](processes/)
+* [Filesystems](filesystems/)
+* [Packages](packages/)
+* [UNIX](unix/)
 * ...
