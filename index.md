@@ -21,4 +21,3 @@ Hi, I'm Radon and this is my personal website.
 * [GitHub](https://github.com/raxod502)
   * [Source code](https://github.com/raxod502/intuitive-explanations)
 * [Resume](/assets/Resume.pdf)
-* [Employer](https://repl.it/)
