@@ -1,0 +1,26 @@
+version: 2
+jobs:
+  build_test_and_deploy:
+    # Don't use docker-in-docker because that will mess up our
+    # docker-install.bash script which wants to create a user with the
+    # same UID as the one we are using to run Docker with (but this
+    # will be root on CI, which is no good as there is already a UID 0
+    # inside the container).
+    machine:
+      image: ubuntu-1604:201903-01
+    steps:
+      - checkout
+      - run: sed -i "s#git@github.com:#https://${GITHUB_ACCESS_TOKEN}@github.com/#" .gitmodules
+      - run: git submodule update --init --recursive
+      - run: make docker CMD="make all deploy JEKYLL_ENV=production"
+workflows:
+  version: 2
+  ci:
+    jobs:
+      - build_test_and_deploy:
+          filters:
+            branches:
+              only: master
+            tags:
+              ignore: /.*/
+          context: "Intuitive Explanations"

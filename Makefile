@@ -1,7 +1,19 @@
-LATEX := tectonic
+PORT ?= 4000
+HOST ?= 127.0.0.1
+
+LATEX := latexmk -cd -pdfxe -interaction=nonstopmode
 JEKYLL := bundle exec jekyll
 
 LATEX_DOCS := $(filter-out %/resume.tex,$(wildcard _src/tex/documents/*/*.tex))
+
+.PHONY: help
+help: ## Show this message
+	@echo "usage:" >&2
+	@grep -h "[#]# " $(MAKEFILE_LIST)	| \
+		sed 's/^/  make /'		| \
+		sed 's/:[^#]*[#]# /|/'		| \
+		sed 's/%/LANG/'			| \
+		column -t -s'|' >&2
 
 .PHONY: all
 all: tex resume xcf build ## Fully build website
@@ -11,7 +23,7 @@ dev: tex resume xcf serve ## Fully build website and then run dev server
 
 .PHONY: serve
 serve: ## Run developer server
-	$(JEKYLL) serve
+	$(JEKYLL) serve --port=$(PORT) --host=$(HOST)
 
 .PHONY: build
 build: ## Build main website content
@@ -27,7 +39,7 @@ resume: ## Compile resume
 
 .PHONY: xcf
 xcf: ## Compile XCF images
-	_scripts/convert_xcf.bash
+	_scripts/convert-xcf.bash
 
 .PHONY: clean
 clean: ## Remove build artifacts
@@ -40,11 +52,6 @@ clean: ## Remove build artifacts
 deploy: ## Deploy website to Netlify
 	_scripts/deploy.bash
 
-.PHONY: help
-help: ## Show this message
-	@echo "usage:" >&2
-	@grep -h "[#]# " $(MAKEFILE_LIST)	| \
-		sed 's/^/  make /'		| \
-		sed 's/:[^#]*[#]# /|/'		| \
-		sed 's/%/LANG/'			| \
-		column -t -s'|' >&2
+.PHONY: docker
+docker: ## Start a Docker shell
+	@_scripts/docker.bash "$(CMD)"

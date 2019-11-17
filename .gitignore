@@ -12,5 +12,6 @@
 /_src/tex/documents/*/*.pdf
 /_src/tex/documents/*/*.snm
 /_src/tex/documents/*/*.toc
+/_src/tex/documents/*/*.xdv
 /_src/xcf/out/*.png
 /_vendor/
