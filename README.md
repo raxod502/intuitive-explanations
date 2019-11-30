@@ -7,52 +7,35 @@ private repositories on GitHub, but that could be easily changed.
 issue](https://github.com/raxod502/intuitive-explanations/issues) if
 you want to contribute and this is an issue for you.
 
-## Dependencies
+## Development
+
+Install:
 
 * [Git](https://git-scm.com/)
-* [Ruby](https://www.ruby-lang.org/en/)
-* [Bundler](https://bundler.io/)
 * [Make](https://www.gnu.org/software/make/)
-* [Tectonic](https://tectonic-typesetting.github.io/en-US/)
-* [GIMP](https://www.gimp.org/)
+* [Docker](https://www.docker.com/)
 
-### Installation on macOS
+Clone this repository recursively and run:
 
-Disclaimer: running these commands will not necessarily do what you
-want. They are meant as a quick reference for people who already know
-what they do. I am not responsible for your decisions as a system
-administrator.
+    $ make docker
 
-    $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    $ brew install git ruby tectonic
-    $ brew cask install gimp
-    $ ln python /Applications/GIMP-2.10.app/Contents/MacOS/python2
-    $ cat <<"EOF" > ~/.local/bin/gimp
-    #!/bin/sh
-    /Applications/GIMP-2.10.app/Contents/MacOS/gimp "$@"
-    EOF
-    $ export PATH="/usr/local/opt/ruby/bin:$PATH"
-    $ export PATH="/usr/local/lib/ruby/gems/2.6.0/bin:$PATH"
-    $ hash -r
+At this point you will be in a shell with all the dependencies
+installed. Run:
 
-## Build
+    $ make help
+    usage:
+      make help    Show this message
+      make all     Fully build website
+      make dev     Fully build website and then run dev server
+      make serve   Run developer server
+      make build   Build main website content
+      make tex     Compile LaTeX
+      make resume  Compile resume
+      make xcf     Compile XCF images
+      make clean   Remove build artifacts
+      make deploy  Deploy website to Netlify
+      make docker  Start a Docker shell
 
-This repository uses submodules. Make sure to clone recursively.
-
-Install Ruby dependencies:
-
-    $ bundle install
-
-Build everything and then watch for content changes:
-
-    $ make dev
-
-Remove build artifacts:
-
-    $ make clean
-
-Deploy built website (done automatically by Travis CI):
-
-    $ make deploy
-
-Check the [Makefile](Makefile) for additional targets.
+When a commit is pushed to `master`, it is deployed automatically by
+[CircleCI](https://circleci.com/) to
+[Netlify](https://www.netlify.com/) after about ten minutes.
