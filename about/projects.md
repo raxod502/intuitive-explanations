@@ -87,7 +87,7 @@ development happened.
 * [Tabcrush] (Summer 2019 -- Present): High-performance power tool for
   editing large-scale tabular data in [Emacs].
 * [Mercury] (Summer 2019 -- Present): [Emacs] interface to [Facebook
-  Messenger], [Signal], and SMS (via [Pushbullet])
+  Messenger], [Signal], and SMS (via [Google Hangouts][hangouts])
 
 ## Work projects
 
@@ -161,6 +161,7 @@ work experience as well.)
 [gnu-elpa]: https://elpa.gnu.org/
 [google calendar]: https://calendar.google.com/
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
+[hangouts]: https://hangouts.google.com/
 [heroku-buildpack-emacs]: https://github.com/raxod502/heroku-buildpack-emacs
 [heroku-buildpack-git-lfs]: https://github.com/raxod502/heroku-buildpack-git-lfs
 [heroku]: https://www.heroku.com/
@@ -194,7 +195,6 @@ work experience as well.)
 [nfas]: https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton
 [prescient.el]: https://github.com/raxod502/prescient.el
 [pset]: https://github.com/raxod502/pset
-[pushbullet]: https://www.pushbullet.com/
 [puzzles]: https://github.com/raxod502/puzzles
 [radian]: https://github.com/raxod502/radian
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
