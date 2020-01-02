@@ -127,12 +127,12 @@ work experience as well.)
 
 ## Abandoned projects
 
-* [Madeline] (Summer 2018): Novel approach to directory syncing, used
-  to maintain complementary mirroring of two filesystem trees via SSH.
 * [pset] (Fall 2017): Configurable templating system for university
   problem sets typeset in LaTeX.
 * [Ishikk] (Summer 2018): Read-write [Google Calendar] interface for
   Emacs, with graphical week view.
+* [Madeline] (Summer 2018): Novel approach to directory syncing, used
+  to maintain complementary mirroring of two filesystem trees via SSH.
 
 [apheleia]: https://github.com/raxod502/apheleia
 [bhs]: https://boh.bvsd.org/Pages/default.aspx
