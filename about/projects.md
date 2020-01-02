@@ -58,8 +58,6 @@ development happened.
 * [Hyperschedule] (Fall 2017 -- Present;
   [source][hyperschedule-source]): Fast and powerful course scheduler
   for the [Claremont Colleges].
-* [Madeline] (Summer 2018): Novel approach to directory syncing, used
-  to maintain complementary mirroring of two filesystem trees via SSH.
 * [heroku-buildpack-emacs] (Summer 2018): [Heroku] buildpack to
   install [Emacs].
 * [GNU ELPA Mirror][gnu-elpa-mirror] (Summer 2018 -- Summer 2019):
@@ -77,10 +75,6 @@ development happened.
 
 ## In-progress personal projects
 
-* [pset] (Fall 2017): Configurable templating system for university
-  problem sets typeset in LaTeX.
-* [Ishikk] (Summer 2018): Read-write [Google Calendar] interface for
-  Emacs, with graphical week view.
 * [µTunes][utunes] (Summer 2019 -- Present): Aggressively minimal
   command-line music player and library manager following the UNIX
   philosophy, with [Emacs] interface.
@@ -88,6 +82,10 @@ development happened.
   editing large-scale tabular data in [Emacs].
 * [Mercury] (Summer 2019 -- Present): [Emacs] interface to [Facebook
   Messenger], [Signal], and SMS (via [Google Hangouts][hangouts])
+* [Selectrum] (Fall 2020 -- Present): Completion and incremental
+  narrowing framework for [Emacs], replacing [Ivy] and [Helm].
+* [CTRLF] (Winter 2020 -- Present): Better single-buffer text search
+  interface, replacing [Isearch] and [Swiper].
 
 ## Work projects
 
@@ -127,6 +125,15 @@ work experience as well.)
   Software Development): Simple webapp for playing [chess] against an
   AI using [minimax] and [neural networks].
 
+## Abandoned projects
+
+* [Madeline] (Summer 2018): Novel approach to directory syncing, used
+  to maintain complementary mirroring of two filesystem trees via SSH.
+* [pset] (Fall 2017): Configurable templating system for university
+  problem sets typeset in LaTeX.
+* [Ishikk] (Summer 2018): Read-write [Google Calendar] interface for
+  Emacs, with graphical week view.
+
 [apheleia]: https://github.com/raxod502/apheleia
 [bhs]: https://boh.bvsd.org/Pages/default.aspx
 [blackout]: https://github.com/raxod502/blackout
@@ -138,6 +145,7 @@ work experience as well.)
 [clojure]: https://clojure.org/
 [conway]: https://github.com/raxod502/conway
 [cortex.optimise]: https://github.com/raxod502/cortex/tree/master/examples/optimise
+[ctrlf]: https://github.com/raxod502/ctrlf
 [delight.el]: https://elpa.gnu.org/packages/delight.html
 [dess-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/DifferentialEquationSolutionStrategies/DifferentialEquationSolutionStrategies.tex
 [dess]: /math/differential-equation-solution-strategies/
@@ -162,6 +170,7 @@ work experience as well.)
 [google calendar]: https://calendar.google.com/
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
 [hangouts]: https://hangouts.google.com/
+[helm]: https://github.com/emacs-helm/helm
 [heroku-buildpack-emacs]: https://github.com/raxod502/heroku-buildpack-emacs
 [heroku-buildpack-git-lfs]: https://github.com/raxod502/heroku-buildpack-git-lfs
 [heroku]: https://www.heroku.com/
@@ -169,7 +178,9 @@ work experience as well.)
 [hyperschedule-source]: https://github.com/MuddCreates/hyperschedule
 [hyperschedule]: https://github.com/MuddCreates/hyperschedule
 [ie]: https://github.com/raxod502/intuitive-explanations
+[isearch]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Incremental-Search.html
 [ishikk]: https://github.com/raxod502/ishikk
+[ivy]: https://github.com/abo-abo/swiper#ivy
 [java]: https://www.java.com/
 [jekyll]: https://jekyllrb.com/
 [jflap autograder]: https://github.com/CSGreater-Developers/HMC-Grader/blob/master/app/plugins/autograder/newjflapgrader.py
@@ -199,11 +210,13 @@ work experience as well.)
 [radian]: https://github.com/raxod502/radian
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
 [repl.it]: https://repl.it/
+[selectrum]: https://github.com/raxod502/selectrum
 [sg-puzzles]: http://mathworld.wolfram.com/Slothouber-GraatsmaPuzzle.html
 [signal]: https://signal.org/
 [smarter-playlist]: https://github.com/raxod502/smarter-playlist
 [straight.el]: https://github.com/raxod502/straight.el
 [sudoku]: https://en.wikipedia.org/wiki/Sudoku
+[swiper]: https://github.com/abo-abo/swiper#swiper
 [tabcrush]: https://github.com/raxod502/tabcrush
 [tc-hn]: https://news.ycombinator.com/item?id=15460851
 [terraria]: https://terraria.org/
