@@ -85,7 +85,7 @@ development happened.
 * [Selectrum] (Fall 2020 -- Present): Completion and incremental
   narrowing framework for [Emacs], replacing [Ivy] and [Helm].
 * [CTRLF] (Winter 2020 -- Present): Better single-buffer text search
-  interface, replacing [Isearch] and [Swiper].
+  interface for [Emacs], replacing [Isearch] and [Swiper].
 
 ## Work projects
 
