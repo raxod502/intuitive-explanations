@@ -76,8 +76,8 @@ development happened.
 ## In-progress personal projects
 
 * [µTunes][utunes] (Summer 2019 -- Present): Aggressively minimal
-  command-line music player and library manager following the UNIX
-  philosophy, with [Emacs] interface. Attempt #3 at a personal music
+  command-line music player and library manager following the [UNIX
+  philosophy], with [Emacs] interface. Attempt #3 at a personal music
   library manager.
 * [Tabcrush] (Summer 2019 -- Present): High-performance power tool for
   editing large-scale tabular data in [Emacs].
@@ -128,9 +128,9 @@ work experience as well.)
 
 ## Abandoned projects
 
-* [etunes] (Fall 2017 -- Summer 2018): Declarative, version-controlled
-  music library manager for Emacs. Attempt #1 at a personal music
-  library manager.
+* [etunes] (Fall 2017 -- Summer 2018): [Declarative],
+  [version-controlled][version control] music library manager for
+  [Emacs]. Attempt #1 at a personal music library manager.
 * [pset] (Fall 2017): Configurable templating system for university
   problem sets typeset in LaTeX.
 * [Ishikk] (Summer 2018): Read-write [Google Calendar] interface for
@@ -138,7 +138,7 @@ work experience as well.)
 * [Madeline] (Summer 2018): Novel approach to directory syncing, used
   to maintain complementary mirroring of two filesystem trees via SSH.
 * [fstunes] (Winter 2019): Extremely minimal music library manager
-  leveraging UNIX filesystem abstractions. Attempt #2 at a personal
+  leveraging [UNIX filesystem] abstractions. Attempt #2 at a personal
   music library manager.
 
 [apheleia]: https://github.com/raxod502/apheleia
@@ -153,6 +153,7 @@ work experience as well.)
 [conway]: https://github.com/raxod502/conway
 [cortex.optimise]: https://github.com/raxod502/cortex/tree/master/examples/optimise
 [ctrlf]: https://github.com/raxod502/ctrlf
+[declarative]: https://en.wikipedia.org/wiki/Declarative_programming
 [delight.el]: https://elpa.gnu.org/packages/delight.html
 [dess-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/DifferentialEquationSolutionStrategies/DifferentialEquationSolutionStrategies.tex
 [dess]: /math/differential-equation-solution-strategies/
@@ -235,8 +236,11 @@ work experience as well.)
 [tmux]: https://tmux.github.io/
 [travis]: https://travis-ci.org/
 [turing machines]: https://en.wikipedia.org/wiki/Turing_machine
+[unix filesystem]: https://en.wikipedia.org/wiki/Unix_filesystem
+[unix philosophy]: https://en.wikipedia.org/wiki/Unix_philosophy
 [upm]: https://github.com/replit/upm
 [utunes]: https://github.com/raxod502/utunes
+[version control]: https://en.wikipedia.org/wiki/Version_control
 [votinglib]: https://github.com/raxod502/VotingLib
 [wd]: https://github.com/mfaerevaag/wd
 [wdx]: https://github.com/raxod502/wdx
