@@ -77,7 +77,8 @@ development happened.
 
 * [µTunes][utunes] (Summer 2019 -- Present): Aggressively minimal
   command-line music player and library manager following the UNIX
-  philosophy, with [Emacs] interface.
+  philosophy, with [Emacs] interface. Attempt #3 at a personal music
+  library manager.
 * [Tabcrush] (Summer 2019 -- Present): High-performance power tool for
   editing large-scale tabular data in [Emacs].
 * [Mercury] (Summer 2019 -- Present): [Emacs] interface to [Facebook
@@ -127,12 +128,18 @@ work experience as well.)
 
 ## Abandoned projects
 
+* [etunes] (Fall 2017 -- Summer 2018): Declarative, version-controlled
+  music library manager for Emacs. Attempt #1 at a personal music
+  library manager.
 * [pset] (Fall 2017): Configurable templating system for university
   problem sets typeset in LaTeX.
 * [Ishikk] (Summer 2018): Read-write [Google Calendar] interface for
   Emacs, with graphical week view.
 * [Madeline] (Summer 2018): Novel approach to directory syncing, used
   to maintain complementary mirroring of two filesystem trees via SSH.
+* [fstunes] (Winter 2019): Extremely minimal music library manager
+  leveraging UNIX filesystem abstractions. Attempt #2 at a personal
+  music library manager.
 
 [apheleia]: https://github.com/raxod502/apheleia
 [bhs]: https://boh.bvsd.org/Pages/default.aspx
@@ -160,7 +167,9 @@ work experience as well.)
 [emacs]: https://www.gnu.org/software/emacs/
 [emacsmirror]: https://emacsmirror.net/
 [empty]: https://github.com/raxod502/empty
+[etunes]: https://github.com/raxod502/etunes
 [facebook messenger]: https://www.messenger.com/
+[fstunes]: https://github.com/raxod502/fstunes
 [gimp]: https://www.gimp.org/
 [git lfs]: https://git-lfs.github.com/
 [git]: https://git-scm.com/
