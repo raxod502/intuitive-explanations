@@ -5,7 +5,7 @@ redirect_from:
 ---
 
 This page lists some of my open-source projects. You can find the
-source code for all of these projects and more on [GitHub].
+source code for (almost) all of these projects and more on [GitHub].
 
 ## Finished personal projects
 
@@ -87,19 +87,39 @@ development happened.
   narrowing framework for [Emacs], replacing [Ivy] and [Helm].
 * [CTRLF] (Winter 2020 -- Present): Better single-buffer text search
   interface for [Emacs], replacing [Isearch] and [Swiper].
+* [Kalyn] (Spring 2020): Compile a high-level functional programming
+  language, inspired by [Haskell] but with [Lisp] syntax, all the way
+  to [ELF] binaries targeting [x86-64] without using any pre-existing
+  components such as the [GNU] [linker] or [C standard
+  library][cstdlib].
 
 ## Work projects
 
-(See also my [resume](/assets/Resume.pdf), which includes proprietary
-work experience as well.)
+(See also my [resume](/assets/Resume.pdf).)
 
+* [Ecofasten] and [Alpine Snowboards] pricing calculators (Summer
+  2015, ThinkTopic; proprietary): Frontend and backend work on
+  existing [Clojure]/[ClojureScript]/[Datomic] web applications for
+  generating price quotes for roof-mounted solar panels and alpine
+  snowboards.
+* think.recommend (Winter 2015 -- Summer 2016, ThinkTopic;
+  proprietary): Library for testing and benchmarking [collaborative
+  filtering][cf] algorithms
 * [cortex.optimise] (Spring -- Summer 2016, ThinkTopic):
   General-purpose library for analyzing, visualizing, and comparing
   [gradient descent] algorithms.
-* [lazy-map] (Fall 2017, ThinkTopic): Lazy map implementation for
+* think.quality (Summer -- Winter 2016, ThinkTopic; proprietary): Tool
+  for running company-wide [Clojure] code quality audits and dashboard
+  to visualize results.
+* CMS Changeset Dashboard (Summer 2017, [Quantcast]; proprietary):
+  Full-stack administrator dashboard for an internal team to manage an
+  internal database used by an internal webapp used by another
+  internal team to manage another internal database. You can imagine
+  the customer-facing impact.
+* [lazy-map] (Fall 2017, ThinkTopic): Lazy [map] implementation for
   [Clojure].
-* [UPM] (Summer 2019, [Repl.it]): Universal package-management
-  interface for Python, Node.js, Ruby, and Emacs Lisp.
+* [UPM] (Summer 2019, [Repl.it]): Universal [package-management][pm]
+  interface for [Python], [Node.js], [Ruby], and [Emacs Lisp][elisp].
 
 ## School projects
 
@@ -123,8 +143,13 @@ work experience as well.)
   CS 121: Software Development): [Heroku] buildpack to install [Git
   LFS] and download assets transparently during build.
 * [whales.life] (Spring 2019, [Harvey Mudd College][hmc], CS 121:
-  Software Development): Simple webapp for playing [chess] against an
-  AI using [minimax] and [neural networks].
+  Software Development; [source](whales.life-source)): Simple webapp
+  for playing [chess] against an AI using [minimax] and [neural
+  networks].
+* [Life After Mudd][lam] (Winter -- Spring 2020, [Harvey Mudd
+  College][hmc], CS 189: Programming Practicum; [source](lam-source)):
+  Geographic visualization webapp for results of a survey on
+  post-graduation plans for the Class of 2020.
 
 ## Abandoned projects
 
@@ -152,6 +177,7 @@ work experience as well.)
 [clojure]: https://clojure.org/
 [conway]: https://github.com/raxod502/conway
 [cortex.optimise]: https://github.com/raxod502/cortex/tree/master/examples/optimise
+[cstdlib]: https://en.wikipedia.org/wiki/C_standard_library
 [ctrlf]: https://github.com/raxod502/ctrlf
 [declarative]: https://en.wikipedia.org/wiki/Declarative_programming
 [delight.el]: https://elpa.gnu.org/packages/delight.html
@@ -165,6 +191,8 @@ work experience as well.)
 [document class]: https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes
 [dynamic programming]: https://en.wikipedia.org/wiki/Dynamic_programming
 [el-patch]: https://github.com/raxod502/el-patch
+[elf]: https://en.wikipedia.org/wiki/Executable_and_Linkable_Format
+[elisp]: https://en.wikipedia.org/wiki/Emacs_Lisp
 [emacs]: https://www.gnu.org/software/emacs/
 [emacsmirror]: https://emacsmirror.net/
 [empty]: https://github.com/raxod502/empty
@@ -177,16 +205,18 @@ work experience as well.)
 [github]: https://github.com/raxod502
 [gnu-elpa-mirror]: https://github.com/raxod502/gnu-elpa-mirror
 [gnu-elpa]: https://elpa.gnu.org/
+[gnu]: https://www.gnu.org/home.en.html
 [google calendar]: https://calendar.google.com/
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
 [hangouts]: https://hangouts.google.com/
+[haskell]: https://www.haskell.org/
 [helm]: https://github.com/emacs-helm/helm
 [heroku-buildpack-emacs]: https://github.com/raxod502/heroku-buildpack-emacs
 [heroku-buildpack-git-lfs]: https://github.com/raxod502/heroku-buildpack-git-lfs
 [heroku]: https://www.heroku.com/
 [hmc]: https://www.hmc.edu/
 [hyperschedule-source]: https://github.com/MuddCreates/hyperschedule
-[hyperschedule]: https://github.com/MuddCreates/hyperschedule
+[hyperschedule]: https://hyperschedule.io
 [ie]: https://github.com/raxod502/intuitive-explanations
 [isearch]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Incremental-Search.html
 [ishikk]: https://github.com/raxod502/ishikk
@@ -195,7 +225,10 @@ work experience as well.)
 [jekyll]: https://jekyllrb.com/
 [jflap autograder]: https://github.com/CSGreater-Developers/HMC-Grader/blob/master/app/plugins/autograder/newjflapgrader.py
 [jflap]: http://www.jflap.org/
+[kalyn]: https://github.com/raxod502/kalyn
 [kenken]: https://en.wikipedia.org/wiki/KenKen
+[lam-source]: https://github.com/MuddCreates/life-after-mudd
+[lam]: https://life-after-mudd.herokuapp.com/
 [lass-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/LinearAlgebraSummarySheet/LinearAlgebraSummarySheet.tex
 [lass]: /math/linear-algebra-summary-sheet/
 [latex]: https://www.latex-project.org/
@@ -204,8 +237,11 @@ work experience as well.)
 [lazy-map]: https://github.com/raxod502/lazy-map
 [leiningen]: https://leiningen.org/
 [linear algebra]: https://en.wikipedia.org/wiki/Linear_algebra
+[linker]: https://en.wikipedia.org/wiki/Linker_(computing)
+[lisp]: https://en.wikipedia.org/wiki/Lisp_(programming_language)
 [madeline]: https://github.com/raxod502/madeline
 [make]: https://www.gnu.org/software/make/
+[map]: https://en.wikipedia.org/wiki/Associative_array
 [mazegen]: https://github.com/raxod502/MazeGen
 [mercury]: https://github.com/raxod502/mercury
 [minimax]: https://en.wikipedia.org/wiki/Minimax
@@ -214,12 +250,16 @@ work experience as well.)
 [netlify]: https://www.netlify.com/
 [neural networks]: https://en.wikipedia.org/wiki/Artificial_neural_network
 [nfas]: https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton
+[node.js]: https://nodejs.org/en/
+[pm]: https://en.wikipedia.org/wiki/Package_manager
 [prescient.el]: https://github.com/raxod502/prescient.el
 [pset]: https://github.com/raxod502/pset
 [puzzles]: https://github.com/raxod502/puzzles
+[python]: https://www.python.org/
 [radian]: https://github.com/raxod502/radian
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
 [repl.it]: https://repl.it/
+[ruby]: https://www.ruby-lang.org/en/
 [selectrum]: https://github.com/raxod502/selectrum
 [sg-puzzles]: http://mathworld.wolfram.com/Slothouber-GraatsmaPuzzle.html
 [signal]: https://signal.org/
@@ -247,3 +287,10 @@ work experience as well.)
 [whales.life-source]: https://github.com/raxod502/cs121-whales
 [whales.life]: https://whales.life/
 [zsh]: http://www.zsh.org/
+[quantcast]: https://www.quantcast.com/
+[cf]: https://en.wikipedia.org/wiki/Collaborative_filtering
+[ecofasten]: https://ecofastensolar.com/
+[alpine snowboards]: https://www.sgsnowboards.com/
+[clojurescript]: https://clojurescript.org/
+[datomic]: https://www.datomic.com/
+[x86-64]: https://en.wikipedia.org/wiki/X86-64
