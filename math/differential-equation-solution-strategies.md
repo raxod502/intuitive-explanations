@@ -18,7 +18,7 @@ exact equations, reduction of order, variation of parameters,
 judicious guessing (undetermined coefficients), the method of
 Frobenius, Laplace transforms, and higher-order equations.
 
-You can read the document [here][] (PDF, ~400 KB, 35 pages). For more
+You can read the document [here] (PDF, ~400 KB, 35 pages). For more
 information about how it was created, see the [About] page.
 
 [here]: /assets/DifferentialEquationSolutionStrategies.pdf

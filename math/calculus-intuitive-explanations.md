@@ -19,7 +19,7 @@ and the definitions and theorems of vector analysis. The document also
 includes links to many other resources helpful for learning calculus
 around the Web.
 
-You can read *Intuitive Explanations* [here][] (PDF, ~5 MB, 67 pages).
+You can read *Intuitive Explanations* [here] (PDF, ~5 MB, 67 pages).
 For more information about how it was created, see the [About] page.
 
 [here]: /assets/CalculusIntuitiveExplanations.pdf

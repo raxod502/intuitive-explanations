@@ -12,7 +12,7 @@ This document does not contain any proofs or explanations; its power,
 rather, lies in its organization, which is such that the theorems that
 are most closely related are placed next to one another.
 
-You can read the document [here][] (PDF, ~200 KB, 10 pages). For more
+You can read the document [here] (PDF, ~200 KB, 10 pages). For more
 information about how it was created, see the [About] page.
 
 [here]: /assets/LinearAlgebraSummarySheet.pdf

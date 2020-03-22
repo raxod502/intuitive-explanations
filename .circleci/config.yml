@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run: sed -i "s#git@github.com:#https://${GITHUB_ACCESS_TOKEN}@github.com/#" .gitmodules
       - run: git submodule update --init --recursive
-      - run: make docker CMD="make all deploy JEKYLL_ENV=production"
+      - run: make docker CMD="make checklinks all deploy JEKYLL_ENV=production"
 workflows:
   version: 2
   ci:

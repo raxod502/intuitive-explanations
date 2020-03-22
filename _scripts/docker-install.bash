@@ -51,8 +51,14 @@ ttf-mscorefonts-installer
 # in case we need superuser
 sudo
 
+# convenient to edit config files and such in a pinch
+vim
+
 # for deploy
 curl
+
+# for markdown link checking script
+python3
 
 "
 

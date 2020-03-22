@@ -24,7 +24,7 @@ projecting the current slide. This way, you can see the answer to the
 question that contestants are trying to solve, without having to write
 down the solutions on paper.
 
-You can view the presentation [here][] (PDF, ~300 KB, 99 slides). For
+You can view the presentation [here] (PDF, ~300 KB, 99 slides). For
 more information about how it was created, see the [About] page.
 
 [here]: /assets/CalculusBowlExpertEdition.pdf

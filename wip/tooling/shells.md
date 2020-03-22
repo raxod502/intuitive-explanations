@@ -80,21 +80,21 @@ the [C programming
 language](https://en.wikipedia.org/wiki/C_(programming_language)). In
 C, the syntax for accessing the first string in the command-line
 arguments is `argv[0]`, so that first string is also sometimes called
-**argv[0]**.
+**argv\[0\]**.
 
 You might ask why the string `git` is part of the command-line
 arguments that are passed to `git`. Why would that information be
 useful? To understand why, recall that a program is just a file on the
 filesystem. It can have any name, or indeed more than one name because
 it has been copied, hard-linked, or symbolically linked (see
-[Filesystems](../filesystems/)). By looking at argv[0], a program can
+[Filesystems](../filesystems/)). By looking at argv\[0\], a program can
 see *which name was used to call it*. One use for this functionality
 is to bundle together more than one program in a single file, as in
 [BusyBox](https://busybox.net/), which can emulate a number of common
 Linux utilities depending on how it is called.
 
 Using some features we will learn about later, you can use a shell to
-run a program with your own argv[0], without needing to modify the
+run a program with your own argv\[0\], without needing to modify the
 filesystem. For example, to call the program `busybox` with the
 command-line arguments `ls` and `/` (i.e. `busybox` is called using
 the name `ls`, so it will behave like the `ls` program usually does):
@@ -151,7 +151,7 @@ to command-line arguments works.
 4. Split the remaining text apart at each space. That transforms `foo
    bar` to the two separate strings `foo` and `bar`, which are then
    used as the command-line arguments. (Program `foo` is invoked with
-   the arguments `foo` and `bar`, with `foo` as argv[0].)
+   the arguments `foo` and `bar`, with `foo` as argv\[0\].)
 
 It's worth noting that this isn't necessarily how the algorithm is
 actually implemented, but it's not a bad way of understanding what's

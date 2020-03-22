@@ -41,6 +41,10 @@ resume: ## Compile resume
 xcf: ## Compile XCF images
 	_scripts/convert-xcf.bash
 
+.PHONY: checklinks
+checklinks: ## Check link anchors in Markdown files
+	python3 _scripts/check_links.py
+
 .PHONY: clean
 clean: ## Remove build artifacts
 	git ls-files --others --ignored --exclude-standard 	\
