@@ -9,7 +9,7 @@ source code for (almost) all of these projects and more on [GitHub].
 
 ## In-progress projects
 
-* [Life After Mudd][lam] (Winter -- Spring 2020, [Harvey Mudd
+* [Life After Mudd][lam] (Winter 2019 -- Spring 2020, [Harvey Mudd
   College][hmc], CS 189: Programming Practicum; [source](lam-source)):
   Geographic visualization webapp for results of a survey on
   post-graduation plans for the Class of 2020.
