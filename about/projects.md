@@ -16,7 +16,7 @@ source code for (almost) all of these projects and more on [GitHub].
 * [Kalyn] (Spring 2020): Compile a high-level functional programming
   language, inspired by [Haskell] but with [Lisp] syntax, all the way
   to [ELF] binaries targeting [x86-64] without using any pre-existing
-  components such as the [GNU] [linker] or [C standard
+  components such as the [GNU][] [linker] or [C standard
   library][cstdlib].
 
 ## Personal projects
