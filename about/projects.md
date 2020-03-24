@@ -67,7 +67,7 @@ development happened.
   written in Python.
 * [`prescient.el`][prescient.el] (Fall 2017 -- Present): Simple but
   effective sorting and filtering for [Emacs].
-* [Hyperschedule] (Fall 2017 -- Present;
+* [Hyperschedule] (Fall 2017 -- Fall 2019;
   [source][hyperschedule-source]): Fast and powerful course scheduler
   for the [Claremont Colleges].
 * [heroku-buildpack-emacs] (Summer 2018): [Heroku] buildpack to
