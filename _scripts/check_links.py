@@ -16,7 +16,7 @@ def normalize(anchor):
 def get_anchors_used(text):
     anchors = []
     for first, second, third in re.findall(
-        r"\\\[|`.+?`|\[(.+?)\](?:\((.+?)\)|\[(.+?)\])?", text, re.DOTALL
+        r"\\\[|`.+?`|\[(.+?)\](?:\((.+?)\)|\[(.*?)\])?", text, re.DOTALL
     ):
         if second or not first:
             continue
