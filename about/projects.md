@@ -7,7 +7,19 @@ redirect_from:
 This page lists some of my open-source projects. You can find the
 source code for (almost) all of these projects and more on [GitHub].
 
-## Finished personal projects
+## In-progress projects
+
+* [Life After Mudd][lam] (Winter -- Spring 2020, [Harvey Mudd
+  College][hmc], CS 189: Programming Practicum; [source](lam-source)):
+  Geographic visualization webapp for results of a survey on
+  post-graduation plans for the Class of 2020.
+* [Kalyn] (Spring 2020): Compile a high-level functional programming
+  language, inspired by [Haskell] but with [Lisp] syntax, all the way
+  to [ELF] binaries targeting [x86-64] without using any pre-existing
+  components such as the [GNU] [linker] or [C standard
+  library][cstdlib].
+
+## Personal projects
 
 All of my open-source projects receive continued maintenance when
 needed. The dates below, however, show when most of the major
@@ -72,26 +84,10 @@ development happened.
 * [Apheleia] (Summer 2019): Run code formatters on [Emacs] buffer
   contents without moving the cursor position, using [RCS patches] and
   [dynamic programming].
-
-## In-progress personal projects
-
-* [µTunes][utunes] (Summer 2019 -- Present): Aggressively minimal
-  command-line music player and library manager following the [UNIX
-  philosophy], with [Emacs] interface. Attempt #3 at a personal music
-  library manager.
-* [Tabcrush] (Summer 2019 -- Present): High-performance power tool for
-  editing large-scale tabular data in [Emacs].
-* [Mercury] (Summer 2019 -- Present): [Emacs] interface to [Facebook
-  Messenger], [Signal], and SMS (via [Google Hangouts][hangouts])
-* [Selectrum] (Fall 2020 -- Present): Completion and incremental
+* [Selectrum] (Fall -- Winter 2019): Completion and incremental
   narrowing framework for [Emacs], replacing [Ivy] and [Helm].
-* [CTRLF] (Winter 2020 -- Present): Better single-buffer text search
-  interface for [Emacs], replacing [Isearch] and [Swiper].
-* [Kalyn] (Spring 2020): Compile a high-level functional programming
-  language, inspired by [Haskell] but with [Lisp] syntax, all the way
-  to [ELF] binaries targeting [x86-64] without using any pre-existing
-  components such as the [GNU] [linker] or [C standard
-  library][cstdlib].
+* [CTRLF] (Winter 2019 -- Spring 2020): Better single-buffer text
+  search interface for [Emacs], replacing [Isearch] and [Swiper].
 
 ## Work projects
 
@@ -146,10 +142,6 @@ development happened.
   Software Development; [source](whales.life-source)): Simple webapp
   for playing [chess] against an AI using [minimax] and [neural
   networks].
-* [Life After Mudd][lam] (Winter -- Spring 2020, [Harvey Mudd
-  College][hmc], CS 189: Programming Practicum; [source](lam-source)):
-  Geographic visualization webapp for results of a survey on
-  post-graduation plans for the Class of 2020.
 
 ## Abandoned projects
 
@@ -162,9 +154,17 @@ development happened.
   Emacs, with graphical week view.
 * [Madeline] (Summer 2018): Novel approach to directory syncing, used
   to maintain complementary mirroring of two filesystem trees via SSH.
-* [fstunes] (Winter 2019): Extremely minimal music library manager
+* [fstunes] (Winter 2018): Extremely minimal music library manager
   leveraging [UNIX filesystem] abstractions. Attempt #2 at a personal
   music library manager.
+* [µTunes][utunes] (Summer -- Winter 2019): Aggressively minimal
+  command-line music player and library manager following the [UNIX
+  philosophy], with [Emacs] interface. Attempt #3 at a personal music
+  library manager.
+* [Tabcrush] (Summer 2019): High-performance power tool for editing
+  large-scale tabular data in [Emacs], intended for use with µTunes.
+* [Mercury] (Summer -- Fall 2019): [Emacs] interface to [Facebook
+  Messenger], [Signal], and SMS (via [Google Hangouts][hangouts])
 
 [apheleia]: https://github.com/raxod502/apheleia
 [bhs]: https://boh.bvsd.org/Pages/default.aspx
