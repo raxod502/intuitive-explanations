@@ -285,7 +285,7 @@ development happened.
 [wd]: https://github.com/mfaerevaag/wd
 [wdx]: https://github.com/raxod502/wdx
 [whales.life-source]: https://github.com/raxod502/cs121-whales
-[whales.life]: https://whales.life/
+[whales.life]: https://cs121-whales.herokuapp.com/
 [zsh]: http://www.zsh.org/
 [quantcast]: https://www.quantcast.com/
 [cf]: https://en.wikipedia.org/wiki/Collaborative_filtering
