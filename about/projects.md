@@ -18,6 +18,10 @@ source code for (almost) all of these projects and more on [GitHub].
   to [ELF] binaries targeting [x86-64] without using any pre-existing
   components such as the [GNU][] [linker] or [C standard
   library][cstdlib].
+* [Dumbparens] (Spring 2020): Sane delimiter-matching package for
+  [Emacs] with primitives based on [syntax tables], replacing
+  [Smartparens], [Paredit], and [Electric Pair
+  mode][electric-pair-mode]
 
 ## Personal projects
 
@@ -166,19 +170,23 @@ development happened.
 * [Mercury] (Summer -- Fall 2019): [Emacs] interface to [Facebook
   Messenger], [Signal], and SMS (via [Google Hangouts][hangouts])
 
+[alpine snowboards]: https://www.sgsnowboards.com/
 [apheleia]: https://github.com/raxod502/apheleia
 [bhs]: https://boh.bvsd.org/Pages/default.aspx
 [blackout]: https://github.com/raxod502/blackout
+[cf]: https://en.wikipedia.org/wiki/Collaborative_filtering
 [chess]: https://en.wikipedia.org/wiki/Chess
 [chrono count]: https://github.com/raxod502/chrono-count
 [cie-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/CalculusIntuitiveExplanations/CalculusIntuitiveExplanations.tex
 [cie]: /math/calculus-intuitive-explanations/
 [claremont colleges]: http://www.claremont.edu/
 [clojure]: https://clojure.org/
+[clojurescript]: https://clojurescript.org/
 [conway]: https://github.com/raxod502/conway
 [cortex.optimise]: https://github.com/raxod502/cortex/tree/master/examples/optimise
 [cstdlib]: https://en.wikipedia.org/wiki/C_standard_library
 [ctrlf]: https://github.com/raxod502/ctrlf
+[datomic]: https://www.datomic.com/
 [declarative]: https://en.wikipedia.org/wiki/Declarative_programming
 [delight.el]: https://elpa.gnu.org/packages/delight.html
 [dess-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/DifferentialEquationSolutionStrategies/DifferentialEquationSolutionStrategies.tex
@@ -189,8 +197,11 @@ development happened.
 [dim.el]: https://github.com/alezost/dim.el
 [diminish.el]: https://github.com/myrjola/diminish.el
 [document class]: https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes
+[dumbparens]: https://github.com/raxod502/dumbparens
 [dynamic programming]: https://en.wikipedia.org/wiki/Dynamic_programming
+[ecofasten]: https://ecofastensolar.com/
 [el-patch]: https://github.com/raxod502/el-patch
+[electric-pair-mode]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Matching.html
 [elf]: https://en.wikipedia.org/wiki/Executable_and_Linkable_Format
 [elisp]: https://en.wikipedia.org/wiki/Emacs_Lisp
 [emacs]: https://www.gnu.org/software/emacs/
@@ -251,11 +262,13 @@ development happened.
 [neural networks]: https://en.wikipedia.org/wiki/Artificial_neural_network
 [nfas]: https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton
 [node.js]: https://nodejs.org/en/
+[paredit]: http://danmidwood.com/content/2014/11/21/animated-paredit.html
 [pm]: https://en.wikipedia.org/wiki/Package_manager
 [prescient.el]: https://github.com/raxod502/prescient.el
 [pset]: https://github.com/raxod502/pset
 [puzzles]: https://github.com/raxod502/puzzles
 [python]: https://www.python.org/
+[quantcast]: https://www.quantcast.com/
 [radian]: https://github.com/raxod502/radian
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
 [repl.it]: https://repl.it/
@@ -264,9 +277,11 @@ development happened.
 [sg-puzzles]: http://mathworld.wolfram.com/Slothouber-GraatsmaPuzzle.html
 [signal]: https://signal.org/
 [smarter-playlist]: https://github.com/raxod502/smarter-playlist
+[smartparens]: https://github.com/Fuco1/smartparens
 [straight.el]: https://github.com/raxod502/straight.el
 [sudoku]: https://en.wikipedia.org/wiki/Sudoku
 [swiper]: https://github.com/abo-abo/swiper#swiper
+[syntax tables]: https://www.gnu.org/software/emacs/manual/html_node/elisp/Syntax-Tables.html
 [tabcrush]: https://github.com/raxod502/tabcrush
 [tc-hn]: https://news.ycombinator.com/item?id=15460851
 [terraria]: https://terraria.org/
@@ -286,11 +301,5 @@ development happened.
 [wdx]: https://github.com/raxod502/wdx
 [whales.life-source]: https://github.com/raxod502/cs121-whales
 [whales.life]: https://cs121-whales.herokuapp.com/
-[zsh]: http://www.zsh.org/
-[quantcast]: https://www.quantcast.com/
-[cf]: https://en.wikipedia.org/wiki/Collaborative_filtering
-[ecofasten]: https://ecofastensolar.com/
-[alpine snowboards]: https://www.sgsnowboards.com/
-[clojurescript]: https://clojurescript.org/
-[datomic]: https://www.datomic.com/
 [x86-64]: https://en.wikipedia.org/wiki/X86-64
+[zsh]: http://www.zsh.org/
