@@ -22,4 +22,4 @@ You can read the document [here] (PDF, ~400 KB, 35 pages). For more
 information about how it was created, see the [About] page.
 
 [here]: /assets/DifferentialEquationSolutionStrategies.pdf
-[about]: /about/site/
+[about]: /about/site

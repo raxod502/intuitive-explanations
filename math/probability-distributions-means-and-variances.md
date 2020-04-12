@@ -13,4 +13,4 @@ You can read the document [here] (PDF, ~200 KB, 7 pages). For more
 information about how it was created, see the [About] page.
 
 [here]: /assets/ProbabilityDistributionsMeansAndVariances.pdf
-[about]: /about/site/
+[about]: /about/site

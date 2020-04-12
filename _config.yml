@@ -25,10 +25,12 @@ header_pages:
     url: /about/projects/
   - title: Math
     url: /math/
+  - title: Mental health
+    url: /mental-health/students-speak
   - title: Resume
     url: /assets/Resume.pdf
   - title: About
-    url: /about/site/
+    url: /about/
 minima:
   social_links:
     github: raxod502

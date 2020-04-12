@@ -5,11 +5,11 @@ redirect_from:
 ---
 
 I was inspired to create this website after I wrote [*Calculus:
-Intuitive Explanations*](/math/calculus-intuitive-explanations/) and
+Intuitive Explanations*](/math/calculus-intuitive-explanations) and
 wanted a way to make it accessible to more people. Since then, it has
-grown to feature [more mathematical writing](/math/) and other
+grown to feature [more mathematical writing](/math) and other
 miscellany. It now also functions as my personal website, featuring a
-[list of projects](/about/projects/) and [my
+[list of projects](/about/projects) and [my
 resume](/assets/Resume.pdf).
 
 This website (aside from my resume, since its version history contains

@@ -11,10 +11,12 @@ Hi, I'm Radon and this is my personal website.
 
 ## Navigation
 
-* [My personal projects](about/projects/)
-* [My writing about math](math/)
-* [Works in progress](wip/)
-* [About this site](about/site/)
+* [About me](about/me)
+* [My personal projects](about/projects)
+* [My writing about math](math)
+* [My thoughts on mental health](mental-health/students-speak)
+* [Works in progress](wip)
+* [About this site](about/site)
 
 ## Quick links
 

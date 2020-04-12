@@ -178,7 +178,7 @@ development happened.
 [chess]: https://en.wikipedia.org/wiki/Chess
 [chrono count]: https://github.com/raxod502/chrono-count
 [cie-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/CalculusIntuitiveExplanations/CalculusIntuitiveExplanations.tex
-[cie]: /math/calculus-intuitive-explanations/
+[cie]: /math/calculus-intuitive-explanations
 [claremont colleges]: http://www.claremont.edu/
 [clojure]: https://clojure.org/
 [clojurescript]: https://clojurescript.org/
@@ -190,7 +190,7 @@ development happened.
 [declarative]: https://en.wikipedia.org/wiki/Declarative_programming
 [delight.el]: https://elpa.gnu.org/packages/delight.html
 [dess-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/DifferentialEquationSolutionStrategies/DifferentialEquationSolutionStrategies.tex
-[dess]: /math/differential-equation-solution-strategies/
+[dess]: /math/differential-equation-solution-strategies
 [dfas]: https://en.wikipedia.org/wiki/Deterministic_finite_automaton
 [diary-manager]: https://github.com/raxod502/diary-manager
 [differential equations]: https://en.wikipedia.org/wiki/Differential_equation
@@ -241,7 +241,7 @@ development happened.
 [lam-source]: https://github.com/MuddCreates/life-after-mudd
 [lam]: https://life-after-mudd.herokuapp.com/
 [lass-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/LinearAlgebraSummarySheet/LinearAlgebraSummarySheet.tex
-[lass]: /math/linear-algebra-summary-sheet/
+[lass]: /math/linear-algebra-summary-sheet
 [latex]: https://www.latex-project.org/
 [layerize-inspiration]: https://github.com/raxod502/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf
 [layerize]: https://github.com/raxod502/layerize

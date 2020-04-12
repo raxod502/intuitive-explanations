@@ -16,4 +16,4 @@ You can read the document [here] (PDF, ~200 KB, 10 pages). For more
 information about how it was created, see the [About] page.
 
 [here]: /assets/LinearAlgebraSummarySheet.pdf
-[about]: /about/site/
+[about]: /about/site
