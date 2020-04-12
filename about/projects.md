@@ -4,10 +4,11 @@ redirect_from:
   - /other-projects/
 ---
 
-This page lists some of my open-source projects. You can find the
-source code for (almost) all of these projects and more on [GitHub].
+This page lists some of my personal, work, and school projects. You
+can find the source code for (almost) all of these projects and more
+on [GitHub].
 
-## In-progress projects
+## Currently working on
 
 * [Life After Mudd][lam] (Winter 2019 -- Spring 2020, [Harvey Mudd
   College][hmc], CS 189: Programming Practicum; [source](lam-source)):
@@ -23,15 +24,43 @@ source code for (almost) all of these projects and more on [GitHub].
   [Smartparens], [Paredit], and [Electric Pair
   mode][electric-pair-mode].
 
-## Personal projects
+## Emacs projects
 
-All of my open-source projects receive continued maintenance when
-needed. The dates below, however, show when most of the major
-development happened.
+* [Radian] (Summer 2016 -- Present): Elegant but practical
+  configurations for [Emacs], [Zsh], [Tmux], and [Git].
+* [`el-patch`][el-patch] (Spring 2017 -- Fall 2018): [Emacs] package
+  for future-proofing Emacs Lisp customizations.
+* [`straight.el`][straight.el] (Spring 2017 -- Present):
+  Next-generation, purely functional package manager for the [Emacs]
+  hacker.
+* [diary-manager] (Spring 2017 -- Summer 2018): Command-line tool and
+  [Emacs] package for managing daily (encrypted, version-controlled)
+  diary entries.
+* [`prescient.el`][prescient.el] (Fall 2017 -- Winter 2019): Simple
+  but effective sorting and filtering for [Emacs].
+* [heroku-buildpack-emacs] (Summer 2018): [Heroku] buildpack to
+  install [Emacs].
+* [GNU ELPA Mirror][gnu-elpa-mirror] (Summer 2018 -- Summer 2019):
+  GitHub mirror of the [GNU ELPA][gnu-elpa] and [Emacsmirror] package
+  repositories for use with [`straight.el`][straight.el].
+* [Blackout] (Fall 2018): Unified replacement for
+  [`diminish.el`][diminish.el], [`delight.el`][delight.el], and
+  [`dim.el`][dim.el]; allows hiding or customizing major and minor
+  mode lighters in [Emacs].
+* [µTunes][utunes] (Spring -- Winter 2019): Aggressively minimal
+  command-line music player and library manager following the [UNIX
+  philosophy], with [Emacs] interface. Attempt #3 at a personal music
+  library manager.
+* [Apheleia] (Summer 2019): Run code formatters on [Emacs] buffer
+  contents without moving the cursor position, using [RCS patches] and
+  [dynamic programming].
+* [Selectrum] (Fall -- Winter 2019): Completion and incremental
+  narrowing framework for [Emacs], replacing [Ivy] and [Helm].
+* [CTRLF] (Winter 2019 -- Spring 2020): Better single-buffer text
+  search interface for [Emacs], replacing [Isearch] and [Swiper].
 
-* [TI-84 programs][ti-84-programs] (Spring 2010 -- Spring 2016): My
-  first programming ever, on the [TI-84 Plus Silver Edition][ti-84] in
-  middle and high school.
+## Games and apps
+
 * [TerrariaClone] (Spring 2011 -- Spring 2013; [HackerNews
   thread][tc-hn]): My first major project, a clone of [Terraria],
   preserved as an example of how terrible code can be if you don't pay
@@ -44,6 +73,12 @@ development happened.
 * [Christmas Rogue] (Winter 2014): Christmas present for my father.
   [Roguelike] game inspired by [Brogue] and implemented in [Java].
   Likely the most over-the-top Christmas present I will ever give.
+* [Hyperschedule] (Fall 2017 -- Fall 2019;
+  [source][hyperschedule-source]): Fast and powerful course scheduler
+  for the [Claremont Colleges].
+
+## Writing
+
 * [*Calculus: Intuitive Explanations*][cie] (Summer -- Fall 2015;
   [source][cie-source]): 67 pages of [LaTeX] content, from limits to
   vector analysis, with 35 [Ti*k*Z][tikz] figures.
@@ -53,59 +88,34 @@ development happened.
 * [*Linear Algebra Summary Sheet*][lass] (Spring 2016;
   [source][lass-source]): Quick reference for important [linear
   algebra] theorems, grouped so that making connections is easy.
+* [`intuitiveexplanations.com`][ie] (Spring 2017 -- Present): Personal
+  website built on [Travis CI/CD][travis] using [Make], [Jekyll],
+  [LaTeX], [GIMP] and hosted on [Netlify].
+* [mla-tex] (Spring 2017 -- Fall 2018): [LaTeX][latex] [document
+  class] for typesetting papers to [MLA] formatting standards.
+
+## Other personal projects
+
+All of my open-source projects receive continued maintenance when
+needed. The dates below, however, show when most of the major
+development happened.
+
+* [TI-84 programs][ti-84-programs] (Spring 2010 -- Spring 2016): My
+  first programming ever, on the [TI-84 Plus Silver Edition][ti-84] in
+  middle and high school.
 * [puzzles] (Summer 2016): Solvers for [KenKen] and [Sudoku] puzzles in
   [Clojure].
 * [empty] (Summer 2016): Absolute bare minimum [Leiningen] template.
-* [Radian] (Summer 2016 -- Present): Elegant but practical
-  configurations for [Emacs], [Zsh], [Tmux], and [Git].
 * [conway] (Fall 2016): A simple solver for generalized
   [Slothouber-Graatsma \(Conway\) puzzles][sg-puzzles] in [Clojure].
 * [smarter-playlist] (Fall 2016): [Clojure] application to generate
   iTunes playlists combining variety, cohesiveness, and novelty.
-* [`el-patch`][el-patch] (Spring 2017 -- Fall 2018): [Emacs] package
-  for future-proofing Emacs Lisp customizations.
-* [`straight.el`][straight.el] (Spring 2017 -- Present):
-  Next-generation, purely functional package manager for the [Emacs]
-  hacker.
-* [`intuitiveexplanations.com`][ie] (Spring 2017 -- Present): Personal
-  website built on [Travis CI/CD][travis] using [Make], [Jekyll],
-  [LaTeX], [GIMP] and hosted on [Netlify].
-* [diary-manager] (Spring 2017 -- Summer 2018): Command-line tool and
-  [Emacs] package for managing daily (encrypted, version-controlled)
-  diary entries.
-* [mla-tex] (Spring 2017 -- Fall 2018): [LaTeX][latex] [document
-  class] for typesetting papers to [MLA] formatting standards.
 * [wdx] (Fall 2017): Simpler and more robust alternative to [wd],
   written in [Python].
-* [`prescient.el`][prescient.el] (Fall 2017 -- Winter 2019): Simple
-  but effective sorting and filtering for [Emacs].
-* [Hyperschedule] (Fall 2017 -- Fall 2019;
-  [source][hyperschedule-source]): Fast and powerful course scheduler
-  for the [Claremont Colleges].
 * [Madeline] (Summer 2018): Novel approach to directory syncing, used
   to maintain complementary mirroring of two filesystem trees via SSH.
-* [heroku-buildpack-emacs] (Summer 2018): [Heroku] buildpack to
-  install [Emacs].
-* [GNU ELPA Mirror][gnu-elpa-mirror] (Summer 2018 -- Summer 2019):
-  GitHub mirror of the [GNU ELPA][gnu-elpa] and [Emacsmirror] package
-  repositories for use with [`straight.el`][straight.el].
-* [Blackout] (Fall 2018): Unified replacement for
-  [`diminish.el`][diminish.el], [`delight.el`][delight.el], and
-  [`dim.el`][dim.el]; allows hiding or customizing major and minor
-  mode lighters in [Emacs].
 * [Tidier] (Spring 2019): Small application to auto-close abandoned
   GitHub issues by label and activity.
-* [µTunes][utunes] (Spring -- Winter 2019): Aggressively minimal
-  command-line music player and library manager following the [UNIX
-  philosophy], with [Emacs] interface. Attempt #3 at a personal music
-  library manager.
-* [Apheleia] (Summer 2019): Run code formatters on [Emacs] buffer
-  contents without moving the cursor position, using [RCS patches] and
-  [dynamic programming].
-* [Selectrum] (Fall -- Winter 2019): Completion and incremental
-  narrowing framework for [Emacs], replacing [Ivy] and [Helm].
-* [CTRLF] (Winter 2019 -- Spring 2020): Better single-buffer text
-  search interface for [Emacs], replacing [Isearch] and [Swiper].
 
 ## Work projects
 
