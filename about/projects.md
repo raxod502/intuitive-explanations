@@ -21,7 +21,7 @@ source code for (almost) all of these projects and more on [GitHub].
 * [Dumbparens] (Spring 2020): Sane delimiter-matching package for
   [Emacs] with primitives based on [syntax tables], replacing
   [Smartparens], [Paredit], and [Electric Pair
-  mode][electric-pair-mode]
+  mode][electric-pair-mode].
 
 ## Personal projects
 
@@ -29,13 +29,21 @@ All of my open-source projects receive continued maintenance when
 needed. The dates below, however, show when most of the major
 development happened.
 
+* [TI-84 programs][ti-84-programs] (Spring 2010 -- Spring 2016): My
+  first programming ever, on the [TI-84 Plus Silver Edition][ti-84] in
+  middle and high school.
 * [TerrariaClone] (Spring 2011 -- Spring 2013; [HackerNews
   thread][tc-hn]): My first major project, a clone of [Terraria],
   preserved as an example of how terrible code can be if you don't pay
   attention to its quality.
-* [Chrono Count] (Summer 2013 -- Spring 2014): iOS app to manage
+* [Chrono Count] (Summer 2013 -- Spring 2014): [iOS] app to manage
   countdowns and countups under arbitrarily complex schedules,
   previously available from the iOS App Store.
+* [Gravity] (Winter 2013): Christmas present for my father. [iOS] app
+  that simulates [many-body Newtonian gravity][n-body].
+* [Christmas Rogue] (Winter 2014): Christmas present for my father.
+  [Roguelike] game inspired by [Brogue] and implemented in [Java].
+  Likely the most over-the-top Christmas present I will ever give.
 * [*Calculus: Intuitive Explanations*][cie] (Summer -- Fall 2015;
   [source][cie-source]): 67 pages of [LaTeX] content, from limits to
   vector analysis, with 35 [Ti*k*Z][tikz] figures.
@@ -68,12 +76,14 @@ development happened.
 * [mla-tex] (Spring 2017 -- Fall 2018): [LaTeX][latex] [document
   class] for typesetting papers to [MLA] formatting standards.
 * [wdx] (Fall 2017): Simpler and more robust alternative to [wd],
-  written in Python.
+  written in [Python].
 * [`prescient.el`][prescient.el] (Fall 2017 -- Winter 2019): Simple
   but effective sorting and filtering for [Emacs].
 * [Hyperschedule] (Fall 2017 -- Fall 2019;
   [source][hyperschedule-source]): Fast and powerful course scheduler
   for the [Claremont Colleges].
+* [Madeline] (Summer 2018): Novel approach to directory syncing, used
+  to maintain complementary mirroring of two filesystem trees via SSH.
 * [heroku-buildpack-emacs] (Summer 2018): [Heroku] buildpack to
   install [Emacs].
 * [GNU ELPA Mirror][gnu-elpa-mirror] (Summer 2018 -- Summer 2019):
@@ -85,6 +95,10 @@ development happened.
   mode lighters in [Emacs].
 * [Tidier] (Spring 2019): Small application to auto-close abandoned
   GitHub issues by label and activity.
+* [µTunes][utunes] (Spring -- Winter 2019): Aggressively minimal
+  command-line music player and library manager following the [UNIX
+  philosophy], with [Emacs] interface. Attempt #3 at a personal music
+  library manager.
 * [Apheleia] (Summer 2019): Run code formatters on [Emacs] buffer
   contents without moving the cursor position, using [RCS patches] and
   [dynamic programming].
@@ -123,6 +137,16 @@ development happened.
 
 ## School projects
 
+* [Science fair project][science-fair] (Fall -- Winter 2011, [Summer
+  Middle School][summit]): [Boolean satisfiability solver][sat]
+  applied to [Sudoku] solving.
+* [Hangman 2 2 3 2][hangman2232] (Spring 2013, [Boulder High
+  School][bhs], Advanced C++): Class project. [iOS] app that plays
+  [hangman] or, depending on usage, the stock market.
+* [Projectile Simulator] (Fall 2013, [Boulder High School][bhs], AP
+  Physics C): Class project. Hacky [Python] GUI in
+  [Tkinter](https://docs.python.org/3/library/tkinter.html) to solve
+  arbitrary [2D kinematics][projectile-motion] problems interactively.
 * [MazeGen] (Fall 2014, [Boulder High School][bhs], Design
   Technology): [Java] application to generate and visualize
   laser-cutter schematics for three-dimensional marble mazes.
@@ -139,49 +163,70 @@ development happened.
   project investigating the performance of different voting systems
   assuming voter satisfaction can be modeled as a high-dimensional
   Eucliean distance metric.
-* [heroku-buildpack-git-lfs] (Spring 2019, [Harvey Mudd College][hmc],
-  CS 121: Software Development): [Heroku] buildpack to install [Git
-  LFS] and download assets transparently during build.
 * [whales.life] (Spring 2019, [Harvey Mudd College][hmc], CS 121:
   Software Development; [source](whales.life-source)): Simple webapp
   for playing [chess] against an AI using [minimax] and [neural
   networks].
+* [heroku-buildpack-git-lfs] (Spring 2019, [Harvey Mudd College][hmc],
+  CS 121: Software Development): [Heroku] buildpack to install [Git
+  LFS] and download assets transparently during build.
+* [Webapps Done Right][wdr] (Spring 2019, [Harvey Mudd College][hmc],
+  CS 121: Software Development; [slides][wdr-slides] and
+  [source][wdr-source]): Guest lecture I gave to my class on webapp
+  development using [Python], [Pipenv], [Flask], [Heroku].
 
-## Abandoned projects
+## Deprecated projects
 
+* [CAS] (Summer 2014): Failed attempt to create a [computer algebra
+  system], like [Mathematica].
+* [minimal-webapp] (Summer 2016): Noble effort to create a
+  [ClojureScript] webapp that did not require a huge number of
+  incomprehensible build system configuration files that nobody quite
+  understood. It almost worked.
+* [acc] (Summer 2017 -- Summer 2018): Command-line accounting tool
+  with first-class support for reconciling multiple ledgers
+  interactively. This project was abandoned when it was pointed out to
+  me by a friend that I didn't actually have to track every single one
+  of my financial transactions.
 * [etunes] (Fall 2017 -- Summer 2018): [Declarative],
   [version-controlled][version control] music library manager for
   [Emacs]. Attempt #1 at a personal music library manager.
+* [fstunes] (Winter 2018): Extremely minimal music library manager
+  leveraging [UNIX filesystem] abstractions. Attempt #2 at a personal
+  music library manager.
+
+## Abandoned projects
+
+* [MazeGen Neue] (Summer 2016): An attempt to rewrite [MazeGen] to be
+  slightly less of a mess. Unfortunately, I went much too far in the
+  opposite direction and created some [Enterprise FizzBuzz], and the
+  project was abandoned.
 * [pset] (Fall 2017): Configurable templating system for university
   problem sets typeset in LaTeX.
 * [Ishikk] (Summer 2018): Read-write [Google Calendar] interface for
   Emacs, with graphical week view.
-* [Madeline] (Summer 2018): Novel approach to directory syncing, used
-  to maintain complementary mirroring of two filesystem trees via SSH.
-* [fstunes] (Winter 2018): Extremely minimal music library manager
-  leveraging [UNIX filesystem] abstractions. Attempt #2 at a personal
-  music library manager.
-* [µTunes][utunes] (Summer -- Winter 2019): Aggressively minimal
-  command-line music player and library manager following the [UNIX
-  philosophy], with [Emacs] interface. Attempt #3 at a personal music
-  library manager.
 * [Tabcrush] (Summer 2019): High-performance power tool for editing
   large-scale tabular data in [Emacs], intended for use with µTunes.
 * [Mercury] (Summer -- Fall 2019): [Emacs] interface to [Facebook
   Messenger], [Signal], and SMS (via [Google Hangouts][hangouts])
 
+[acc]: https://github.com/raxod502/acc
 [alpine snowboards]: https://www.sgsnowboards.com/
 [apheleia]: https://github.com/raxod502/apheleia
 [bhs]: https://boh.bvsd.org/Pages/default.aspx
 [blackout]: https://github.com/raxod502/blackout
+[brogue]: https://sites.google.com/site/broguegame/
+[cas]: https://github.com/raxod502/CAS
 [cf]: https://en.wikipedia.org/wiki/Collaborative_filtering
 [chess]: https://en.wikipedia.org/wiki/Chess
+[christmas rogue]: https://github.com/raxod502/ChristmasRogue
 [chrono count]: https://github.com/raxod502/chrono-count
 [cie-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/CalculusIntuitiveExplanations/CalculusIntuitiveExplanations.tex
 [cie]: /math/calculus-intuitive-explanations
 [claremont colleges]: http://www.claremont.edu/
 [clojure]: https://clojure.org/
 [clojurescript]: https://clojurescript.org/
+[computer algebra system]: https://en.wikipedia.org/wiki/Computer_algebra_system
 [conway]: https://github.com/raxod502/conway
 [cortex.optimise]: https://github.com/raxod502/cortex/tree/master/examples/optimise
 [cstdlib]: https://en.wikipedia.org/wiki/C_standard_library
@@ -207,8 +252,10 @@ development happened.
 [emacs]: https://www.gnu.org/software/emacs/
 [emacsmirror]: https://emacsmirror.net/
 [empty]: https://github.com/raxod502/empty
+[enterprise fizzbuzz]: https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
 [etunes]: https://github.com/raxod502/etunes
 [facebook messenger]: https://www.messenger.com/
+[flask]: https://flask.palletsprojects.com/en/1.1.x/
 [fstunes]: https://github.com/raxod502/fstunes
 [gimp]: https://www.gimp.org/
 [git lfs]: https://git-lfs.github.com/
@@ -219,6 +266,9 @@ development happened.
 [gnu]: https://www.gnu.org/home.en.html
 [google calendar]: https://calendar.google.com/
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
+[gravity]: https://github.com/raxod502/Gravity
+[hangman2232]: https://github.com/raxod502/Hangman2232
+[hangman]: https://en.wikipedia.org/wiki/Hangman_(game)
 [hangouts]: https://hangouts.google.com/
 [haskell]: https://www.haskell.org/
 [helm]: https://github.com/emacs-helm/helm
@@ -229,6 +279,7 @@ development happened.
 [hyperschedule-source]: https://github.com/MuddCreates/hyperschedule
 [hyperschedule]: https://hyperschedule.io
 [ie]: https://github.com/raxod502/intuitive-explanations
+[ios]: https://www.apple.com/ios/
 [isearch]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Incremental-Search.html
 [ishikk]: https://github.com/raxod502/ishikk
 [ivy]: https://github.com/abo-abo/swiper#ivy
@@ -253,18 +304,25 @@ development happened.
 [madeline]: https://github.com/raxod502/madeline
 [make]: https://www.gnu.org/software/make/
 [map]: https://en.wikipedia.org/wiki/Associative_array
+[mathematica]: https://www.wolfram.com/mathematica/
+[mazegen neue]: https://github.com/raxod502/MazeGenNeue
 [mazegen]: https://github.com/raxod502/MazeGen
 [mercury]: https://github.com/raxod502/mercury
+[minimal-webapp]: https://github.com/raxod502/minimal-webapp
 [minimax]: https://en.wikipedia.org/wiki/Minimax
 [mla-tex]: https://github.com/raxod502/mla-tex
 [mla]: https://owl.english.purdue.edu/owl/resource/747/24/
+[n-body]: https://en.wikipedia.org/wiki/N-body_simulation
 [netlify]: https://www.netlify.com/
 [neural networks]: https://en.wikipedia.org/wiki/Artificial_neural_network
 [nfas]: https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton
 [node.js]: https://nodejs.org/en/
 [paredit]: http://danmidwood.com/content/2014/11/21/animated-paredit.html
+[pipenv]: https://pipenv.pypa.io/en/latest/
 [pm]: https://en.wikipedia.org/wiki/Package_manager
 [prescient.el]: https://github.com/raxod502/prescient.el
+[projectile simulator]: https://github.com/raxod502/ProjectileSimulator
+[projectile-motion]: https://en.wikipedia.org/wiki/Projectile_motion
 [pset]: https://github.com/raxod502/pset
 [puzzles]: https://github.com/raxod502/puzzles
 [python]: https://www.python.org/
@@ -272,7 +330,10 @@ development happened.
 [radian]: https://github.com/raxod502/radian
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
 [repl.it]: https://repl.it/
+[roguelike]: https://en.wikipedia.org/wiki/Roguelike
 [ruby]: https://www.ruby-lang.org/en/
+[sat]: https://en.wikipedia.org/wiki/Boolean_satisfiability_problem
+[science-fair]: https://github.com/raxod502/ScienceFair
 [selectrum]: https://github.com/raxod502/selectrum
 [sg-puzzles]: http://mathworld.wolfram.com/Slothouber-GraatsmaPuzzle.html
 [signal]: https://signal.org/
@@ -280,14 +341,18 @@ development happened.
 [smartparens]: https://github.com/Fuco1/smartparens
 [straight.el]: https://github.com/raxod502/straight.el
 [sudoku]: https://en.wikipedia.org/wiki/Sudoku
+[summit]: https://sum.bvsd.org/Pages/default.aspx
 [swiper]: https://github.com/abo-abo/swiper#swiper
 [syntax tables]: https://www.gnu.org/software/emacs/manual/html_node/elisp/Syntax-Tables.html
 [tabcrush]: https://github.com/raxod502/tabcrush
 [tc-hn]: https://news.ycombinator.com/item?id=15460851
 [terraria]: https://terraria.org/
 [terrariaclone]: https://github.com/raxod502/TerrariaClone
+[ti-84-programs]: https://github.com/raxod502/TI84
+[ti-84]: https://en.wikipedia.org/wiki/TI-84_Plus_series#TI-84_Plus_Silver_Edition
 [tidier]: https://github.com/raxod502/tidier
 [tikz]: https://en.wikipedia.org/wiki/PGF/TikZ
+[tkinter]: https://docs.python.org/3/library/tkinter.html
 [tmux]: https://tmux.github.io/
 [travis]: https://travis-ci.org/
 [turing machines]: https://en.wikipedia.org/wiki/Turing_machine
@@ -298,6 +363,9 @@ development happened.
 [version control]: https://en.wikipedia.org/wiki/Version_control
 [votinglib]: https://github.com/raxod502/VotingLib
 [wd]: https://github.com/mfaerevaag/wd
+[wdr-slides]: https://docs.google.com/presentation/d/1NTf-VUhs0jjtqVeny3gmdrZZ03Rbv8ZDsLrWiBvHYLk/edit?usp=sharing
+[wdr-source]: https://github.com/raxod502/cs121-hello
+[wdr]: https://drive.google.com/open?id=1J0dQjrrh7Wiio5HlGAtkPKbn5C7GWhG2
 [wdx]: https://github.com/raxod502/wdx
 [whales.life-source]: https://github.com/raxod502/cs121-whales
 [whales.life]: https://cs121-whales.herokuapp.com/
