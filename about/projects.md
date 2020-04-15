@@ -8,6 +8,10 @@ This page lists some of my personal, work, and school projects. You
 can find the source code for (almost) all of these projects and more
 on [GitHub].
 
+All of my open-source projects receive continued maintenance when
+needed. The dates below, however, show when most of the major
+development happened.
+
 ## Currently working on
 
 * [Life After Mudd][lam] (Winter 2019 -- Spring 2020, [Harvey Mudd
@@ -95,10 +99,6 @@ on [GitHub].
   class] for typesetting papers to [MLA] formatting standards.
 
 ## Other personal projects
-
-All of my open-source projects receive continued maintenance when
-needed. The dates below, however, show when most of the major
-development happened.
 
 * [TI-84 programs][ti-84-programs] (Spring 2010 -- Spring 2016): My
   first programming ever, on the [TI-84 Plus Silver Edition][ti-84] in
