@@ -32,9 +32,9 @@ development happened.
 
 * [Radian] (Summer 2016 -- Present): Elegant but practical
   configurations for [Emacs], [Zsh], [Tmux], and [Git].
-* [`el-patch`][el-patch] (Spring 2017 -- Fall 2018): [Emacs] package
+* [`el-patch`][el-patch] (Winter 2016 -- Fall 2018): [Emacs] package
   for future-proofing Emacs Lisp customizations.
-* [`straight.el`][straight.el] (Spring 2017 -- Present):
+* [`straight.el`][straight.el] (Winter 2016 -- Present):
   Next-generation, purely functional package manager for the [Emacs]
   hacker.
 * [diary-manager] (Spring 2017 -- Summer 2018): Command-line tool and
