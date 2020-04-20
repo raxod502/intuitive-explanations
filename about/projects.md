@@ -58,7 +58,7 @@ development happened.
 * [Apheleia] (Summer 2019): Run code formatters on [Emacs] buffer
   contents without moving the cursor position, using [RCS patches] and
   [dynamic programming].
-* [Selectrum] (Fall -- Winter 2019): Completion and incremental
+* [Selectrum] (Fall 2019 -- Spring 2020): Completion and incremental
   narrowing framework for [Emacs], replacing [Ivy] and [Helm].
 * [CTRLF] (Winter 2019 -- Spring 2020): Better single-buffer text
   search interface for [Emacs], replacing [Isearch] and [Swiper].
