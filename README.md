@@ -1,11 +1,9 @@
 # Intuitive Explanations
 
-This is the home of my personal website. The build system is not
-currently optimized for use by people who do not have access to my
-private repositories on GitHub, but that could be easily changed.
-[Open an
-issue](https://github.com/raxod502/intuitive-explanations/issues) if
-you want to contribute and this is an issue for you.
+This is the home of my personal website. Most of it is open-source,
+there are just one or two small pieces which are kept in private
+submodules (such as my resume) to which the deploy system has access.
+You can build the website yourself without these components.
 
 ## Development
 
@@ -15,7 +13,7 @@ Install:
 * [Make](https://www.gnu.org/software/make/)
 * [Docker](https://www.docker.com/)
 
-Clone this repository recursively and run:
+Clone this repository and run:
 
     $ make docker
 

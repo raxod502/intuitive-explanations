@@ -13,5 +13,16 @@
 /_src/tex/documents/*/*.snm
 /_src/tex/documents/*/*.toc
 /_src/tex/documents/*/*.xdv
+/_src/placeholder/auto/
+/_src/placeholder/*.aux
+/_src/placeholder/*.fdb_latexmk
+/_src/placeholder/*.fls
+/_src/placeholder/*.log
+/_src/placeholder/*.nav
+/_src/placeholder/*.out
+/_src/placeholder/*.pdf
+/_src/placeholder/*.snm
+/_src/placeholder/*.toc
+/_src/placeholder/*.xdv
 /_src/xcf/out/*.png
 /_vendor/

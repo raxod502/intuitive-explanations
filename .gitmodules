@@ -1,3 +1,6 @@
-[submodule "_src/tex/documents/resume"]
-	path = _src/tex/documents/resume
+[submodule "_src/resume"]
+	path = _src/resume
 	url = git@github.com:raxod502/resume.git
+[submodule "_src/stories"]
+	path = _src/stories
+	url = git@github.com:raxod502/fiction-writing.git

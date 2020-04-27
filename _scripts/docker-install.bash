@@ -60,6 +60,9 @@ curl
 # for markdown link checking script
 python3
 
+# fiction writing stories
+pandoc
+
 "
 
 echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula \

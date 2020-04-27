@@ -4,7 +4,7 @@ HOST ?= 127.0.0.1
 LATEX := latexmk -cd -pdfxe -interaction=nonstopmode
 JEKYLL := bundle exec jekyll
 
-LATEX_DOCS := $(filter-out %/resume.tex,$(wildcard _src/tex/documents/*/*.tex))
+LATEX_DOCS := $(wildcard _src/tex/documents/*/*.tex)
 
 .PHONY: help
 help: ## Show this message
@@ -16,10 +16,10 @@ help: ## Show this message
 		column -t -s'|' >&2
 
 .PHONY: all
-all: tex resume xcf build ## Fully build website
+all: tex resume stories xcf build ## Fully build website
 
 .PHONY: dev
-dev: tex resume xcf serve ## Fully build website and then run dev server
+dev: tex resume stories xcf serve ## Fully build website and then run dev server
 
 .PHONY: serve
 serve: ## Run developer server
@@ -33,9 +33,30 @@ build: ## Build main website content
 tex: ## Compile LaTeX
 	for doc in $(LATEX_DOCS); do echo $$doc && $(LATEX) $$doc || exit 1; done
 
+.PHONY: placeholder
+placeholder: ## Compile placeholder document
+	$(LATEX) _src/placeholder/Placeholder.tex
+
 .PHONY: resume
 resume: ## Compile resume
-	make -C _src/tex/documents/resume resume-without-phone.pdf
+	if [ -e _src/resume/.git ]; then							\
+		make -C _src/resume resume-without-phone.pdf;					\
+	else											\
+		make placeholder;								\
+		ln -s ../placeholder/Placeholder.pdf _src/resume/resume-without-phone.pdf;	\
+	fi
+
+.PHONY: stories
+stories: ## Compile Fiction Writing stories
+	if [ -e _src/stories/.git ]; then								\
+		make -C _src/stories;									\
+	else												\
+		make placeholder;									\
+		mkdir -p _src/stories/lipogram _src/stories/roundone _src/stories/roundtwo;		\
+		ln -s ../../placeholder/Placeholder.pdf _src/stories/lipogram/OpportunityForStudy.pdf;	\
+		ln -s ../../placeholder/Placeholder.pdf _src/stories/roundone/TheGarden.pdf;		\
+		ln -s ../../placeholder/Placeholder.pdf _src/stories/roundtwo/NewYearsDay.pdf;		\
+	fi
 
 .PHONY: xcf
 xcf: ## Compile XCF images
