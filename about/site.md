@@ -31,6 +31,6 @@ available on this site.
 My site is deployed on [Netlify](https://www.netlify.com/), an
 extremely fast service for hosting static sites like this one.
 However, since they don't provide infrastructure for complex
-compilation steps (e.g. rendering LaTeX to PDF), I use [Travis
-CI](https://travis-ci.org/) to do this automatically and then deploy
-every time I push to GitHub.
+compilation steps (e.g. rendering LaTeX to PDF), I use
+[CircleCI](https://circleci.com/) to do this automatically and then
+deploy every time I push to GitHub.
