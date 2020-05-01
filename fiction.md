@@ -12,15 +12,16 @@ were individual and based on our previous work. I found it to be an
 excellent experience, since I had always told myself I wanted to be
 able to write fiction, but I had never actually managed to produce
 anything. Over the course of the class, I created three works that I
-feel confident in sharing:
+feel confident in sharing.
+
+**I think that *New Year's Day* is by far my best work so far.**
 
 * [*Opportunity for Study*](/assets/OpportunityForStudy.pdf): 300
   words, does not include the letter *e*. Setting: fantasy.
 * [*The Garden*](/assets/TheGarden.pdf): 1,500 words, constraints
   below. Setting: science fiction.
 * [*New Year's Day*](/assets/NewYearsDay.pdf): 3,000 words,
-  constraints below. Setting: real-world, historical. I think this one
-  is my best work.
+  constraints below. Setting: real-world, historical.
 
 ### Constraints for The Garden
 
