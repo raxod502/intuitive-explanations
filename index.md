@@ -16,7 +16,6 @@ Hi, I'm Radon and this is my personal website.
 * [My writing about math](math)
 * [My thoughts on mental health](mental-health/students-speak)
 * [My fiction writing](fiction)
-* [Works in progress](wip)
 * [About this site](about/site)
 
 ## Quick links

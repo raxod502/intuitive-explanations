@@ -23,6 +23,18 @@
 /assets/ftc-graph-lines-labeled.png /wip/integration/
 /assets/ftc-graph-lines-many.png /wip/integration/
 /files/LaTeXSource.zip https://github.com/raxod502/intuitive-explanations/tree/8fed15eb6aeeb1c8f373af4f0d434316c557c71c/_src/tex
+/wip/ https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/index.md
+/wip/etug https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/etug.md
+/wip/integration https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/integration.md
+/wip/limits https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/limits.md
+/wip/tooling/ https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/index.md
+/wip/tooling/boot https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/boot.md
+/wip/tooling/filesystems https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/filesystems.md
+/wip/tooling/packages https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/packages.md
+/wip/tooling/partitions https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/partitions.md
+/wip/tooling/processes https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/processes.md
+/wip/tooling/shells https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/shells.md
+/wip/tooling/unix https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/unix.md
 
 # Local Variables:
 # mode: conf
