@@ -22,17 +22,19 @@ include:
 # Theme configuration
 header_pages:
   - title: Projects
-    url: /about/projects/
+    url: /about/projects
   - title: Math
-    url: /math/
-  - title: Mental health
-    url: /mental-health/students-speak
+    url: /math
+  - title: Tech
+    url: /tech
   - title: Fiction
     url: /fiction
+  - title: Mental health
+    url: /mental-health/students-speak
   - title: Resume
     url: /assets/Resume.pdf
   - title: About
-    url: /about/
+    url: /about
 minima:
   social_links:
     github: raxod502

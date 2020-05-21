@@ -13,6 +13,7 @@ Hi, I'm Radon and this is my personal website.
 
 * [About me](about/me)
 * [My personal projects](about/projects)
+* [My technical blog](tech)
 * [My writing about math](math)
 * [My thoughts on mental health](mental-health/students-speak)
 * [My fiction writing](fiction)
