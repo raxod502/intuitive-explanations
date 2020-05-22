@@ -14,6 +14,7 @@ def normalize(anchor):
 
 
 def get_anchors_used(text):
+    text = re.sub(r"```.+?```", "", text, flags=re.DOTALL)
     anchors = []
     for first, second, third in re.findall(
         r"\\\[|`.+?`|\[(.+?)\](?:\((.+?)\)|\[(.*?)\])?", text, re.DOTALL
