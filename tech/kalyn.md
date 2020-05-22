@@ -25,7 +25,7 @@ GitHub](https://github.com/raxod502/kalyn).
     + [User-defined algebraic data types](#user-defined-algebraic-data-types)
   * [Syntax](#syntax)
     + [Expressions](#expressions)
-      - [Macros](#macros)
+    + [Macros](#macros)
     + [Declarations](#declarations)
   * [Module system](#module-system)
   * [Typeclasses](#typeclasses)
