@@ -457,7 +457,7 @@ destructuring it:
     (append "_u" (showInt i))))
 ```
 
-##### Macros
+#### Macros
 
 That's it for the core expression types in Kalyn. There are a few more
 pieces of syntax, which the parser handles as macros. For example, the
