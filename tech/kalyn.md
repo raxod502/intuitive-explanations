@@ -2316,7 +2316,7 @@ Before the change, we would get these functions:
 * `__src_u45kalynStdlibLists_u46kalyn__foldr__lambda30483__func_init`
 * `__src_u45kalynStdlibLists_u46kalyn__foldr__lambda30488__func_init_elts`
 
-Aside from being a real mouthfull, these functions don't have
+Aside from being a real mouthful, these functions don't have
 predictable names. After the change, we instead get these functions:
 
 * `__src_u45kalynStdlibLists_u46kalyn__foldr`
