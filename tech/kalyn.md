@@ -3317,6 +3317,9 @@ chronological order:
   Although frankly I'd take this documentation over the x86 reference.
   At least this one is trying, even if it's wrong.
 
+  (Yes, okay, okay, the documentation doesn't *technically* say
+  anything that's outright false. Only severely misleading.)
+
 * **Hanging off the edge:** When I was in the final stages of getting
   the compiler online, I noticed that I would sometimes get a
   segmentation fault, but only if I printed enough data. Here's what
