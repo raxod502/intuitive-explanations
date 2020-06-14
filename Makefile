@@ -27,7 +27,7 @@ serve: ## Run developer server
 
 .PHONY: build
 build: ## Build main website content
-	$(JEKYLL) build
+	JEKYLL_ENV=production $(JEKYLL) build
 
 .PHONY: tex
 tex: ## Compile LaTeX
