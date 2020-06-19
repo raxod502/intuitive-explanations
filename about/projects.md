@@ -14,24 +14,11 @@ development happened.
 
 ## Currently working on
 
-* [Life After Mudd][lam] (Winter 2019 -- Spring 2020, [Harvey Mudd
-  College][hmc], CS 189: Programming Practicum; [source](lam-source)):
-  Geographic visualization webapp for results of a survey on
-  post-graduation plans for the Class of 2020.
-* [Kalyn] (Spring 2020): Compile a high-level functional programming
-  language, inspired by [Haskell] but with [Lisp] syntax, all the way
-  to [ELF] binaries targeting [x86-64] without using any pre-existing
-  components such as the [GNU][] [linker] or [C standard
-  library][cstdlib].
-* [Dumbparens] (Spring 2020): Sane delimiter-matching package for
-  [Emacs] with primitives based on [syntax tables], replacing
-  [Smartparens], [Paredit], and [Electric Pair
-  mode][electric-pair-mode].
+* [Radian] (Summer 2016 -- Present): Elegant but practical
+  configurations for [Emacs], [Zsh], [Tmux], and [Git].
 
 ## Emacs projects
 
-* [Radian] (Summer 2016 -- Present): Elegant but practical
-  configurations for [Emacs], [Zsh], [Tmux], and [Git].
 * [`el-patch`][el-patch] (Winter 2016 -- Fall 2018): [Emacs] package
   for future-proofing Emacs Lisp customizations.
 * [`straight.el`][straight.el] (Winter 2016 -- Present):
@@ -80,6 +67,11 @@ development happened.
 * [Hyperschedule] (Fall 2017 -- Fall 2019;
   [source][hyperschedule-source]): Fast and powerful course scheduler
   for the [Claremont Colleges].
+* [GitHub Email Backlog][geb] (Summer 2020): Simple [Chrome
+  extension][chrome-ext] which abuses the [GitHub notifications
+  API][github-notifications] to automatically update my profile status
+  with an estimate of how long you will wait for a response when you
+  report an issue.
 
 ## Writing
 
@@ -116,6 +108,11 @@ development happened.
   to maintain complementary mirroring of two filesystem trees via SSH.
 * [Tidier] (Spring 2019): Small application to auto-close abandoned
   GitHub issues by label and activity.
+* [Kalyn] (Spring 2020): Compile a high-level functional programming
+  language, inspired by [Haskell] but with [Lisp] syntax, all the way
+  to [ELF] binaries targeting [x86-64] without using any pre-existing
+  components such as the [GNU][] [linker] or [C standard
+  library][cstdlib].
 
 ## Work projects
 
@@ -184,6 +181,22 @@ development happened.
   CS 121: Software Development; [slides][wdr-slides] and
   [source][wdr-source]): Guest lecture I gave to my class on webapp
   development using [Python], [Pipenv], [Flask], [Heroku].
+* [Lossless Path MTU Discovery][clinic-frag] (Fall 2019 -- Spring
+  2020, [Harvey Mudd College][hmc], [CS Clinic][clinic];
+  [slides][clinic-slides] and [Internet-Draft][clinic-frag-id]):
+  Implementation in the [Linux kernel][kernel] of a replacement for
+  [Path MTU Discovery][pmtud] with improved performance and
+  robustness.
+* [IPv6 Routing Extension Header Benchmarking][clinic-bench] (Spring
+  2020, [Harvey Mudd College][hmc], [CS Clinic][clinic];
+  [slides][clinic-slides] and [Internet-Draft][clinic-bench-id]):
+  Systematic procedure for comparing the performance of IPv6 routing
+  [extension headers][exthdr] including [Routing Header Type 0][rh0],
+  [Segment Routing Header][srh], and [Compressed Routing Header][crh].
+* [Life After Mudd][lam] (Winter 2019 -- Spring 2020, [Harvey Mudd
+  College][hmc], CS 189: Programming Practicum; [source](lam-source)):
+  Geographic visualization webapp for results of a survey on
+  post-graduation plans for the Class of 2020.
 
 ## Deprecated projects
 
@@ -205,7 +218,7 @@ development happened.
   leveraging [UNIX filesystem] abstractions. Attempt #2 at a personal
   music library manager.
 
-## Abandoned projects
+## Abandoned and on-hiatus projects
 
 * [MazeGen Neue] (Summer 2016): An attempt to rewrite [MazeGen] to be
   slightly less of a mess. Unfortunately, I went much too far in the
@@ -219,6 +232,10 @@ development happened.
   large-scale tabular data in [Emacs], intended for use with µTunes.
 * [Mercury] (Summer -- Fall 2019): [Emacs] interface to [Facebook
   Messenger], [Signal], and SMS (via [Google Hangouts][hangouts])
+* [Dumbparens] (Spring 2020): Sane delimiter-matching package for
+  [Emacs] with primitives based on [syntax tables], replacing
+  [Smartparens], [Paredit], and [Electric Pair
+  mode][electric-pair-mode].
 
 [acc]: https://github.com/raxod502/acc
 [alpine snowboards]: https://www.sgsnowboards.com/
@@ -230,15 +247,23 @@ development happened.
 [cf]: https://en.wikipedia.org/wiki/Collaborative_filtering
 [chess]: https://en.wikipedia.org/wiki/Chess
 [christmas rogue]: https://github.com/raxod502/ChristmasRogue
+[chrome-ext]: https://developer.chrome.com/extensions
 [chrono count]: https://github.com/raxod502/chrono-count
 [cie-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/CalculusIntuitiveExplanations/CalculusIntuitiveExplanations.tex
 [cie]: /math/calculus-intuitive-explanations
 [claremont colleges]: http://www.claremont.edu/
+[clinic-bench-id]: https://github.com/raxod502/juniper-tools/blob/master/benchmarking/draft/final.pdf
+[clinic-bench]: https://github.com/raxod502/juniper-tools/tree/master/benchmarking
+[clinic-frag-id]: https://tools.ietf.org/html/draft-bonica-intarea-lossless-pmtud-01
+[clinic-frag]: https://github.com/raxod502/juniper-tools/tree/master/fragmentation
+[clinic-slides]: https://docs.google.com/presentation/d/1EES7E0OFQy24dXvpHuuqUpKei186B7zW8glRP0tqRLw/edit?usp=sharing
+[clinic]: https://www.cs.hmc.edu/clinic/
 [clojure]: https://clojure.org/
 [clojurescript]: https://clojurescript.org/
 [computer algebra system]: https://en.wikipedia.org/wiki/Computer_algebra_system
 [conway]: https://github.com/raxod502/conway
 [cortex.optimise]: https://github.com/raxod502/cortex/tree/master/examples/optimise
+[crh]: https://tools.ietf.org/html/draft-bonica-6man-comp-rtg-hdr-22
 [cstdlib]: https://en.wikipedia.org/wiki/C_standard_library
 [ctrlf]: https://github.com/raxod502/ctrlf
 [datomic]: https://www.datomic.com/
@@ -264,12 +289,15 @@ development happened.
 [empty]: https://github.com/raxod502/empty
 [enterprise fizzbuzz]: https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
 [etunes]: https://github.com/raxod502/etunes
+[exthdr]: https://en.wikipedia.org/wiki/IPv6_packet#Extension_headers
 [facebook messenger]: https://www.messenger.com/
 [flask]: https://flask.palletsprojects.com/en/1.1.x/
 [fstunes]: https://github.com/raxod502/fstunes
+[geb]: https://github.com/raxod502/github-email-backlog
 [gimp]: https://www.gimp.org/
 [git lfs]: https://git-lfs.github.com/
 [git]: https://git-scm.com/
+[github-notifications]: https://developer.github.com/v3/activity/notifications/
 [github]: https://github.com/raxod502
 [gnu-elpa-mirror]: https://github.com/raxod502/gnu-elpa-mirror
 [gnu-elpa]: https://elpa.gnu.org/
@@ -299,6 +327,7 @@ development happened.
 [jflap]: http://www.jflap.org/
 [kalyn]: https://github.com/raxod502/kalyn
 [kenken]: https://en.wikipedia.org/wiki/KenKen
+[kernel]: https://en.wikipedia.org/wiki/Linux_kernel
 [lam-source]: https://github.com/MuddCreates/life-after-mudd
 [lam]: https://life-after-mudd.herokuapp.com/
 [lass-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/LinearAlgebraSummarySheet/LinearAlgebraSummarySheet.tex
@@ -330,6 +359,7 @@ development happened.
 [paredit]: http://danmidwood.com/content/2014/11/21/animated-paredit.html
 [pipenv]: https://pipenv.pypa.io/en/latest/
 [pm]: https://en.wikipedia.org/wiki/Package_manager
+[pmtud]: https://en.wikipedia.org/wiki/Path_MTU_Discovery
 [prescient.el]: https://github.com/raxod502/prescient.el
 [projectile simulator]: https://github.com/raxod502/ProjectileSimulator
 [projectile-motion]: https://en.wikipedia.org/wiki/Projectile_motion
@@ -340,6 +370,7 @@ development happened.
 [radian]: https://github.com/raxod502/radian
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
 [repl.it]: https://repl.it/
+[rh0]: https://tools.ietf.org/html/rfc2460#section-4.4
 [roguelike]: https://en.wikipedia.org/wiki/Roguelike
 [ruby]: https://www.ruby-lang.org/en/
 [sat]: https://en.wikipedia.org/wiki/Boolean_satisfiability_problem
@@ -349,6 +380,7 @@ development happened.
 [signal]: https://signal.org/
 [smarter-playlist]: https://github.com/raxod502/smarter-playlist
 [smartparens]: https://github.com/Fuco1/smartparens
+[srh]: https://tools.ietf.org/html/rfc8754
 [straight.el]: https://github.com/raxod502/straight.el
 [sudoku]: https://en.wikipedia.org/wiki/Sudoku
 [summit]: https://sum.bvsd.org/Pages/default.aspx
