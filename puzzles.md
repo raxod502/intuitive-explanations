@@ -55,11 +55,9 @@ Information about your submissions is only stored on your browser, and
 never sent or saved anywhere else. In other words, answer verification
 happens right in your browser, without even an Internet connection
 required. (No, this doesn't mean you can just look at the website
-source code and find out the puzzle answers. Unless you have a way of
-cracking [modern cryptographic
-protocols](https://en.wikipedia.org/wiki/Cryptography#Modern_cryptography),
-anyway.) If you want to erase your submission information from your
-browser, you can either clear your cookies or simply <a
+source code and find out the puzzle answers. If you don't believe me,
+give it a try :) If you want to erase your submission information from
+your browser, you can either clear your cookies or simply <a
 href="javascript:void(0)" id="puzzle-reset">click here</a>.
 
 <link href="/css/puzzles.css" rel="stylesheet">
