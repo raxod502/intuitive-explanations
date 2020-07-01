@@ -24,7 +24,7 @@ are provided in PDF format. There are nine in total, and one is a
 Figuring out *which* one is part of the metapuzzle :)
 
 <div id="puzzles">
-  <i>Puzzles are currently loading...</i>
+  <p><i>Puzzles are currently loading...</i></p>
 </div>
 
 <div id="modal">
