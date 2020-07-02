@@ -160,32 +160,42 @@ function showModal(puzzle) {
     const submissions = document.getElementById("submissions");
     submissions.innerHTML = "";
     const guessList = guesses[puzzle.title] || [];
-    if (guessList.length > 0) {
+    const correctList = [];
+    const incorrectList = [];
+    for (let i = guessList.length - 1; i > -1; i--) {
+      const guess = guessList[i];
+      const submission = document.createElement("li");
+      submission.classList.add("puzzle-submission");
+      submission.innerText = guess;
+      if (solved[puzzle.title] && i === guessList.length - 1) {
+        const a = document.createElement("a");
+        a.href = solved[puzzle.title];
+        a.target = "_blank";
+        a.innerText = "read solution";
+        const yay = document.createElement("i");
+        yay.appendChild(document.createTextNode(" ("));
+        yay.appendChild(a);
+        yay.appendChild(document.createTextNode(")"));
+        submission.appendChild(yay);
+        submission.classList.add("correct");
+        correctList.push(submission);
+      } else {
+        submission.classList.add("incorrect");
+        incorrectList.push(submission);
+      }
+    }
+    if (correctList.length > 0) {
       const hdr = document.createElement("h5");
-      hdr.innerText = "Checked answers:";
+      hdr.innerText = "Correct answer:";
       submissions.appendChild(hdr);
       const ul = document.createElement("ul");
-      for (let i = guessList.length - 1; i > -1; i--) {
-        const guess = guessList[i];
-        const submission = document.createElement("li");
-        submission.classList.add("puzzle-submission");
-        submission.innerText = guess;
-        if (solved[puzzle.title] && i === guessList.length - 1) {
-          const a = document.createElement("a");
-          a.href = solved[puzzle.title];
-          a.target = "_blank";
-          a.innerText = "read solution";
-          const yay = document.createElement("i");
-          yay.appendChild(document.createTextNode(" ("));
-          yay.appendChild(a);
-          yay.appendChild(document.createTextNode(")"));
-          submission.appendChild(yay);
-          submission.classList.add("correct");
-        } else {
-          submission.classList.add("incorrect");
-        }
-        submissions.appendChild(submission);
-      }
+      correctList.forEach((s) => submissions.appendChild(s));
+    }
+    if (incorrectList.length > 0) {
+      const hdr = document.createElement("h5");
+      hdr.innerText = "Incorrect answers:";
+      submissions.appendChild(hdr);
+      incorrectList.forEach((s) => submissions.appendChild(s));
     }
   };
   document.getElementById("answer-input").onkeyup = function (e) {
