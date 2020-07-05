@@ -5,7 +5,7 @@ const puzzles = [
       "https://drive.google.com/file/d/1dpiZnoMgR6p5WXF0tohTqGjq_ZpDdUwT/view?usp=sharing",
     hash: "f3af49146b785311f1bc522a2a864ff16b374946e04a0c4f8e23806ed28a99af",
     solCrypt:
-      '{"iv":"vdgadm0h2ueIQ5cR4Gf2pQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"ZwWaQAY7grk=","ct":"WD6Edq6Tpb21zfEt4ARQqlmZ9rZhNUm1gvjhpY0QQYKrOvOHcx0nJ3VeNoFy/JCxbQeLPP0wc3tP8Vv52k4utkqwh/tJUhn4GGkNh8kDYLRF5/dPWN/zWdjs"}',
+      '{"iv":"RHGE7ptX1FvpVVG/fnI0DA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"e4ZV2g9qcbc=","ct":"09LO+doMZSWGz048Dfv1/3323FKjUMwqMVu/mRkb6FCzDas+HjEdMhOHLYGSWtvbNXajmE4BXSikMsrYncw9m1PIWhCKDG7ZM4wL0o/LeHSKFM8N+MRVgUcv"}',
   },
   {
     title: "Basic Arithmetic",
@@ -13,7 +13,7 @@ const puzzles = [
       "https://drive.google.com/file/d/1XqgF9gcChQFQCS3V_5ccbt2HLLkiwkbU/view?usp=sharing",
     hash: "821f700bb6448793533d6c3699bdb963995fc6372c12c76a2ff7f7fcf9b4f651",
     solCrypt:
-      '{"iv":"KkvVYdyXvB8sJ7s4iO7+4g==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"pfe8H5vUENc=","ct":"zRj28We+o4frTDgRkWOccrV+DiyevUx+UihPSOq1Qp9TGlPGUGeUf8lYppJ0TIJtkt6tXQG2jvoBA3CyMGkZL3cNQNIziru5WZ6SAXsk18L/KdyN/D4ee/UO"}',
+      '{"iv":"53eUDiKz/WeOjLZkJScqVg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"VpfECVsYKqQ=","ct":"EhmBx4WebwKensRNPqVHUbo8Dy1fIbxNCyOwAKmKMckAJ63Ib8hHAIJGVAIxihGl70Af2w/1O2DiShFki9wUgcGHy0Q8fRzJUx3ybQiNBwxqVUlyNV/ro+xv"}',
   },
   {
     title: "Circle of Life",
@@ -21,7 +21,7 @@ const puzzles = [
       "https://drive.google.com/file/d/1KrpU3P9FMESQyl3K7e0NEM0k-fA_Ndy8/view?usp=sharing",
     hash: "a9e7d752c811dc903a17380b8f8c1b3bd979d6c519040c86d8695cb0473b3ad3",
     solCrypt:
-      '{"iv":"Spyz/HrUMv5Rsp/Fw0g8VQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"9rSRbZu/vdE=","ct":"qb7ukHIRhTWh3tjSVciRbYT5XDxXyEMLCaHGiE1RQ0ZwXia9lW7iL55cvuwpPp48qhVyZr1SMNQVUvtwoSDMvkiChWmwjFhjUTEJbXPZdZ+6agVoX75GteBB"}',
+      '{"iv":"KoIZzxsSLCMOkVIie3N3jA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"4uQRKR79eJE=","ct":"9dlOvYKUajK1s+YWYx/lcLVPrYgTSf+VFCrMP6dYjnUnQyQtVFQhQ234r/6up85xZAO9nMh7zz5ZA0rULwnQsfkk5ARPeVPGshCtO3BlQ/mvA+1J6HVgVjd5"}',
   },
   {
     title: "Contrary Crossword",
@@ -29,7 +29,7 @@ const puzzles = [
       "https://drive.google.com/file/d/1Cv7x5dAoli6oMNzIjwrJjmpgDLWXWys_/view?usp=sharing",
     hash: "42abb7512027c2959f9ec9c5aac3eb5e596c76840768f1bc4502476d56eab87b",
     solCrypt:
-      '{"iv":"vhQRBSCUwOCWlsEDGlvNtg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"UO/6zOMTN/Y=","ct":"jiiNeiO1VNlviA124qMEYDe9xRS4rEt4BJRbIZ9IpHW0RGdW0qwbZ4atFoMX8RM0xIe7chqBxftAhgkyNHlUakXGdd2PHRQNCFJ/2T4Ae2gW+0sRHbYpSmho"}',
+      '{"iv":"QC1XxhK78mcpUyPENeVEcA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"rjRZeFB0fo0=","ct":"KpJPR9TcvRRDjfMw8/R9vDfFq24="}',
   },
   {
     title: "Degrees",
@@ -37,7 +37,7 @@ const puzzles = [
       "https://drive.google.com/file/d/1brEC0taCx9aDyu8oKpergCV62FiK7XPt/view?usp=sharing",
     hash: "0ce3c77046694c7d44aed3c3552ceb23e68053f89ba02e03a240fc9f7cb0c7b0",
     solCrypt:
-      '{"iv":"jKhE80Qj/6956W2SjDivBw==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"tGK5i5G0D0Y=","ct":"abtn6rzsKMb0yeRET5zmAPp47X+emaDR/4fsFqveTyI8mQaP2XxUP5y4E2/J14NsnoeT2qdOMDNVlLsfZlxhOKJMfNkm5i38TD1wnn7KpSf4ys6j9DEqmYN9"}',
+      '{"iv":"W95hzSQJ2oT5oBMCSJwvTA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"4VDoU/yEZrY=","ct":"tujxeX46hjDeV4Yl8DNe+Fi0F2swoIhdaXrVY3j0lwFz11eoug+7b8ylA7cz+4ekSqBYjOK34QXlz4vzSV8YWieXaUQI9tIJbt88+b9btEZM5GJfAd1KuNfM"}',
   },
   {
     title: "Endless Castle",
@@ -45,7 +45,7 @@ const puzzles = [
       "https://drive.google.com/file/d/1D12xI7mZnTbd1rR_VLhKASRb1uiK4HHn/view?usp=sharing",
     hash: "b46dc679cdf57f0db46263c81287060a18cc7cf89a158923f5e21fb6606276cf",
     solCrypt:
-      '{"iv":"x32/WX6XRdGs5+H+D42SSg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"syNxpNPZppQ=","ct":"w4JvpmHPx4WH4sXKoQT6tqm6ql147ek6nt5n3W9nuaNn66Kg+Ju1iwrbE5NUpbsL2Ur0I8PznM21BXxb3lksX29DzmSnFE/P/R3kmGfN/9M5Zuqdh9Zqjn+E"}',
+      '{"iv":"B9Ic9HD2M9AG/18kmAMrIw==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"TZnIJMfMOV8=","ct":"IWWP0DJVy2d8c8gmqBvohPkGi9XYnTE0wywG390jttohM/YX7IcrtYlSMHG16dsAe+iUaBr4ioIo9KbA7dBci+BqmXkrTVsKMZXtErxySdBNxZ5dCKA//jS7"}',
   },
   {
     title: "Flight Corrections",
@@ -53,7 +53,7 @@ const puzzles = [
       "https://drive.google.com/file/d/1m1M4tu9Fpq9-hXyoENMqQCrvWlfFE19Z/view?usp=sharing",
     hash: "49c155caa79be806786b5118ef45ab978d69de3147f6a87c66f96ec760e73db0",
     solCrypt:
-      '{"iv":"hd8gZS+qv8oSACuVpZqxig==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"lTNRyClk2qY=","ct":"TvrOpGhl/HvPuGLzKFgddyaYVz+JSRvBaYd16d9xnG1JL6XgVo4gtXVQ1si8Pd0pRI1KC35uHezXrzfUlB/3DLv2kOtUjch+joQ2ST3j3eSprM9MPjPWqGtG"}',
+      '{"iv":"LURel4Jd9GfPQKYoY+o9Gg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"Tc4TZYe1ul4=","ct":"hcf7axxTpP7mZRzfs9XtsZyB0VLuDjuDlFgxhnH2ukJhSDThLcBzee0cIWtjPD3YpsD5IRa1nBlT/n+XYZQxlftHaH9sRGwppiJhrbDIh3To9tjQasrQUiYm"}',
   },
   {
     title: "Identification",
@@ -61,7 +61,7 @@ const puzzles = [
       "https://drive.google.com/file/d/1ROb3KOAJnrWK2T4rvdzKO5Zi-b9mAOCV/view?usp=sharing",
     hash: "3387d61728cdf0b32daf6776b672b06cf62ce0fe66f21efb3d43dc8a51aa81d5",
     solCrypt:
-      '{"iv":"XEWNh+BWJBaYOyoW4UAVyg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"v2DTcluanj4=","ct":"sznvm/5DLVXRRnZcJBSeB9KU8TFs/LsPsvbfHb+einbw/6Tx8Tt5ZcfSrOdjVMZs4+KFUOEZSzA5VSo/ZJiFlRBseJu7egsP7nbQNrJe7+4PQYASvZ6UFESU"}',
+      '{"iv":"NjO2X/aw4msF5VDHgNA1Dg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"vM5iXfoQ4NU=","ct":"+YVWQ/tNQkkd9FjJdiyukN28Ns2pnZLvpuDaOihLB5EeljerX3PX655my5+/o+wEIUh6fRRFYZOofq2xOI104g6jJ4CH0fm2ewVuCIVcLFq+ucGgSgQBwf3U"}',
   },
   {
     title: "PriPri",
@@ -69,9 +69,12 @@ const puzzles = [
       "https://drive.google.com/file/d/1pRnFheyiyelRH3Alz9exTUYUa31Zh2q2/view?usp=sharing",
     hash: "052886256f2eb5224f013b47ed38b4199e799db211813c24691d588c46248b29",
     solCrypt:
-      '{"iv":"DQloGfawJ9Kwx8sn8MiY2w==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"1w7g/1tUflE=","ct":"DI7vhOTbfT/Nh6QR3AQ5ZJeBlZTHOD0UHyrOLUs3iGQmXb4S9m6aiXaNWVGfghTjGLoL9EY0aV6gbTQEBDZByqR+0BvLSITnkXdqUo0gzt6cT8KEQXWC1gg1"}',
+      '{"iv":"KxOJRIPSx5H1QA5YTkvzxg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"MLnJHeeObXw=","ct":"qeGKxNQXShJ7T4OSnkT0mVKsxv3hjpNb2YGijTklFWpPJvMppUG2QXgWS8xd/v7CcGQt3M11qIPirg2KyYuka+K5mIF68PZn1sgbLF2tAzlGAZeYVR+38jMU"}',
   },
 ];
+
+const metasolCrypt =
+  '{"iv":"bpNKa07I0tJ5TcBDDzQPJg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"JUwcbByhkK0=","ct":"77k2MbMcNkJ9ESxmg/1ZXiOqUo1AfhTkcNJsLWC5xn+qQlfoxGHRr5zthmozzxDhvOPIs5uYPnFNUDUXpyKC8B6Msp2GAw/u72p7o5zGBdYn0Na1tSfwdFxp"}';
 
 let guesses = {};
 
@@ -97,6 +100,7 @@ function saveGuesses() {
 }
 
 let solved = {};
+let metasol = null;
 
 loadGuesses();
 
@@ -114,6 +118,24 @@ function checkLatestGuess(puzzle) {
       solved[puzzle.title] = sjcl.decrypt(guess, puzzle.solCrypt);
     } catch (err) {
       // somehow hash collision?
+    }
+    let stillUnsolved = false;
+    let allAnswers = "";
+    for (const puzzle of puzzles) {
+      if (!solved[puzzle.title]) {
+        stillUnsolved = true;
+        break;
+      } else {
+        const guessList = guesses[puzzle.title];
+        allAnswers += guessList[guessList.length - 1];
+      }
+    }
+    if (!stillUnsolved) {
+      try {
+        metasol = sjcl.decrypt(allAnswers, metasolCrypt);
+      } catch (err) {
+        alert("Something went wrong with the cryptography...");
+      }
     }
   }
 }
@@ -168,10 +190,21 @@ function showModal(puzzle) {
       submission.classList.add("puzzle-submission");
       submission.innerText = guess;
       if (solved[puzzle.title] && i === guessList.length - 1) {
-        const a = document.createElement("a");
-        a.href = solved[puzzle.title];
-        a.target = "_blank";
-        a.innerText = "read solution";
+        let a;
+        let href = solved[puzzle.title];
+        if (href === "[Metapuzzle]" && !metasol) {
+          a = document.createTextNode(
+            "solution hidden until all puzzles are solved"
+          );
+        } else {
+          if (href === "[Metapuzzle]" && metasol) {
+            href = metasol;
+          }
+          a = document.createElement("a");
+          a.href = href;
+          a.target = "_blank";
+          a.innerText = "read solution";
+        }
         const yay = document.createElement("i");
         yay.appendChild(document.createTextNode(" ("));
         yay.appendChild(a);
@@ -257,6 +290,7 @@ document.getElementById("puzzle-reset").onclick = function () {
   guesses = {};
   localStorage.removeItem("puzzleHuntGuesses");
   solved = {};
+  metasol = null;
   render();
   alert("Erased your submission history!");
 };
