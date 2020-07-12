@@ -66,7 +66,7 @@ development happened.
   Likely the most over-the-top Christmas present I will ever give.
 * [Hyperschedule] (Fall 2017 -- Fall 2019;
   [source][hyperschedule-source]): Fast and powerful course scheduler
-  for the [Claremont Colleges].
+  for the [Claremont Colleges]. *Current maintainer: [Kye Shi][kye]*
 * [GitHub Email Backlog][geb] (Summer 2020): Simple [Chrome
   extension][chrome-ext] which abuses the [GitHub notifications
   API][github-notifications] to automatically update my profile status
@@ -328,6 +328,7 @@ development happened.
 [kalyn]: https://github.com/raxod502/kalyn
 [kenken]: https://en.wikipedia.org/wiki/KenKen
 [kernel]: https://en.wikipedia.org/wiki/Linux_kernel
+[kye]: https://github.com/kwshi
 [lam-source]: https://github.com/MuddCreates/life-after-mudd
 [lam]: https://life-after-mudd.herokuapp.com/
 [lass-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/LinearAlgebraSummarySheet/LinearAlgebraSummarySheet.tex
