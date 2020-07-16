@@ -47,6 +47,7 @@ development happened.
   [dynamic programming].
 * [Selectrum] (Fall 2019 -- Spring 2020): Completion and incremental
   narrowing framework for [Emacs], replacing [Ivy] and [Helm].
+  *Co-maintainer: [Clemens Radermacher][clemera].*
 * [CTRLF] (Winter 2019 -- Spring 2020): Better single-buffer text
   search interface for [Emacs], replacing [Isearch] and [Swiper].
 
@@ -66,7 +67,7 @@ development happened.
   Likely the most over-the-top Christmas present I will ever give.
 * [Hyperschedule] (Fall 2017 -- Fall 2019;
   [source][hyperschedule-source]): Fast and powerful course scheduler
-  for the [Claremont Colleges]. *Current maintainer: [Kye Shi][kye]*
+  for the [Claremont Colleges]. *Current maintainer: [Kye Shi][kye].*
 * [GitHub Email Backlog][geb] (Summer 2020): Simple [Chrome
   extension][chrome-ext] which abuses the [GitHub notifications
   API][github-notifications] to automatically update my profile status
@@ -122,10 +123,11 @@ development happened.
   2015, ThinkTopic; proprietary): Frontend and backend work on
   existing [Clojure]/[ClojureScript]/[Datomic] web applications for
   generating price quotes for roof-mounted solar panels and alpine
-  snowboards.
+  snowboards. *Teammates: [Charles Gruenwald][charles], [Keren
+  Megory-Cohen][keren].*
 * think.recommend (Winter 2015 -- Summer 2016, ThinkTopic;
   proprietary): Library for testing and benchmarking [collaborative
-  filtering][cf] algorithms
+  filtering][cf] algorithms.
 * [cortex.optimise] (Spring -- Summer 2016, ThinkTopic):
   General-purpose library for analyzing, visualizing, and comparing
   [gradient descent] algorithms.
@@ -173,7 +175,8 @@ development happened.
 * [whales.life] (Spring 2019, [Harvey Mudd College][hmc], CS 121:
   Software Development; [source](whales.life-source)): Simple webapp
   for playing [chess] against an AI using [minimax] and [neural
-  networks].
+  networks]. *Teammates: [Ben Baral][ben], [Max Treutelaar][max],
+  [Miles President][miles], [Shannon Collier][shannon].*
 * [heroku-buildpack-git-lfs] (Spring 2019, [Harvey Mudd College][hmc],
   CS 121: Software Development): [Heroku] buildpack to install [Git
   LFS] and download assets transparently during build.
@@ -186,17 +189,21 @@ development happened.
   [slides][clinic-slides] and [Internet-Draft][clinic-frag-id]):
   Implementation in the [Linux kernel][kernel] of a replacement for
   [Path MTU Discovery][pmtud] with improved performance and
-  robustness.
+  robustness. *Teammates: [Bradley Newton][bradley], [Hakan
+  Alpan][hakan], [Miles President][miles].*
 * [IPv6 Routing Extension Header Benchmarking][clinic-bench] (Spring
   2020, [Harvey Mudd College][hmc], [CS Clinic][clinic];
   [slides][clinic-slides] and [Internet-Draft][clinic-bench-id]):
   Systematic procedure for comparing the performance of IPv6 routing
   [extension headers][exthdr] including [Routing Header Type 0][rh0],
   [Segment Routing Header][srh], and [Compressed Routing Header][crh].
+  *Teammates: [Bradley Newton][bradley], [Hakan Alpan][hakan], [Miles
+  President][miles].*
 * [Life After Mudd][lam] (Winter 2019 -- Spring 2020, [Harvey Mudd
   College][hmc], CS 189: Programming Practicum; [source](lam-source)):
   Geographic visualization webapp for results of a survey on
-  post-graduation plans for the Class of 2020.
+  post-graduation plans for the Class of 2020. *Current maintainer:
+  [Kye Shi][kye].*
 
 ## Deprecated projects
 
@@ -240,11 +247,14 @@ development happened.
 [acc]: https://github.com/raxod502/acc
 [alpine snowboards]: https://www.sgsnowboards.com/
 [apheleia]: https://github.com/raxod502/apheleia
+[ben]: https://www.linkedin.com/in/ben-baral/
 [bhs]: https://boh.bvsd.org/Pages/default.aspx
 [blackout]: https://github.com/raxod502/blackout
+[bradley]: https://www.linkedin.com/in/bnew10/
 [brogue]: https://sites.google.com/site/broguegame/
 [cas]: https://github.com/raxod502/CAS
 [cf]: https://en.wikipedia.org/wiki/Collaborative_filtering
+[charles]: https://www.linkedin.com/in/charles-gruenwald-phd-150ba13
 [chess]: https://en.wikipedia.org/wiki/Chess
 [christmas rogue]: https://github.com/raxod502/ChristmasRogue
 [chrome-ext]: https://developer.chrome.com/extensions
@@ -252,6 +262,7 @@ development happened.
 [cie-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/CalculusIntuitiveExplanations/CalculusIntuitiveExplanations.tex
 [cie]: /math/calculus-intuitive-explanations
 [claremont colleges]: http://www.claremont.edu/
+[clemera]: https://github.com/clemera
 [clinic-bench-id]: https://github.com/raxod502/juniper-tools/blob/master/benchmarking/draft/final.pdf
 [clinic-bench]: https://github.com/raxod502/juniper-tools/tree/master/benchmarking
 [clinic-frag-id]: https://tools.ietf.org/html/draft-bonica-intarea-lossless-pmtud-01
@@ -305,6 +316,7 @@ development happened.
 [google calendar]: https://calendar.google.com/
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
 [gravity]: https://github.com/raxod502/Gravity
+[hakan]: https://www.linkedin.com/in/hakan-alpan-15189615b/
 [hangman2232]: https://github.com/raxod502/Hangman2232
 [hangman]: https://en.wikipedia.org/wiki/Hangman_(game)
 [hangouts]: https://hangouts.google.com/
@@ -327,6 +339,7 @@ development happened.
 [jflap]: http://www.jflap.org/
 [kalyn]: https://github.com/raxod502/kalyn
 [kenken]: https://en.wikipedia.org/wiki/KenKen
+[keren]: https://www.linkedin.com/in/keren-megory
 [kernel]: https://en.wikipedia.org/wiki/Linux_kernel
 [kye]: https://github.com/kwshi
 [lam-source]: https://github.com/MuddCreates/life-after-mudd
@@ -345,9 +358,11 @@ development happened.
 [make]: https://www.gnu.org/software/make/
 [map]: https://en.wikipedia.org/wiki/Associative_array
 [mathematica]: https://www.wolfram.com/mathematica/
+[max]: https://www.linkedin.com/in/max-treutelaar/
 [mazegen neue]: https://github.com/raxod502/MazeGenNeue
 [mazegen]: https://github.com/raxod502/MazeGen
 [mercury]: https://github.com/raxod502/mercury
+[miles]: https://www.linkedin.com/in/miles-president-4b5394149/
 [minimal-webapp]: https://github.com/raxod502/minimal-webapp
 [minimax]: https://en.wikipedia.org/wiki/Minimax
 [mla-tex]: https://github.com/raxod502/mla-tex
@@ -378,6 +393,7 @@ development happened.
 [science-fair]: https://github.com/raxod502/ScienceFair
 [selectrum]: https://github.com/raxod502/selectrum
 [sg-puzzles]: http://mathworld.wolfram.com/Slothouber-GraatsmaPuzzle.html
+[shannon]: https://www.linkedin.com/in/shannon-collier-631392149/
 [signal]: https://signal.org/
 [smarter-playlist]: https://github.com/raxod502/smarter-playlist
 [smartparens]: https://github.com/Fuco1/smartparens
