@@ -38,7 +38,6 @@ header_pages:
 minima:
   social_links:
     github: raxod502
-google_analytics: UA-111346837-2
 
 # Page configuration
 defaults:
