@@ -335,7 +335,7 @@ development happened.
 [ivy]: https://github.com/abo-abo/swiper#ivy
 [java]: https://www.java.com/
 [jekyll]: https://jekyllrb.com/
-[jflap autograder]: https://github.com/CSGreater-Developers/HMC-Grader/blob/master/app/plugins/autograder/newjflapgrader.py
+[jflap autograder]: https://github.com/raxod502/HMC-Grader/blob/master/app/plugins/autograder/newjflapgrader.py
 [jflap]: http://www.jflap.org/
 [kalyn]: https://github.com/raxod502/kalyn
 [kenken]: https://en.wikipedia.org/wiki/KenKen
