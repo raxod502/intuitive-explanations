@@ -109,11 +109,11 @@ development happened.
   to maintain complementary mirroring of two filesystem trees via SSH.
 * [Tidier] (Spring 2019): Small application to auto-close abandoned
   GitHub issues by label and activity.
-* [Kalyn] (Spring 2020): Compile a high-level functional programming
-  language, inspired by [Haskell] but with [Lisp] syntax, all the way
-  to [ELF] binaries targeting [x86-64] without using any pre-existing
-  components such as the [GNU][] [linker] or [C standard
-  library][cstdlib].
+* [Kalyn] (Spring 2020; [blog post][kalyn-post]): Compile a high-level
+  functional programming language, inspired by [Haskell] but with
+  [Lisp] syntax, all the way to [ELF] binaries targeting [x86-64]
+  without using any pre-existing components such as the [GNU][]
+  [linker] or [C standard library][cstdlib].
 
 ## Work projects
 
@@ -338,6 +338,7 @@ development happened.
 [jflap autograder]: https://github.com/raxod502/HMC-Grader/blob/master/app/plugins/autograder/newjflapgrader.py
 [jflap]: http://www.jflap.org/
 [kalyn]: https://github.com/raxod502/kalyn
+[kalyn-post]: https://intuitiveexplanations.com/tech/kalyn
 [kenken]: https://en.wikipedia.org/wiki/KenKen
 [keren]: https://www.linkedin.com/in/keren-megory
 [kernel]: https://en.wikipedia.org/wiki/Linux_kernel
