@@ -19,6 +19,8 @@ development happened.
 
 ## Emacs projects
 
+* [Radian] (Summer 2016 -- Present): Elegant but practical
+  configurations for [Emacs], [Zsh], [Tmux], and [Git].
 * [`el-patch`][el-patch] (Winter 2016 -- Fall 2018): [Emacs] package
   for future-proofing Emacs Lisp customizations.
 * [`straight.el`][straight.el] (Winter 2016 -- Present):
