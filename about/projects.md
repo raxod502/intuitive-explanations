@@ -14,13 +14,13 @@ development happened.
 
 ## Currently working on
 
-* [Radian] (Summer 2016 -- Present): Elegant but practical
-  configurations for [Emacs], [Zsh], [Tmux], and [Git].
 * [Riju] (Summer 2020; [source][riju-source]): Extremely fast online
   playground for every programming language.
 
 ## Emacs projects
 
+* [Radian] (Summer 2016 -- Present): Elegant but practical
+  configurations for [Emacs], [Zsh], [Tmux], and [Git].
 * [`el-patch`][el-patch] (Winter 2016 -- Fall 2018): [Emacs] package
   for future-proofing Emacs Lisp customizations.
 * [`straight.el`][straight.el] (Winter 2016 -- Present):
