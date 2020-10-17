@@ -40,10 +40,10 @@ placeholder: ## Compile placeholder document
 .PHONY: resume
 resume: ## Compile resume
 	if [ -e _src/resume/.git ]; then							\
-		make -C _src/resume resume-without-phone.pdf;					\
+		make -C _src/resume resume-public.pdf;						\
 	else											\
 		make placeholder;								\
-		ln -s ../placeholder/Placeholder.pdf _src/resume/resume-without-phone.pdf;	\
+		ln -s ../placeholder/Placeholder.pdf _src/resume/resume-public.pdf;		\
 	fi
 
 .PHONY: stories
