@@ -23,4 +23,3 @@ workflows:
               only: master
             tags:
               ignore: /.*/
-          context: "Intuitive Explanations"
