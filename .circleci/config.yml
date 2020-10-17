@@ -10,7 +10,7 @@ jobs:
       image: ubuntu-1604:201903-01
     steps:
       - checkout
-      - run: sed -i "s#git@gitlab.com:#https://:${GITLAB_ACCESS_TOKEN}@gitlab.com/#" .gitmodules
+      - run: sed -i "s#git@gitlab.com:#https://git:${GITLAB_ACCESS_TOKEN}@gitlab.com/#" .gitmodules
       - run: git submodule update --init --recursive
       - run: make docker CMD="make checklinks all deploy JEKYLL_ENV=production"
 workflows:
