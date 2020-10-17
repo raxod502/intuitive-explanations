@@ -2,11 +2,11 @@
 title: About Me
 ---
 
-Hi, my name is Radon Rosborough (he/him). I am currently a senior at
-[Harvey Mudd College](https://www.hmc.edu/) majoring in computer
-science. My hometown is Boulder, CO. After graduation, I am excited to
-be joining [Plaid](https://plaid.com/) in San Francisco, CA as a
-full-time software engineer.
+Hi, my name is Radon Rosborough (he/him). I am a software engineer on
+the Infrastructure team at [Plaid](https://plaid.com/) in San
+Francisco, CA, recently graduated from [Harvey Mudd
+College](https://www.hmc.edu/) majoring in computer science. My
+hometown is Boulder, CO.
 
 When I'm not studying or working, I often enjoy building tools to
 improve my programming workflow, and in particular I am an
