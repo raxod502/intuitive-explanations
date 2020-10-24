@@ -25,7 +25,7 @@ development happened.
   for future-proofing Emacs Lisp customizations.
 * [`straight.el`][straight.el] (Winter 2016 -- Present):
   Next-generation, purely functional package manager for the [Emacs]
-  hacker.
+  hacker. *Co-maintainer: [Nicholas Vollmer][progfolio].*
 * [diary-manager] (Spring 2017 -- Summer 2018): Command-line tool and
   [Emacs] package for managing daily (encrypted, version-controlled)
   diary entries.
@@ -380,6 +380,7 @@ development happened.
 [pm]: https://en.wikipedia.org/wiki/Package_manager
 [pmtud]: https://en.wikipedia.org/wiki/Path_MTU_Discovery
 [prescient.el]: https://github.com/raxod502/prescient.el
+[progfolio]: https://github.com/progfolio
 [projectile simulator]: https://github.com/raxod502/ProjectileSimulator
 [projectile-motion]: https://en.wikipedia.org/wiki/Projectile_motion
 [pset]: https://github.com/raxod502/pset
