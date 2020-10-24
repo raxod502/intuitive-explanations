@@ -2625,9 +2625,9 @@ example instruction. Let's encode the following instruction:
 addq $0x42, 0x20(%r11, %rdi, 4)
 ```
 
-This instruction says that we should compute the value of `%r11 + %rdi
-* 4 + 0x20`, and add the value `0x42` to whatever is stored at that
-memory address.
+This instruction says that we should figure out the value of `%r11 +
+%rdi * 4 + 0x20`, and add the value `0x42` to whatever is stored at
+that memory address.
 
 The first thing we do is look at the [big table of
 opcodes](http://ref.x86asm.net/coder64-abc.html). There are quite a
@@ -2995,7 +2995,7 @@ worked well, so we have in the program header:
 
 ```
 0x00000  ->  (not mapped)  ELF headers
-0x01000  ->  0x10000       Code
+0x01000  ->  0x11000       Code
 0xcf000  ->  0xdf000       Data
 ```
 
