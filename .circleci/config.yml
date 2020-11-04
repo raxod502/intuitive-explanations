@@ -7,7 +7,7 @@ jobs:
     # will be root on CI, which is no good as there is already a UID 0
     # inside the container).
     machine:
-      image: ubuntu-1604:201903-01
+      image: ubuntu-2004:202010-01
     steps:
       - checkout
       - run: sed -i "s#git@gitlab.com:#https://git:${GITLAB_ACCESS_TOKEN}@gitlab.com/#" .gitmodules
