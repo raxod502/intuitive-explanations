@@ -14,8 +14,8 @@ development happened.
 
 ## Currently working on
 
-* [Riju] (Summer 2020; [source][riju-source]): Extremely fast online
-  playground for every programming language.
+* [Riju] (Summer 2020 -- Present; [source][riju-source]): Extremely
+  fast online playground for every programming language.
 
 ## Emacs projects
 
