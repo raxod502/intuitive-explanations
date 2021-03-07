@@ -25,8 +25,8 @@ Linux](https://manjaro.org/) on the [Dell XPS 15
 reluctance) run Android on the [Google Pixel
 3a](https://store.google.com/us/product/pixel_3a).
 
-I spent time every day maintaining my open-source projects [on
-GitHub](https://github.com/raxod502), because I enjoy helping my
+I spent time on a regular basis maintaining my open-source projects
+[on GitHub](https://github.com/raxod502), because I enjoy helping my
 software help other people and because I want to set a positive
 example for open-source community-building. If you file a bug report,
 I may not have time to fix the problem, but I *do* read every single
