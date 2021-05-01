@@ -13,9 +13,11 @@ plugins:
 exclude:
   - _vendor
   - _src
+  - Dockerfile
   - Gemfile
   - Gemfile.lock
   - Makefile
+  - README.md
 include:
   - _redirects
 
