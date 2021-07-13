@@ -3,5 +3,5 @@
 set -e
 set -o pipefail
 
-bundle install --clean
+bundle install
 exec "$@"
