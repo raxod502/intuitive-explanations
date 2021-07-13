@@ -18,7 +18,9 @@ docker() {
 
 PORT="${PORT:-4000}"
 
-docker build . -t intuitive-explanations --build-arg "UID=$UID"
+if [[ -z "${NO_BUILD:-}" ]]; then
+    docker build . -t intuitive-explanations --build-arg "UID=$UID"
+fi
 
 # Putting the deploy key in the command line is considered bad
 # practice. However we must do it to work around a Docker bug, see

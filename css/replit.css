@@ -1,0 +1,69 @@
+/* Based on https://codepen.io/harmputman/pen/IpAnb */
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ptsans/v12/jizaRExUiTo99u79D0KEwA.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoC1CzjsGyI.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCs6KVjbNBYlgoKfw7z.ttf)
+    format("truetype");
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/ubuntu/v15/4iCv6KVjbNBYlgoCxCvjsGyI.ttf)
+    format("truetype");
+}
+
+blockquote.replit {
+  color: #111;
+  letter-spacing: 0;
+
+  display: block;
+  border-width: 2px 0;
+  border-style: solid;
+  border-color: #eee;
+  padding: 1.5em 0 0.5em;
+  margin: 1.5em 0;
+  position: relative;
+}
+
+blockquote.replit:before {
+  content: "\201C";
+  position: absolute;
+  top: 0em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fdfdfd;
+  width: 3rem;
+  height: 2rem;
+  font: 6em/1.08em "PT Sans", sans-serif;
+  color: #666;
+  text-align: center;
+}
+
+blockquote.replit:after {
+  content: "\2014\00A0"attr(cite);
+  display: block;
+  text-align: right;
+  font-size: 0.875em;
+  color: #e74c3c;
+}
+
+blockquote.replit .ellipsis {
+  color: #ccc;
+}
