@@ -14,8 +14,8 @@ development happened.
 
 ## Currently working on
 
-* [Radian] (Summer 2016 -- Present): Elegant but practical
-  configurations for [Emacs], [Zsh], [Tmux], and [Git].
+* [Riju] (Summer 2020 -- Present; [source][riju-source]): Extremely
+  fast online playground for every programming language.
 
 ## Emacs projects
 
@@ -391,6 +391,8 @@ development happened.
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
 [repl.it]: https://repl.it/
 [rh0]: https://tools.ietf.org/html/rfc2460#section-4.4
+[riju]: https://riju.codes/
+[riju-source]: https://github.com/raxod502/riju
 [roguelike]: https://en.wikipedia.org/wiki/Roguelike
 [ruby]: https://www.ruby-lang.org/en/
 [sat]: https://en.wikipedia.org/wiki/Boolean_satisfiability_problem
