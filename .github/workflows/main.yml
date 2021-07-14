@@ -1,0 +1,26 @@
+name: Build and deploy
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+concurrency: deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@v2
+      - name: Checkout submodules
+        env:
+          GITLAB_ACCESS_TOKEN: ${{ secrets.GITLAB_ACCESS_TOKEN }}
+        run: |
+          sed -i "s#git@gitlab.com:#https://git:${GITLAB_ACCESS_TOKEN}@gitlab.com/#" .gitmodules
+          git submodule update --init --recursive
+      - name: Build and deploy
+        env:
+          NETLIFY_KEY: ${{ secrets.NETLIFY_KEY }}
+        run: |
+          make docker CMD="make checklinks all deploy JEKYLL_ENV=production"
