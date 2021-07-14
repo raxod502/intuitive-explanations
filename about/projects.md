@@ -75,6 +75,8 @@ development happened.
   API][github-notifications] to automatically update my profile status
   with an estimate of how long you will wait for a response when you
   report an issue.
+* [Python in a Box][pib] (Summer 2021; [source][pib-source]):
+  Interactive online Python REPL in 30 lines of JavaScript.
 
 ## Writing
 
@@ -376,6 +378,8 @@ development happened.
 [nfas]: https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton
 [node.js]: https://nodejs.org/en/
 [paredit]: http://danmidwood.com/content/2014/11/21/animated-paredit.html
+[pib]: https://python-in-a-box.herokuapp.com/
+[pib-source]: https://github.com/raxod502/python-in-a-box
 [pipenv]: https://pipenv.pypa.io/en/latest/
 [pm]: https://en.wikipedia.org/wiki/Package_manager
 [pmtud]: https://en.wikipedia.org/wiki/Path_MTU_Discovery
