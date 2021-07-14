@@ -10,7 +10,7 @@ fi
 
 docker() {
     if [[ "$OSTYPE" != darwin* ]] && [[ "$EUID" != 0 ]]; then
-        command sudo docker "$@"
+        command sudo -E docker "$@"
     else
         command docker "$@"
     fi
