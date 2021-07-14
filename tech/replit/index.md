@@ -331,7 +331,7 @@ Replit's stated ideals include:
   GitHub")
 * making it easy to share and remix your creations (e.g. Replit's CEO
   on learning to program: ["I'd download projects related to what I
-  wanted to build [...] change & tinker with them, and get
+  wanted to build \[...\] change & tinker with them, and get
   inspired"](https://web.archive.org/web/20210522215545/https://blog.replit.com/github);
   he advises others to
   [fork](https://web.archive.org/web/20210522212135/https://twitter.com/amasad/status/1395074521804148738)

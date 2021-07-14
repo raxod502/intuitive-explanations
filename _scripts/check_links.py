@@ -17,11 +17,14 @@ def get_anchors_used(text):
     text = re.sub(r"```.+?```", "", text, flags=re.DOTALL)
     anchors = []
     for first, second, third in re.findall(
-        r"\\\[|`.+?`|\[(.+?)\](?:\((.+?)\)|\[(.*?)\])?", text, re.DOTALL
+        r"\\\[|`.+?`|\[(.+?[^\\])\](?:\((.+?)\)|\[(.*?)\])?", text, re.DOTALL
     ):
         if second or not first:
             continue
-        anchors.append(normalize(third or first))
+        anchor = normalize(third or first)
+        if anchor == "...":
+            continue
+        anchors.append(anchor)
     return anchors
 
 
