@@ -15,9 +15,11 @@ jobs:
         uses: actions/checkout@v2
       - name: Checkout submodules
         env:
-          GITLAB_ACCESS_TOKEN: ${{ secrets.GITLAB_ACCESS_TOKEN }}
+          FICTION_WRITING: ${{ secrets.CLONE_URL_FICTION_WRITING }}
+          RESUME: ${{ secrets.CLONE_URL_RESUME }}
         run: |
-          sed -i "s#git@gitlab.com:#https://git:${GITLAB_ACCESS_TOKEN}@gitlab.com/#" .gitmodules
+          git config -f .gitmodules submodule._src/resume.url "${RESUME}"
+          git config -f .gitmodules submodule._src/stories.url "${FICTION_WRITING}"
           git submodule update --init --recursive
       - name: Build and deploy
         env:
