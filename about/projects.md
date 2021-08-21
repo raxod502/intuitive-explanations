@@ -16,6 +16,13 @@ development happened.
 
 * [Riju] (Summer 2020 -- Present; [source][riju-source]): Extremely
   fast online playground for every programming language.
+* Shallan (Spring 2021 -- Present; not yet published): Personal music
+  library player combining the user-friendly interface and
+  cross-device synchronization of [YouTube Music][ytm] with the
+  flexibility and ownership of a self-hosted open-source solution.
+  Attempt #4 at a personal music library manager.
+* Veidt (Summer 2021 -- Present; not yet published): Online [webcomic]
+  aggregator, reader, and notification service.
 
 ## Emacs projects
 
@@ -40,10 +47,6 @@ development happened.
   [`diminish.el`][diminish.el], [`delight.el`][delight.el], and
   [`dim.el`][dim.el]; allows hiding or customizing major and minor
   mode lighters in [Emacs].
-* [µTunes][utunes] (Spring -- Winter 2019): Aggressively minimal
-  command-line music player and library manager following the [UNIX
-  philosophy], with [Emacs] interface. Attempt #3 at a personal music
-  library manager.
 * [Apheleia] (Summer 2019): Run code formatters on [Emacs] buffer
   contents without moving the cursor position, using [RCS patches] and
   [dynamic programming].
@@ -228,6 +231,10 @@ development happened.
 * [fstunes] (Winter 2018): Extremely minimal music library manager
   leveraging [UNIX filesystem] abstractions. Attempt #2 at a personal
   music library manager.
+* [µTunes][utunes] (Spring -- Winter 2019): Aggressively minimal
+  command-line music player and library manager following the [UNIX
+  philosophy], with [Emacs] interface. Attempt #3 at a personal music
+  library manager.
 
 ## Abandoned and on-hiatus projects
 
@@ -436,7 +443,9 @@ development happened.
 [wdr-source]: https://github.com/raxod502/cs121-hello
 [wdr]: https://drive.google.com/open?id=1J0dQjrrh7Wiio5HlGAtkPKbn5C7GWhG2
 [wdx]: https://github.com/raxod502/wdx
+[webcomic]: https://en.wikipedia.org/wiki/Webcomic
 [whales.life-source]: https://github.com/raxod502/cs121-whales
 [whales.life]: https://cs121-whales.herokuapp.com/
 [x86-64]: https://en.wikipedia.org/wiki/X86-64
+[ytm]: https://music.youtube.com/
 [zsh]: http://www.zsh.org/
