@@ -65,8 +65,24 @@ development happened.
 * [Chrono Count] (Summer 2013 -- Spring 2014): [iOS] app to manage
   countdowns and countups under arbitrarily complex schedules,
   previously available from the iOS App Store.
+* [Mother's Day][mothers-day-2013] (Summer 2013): Small [Java] applet
+  that I made for Mother's Day.
+* [Watching Paint Dry: The Game][watching paint dry] (Summer 2013):
+  Small [Java] applet where you can paint things with the mouse, and
+  then watch the paint dry. Yes, really. For Father's Day.
+* [tetris-processing] (Winter 2013): Simple clone of [Tetris] from
+  high school, this one in [Processing] and featuring music.
+* [funwithframes] (Winter 2013): Simple game in [Processing] where you
+  try to dodge certain squares while being distracted by other
+  squares.
 * [Gravity] (Winter 2013): Christmas present for my father. [iOS] app
   that simulates [many-body Newtonian gravity][n-body].
+* [2048] (Spring -- Summer 2014): Simple clone of the game
+  [2048][2048-game], implemented in [Java] with graphical and
+  command-line interfaces as well as a few auto-solving algorithms.
+* [tetris-python] (Summer 2014): Slightly more advanced clone of
+  [Tetris] from high school, this one in [Python] and featuring
+  pentominoes and other nonstandard pieces.
 * [Christmas Rogue] (Winter 2014): Christmas present for my father.
   [Roguelike] game inspired by [Brogue] and implemented in [Java].
   Likely the most over-the-top Christmas present I will ever give.
@@ -97,6 +113,9 @@ development happened.
   [LaTeX], [GIMP] and hosted on [Netlify].
 * [mla-tex] (Spring 2017 -- Fall 2018): [LaTeX][latex] [document
   class] for typesetting papers to [MLA] formatting standards.
+* [example-website] (Summer 2020): Simple template to set up a [static
+  site] similar to my personal website, for my friends who were
+  interested in making similar websites for themselves.
 
 ## Other personal projects
 
@@ -153,9 +172,9 @@ development happened.
 
 ## School projects
 
-* [Science fair project][science-fair] (Fall -- Winter 2011, [Summer
-  Middle School][summit]): [Boolean satisfiability solver][sat]
-  applied to [Sudoku] solving.
+* [Science fair project][science-fair] (Fall 2011 -- Spring 2012,
+  [Summer Middle School][summit]): [Boolean satisfiability
+  solver][sat] applied to [Sudoku] solving.
 * [Hangman 2 2 3 2][hangman2232] (Spring 2013, [Boulder High
   School][bhs], Advanced C++): Class project. [iOS] app that plays
   [hangman] or, depending on usage, the stock market.
@@ -163,6 +182,10 @@ development happened.
   Physics C): Class project. Hacky [Python] GUI in
   [Tkinter](https://docs.python.org/3/library/tkinter.html) to solve
   arbitrary [2D kinematics][projectile-motion] problems interactively.
+* [MathViewers] (Summer -- Winter 2014): Various programming projects
+  for math classes: [generative art], [complex arithmetic][complex
+  numbers] visualization, numerical solution of [differential
+  equations].
 * [MazeGen] (Fall 2014, [Boulder High School][bhs], Design
   Technology): [Java] application to generate and visualize
   laser-cutter schematics for three-dimensional marble mazes.
@@ -220,11 +243,26 @@ development happened.
   [ClojureScript] webapp that did not require a huge number of
   incomprehensible build system configuration files that nobody quite
   understood. It almost worked.
+* [mood-tracker] (Spring 2017): Small [AppleScript] utility to record
+  data about personal mood at regular intervals. This project was
+  abandoned when I realized that trying to systematize everything in
+  my life was actually not making me happier.
 * [acc] (Summer 2017 -- Summer 2018): Command-line accounting tool
   with first-class support for reconciling multiple ledgers
   interactively. This project was abandoned when it was pointed out to
   me by a friend that I didn't actually have to track every single one
   of my financial transactions.
+* [Dotman] (Summer 2017 -- Summer 2018): A very silly idea I had to
+  write a unified package manager (with [Ruby] DSL) for my entire
+  system configuration (e.g. software installation, configuration,
+  dotfiles, misc scripts, etc.). This was abandoned when I realized I
+  could just manually write down what I did to configure my laptop. If
+  you actually want for declarative system configuration, you should
+  probably be using [Nix].
+* [elint] (Summer -- Fall 2017): An attempt at deduplicating various
+  [CI] utilities for my [Emacs] packages. It didn't provide enough
+  value to justify the overhead, although there are other projects
+  which provide the same functionality in a more powerful manner.
 * [etunes] (Fall 2017 -- Summer 2018): [Declarative],
   [version-controlled][version control] music library manager for
   [Emacs]. Attempt #1 at a personal music library manager.
@@ -238,10 +276,15 @@ development happened.
 
 ## Abandoned and on-hiatus projects
 
+* [space-grid] (Spring 2012): An attempt at a clone of the Flash game
+  [Star Relic] in [Python]. It didn't get very far, because I didn't
+  actually know any game programming.
 * [MazeGen Neue] (Summer 2016): An attempt to rewrite [MazeGen] to be
   slightly less of a mess. Unfortunately, I went much too far in the
   opposite direction and created some [Enterprise FizzBuzz], and the
   project was abandoned.
+* [dfa] (Spring 2016): A quickly-abandoned attempt to use [Clojure] to
+  generate [DFAs] using a [genetic algorithm].
 * [pset] (Fall 2017): Configurable templating system for university
   problem sets typeset in LaTeX.
 * [Ishikk] (Summer 2018): Read-write [Google Calendar] interface for
@@ -255,9 +298,12 @@ development happened.
   [Smartparens], [Paredit], and [Electric Pair
   mode][electric-pair-mode].
 
+[2048-game]: https://play2048.co/
+[2048]: https://github.com/raxod502/2048
 [acc]: https://github.com/raxod502/acc
 [alpine snowboards]: https://www.sgsnowboards.com/
 [apheleia]: https://github.com/raxod502/apheleia
+[applescript]: https://en.wikipedia.org/wiki/AppleScript
 [ben]: https://www.linkedin.com/in/ben-baral/
 [bhs]: https://boh.bvsd.org/Pages/default.aspx
 [blackout]: https://github.com/raxod502/blackout
@@ -270,6 +316,7 @@ development happened.
 [christmas rogue]: https://github.com/raxod502/ChristmasRogue
 [chrome-ext]: https://developer.chrome.com/extensions
 [chrono count]: https://github.com/raxod502/chrono-count
+[ci]: https://en.wikipedia.org/wiki/Continuous_integration
 [cie-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/CalculusIntuitiveExplanations/CalculusIntuitiveExplanations.tex
 [cie]: /math/calculus-intuitive-explanations
 [claremont colleges]: http://www.claremont.edu/
@@ -282,6 +329,7 @@ development happened.
 [clinic]: https://www.cs.hmc.edu/clinic/
 [clojure]: https://clojure.org/
 [clojurescript]: https://clojurescript.org/
+[complex numbers]: https://en.wikipedia.org/wiki/Complex_number
 [computer algebra system]: https://en.wikipedia.org/wiki/Computer_algebra_system
 [conway]: https://github.com/raxod502/conway
 [cortex.optimise]: https://github.com/raxod502/cortex/tree/master/examples/optimise
@@ -293,29 +341,36 @@ development happened.
 [delight.el]: https://elpa.gnu.org/packages/delight.html
 [dess-source]: https://github.com/raxod502/intuitive-explanations/blob/master/_src/tex/documents/DifferentialEquationSolutionStrategies/DifferentialEquationSolutionStrategies.tex
 [dess]: /math/differential-equation-solution-strategies
+[dfa]: https://github.com/raxod502/dfa
 [dfas]: https://en.wikipedia.org/wiki/Deterministic_finite_automaton
 [diary-manager]: https://github.com/raxod502/diary-manager
 [differential equations]: https://en.wikipedia.org/wiki/Differential_equation
 [dim.el]: https://github.com/alezost/dim.el
 [diminish.el]: https://github.com/myrjola/diminish.el
 [document class]: https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes
+[dotman]: https://github.com/raxod502/dotman/tree/e0ee7c8ba99477fd8c554a0757449b1ed6179fa4
 [dumbparens]: https://github.com/raxod502/dumbparens
 [dynamic programming]: https://en.wikipedia.org/wiki/Dynamic_programming
 [ecofasten]: https://ecofastensolar.com/
 [el-patch]: https://github.com/raxod502/el-patch
 [electric-pair-mode]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Matching.html
 [elf]: https://en.wikipedia.org/wiki/Executable_and_Linkable_Format
+[elint]: https://github.com/raxod502/elint
 [elisp]: https://en.wikipedia.org/wiki/Emacs_Lisp
 [emacs]: https://www.gnu.org/software/emacs/
 [emacsmirror]: https://emacsmirror.net/
 [empty]: https://github.com/raxod502/empty
 [enterprise fizzbuzz]: https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
 [etunes]: https://github.com/raxod502/etunes
+[example-website]: https://github.com/raxod502/example-website
 [exthdr]: https://en.wikipedia.org/wiki/IPv6_packet#Extension_headers
 [facebook messenger]: https://www.messenger.com/
 [flask]: https://flask.palletsprojects.com/en/1.1.x/
 [fstunes]: https://github.com/raxod502/fstunes
+[funwithframes]: https://github.com/raxod502/funwithframes
 [geb]: https://github.com/raxod502/github-email-backlog
+[generative art]: https://en.wikipedia.org/wiki/Generative_art
+[genetic algorithm]: https://en.wikipedia.org/wiki/Genetic_algorithm
 [gimp]: https://www.gimp.org/
 [git lfs]: https://git-lfs.github.com/
 [git]: https://git-scm.com/
@@ -348,8 +403,8 @@ development happened.
 [jekyll]: https://jekyllrb.com/
 [jflap autograder]: https://github.com/raxod502/HMC-Grader/blob/master/app/plugins/autograder/newjflapgrader.py
 [jflap]: http://www.jflap.org/
-[kalyn]: https://github.com/raxod502/kalyn
 [kalyn-post]: https://intuitiveexplanations.com/tech/kalyn
+[kalyn]: https://github.com/raxod502/kalyn
 [kenken]: https://en.wikipedia.org/wiki/KenKen
 [keren]: https://www.linkedin.com/in/keren-megory
 [kernel]: https://en.wikipedia.org/wiki/Linux_kernel
@@ -370,6 +425,7 @@ development happened.
 [make]: https://www.gnu.org/software/make/
 [map]: https://en.wikipedia.org/wiki/Associative_array
 [mathematica]: https://www.wolfram.com/mathematica/
+[mathviewers]: https://github.com/raxod502/MathViewers
 [max]: https://www.linkedin.com/in/max-treutelaar/
 [mazegen neue]: https://github.com/raxod502/MazeGenNeue
 [mazegen]: https://github.com/raxod502/MazeGen
@@ -379,18 +435,22 @@ development happened.
 [minimax]: https://en.wikipedia.org/wiki/Minimax
 [mla-tex]: https://github.com/raxod502/mla-tex
 [mla]: https://owl.english.purdue.edu/owl/resource/747/24/
+[mood-tracker]: https://github.com/raxod502/mood-tracker
+[mothers-day-2013]: https://github.com/raxod502/mothers-day-2013
 [n-body]: https://en.wikipedia.org/wiki/N-body_simulation
 [netlify]: https://www.netlify.com/
 [neural networks]: https://en.wikipedia.org/wiki/Artificial_neural_network
 [nfas]: https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton
+[nix]: https://nixos.org/
 [node.js]: https://nodejs.org/en/
 [paredit]: http://danmidwood.com/content/2014/11/21/animated-paredit.html
-[pib]: https://python-in-a-box.herokuapp.com/
 [pib-source]: https://github.com/raxod502/python-in-a-box
+[pib]: https://python-in-a-box.herokuapp.com/
 [pipenv]: https://pipenv.pypa.io/en/latest/
 [pm]: https://en.wikipedia.org/wiki/Package_manager
 [pmtud]: https://en.wikipedia.org/wiki/Path_MTU_Discovery
 [prescient.el]: https://github.com/raxod502/prescient.el
+[processing]: https://processing.org/
 [progfolio]: https://github.com/progfolio
 [projectile simulator]: https://github.com/raxod502/ProjectileSimulator
 [projectile-motion]: https://en.wikipedia.org/wiki/Projectile_motion
@@ -402,8 +462,8 @@ development happened.
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
 [repl.it]: https://repl.it/
 [rh0]: https://tools.ietf.org/html/rfc2460#section-4.4
-[riju]: https://riju.codes/
 [riju-source]: https://github.com/raxod502/riju
+[riju]: https://riju.codes/
 [roguelike]: https://en.wikipedia.org/wiki/Roguelike
 [ruby]: https://www.ruby-lang.org/en/
 [sat]: https://en.wikipedia.org/wiki/Boolean_satisfiability_problem
@@ -414,7 +474,10 @@ development happened.
 [signal]: https://signal.org/
 [smarter-playlist]: https://github.com/raxod502/smarter-playlist
 [smartparens]: https://github.com/Fuco1/smartparens
+[space-grid]: https://github.com/raxod502/space-grid
 [srh]: https://tools.ietf.org/html/rfc8754
+[star relic]: https://armorgames.com/play/5986/star-relic
+[static site]: https://en.wikipedia.org/wiki/Static_web_page
 [straight.el]: https://github.com/raxod502/straight.el
 [sudoku]: https://en.wikipedia.org/wiki/Sudoku
 [summit]: https://sum.bvsd.org/Pages/default.aspx
@@ -424,6 +487,9 @@ development happened.
 [tc-hn]: https://news.ycombinator.com/item?id=15460851
 [terraria]: https://terraria.org/
 [terrariaclone]: https://github.com/raxod502/TerrariaClone
+[tetris-processing]: https://github.com/raxod502/tetris-processing
+[tetris-python]: https://github.com/raxod502/tetris-python
+[tetris]: https://en.wikipedia.org/wiki/Tetris
 [ti-84-programs]: https://github.com/raxod502/TI84
 [ti-84]: https://en.wikipedia.org/wiki/TI-84_Plus_series#TI-84_Plus_Silver_Edition
 [tidier]: https://github.com/raxod502/tidier
@@ -438,6 +504,7 @@ development happened.
 [utunes]: https://github.com/raxod502/utunes
 [version control]: https://en.wikipedia.org/wiki/Version_control
 [votinglib]: https://github.com/raxod502/VotingLib
+[watching paint dry]: https://github.com/raxod502/Watching-Paint-Dry
 [wd]: https://github.com/mfaerevaag/wd
 [wdr-slides]: https://docs.google.com/presentation/d/1NTf-VUhs0jjtqVeny3gmdrZZ03Rbv8ZDsLrWiBvHYLk/edit?usp=sharing
 [wdr-source]: https://github.com/raxod502/cs121-hello
