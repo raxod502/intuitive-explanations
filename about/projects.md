@@ -23,6 +23,9 @@ development happened.
   Attempt #4 at a personal music library manager.
 * Veidt (Summer 2021 -- Present; not yet published): Online [webcomic]
   aggregator, reader, and notification service.
+* osscount (Fall 2021 -- Present; not yet published): [Python]
+  application to generate fun graphs and metrics about the composition
+  of my (and your) open-source work.
 
 ## Emacs projects
 
