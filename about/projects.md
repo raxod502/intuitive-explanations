@@ -99,6 +99,11 @@ development happened.
   report an issue.
 * [Python in a Box][pib] (Summer 2021; [source][pib-source]):
   Interactive online Python REPL in 30 lines of JavaScript.
+* [Messenger Mirror][mm] (Fall 2021): Small [Python] application using
+  [Selenium] to bypass Facebook Messenger's anti-bot protections and
+  allow message notifications to be automatically forwarded to email.
+  Part of my initiative to stop using the products of companies I
+  despise.
 
 ## Writing
 
@@ -438,6 +443,7 @@ development happened.
 [minimax]: https://en.wikipedia.org/wiki/Minimax
 [mla-tex]: https://github.com/raxod502/mla-tex
 [mla]: https://owl.english.purdue.edu/owl/resource/747/24/
+[mm]: https://github.com/raxod502/messenger-mirror
 [mood-tracker]: https://github.com/raxod502/mood-tracker
 [mothers-day-2013]: https://github.com/raxod502/mothers-day-2013
 [n-body]: https://en.wikipedia.org/wiki/N-body_simulation
@@ -472,6 +478,7 @@ development happened.
 [sat]: https://en.wikipedia.org/wiki/Boolean_satisfiability_problem
 [science-fair]: https://github.com/raxod502/ScienceFair
 [selectrum]: https://github.com/raxod502/selectrum
+[selenium]: https://www.selenium.dev/
 [sg-puzzles]: http://mathworld.wolfram.com/Slothouber-GraatsmaPuzzle.html
 [shannon]: https://www.linkedin.com/in/shannon-collier-631392149/
 [signal]: https://signal.org/
