@@ -39,6 +39,9 @@
 /wip/tooling/shells https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/shells.md
 /wip/tooling/unix https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/unix.md
 
+# Matrix
+/.well-known/matrix/* https://matrix.intuitiveexplanations.com/.well-known/matrix/:splat 200!
+
 # Local Variables:
 # mode: conf
 # End:
