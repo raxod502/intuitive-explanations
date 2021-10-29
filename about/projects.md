@@ -20,7 +20,7 @@ development happened.
   library player combining the user-friendly interface and
   cross-device synchronization of [YouTube Music][ytm] with the
   flexibility and ownership of a self-hosted open-source solution.
-  Attempt #4 at a personal music library manager.
+  Attempt #5 at a personal music library manager.
 * Veidt (Summer 2021 -- Present; not yet published): Online [webcomic]
   aggregator, reader, and notification service.
 * osscount (Fall 2021 -- Present; not yet published): [Python]
@@ -281,6 +281,9 @@ development happened.
   command-line music player and library manager following the [UNIX
   philosophy], with [Emacs] interface. Attempt #3 at a personal music
   library manager.
+* [Pyrelight] (Spring -- Summer 2020): More sophisticated command-line
+  music player and library manager. Attempt #4 at a personal music
+  library manager.
 
 ## Abandoned and on-hiatus projects
 
@@ -465,6 +468,7 @@ development happened.
 [projectile-motion]: https://en.wikipedia.org/wiki/Projectile_motion
 [pset]: https://github.com/raxod502/pset
 [puzzles]: https://github.com/raxod502/puzzles
+[pyrelight]: https://github.com/raxod502/pyrelight
 [python]: https://www.python.org/
 [quantcast]: https://www.quantcast.com/
 [radian]: https://github.com/raxod502/radian
