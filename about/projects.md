@@ -104,6 +104,10 @@ development happened.
   allow message notifications to be automatically forwarded to email.
   Part of my initiative to stop using the products of companies I
   despise.
+* [Unzuckify] (Winter 2021): Small [Python] application using
+  reverse-engineered Facebook login and GraphQL APIs to exfiltrate
+  message notifications and forward them to email. Replaces Messenger
+  Mirror after Facebook blocked my VPS IP address.
 
 ## Writing
 
@@ -514,6 +518,7 @@ development happened.
 [turing machines]: https://en.wikipedia.org/wiki/Turing_machine
 [unix filesystem]: https://en.wikipedia.org/wiki/Unix_filesystem
 [unix philosophy]: https://en.wikipedia.org/wiki/Unix_philosophy
+[unzuckify]: https://github.com/raxod502/unzuckify
 [upm]: https://github.com/replit/upm
 [utunes]: https://github.com/raxod502/utunes
 [version control]: https://en.wikipedia.org/wiki/Version_control
