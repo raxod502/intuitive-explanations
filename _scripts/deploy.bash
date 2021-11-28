@@ -32,7 +32,7 @@ echo "Deploying..."
 curl -H "Content-Type: application/zip" \
      -H "Authorization: Bearer ${NETLIFY_KEY}" \
      --data-binary @"${zipfile}" \
-     https://api.netlify.com/api/v1/sites/intuitive-explanations.netlify.com/deploys
+     "https://api.netlify.com/api/v1/sites/${SITE:-intuitive-explanations}.netlify.com/deploys"
 
 rm -rf "$tmpdir"
 
