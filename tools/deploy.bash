@@ -23,7 +23,7 @@ fi
 
 tmpdir="$(mktemp -d "${TMPDIR:-/tmp}/intuitive-explanations.XXXXXX")"
 zipfile="${tmpdir}/site.zip"
-pushd _site
+pushd out
 zip -r "$zipfile" .
 popd >/dev/null
 
