@@ -3,6 +3,10 @@
 set -e
 set -o pipefail
 
+if [[ -f .env ]]; then
+    source .env
+fi
+
 die() {
     echo "deploy.bash: fatal: $1" 1>&2
     exit 1

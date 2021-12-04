@@ -8,6 +8,7 @@
 *.snm
 *.toc
 *.xdv
+.env
 auto
 node_modules
 out
