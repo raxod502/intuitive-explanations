@@ -21,11 +21,11 @@ dev: tex resume stories xcf serve ## Fully build website and then run dev server
 
 .PHONY: serve
 serve: ## Run developer server
-	rm -rf out && npx eleventy --serve --port=$(PORT)
+	npx eleventy --serve --port=$(PORT)
 
 .PHONY: build
 build: ## Build main website content
-	rm -rf out && npx eleventy
+	npx eleventy
 
 .PHONY: tex
 tex: ## Compile LaTeX
