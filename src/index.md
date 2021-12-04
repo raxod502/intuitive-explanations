@@ -6,17 +6,23 @@ Hi, I'm Radon and this is my personal website.
 
 ## Navigation
 
-* [About me](about/me)
+Main features:
+
 * [My personal projects](about/projects)
 * [My technical blog](tech)
 * [My writing about math](math)
-* [My thoughts on mental health](mental-health/students-speak)
-* [My fiction writing](fiction)
 * [My puzzle hunt](puzzles)
-* [About this site](about/site)
+* [My resume](/assets/Resume.pdf)
+* [About me](/about/me)
+* [About this site](/about/site)
 
-## Quick links
+Perhaps also of interest:
+
+* [My fiction writing](fiction)
+* [My thoughts on mental health](mental-health/students-speak)
+
+## External links
 
 * [GitHub](https://github.com/raxod502)
-  * [Source code](https://github.com/raxod502/intuitive-explanations)
+  * [Website source code](https://github.com/raxod502/intuitive-explanations)
 * [Resume](/assets/Resume.pdf)

@@ -5,16 +5,16 @@
       "url": "/about/projects"
     },
     {
+      "title": "Blog",
+      "url": "/tech"
+    },
+    {
       "title": "Math",
       "url": "/math"
     },
     {
-      "title": "Tech",
-      "url": "/tech"
-    },
-    {
-      "title": "Fiction",
-      "url": "/fiction"
+      "title": "Puzzles",
+      "url": "/puzzles"
     },
     {
       "title": "Resume",
