@@ -1,6 +1,6 @@
-[submodule "_src/resume"]
-	path = _src/resume
+[submodule "doc/resume"]
+	path = doc/resume
 	url = git@gitlab.com:raxod502/resume.git
-[submodule "_src/stories"]
-	path = _src/stories
-	url = git@gitlab.com:raxod502/fiction-writing.git
+[submodule "doc/stories"]
+	path = doc/stories
+	url = git@gitlab.com:raxod502/stories.git

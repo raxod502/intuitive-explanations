@@ -2,23 +2,22 @@
 /projects /about/projects
 
 # Files that still exist
-/files/CalcBowl.pdf /CalculusBowlExpertEdition.pdf
-/files/CalculusTextbookCover.pdf https://github.com/raxod502/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf
-/files/ChronoCountDetails.pdf https://github.com/raxod502/chrono-count/blob/b08480eff49f6e3b66ae32fe3bb4afe39dc0ce7a/ChronoCountDetails.pdf
-/files/DifferentialEquationSolutionStrategies.pdf /DifferentialEquationSolutionStrategies.pdf
-/files/ExistenceUniquenessTheorem.pdf /PicardLindelofTheorem.pdf
-/files/Intuition /CalculusIntuitiveExplanations.pdf
-/files/Intuition.pdf /CalculusIntuitiveExplanations.pdf
-/files/IntuitiveExplanations.pdf /CalculusIntuitiveExplanations.pdf
-/files/LinearAlgebraSummarySheet.pdf /LinearAlgebraSummarySheet.pdf
-/files/ProbabilityDistributionProofs.pdf /ProbabilityDistributionsMeansAndVariances.pdf
-
 /CalculusBowlExpertEdition.pdf /assets/CalculusBowlExpertEdition.pdf
 /CalculusIntuitiveExplanations.pdf /assets/CalculusIntuitiveExplanations.pdf
 /DifferentialEquationSolutionStrategies.pdf /assets/DifferentialEquationSolutionStrategies.pdf
 /LinearAlgebraSummarySheet.pdf /assets/LinearAlgebraSummarySheet.pdf
 /PicardLindelofTheorem.pdf /assets/PicardLindelofTheorem.pdf
 /ProbabilityDistributionsMeansAndVariances.pdf /assets/ProbabilityDistributionsMeansAndVariances.pdf
+/files/CalcBowl.pdf /CalculusBowlExpertEdition.pdf
+/files/CalculusTextbookCover.pdf https://github.com/raxod502/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf
+/files/ChronoCountDetails.pdf https://github.com/raxod502/chrono-count/blob/b08480eff49f6e3b66ae32fe3bb4afe39dc0ce7a/ChronoCountDetails.pdf
+/files/DifferentialEquationSolutionStrategies.pdf /assets/DifferentialEquationSolutionStrategies.pdf
+/files/ExistenceUniquenessTheorem.pdf /assets/PicardLindelofTheorem.pdf
+/files/Intuition /assets/CalculusIntuitiveExplanations.pdf
+/files/Intuition.pdf /assets/CalculusIntuitiveExplanations.pdf
+/files/IntuitiveExplanations.pdf /assets/CalculusIntuitiveExplanations.pdf
+/files/LinearAlgebraSummarySheet.pdf /assets/LinearAlgebraSummarySheet.pdf
+/files/ProbabilityDistributionProofs.pdf /assets/ProbabilityDistributionsMeansAndVariances.pdf
 
 # Files that no longer exist
 /assets/ftc-graph.png /wip/integration/
@@ -26,11 +25,32 @@
 /assets/ftc-graph-lines-labeled.png /wip/integration/
 /assets/ftc-graph-lines-many.png /wip/integration/
 /files/LaTeXSource.zip https://github.com/raxod502/intuitive-explanations/tree/8fed15eb6aeeb1c8f373af4f0d434316c557c71c/_src/tex
-/wip/ https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/index.md
+
+# Pages that still exist
+/about-this-site /about/site
+/calculus-bowl /math/calculus-bowl-expert-edition
+/calculus-bowl-expert-edition /math/calculus-bowl-expert-edition
+/calculus-intuitive-explanations /math/calculus-intuitive-explanations
+/differential-equation-solution-strategies /math/differential-equation-solution-strategies
+/differential-equations-solution-strategies /math/differential-equation-solution-strategies
+/existence-uniqueness-theorem /math/picard-lindelof-theorem
+/files /
+/intuitive-explanations /math/calculus-intuitive-explanations
+/linear-algebra-summary-sheet /math/linear-algebra-summary-sheet
+/other-projects /about/projects
+/page/1 /
+/picard-lindelof-theorem /math/picard-lindelof-theorem
+/post /
+/post/page/1 /
+/probability-distributions-means-and-variances /math/probability-distributions-means-and-variances
+/probability-distributions-proofs /math/probability-distributions-means-and-variances
+
+# Pages that no longer exist
+/wip https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/index.md
 /wip/etug https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/etug.md
 /wip/integration https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/integration.md
 /wip/limits https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/limits.md
-/wip/tooling/ https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/index.md
+/wip/tooling https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/index.md
 /wip/tooling/boot https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/boot.md
 /wip/tooling/filesystems https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/filesystems.md
 /wip/tooling/packages https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/packages.md
@@ -43,5 +63,5 @@
 /.well-known/matrix/* https://matrix.intuitiveexplanations.com/.well-known/matrix/:splat 200!
 
 # Local Variables:
-# mode: conf
+# mode: conf-space
 # End:

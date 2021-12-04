@@ -1,0 +1,57 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Intuitive Explanations</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">
+            Radon Rosborough
+          </li>
+          <li><a class="u-email" href="mailto:radon.neon@gmail.com">radon.neon@gmail.com</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          <li><a href="https://github.com/raxod502"><svg class="svg-icon grey"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg><span class="username">raxod502</span></a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Understand, don't memorize.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+   styles: {
+     ".MathJax .normal": {
+       // These styles should be the same as those applied to
+       // the main text of the site.
+       "color": "#111 !important",
+       "font-family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default; !important",
+       "font-size": "16px !important",
+     },
+   },
+   TeX: {
+     Macros: {
+       n: ["\\class{normal}{\\text{#1}}", 1],
+     },
+   },
+   tex2jax: {
+     inlineMath: [['$','$'], ['\\(','\\)']],
+   },
+ });
+</script>
+{% if jekyll.environment == "production" %}
+<script src="https://cdn.usefathom.com/script.js" site="OPNDVMZW" defer></script>
+{% endif %}

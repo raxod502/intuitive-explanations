@@ -1,10 +1,8 @@
 PORT ?= 4000
-HOST ?= 127.0.0.1
 
 LATEX := latexmk -cd -pdfxe -interaction=nonstopmode
-JEKYLL := bundle exec jekyll
 
-LATEX_DOCS := $(wildcard _src/tex/documents/*/*.tex)
+LATEX_DOCS := $(wildcard doc/tex/documents/*/*.tex)
 
 .PHONY: help
 help: ## Show this message
@@ -23,11 +21,11 @@ dev: tex resume stories xcf serve ## Fully build website and then run dev server
 
 .PHONY: serve
 serve: ## Run developer server
-	$(JEKYLL) serve --port=$(PORT) --host=$(HOST)
+	rm -rf out && npx eleventy --serve --port=$(PORT)
 
 .PHONY: build
 build: ## Build main website content
-	JEKYLL_ENV=production $(JEKYLL) build
+	rm -rf out && npx eleventy
 
 .PHONY: tex
 tex: ## Compile LaTeX
@@ -35,48 +33,48 @@ tex: ## Compile LaTeX
 
 .PHONY: placeholder
 placeholder: ## Compile placeholder document
-	$(LATEX) _src/placeholder/Placeholder.tex
+	$(LATEX) doc/placeholder/Placeholder.tex
 
 .PHONY: resume
 resume: ## Compile resume
-	if [ -e _src/resume/.git ]; then							\
-		make -C _src/resume resume-public.pdf;						\
+	if [ -e doc/resume/.git ]; then								\
+		make -C doc/resume resume-public.pdf;						\
 	else											\
 		make placeholder;								\
-		ln -s ../placeholder/Placeholder.pdf _src/resume/resume-public.pdf;		\
+		ln -s ../placeholder/Placeholder.pdf doc/resume/resume-public.pdf;		\
 	fi
 
 .PHONY: stories
 stories: ## Compile Fiction Writing stories
-	if [ -e _src/stories/.git ]; then								\
-		make -C _src/stories;									\
+	if [ -e doc/stories/.git ]; then								\
+		make -C doc/stories;									\
 	else												\
 		make placeholder;									\
-		mkdir -p _src/stories/lipogram _src/stories/roundone _src/stories/roundtwo;		\
-		ln -s ../../placeholder/Placeholder.pdf _src/stories/lipogram/OpportunityForStudy.pdf;	\
-		ln -s ../../placeholder/Placeholder.pdf _src/stories/roundone/TheGarden.pdf;		\
-		ln -s ../../placeholder/Placeholder.pdf _src/stories/roundtwo/NewYearsDay.pdf;		\
+		mkdir -p doc/stories/lipogram doc/stories/roundone doc/stories/roundtwo;		\
+		ln -s ../../placeholder/Placeholder.pdf doc/stories/lipogram/OpportunityForStudy.pdf;	\
+		ln -s ../../placeholder/Placeholder.pdf doc/stories/roundone/TheGarden.pdf;		\
+		ln -s ../../placeholder/Placeholder.pdf doc/stories/roundtwo/NewYearsDay.pdf;		\
 	fi
 
 .PHONY: xcf
 xcf: ## Compile XCF images
-	_scripts/convert-xcf.bash
+	tools/convert-xcf.bash
 
 .PHONY: checklinks
 checklinks: ## Check link anchors in Markdown files
-	python3 _scripts/check_links.py
+	python3 tools/check_links.py
 
 .PHONY: clean
 clean: ## Remove build artifacts
 	git ls-files --others --ignored --exclude-standard 	\
-		| grep -v '^_vendor/'				\
+		| grep -v '^node_modules/'			\
 		| xargs rm -v					\
 		| sed 's/^/Removed: /'
 
 .PHONY: deploy
 deploy: ## Deploy website to Netlify
-	_scripts/deploy.bash
+	tools/deploy.bash
 
 .PHONY: docker
 docker: ## Start a Docker shell
-	@_scripts/docker.bash "$(CMD)"
+	tools/docker-run.bash "$(CMD)"

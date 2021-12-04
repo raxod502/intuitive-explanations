@@ -1,0 +1,6 @@
+# Ignore everything except the install script. This is because we do
+# not deploy the Docker image anywhere, so it does not have to have
+# any code or assets embedded into it, only the dependencies to run
+# tooling with the source code on a shared volume.
+*
+!tools/docker-install.bash

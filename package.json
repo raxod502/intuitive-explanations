@@ -1,0 +1,19 @@
+{
+  "name": "intuitive-explanations",
+  "version": "0.1.0",
+  "description": "Personal website",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raxod502/intuitive-explanations.git"
+  },
+  "author": "Radon Rosborough <radon.neon@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raxod502/intuitive-explanations/issues"
+  },
+  "homepage": "https://github.com/raxod502/intuitive-explanations",
+  "private": true,
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}

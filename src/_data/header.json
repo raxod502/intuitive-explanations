@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "title": "Projects",
+      "url": "/about/projects"
+    },
+    {
+      "title": "Math",
+      "url": "/math"
+    },
+    {
+      "title": "Tech",
+      "url": "/tech"
+    },
+    {
+      "title": "Fiction",
+      "url": "/fiction"
+    },
+    {
+      "title": "Resume",
+      "url": "/assets/Resume.pdf"
+    },
+    {
+      "title": "About",
+      "url": "/about"
+    }
+  ]
+}
