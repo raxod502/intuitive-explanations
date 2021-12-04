@@ -17,7 +17,7 @@ welcome contributions!
 
 I write web content in
 [Markdown](https://www.markdownguide.org/getting-started), and use a
-*static site generator* called [Jekyll](https://jekyllrb.com/) to
+*static site generator* called [Eleventy](https://www.11ty.dev/) to
 transform it into HTML with the aid of the
 [Liquid](https://shopify.github.io/liquid/) template language.
 
