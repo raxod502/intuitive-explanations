@@ -13,3 +13,4 @@ auto
 node_modules
 out
 !assets/*
+!doc/tex/documents/CalculusIntuitiveExplanations/data/*
