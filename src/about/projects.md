@@ -119,8 +119,8 @@ development happened.
   [source][lass-source]): Quick reference for important [linear
   algebra] theorems, grouped so that making connections is easy.
 * [`intuitiveexplanations.com`][ie] (Spring 2017 -- Present): Personal
-  website built on [Travis CI/CD][travis] using [Make], [Jekyll],
-  [LaTeX], [GIMP] and hosted on [Netlify].
+  website built on [GitHub Actions][gha] using [Make], [Eleventy],
+  [LaTeX], and hosted on [Netlify].
 * [mla-tex] (Spring 2017 -- Fall 2018): [LaTeX][latex] [document
   class] for typesetting papers to [MLA] formatting standards.
 * [example-website] (Summer 2020): Simple template to set up a [static
@@ -332,6 +332,7 @@ development happened.
 [ci]: https://en.wikipedia.org/wiki/Continuous_integration
 [cie-source]: https://github.com/raxod502/intuitive-explanations/blob/master/doc/tex/documents/CalculusIntuitiveExplanations/CalculusIntuitiveExplanations.tex
 [cie]: /math/calculus-intuitive-explanations
+[circleci]: https://circleci.com/
 [claremont colleges]: http://www.claremont.edu/
 [clemera]: https://github.com/clemera
 [clinic-bench-id]: https://github.com/raxod502/juniper-tools/blob/master/benchmarking/draft/final.pdf
@@ -367,6 +368,7 @@ development happened.
 [ecofasten]: https://ecofastensolar.com/
 [el-patch]: https://github.com/raxod502/el-patch
 [electric-pair-mode]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Matching.html
+[eleventy]: https://11ty.dev/
 [elf]: https://en.wikipedia.org/wiki/Executable_and_Linkable_Format
 [elint]: https://github.com/raxod502/elint
 [elisp]: https://en.wikipedia.org/wiki/Emacs_Lisp
@@ -384,7 +386,7 @@ development happened.
 [geb]: https://github.com/raxod502/github-email-backlog
 [generative art]: https://en.wikipedia.org/wiki/Generative_art
 [genetic algorithm]: https://en.wikipedia.org/wiki/Genetic_algorithm
-[gimp]: https://www.gimp.org/
+[gha]: https://github.com/features/actions
 [git lfs]: https://git-lfs.github.com/
 [git]: https://git-scm.com/
 [github-notifications]: https://developer.github.com/v3/activity/notifications/
@@ -413,7 +415,6 @@ development happened.
 [ishikk]: https://github.com/raxod502/ishikk
 [ivy]: https://github.com/abo-abo/swiper#ivy
 [java]: https://www.java.com/
-[jekyll]: https://jekyllrb.com/
 [jflap autograder]: https://github.com/raxod502/HMC-Grader/blob/master/app/plugins/autograder/newjflapgrader.py
 [jflap]: http://www.jflap.org/
 [kalyn-post]: https://intuitiveexplanations.com/tech/kalyn
@@ -512,7 +513,6 @@ development happened.
 [tikz]: https://en.wikipedia.org/wiki/PGF/TikZ
 [tkinter]: https://docs.python.org/3/library/tkinter.html
 [tmux]: https://tmux.github.io/
-[travis]: https://travis-ci.org/
 [turing machines]: https://en.wikipedia.org/wiki/Turing_machine
 [unix filesystem]: https://en.wikipedia.org/wiki/Unix_filesystem
 [unix philosophy]: https://en.wikipedia.org/wiki/Unix_philosophy
