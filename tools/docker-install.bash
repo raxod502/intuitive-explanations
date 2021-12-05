@@ -16,9 +16,6 @@ bsdmainutils
 # for installing eleventy
 npm
 
-# for converting XCF to PNG
-gimp
-
 # compiling latex
 texlive
 texlive-xetex

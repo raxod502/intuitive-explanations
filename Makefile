@@ -14,10 +14,10 @@ help: ## Show this message
 		column -t -s'|' >&2
 
 .PHONY: all
-all: tex resume stories xcf build ## Fully build website
+all: tex resume stories build ## Fully build website
 
 .PHONY: dev
-dev: tex resume stories xcf serve ## Fully build website and then run dev server
+dev: tex resume stories serve ## Fully build website and then run dev server
 
 .PHONY: serve
 serve: ## Run developer server
@@ -55,10 +55,6 @@ stories: ## Compile Fiction Writing stories
 		ln -s ../../placeholder/Placeholder.pdf doc/stories/roundone/TheGarden.pdf;		\
 		ln -s ../../placeholder/Placeholder.pdf doc/stories/roundtwo/NewYearsDay.pdf;		\
 	fi
-
-.PHONY: xcf
-xcf: ## Compile XCF images
-	tools/convert-xcf.bash
 
 .PHONY: checklinks
 checklinks: ## Check link anchors in Markdown files
