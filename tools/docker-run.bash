@@ -20,9 +20,9 @@ if [[ -z "${NO_BUILD:-}" ]]; then
     "${docker_build[@]}"
 fi
 
-it=
+it=()
 if [[ -t 1 ]]; then
-    it="-it"
+    it=("${it[@]}" "-it")
 fi
 
 cmd=(
