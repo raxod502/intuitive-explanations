@@ -27,7 +27,7 @@ fi
 
 cmd=(
     "${docker[@]}" run --rm "${it[@]}" -v "${repo}:/src" -w /src --network=host
-    -e NETLIFY_KEY --entrypoint=/src/tools/docker-pid1.bash
+    -e NETLIFY_KEY -e ENABLE_ANALYTICS --entrypoint=/src/tools/docker-pid1.bash
     intuitive-explanations "${cmd_args[@]}"
 )
 

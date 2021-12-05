@@ -25,4 +25,4 @@ jobs:
         env:
           NETLIFY_KEY: ${{ secrets.NETLIFY_KEY }}
         run: |
-          make docker CMD="make checklinks all deploy JEKYLL_ENV=production"
+          make docker CMD="make checklinks all deploy ENABLE_ANALYTICS=1"

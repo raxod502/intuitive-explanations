@@ -52,6 +52,6 @@
    },
  });
 </script>
-{% if jekyll.environment == "production" %}
+{% if env.ENABLE_ANALYTICS %}
 <script src="https://cdn.usefathom.com/script.js" site="OPNDVMZW" defer></script>
 {% endif %}
