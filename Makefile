@@ -63,9 +63,8 @@ checklinks: ## Check link anchors in Markdown files
 .PHONY: clean
 clean: ## Remove build artifacts
 	git ls-files --others --ignored --exclude-standard 	\
-		| grep -v '^node_modules/'			\
-		| xargs rm -v					\
-		| sed 's/^/Removed: /'
+		| grep -Ev '^(node_modules|\.env)'		\
+		| xargs rm -v
 
 .PHONY: deploy
 deploy: ## Deploy website to Netlify

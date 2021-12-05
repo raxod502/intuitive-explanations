@@ -12,3 +12,4 @@
 auto
 node_modules
 out
+!assets/*
