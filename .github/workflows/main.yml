@@ -18,8 +18,8 @@ jobs:
           FICTION_WRITING: ${{ secrets.CLONE_URL_FICTION_WRITING }}
           RESUME: ${{ secrets.CLONE_URL_RESUME }}
         run: |
-          git config -f .gitmodules submodule._src/resume.url "${RESUME}"
-          git config -f .gitmodules submodule._src/stories.url "${FICTION_WRITING}"
+          git config -f .gitmodules submodule.doc/resume.url "${RESUME}"
+          git config -f .gitmodules submodule.doc/stories.url "${FICTION_WRITING}"
           git submodule update --init --recursive
       - name: Build and deploy
         env:

@@ -3,8 +3,8 @@
 set -e
 set -o pipefail
 
-raw=_src/xcf/raw
-out=_src/xcf/out
+raw=doc/xcf/raw
+out=doc/xcf/out
 
 readarray -t raw_names < <(ls "$raw" 2>/dev/null)
 readarray -t out_names < <(ls "$out" 2>/dev/null)
