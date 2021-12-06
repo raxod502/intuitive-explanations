@@ -183,14 +183,13 @@ development happened.
 ## School projects
 
 * [Science fair project][science-fair] (Fall 2011 -- Spring 2012,
-  [Summer Middle School][summit]): [Boolean satisfiability
+  [Summit Middle School][summit]): [Boolean satisfiability
   solver][sat] applied to [Sudoku] solving.
 * [Hangman 2 2 3 2][hangman2232] (Spring 2013, [Boulder High
   School][bhs], Advanced C++): Class project. [iOS] app that plays
   [hangman] or, depending on usage, the stock market.
 * [Projectile Simulator] (Fall 2013, [Boulder High School][bhs], AP
-  Physics C): Class project. Hacky [Python] GUI in
-  [Tkinter](https://docs.python.org/3/library/tkinter.html) to solve
+  Physics C): Class project. Hacky [Python] GUI in [Tkinter] to solve
   arbitrary [2D kinematics][projectile-motion] problems interactively.
 * [MathViewers] (Summer -- Winter 2014): Various programming projects
   for math classes: [generative art], [complex arithmetic][complex
@@ -213,7 +212,7 @@ development happened.
   assuming voter satisfaction can be modeled as a high-dimensional
   Eucliean distance metric.
 * [whales.life] (Spring 2019, [Harvey Mudd College][hmc], CS 121:
-  Software Development; [source](whales.life-source)): Simple webapp
+  Software Development; [source][whales.life-source]): Simple webapp
   for playing [chess] against an AI using [minimax] and [neural
   networks]. *Teammates: [Ben Baral][ben], [Max Treutelaar][max],
   [Miles President][miles], [Shannon Collier][shannon].*
@@ -240,7 +239,7 @@ development happened.
   *Teammates: [Bradley Newton][bradley], [Hakan Alpan][hakan], [Miles
   President][miles].*
 * [Life After Mudd][lam] (Winter 2019 -- Spring 2020, [Harvey Mudd
-  College][hmc], CS 189: Programming Practicum; [source](lam-source)):
+  College][hmc], CS 189: Programming Practicum; [source][lam-source]):
   Geographic visualization webapp for results of a survey on
   post-graduation plans for the Class of 2020. *Current maintainer:
   [Kye Shi][kye].*
@@ -318,7 +317,7 @@ development happened.
 [apheleia]: https://github.com/raxod502/apheleia
 [applescript]: https://en.wikipedia.org/wiki/AppleScript
 [ben]: https://www.linkedin.com/in/ben-baral/
-[bhs]: https://boh.bvsd.org/Pages/default.aspx
+[bhs]: https://boh.bvsd.org/
 [blackout]: https://github.com/raxod502/blackout
 [bradley]: https://www.linkedin.com/in/bnew10/
 [brogue]: https://sites.google.com/site/broguegame/
@@ -493,7 +492,7 @@ development happened.
 [smartparens]: https://github.com/Fuco1/smartparens
 [space-grid]: https://github.com/raxod502/space-grid
 [srh]: https://tools.ietf.org/html/rfc8754
-[star relic]: https://armorgames.com/play/5986/star-relic
+[star relic]: http://www.ifgdb.com/play/star-relic/
 [static site]: https://en.wikipedia.org/wiki/Static_web_page
 [straight.el]: https://github.com/raxod502/straight.el
 [sudoku]: https://en.wikipedia.org/wiki/Sudoku
@@ -511,6 +510,7 @@ development happened.
 [ti-84]: https://en.wikipedia.org/wiki/TI-84_Plus_series#TI-84_Plus_Silver_Edition
 [tidier]: https://github.com/raxod502/tidier
 [tikz]: https://en.wikipedia.org/wiki/PGF/TikZ
+[tkinter]: https://docs.python.org/3/library/tkinter.html
 [tkinter]: https://docs.python.org/3/library/tkinter.html
 [tmux]: https://tmux.github.io/
 [turing machines]: https://en.wikipedia.org/wiki/Turing_machine

@@ -25,13 +25,15 @@ setTimeout(() => {
   };
 }, 0);
 
+const anchor = require("markdown-it-anchor");
+
 module.exports = (eleventyConfig) => {
   eleventyConfig.setLibrary(
     "md",
     require("markdown-it")({
       html: true,
       typographer: true,
-    })
+    }).use(anchor)
   );
 
   for (const path of ["assets", "css", "favicons", "js"]) {
