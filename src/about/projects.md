@@ -511,7 +511,6 @@ development happened.
 [tidier]: https://github.com/raxod502/tidier
 [tikz]: https://en.wikipedia.org/wiki/PGF/TikZ
 [tkinter]: https://docs.python.org/3/library/tkinter.html
-[tkinter]: https://docs.python.org/3/library/tkinter.html
 [tmux]: https://tmux.github.io/
 [turing machines]: https://en.wikipedia.org/wiki/Turing_machine
 [unix filesystem]: https://en.wikipedia.org/wiki/Unix_filesystem
