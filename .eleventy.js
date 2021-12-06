@@ -26,6 +26,7 @@ setTimeout(() => {
 }, 0);
 
 const anchor = require("markdown-it-anchor");
+const toc = require("markdown-toc");
 
 module.exports = (eleventyConfig) => {
   eleventyConfig.setLibrary(
@@ -33,7 +34,10 @@ module.exports = (eleventyConfig) => {
     require("markdown-it")({
       html: true,
       typographer: true,
-    }).use(anchor)
+    }).use(anchor, {
+      // GitHub compatible heading slugs that don't look awful
+      slugify: toc.slugify,
+    })
   );
 
   for (const path of ["assets", "css", "favicons", "js"]) {

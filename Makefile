@@ -58,7 +58,7 @@ stories: ## Compile Fiction Writing stories
 
 .PHONY: checklinks
 checklinks: ## Check link anchors in Markdown files
-	python3 tools/check_links.py
+	python3 tools/check_internal_links.py
 
 .PHONY: clean
 clean: ## Remove build artifacts
