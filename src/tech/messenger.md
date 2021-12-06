@@ -2580,7 +2580,8 @@ otid = epoch + random.randrange(2 ** 22)
 
 At long last, we can add this code to Messyger and have a fully(?)
 functioning Messenger client that can fetch our list of conversations,
-and send a text message to any one of them.
+and send a text message to any one of them. The full code is [on
+GitHub](https://github.com/raxod502/messyger).
 
 ## What next?
 
