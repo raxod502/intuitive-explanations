@@ -1,6 +1,7 @@
 ---
 title: |
   Reverse engineering the Facebook Messenger API
+date: 2021-12-06
 ---
 
 I recently had occasion to reverse engineer the [Facebook

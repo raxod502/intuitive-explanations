@@ -1,6 +1,7 @@
 ---
 title: |
   How Replit used legal threats to kill my open-source project
+date: 2021-07-13
 ---
 
 <link href="/css/replit.css" rel="stylesheet">

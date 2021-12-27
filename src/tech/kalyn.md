@@ -1,5 +1,6 @@
 ---
 title: 'Kalyn: a self-hosting compiler for x86-64'
+date: 2020-05-21
 ---
 ![Module flow chart for Kalyn](/assets/kalyn-module-map.png)
 

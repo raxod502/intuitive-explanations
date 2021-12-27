@@ -26,3 +26,5 @@ Perhaps also of interest:
 * [GitHub](https://github.com/raxod502)
   * [Website source code](https://github.com/raxod502/intuitive-explanations)
 * [Resume](/assets/Resume.pdf)
+
+RSS feed at [https://intuitiveexplanations.com/feed.xml](/feed.xml).
