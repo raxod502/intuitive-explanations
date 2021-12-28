@@ -266,7 +266,7 @@ development happened.
   system configuration (e.g. software installation, configuration,
   dotfiles, misc scripts, etc.). This was abandoned when I realized I
   could just manually write down what I did to configure my laptop. If
-  you actually want for declarative system configuration, you should
+  you actually want declarative system configuration, you should
   probably be using [Nix].
 * [elint] (Summer -- Fall 2017): An attempt at deduplicating various
   [CI] utilities for my [Emacs] packages. It didn't provide enough
