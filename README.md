@@ -22,17 +22,19 @@ installed. Run:
 
     $ make help
     usage:
-      make help    Show this message
-      make all     Fully build website
-      make dev     Fully build website and then run dev server
-      make serve   Run developer server
-      make build   Build main website content
-      make tex     Compile LaTeX
-      make resume  Compile resume
-      make xcf     Compile XCF images
-      make clean   Remove build artifacts
-      make deploy  Deploy website to Netlify
-      make docker  Start a Docker shell
+      make help         Show this message
+      make all          Fully build website
+      make dev          Fully build website and then run dev server
+      make serve        Run developer server
+      make build        Build main website content
+      make tex          Compile LaTeX
+      make placeholder  Compile placeholder document
+      make resume       Compile resume
+      make stories      Compile Fiction Writing stories
+      make checklinks   Check link anchors in Markdown files
+      make clean        Remove build artifacts
+      make deploy       Deploy website to Netlify
+      make docker       Start a Docker shell
 
 When a commit is pushed to `master`, it is deployed automatically by
 [GitHub Actions](https://github.com/features/actions) to
