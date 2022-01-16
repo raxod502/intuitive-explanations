@@ -1,5 +1,7 @@
 div.puzzle-container {
-  margin: 20px 160px;
+  width: 100%;
+  max-width: 420px;
+  margin: 20px auto;
   height: 60px;
   display: flex;
 }
