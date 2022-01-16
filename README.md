@@ -35,5 +35,5 @@ installed. Run:
       make docker  Start a Docker shell
 
 When a commit is pushed to `master`, it is deployed automatically by
-[CircleCI](https://circleci.com/) to
+[GitHub Actions](https://github.com/features/actions) to
 [Netlify](https://www.netlify.com/) after about ten minutes.
