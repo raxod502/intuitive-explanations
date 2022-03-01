@@ -150,6 +150,8 @@ development happened.
   [Lisp] syntax, all the way to [ELF] binaries targeting [x86-64]
   without using any pre-existing components such as the [GNU][]
   [linker] or [C standard library][cstdlib].
+* [pass-ln] (Winter 2022): [Pass] extension for creating [symbolic
+  links][symlinks].
 
 ## Work projects
 
@@ -458,6 +460,8 @@ development happened.
 [nix]: https://nixos.org/
 [node.js]: https://nodejs.org/en/
 [paredit]: http://danmidwood.com/content/2014/11/21/animated-paredit.html
+[pass-ln]: https://github.com/raxod502/pass-ln
+[pass]: https://www.passwordstore.org/
 [pib-source]: https://github.com/raxod502/python-in-a-box
 [pib]: https://python-in-a-box.herokuapp.com/
 [pipenv]: https://pipenv.pypa.io/en/latest/
@@ -498,6 +502,7 @@ development happened.
 [sudoku]: https://en.wikipedia.org/wiki/Sudoku
 [summit]: https://sum.bvsd.org/Pages/default.aspx
 [swiper]: https://github.com/abo-abo/swiper#swiper
+[symlinks]: https://en.wikipedia.org/wiki/Symbolic_link
 [syntax tables]: https://www.gnu.org/software/emacs/manual/html_node/elisp/Syntax-Tables.html
 [tabcrush]: https://github.com/raxod502/tabcrush
 [tc-hn]: https://news.ycombinator.com/item?id=15460851
