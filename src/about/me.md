@@ -19,10 +19,9 @@ instead, make it as easy as possible to recover from them), and this
 philosophy strongly influences the design of the software I create. I
 abandoned [Apple](https://www.apple.com/) a few years back due to
 irreconcilable philosophical differences, and have never looked back.
-I run the [KDE](https://kde.org/) edition of [Manjaro
-Linux](https://manjaro.org/) on the [Dell XPS 15
-9570](https://wiki.archlinux.org/index.php/Dell_XPS_15_9570) and (with
-reluctance) run Android on the [Google Pixel
+I run [Pop!\_OS](https://pop.system76.com/) on the [System 76 Oryx
+Pro](https://system76.com/laptops/oryx) and (with reluctance) run
+Android on the [Google Pixel
 3a](https://store.google.com/us/product/pixel_3a).
 
 I spent time on a regular basis maintaining my open-source projects
