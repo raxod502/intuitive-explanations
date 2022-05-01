@@ -141,8 +141,6 @@ development happened.
   iTunes playlists combining variety, cohesiveness, and novelty.
 * [wdx] (Fall 2017): Simpler and more robust alternative to [wd],
   written in [Python].
-* [Madeline] (Summer 2018): Novel approach to directory syncing, used
-  to maintain complementary mirroring of two filesystem trees via SSH.
 * [Tidier] (Spring 2019): Small application to auto-close abandoned
   GitHub issues by label and activity.
 * [Kalyn] (Spring 2020; [blog post][kalyn-post]): Compile a high-level
@@ -277,6 +275,11 @@ development happened.
 * [etunes] (Fall 2017 -- Summer 2018): [Declarative],
   [version-controlled][version control] music library manager for
   [Emacs]. Attempt #1 at a personal music library manager.
+* [Madeline] (Summer 2018): Novel approach to directory syncing, used
+  to maintain complementary mirroring of two filesystem trees via SSH.
+  This idea, while interesting, never served my use case terribly well
+  in the end, and the implementation is terrible. I now use a smaller
+  and better-targeted personal script to serve a similar function.
 * [fstunes] (Winter 2018): Extremely minimal music library manager
   leveraging [UNIX filesystem] abstractions. Attempt #2 at a personal
   music library manager.
