@@ -2603,3 +2603,6 @@ Or, you can find a website of your own that you wish exposed a better
 API. Can you figure out how to make things work the way you want?
 
 ⛏️ Go forth and build something!
+
+*Mandatory legal notice:* This blog post is maintained by [Radian
+LLC](https://radian.codes/).

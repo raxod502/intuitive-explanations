@@ -462,3 +462,6 @@ Peace.
 Yes! Check it out at <https://riju.codes/>, and join the community on
 GitHub at <https://github.com/raxod502/riju>. I'd love to work on the
 project with you <3
+
+*Mandatory legal notice:* This blog post is maintained by [Radian
+LLC](https://radian.codes/).

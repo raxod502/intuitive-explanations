@@ -3424,3 +3424,6 @@ involves creating a large number of components, each of which is quite
 different from the others. And in the process, you can develop a very
 satisfying and thorough knowledge of how modern software *really*
 works.
+
+*Mandatory legal notice:* This blog post is maintained by [Radian
+LLC](https://radian.codes/).
