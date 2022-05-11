@@ -12,18 +12,28 @@ development happened.
 
 ## Currently working on
 
-* [Riju] (Summer 2020 -- Present; [source][riju-source]): Extremely
-  fast online playground for every programming language.
-* Shallan (Spring 2021 -- Present; not yet published): Personal music
+* [Riju] (Summer 2020 -- Winter 2021; [source][riju-source]):
+  Extremely fast online playground for every programming language.
+* Shallan (Spring -- Summer 2021; not yet published): Personal music
   library player combining the user-friendly interface and
   cross-device synchronization of [YouTube Music][ytm] with the
   flexibility and ownership of a self-hosted open-source solution.
   Attempt #5 at a personal music library manager.
-* Veidt (Summer 2021 -- Present; not yet published): Online [webcomic]
+* Veidt (Summer -- Fall 2021; not yet published): Online [webcomic]
   aggregator, reader, and notification service.
-* osscount (Fall 2021 -- Present; not yet published): [Python]
-  application to generate fun graphs and metrics about the composition
-  of my (and your) open-source work.
+* osscount (Fall 2021; not yet published): [Python] application to
+  generate fun graphs and metrics about the composition of my (and
+  your) open-source work.
+* Silhouette (Fall 2021; not yet published): [Python] webapp that
+  shows you visual silhouettes of your code from GitHub and challenges
+  you to guess the language based on the visual appearance of the
+  code.
+* TerrariaCloneClone (Winter 2021; not yet published): Rewrite of
+  [TerrariaClone] in [C++] on [SFML], an experiment to see how much
+  less bad at programming I have gotten since my very first project
+  over a decade ago.
+* Tinyku (Spring 2022 -- Present; not yet published): Miniature
+  educational clone of the [Heroku] platform deployed on [Kubernetes].
 
 ## Emacs projects
 
@@ -326,6 +336,7 @@ development happened.
 [blackout]: https://github.com/raxod502/blackout
 [bradley]: https://www.linkedin.com/in/bnew10/
 [brogue]: https://sites.google.com/site/broguegame/
+[c++]: https://en.wikipedia.org/wiki/C%2B%2B
 [cas]: https://github.com/raxod502/CAS
 [cf]: https://en.wikipedia.org/wiki/Collaborative_filtering
 [charles]: https://www.linkedin.com/in/charles-gruenwald-phd-150ba13
@@ -426,6 +437,7 @@ development happened.
 [kenken]: https://en.wikipedia.org/wiki/KenKen
 [keren]: https://www.linkedin.com/in/keren-megory
 [kernel]: https://en.wikipedia.org/wiki/Linux_kernel
+[kubernetes]: https://kubernetes.io/
 [kye]: https://github.com/kwshi
 [lam-source]: https://github.com/MuddCreates/life-after-mudd
 [lam]: https://life-after-mudd.herokuapp.com/
@@ -492,6 +504,7 @@ development happened.
 [science-fair]: https://github.com/raxod502/ScienceFair
 [selectrum]: https://github.com/raxod502/selectrum
 [selenium]: https://www.selenium.dev/
+[sfml]: https://www.sfml-dev.org/
 [sg-puzzles]: http://mathworld.wolfram.com/Slothouber-GraatsmaPuzzle.html
 [shannon]: https://www.linkedin.com/in/shannon-collier-631392149/
 [signal]: https://signal.org/
