@@ -36,6 +36,6 @@ installed. Run:
       make deploy       Deploy website to Netlify
       make docker       Start a Docker shell
 
-When a commit is pushed to `master`, it is deployed automatically by
+When a commit is pushed to `main`, it is deployed automatically by
 [GitHub Actions](https://github.com/features/actions) to
 [Netlify](https://www.netlify.com/) after about ten minutes.
