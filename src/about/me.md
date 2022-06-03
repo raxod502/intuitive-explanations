@@ -22,7 +22,7 @@ irreconcilable philosophical differences, and have never looked back.
 I run [Pop!\_OS](https://pop.system76.com/) on the [System 76 Oryx
 Pro](https://system76.com/laptops/oryx) and (with reluctance) run
 Android on the [Google Pixel
-3a](https://store.google.com/us/product/pixel_3a).
+3a](https://en.wikipedia.org/wiki/Pixel_3a).
 
 I spent time on a regular basis maintaining my open-source projects
 [on GitHub](https://github.com/raxod502), because I enjoy helping my
