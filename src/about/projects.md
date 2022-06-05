@@ -4,7 +4,8 @@ title: "Projects"
 
 This page lists some of my personal, work, and school projects. You
 can find the source code for (almost) all of these projects and more
-on [GitHub].
+on my [personal GitHub account][github] and the [Radian LLC GitHub
+organization][radian-github].
 
 All of my open-source projects receive continued maintenance when
 needed. The dates below, however, show when most of the major
@@ -116,6 +117,9 @@ development happened.
   reverse-engineered Facebook login and GraphQL APIs to exfiltrate
   message notifications and forward them to email. Replaces Messenger
   Mirror after Facebook blocked my VPS IP address.
+* [Claremont Spam Disabler] (Summer 2022): Tiny [Google Apps
+  Script][gas] project that automatically filters and processes spammy
+  emails sent to students by the [Claremont Colleges].
 
 ## Writing
 
@@ -326,14 +330,14 @@ development happened.
   mode][electric-pair-mode].
 
 [2048-game]: https://play2048.co/
-[2048]: https://github.com/raxod502/2048
+[2048]: https://github.com/radian-software/2048
 [acc]: https://github.com/raxod502/acc
 [alpine snowboards]: https://www.sgsnowboards.com/
-[apheleia]: https://github.com/raxod502/apheleia
+[apheleia]: https://github.com/radian-software/apheleia
 [applescript]: https://en.wikipedia.org/wiki/AppleScript
 [ben]: https://www.linkedin.com/in/ben-baral/
 [bhs]: https://boh.bvsd.org/
-[blackout]: https://github.com/raxod502/blackout
+[blackout]: https://github.com/radian-software/blackout
 [bradley]: https://www.linkedin.com/in/bnew10/
 [brogue]: https://sites.google.com/site/broguegame/
 [c++]: https://en.wikipedia.org/wiki/C%2B%2B
@@ -341,14 +345,15 @@ development happened.
 [cf]: https://en.wikipedia.org/wiki/Collaborative_filtering
 [charles]: https://www.linkedin.com/in/charles-gruenwald-phd-150ba13
 [chess]: https://en.wikipedia.org/wiki/Chess
-[christmas rogue]: https://github.com/raxod502/ChristmasRogue
+[christmas rogue]: https://github.com/radian-software/ChristmasRogue
 [chrome-ext]: https://developer.chrome.com/extensions
-[chrono count]: https://github.com/raxod502/chrono-count
+[chrono count]: https://github.com/radian-software/chrono-count
 [ci]: https://en.wikipedia.org/wiki/Continuous_integration
 [cie-source]: https://github.com/raxod502/intuitive-explanations/blob/main/doc/tex/documents/CalculusIntuitiveExplanations/CalculusIntuitiveExplanations.tex
 [cie]: /math/calculus-intuitive-explanations
 [circleci]: https://circleci.com/
 [claremont colleges]: http://www.claremont.edu/
+[claremont spam disabler]: https://github.com/radian-software/claremont-spam-disabler
 [clemera]: https://github.com/clemera
 [clinic-bench-id]: https://github.com/raxod502/juniper-tools/blob/master/benchmarking/draft/final.pdf
 [clinic-bench]: https://github.com/raxod502/juniper-tools/tree/master/benchmarking
@@ -364,7 +369,7 @@ development happened.
 [cortex.optimise]: https://github.com/raxod502/cortex/tree/master/examples/optimise
 [crh]: https://tools.ietf.org/html/draft-bonica-6man-comp-rtg-hdr-22
 [cstdlib]: https://en.wikipedia.org/wiki/C_standard_library
-[ctrlf]: https://github.com/raxod502/ctrlf
+[ctrlf]: https://github.com/radian-software/ctrlf
 [datomic]: https://www.datomic.com/
 [declarative]: https://en.wikipedia.org/wiki/Declarative_programming
 [delight.el]: https://elpa.gnu.org/packages/delight.html
@@ -372,33 +377,34 @@ development happened.
 [dess]: /math/differential-equation-solution-strategies
 [dfa]: https://github.com/raxod502/dfa
 [dfas]: https://en.wikipedia.org/wiki/Deterministic_finite_automaton
-[diary-manager]: https://github.com/raxod502/diary-manager
+[diary-manager]: https://github.com/radian-software/diary-manager
 [differential equations]: https://en.wikipedia.org/wiki/Differential_equation
 [dim.el]: https://github.com/alezost/dim.el
 [diminish.el]: https://github.com/myrjola/diminish.el
 [document class]: https://en.wikibooks.org/wiki/LaTeX/Document_Structure#Document_classes
 [dotman]: https://github.com/raxod502/dotman/tree/e0ee7c8ba99477fd8c554a0757449b1ed6179fa4
-[dumbparens]: https://github.com/raxod502/dumbparens
+[dumbparens]: https://github.com/radian-software/dumbparens
 [dynamic programming]: https://en.wikipedia.org/wiki/Dynamic_programming
 [ecofasten]: https://ecofastensolar.com/
-[el-patch]: https://github.com/raxod502/el-patch
+[el-patch]: https://github.com/radian-software/el-patch
 [electric-pair-mode]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Matching.html
 [eleventy]: https://11ty.dev/
 [elf]: https://en.wikipedia.org/wiki/Executable_and_Linkable_Format
-[elint]: https://github.com/raxod502/elint
+[elint]: https://github.com/radian-software/elint
 [elisp]: https://en.wikipedia.org/wiki/Emacs_Lisp
 [emacs]: https://www.gnu.org/software/emacs/
 [emacsmirror]: https://emacsmirror.net/
-[empty]: https://github.com/raxod502/empty
+[empty]: https://github.com/radian-software/empty
 [enterprise fizzbuzz]: https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
-[etunes]: https://github.com/raxod502/etunes
+[etunes]: https://github.com/radian-software/etunes
 [example-website]: https://github.com/raxod502/example-website
 [exthdr]: https://en.wikipedia.org/wiki/IPv6_packet#Extension_headers
 [facebook messenger]: https://www.messenger.com/
 [flask]: https://flask.palletsprojects.com/en/1.1.x/
-[fstunes]: https://github.com/raxod502/fstunes
-[funwithframes]: https://github.com/raxod502/funwithframes
-[geb]: https://github.com/raxod502/github-email-backlog
+[fstunes]: https://github.com/radian-software/fstunes
+[funwithframes]: https://github.com/radian-software/funwithframes
+[gas]: https://developers.google.com/apps-script
+[geb]: https://github.com/radian-software/github-email-backlog
 [generative art]: https://en.wikipedia.org/wiki/Generative_art
 [genetic algorithm]: https://en.wikipedia.org/wiki/Genetic_algorithm
 [gha]: https://github.com/features/actions
@@ -406,20 +412,20 @@ development happened.
 [git]: https://git-scm.com/
 [github-notifications]: https://developer.github.com/v3/activity/notifications/
 [github]: https://github.com/raxod502
-[gnu-elpa-mirror]: https://github.com/raxod502/gnu-elpa-mirror
+[gnu-elpa-mirror]: https://github.com/radian-software/gnu-elpa-mirror
 [gnu-elpa]: https://elpa.gnu.org/
 [gnu]: https://www.gnu.org/home.en.html
 [google calendar]: https://calendar.google.com/
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
-[gravity]: https://github.com/raxod502/Gravity
+[gravity]: https://github.com/radian-software/Gravity
 [hakan]: https://www.linkedin.com/in/hakan-alpan-15189615b/
-[hangman2232]: https://github.com/raxod502/Hangman2232
+[hangman2232]: https://github.com/radian-software/Hangman2232
 [hangman]: https://en.wikipedia.org/wiki/Hangman_(game)
 [hangouts]: https://hangouts.google.com/
 [haskell]: https://www.haskell.org/
 [helm]: https://github.com/emacs-helm/helm
-[heroku-buildpack-emacs]: https://github.com/raxod502/heroku-buildpack-emacs
-[heroku-buildpack-git-lfs]: https://github.com/raxod502/heroku-buildpack-git-lfs
+[heroku-buildpack-emacs]: https://github.com/radian-software/heroku-buildpack-emacs
+[heroku-buildpack-git-lfs]: https://github.com/radian-software/heroku-buildpack-git-lfs
 [heroku]: https://www.heroku.com/
 [hmc]: https://www.hmc.edu/
 [hyperschedule-source]: https://github.com/MuddCreates/hyperschedule
@@ -427,13 +433,13 @@ development happened.
 [ie]: https://github.com/raxod502/intuitive-explanations
 [ios]: https://www.apple.com/ios/
 [isearch]: https://www.gnu.org/software/emacs/manual/html_node/emacs/Incremental-Search.html
-[ishikk]: https://github.com/raxod502/ishikk
+[ishikk]: https://github.com/radian-software/ishikk
 [ivy]: https://github.com/abo-abo/swiper#ivy
 [java]: https://www.java.com/
 [jflap autograder]: https://github.com/raxod502/HMC-Grader/blob/master/app/plugins/autograder/newjflapgrader.py
 [jflap]: http://www.jflap.org/
 [kalyn-post]: https://intuitiveexplanations.com/tech/kalyn
-[kalyn]: https://github.com/raxod502/kalyn
+[kalyn]: https://github.com/radian-software/kalyn
 [kenken]: https://en.wikipedia.org/wiki/KenKen
 [keren]: https://www.linkedin.com/in/keren-megory
 [kernel]: https://en.wikipedia.org/wiki/Linux_kernel
@@ -444,28 +450,28 @@ development happened.
 [lass-source]: https://github.com/raxod502/intuitive-explanations/blob/main/doc/tex/documents/LinearAlgebraSummarySheet/LinearAlgebraSummarySheet.tex
 [lass]: /math/linear-algebra-summary-sheet
 [latex]: https://www.latex-project.org/
-[layerize-inspiration]: https://github.com/raxod502/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf
-[layerize]: https://github.com/raxod502/layerize
+[layerize-inspiration]: https://github.com/radian-software/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf
+[layerize]: https://github.com/radian-software/layerize
 [lazy-map]: https://github.com/raxod502/lazy-map
 [leiningen]: https://leiningen.org/
 [linear algebra]: https://en.wikipedia.org/wiki/Linear_algebra
 [linker]: https://en.wikipedia.org/wiki/Linker_(computing)
 [lisp]: https://en.wikipedia.org/wiki/Lisp_(programming_language)
-[madeline]: https://github.com/raxod502/madeline
+[madeline]: https://github.com/radian-software/madeline
 [make]: https://www.gnu.org/software/make/
 [map]: https://en.wikipedia.org/wiki/Associative_array
 [mathematica]: https://www.wolfram.com/mathematica/
 [mathviewers]: https://github.com/raxod502/MathViewers
 [max]: https://www.linkedin.com/in/max-treutelaar/
-[mazegen neue]: https://github.com/raxod502/MazeGenNeue
-[mazegen]: https://github.com/raxod502/MazeGen
-[mercury]: https://github.com/raxod502/mercury
+[mazegen neue]: https://github.com/radian-software/MazeGenNeue
+[mazegen]: https://github.com/radian-software/MazeGen
+[mercury]: https://github.com/radian-software/mercury
 [miles]: https://www.linkedin.com/in/miles-president-4b5394149/
 [minimal-webapp]: https://github.com/raxod502/minimal-webapp
 [minimax]: https://en.wikipedia.org/wiki/Minimax
-[mla-tex]: https://github.com/raxod502/mla-tex
+[mla-tex]: https://github.com/radian-software/mla-tex
 [mla]: https://owl.english.purdue.edu/owl/resource/747/24/
-[mm]: https://github.com/raxod502/messenger-mirror
+[mm]: https://github.com/radian-software/messenger-mirror
 [mood-tracker]: https://github.com/raxod502/mood-tracker
 [mothers-day-2013]: https://github.com/raxod502/mothers-day-2013
 [n-body]: https://en.wikipedia.org/wiki/N-body_simulation
@@ -475,70 +481,71 @@ development happened.
 [nix]: https://nixos.org/
 [node.js]: https://nodejs.org/en/
 [paredit]: http://danmidwood.com/content/2014/11/21/animated-paredit.html
-[pass-ln]: https://github.com/raxod502/pass-ln
+[pass-ln]: https://github.com/radian-software/pass-ln
 [pass]: https://www.passwordstore.org/
-[pib-source]: https://github.com/raxod502/python-in-a-box
+[pib-source]: https://github.com/radian-software/python-in-a-box
 [pib]: https://python-in-a-box.herokuapp.com/
 [pipenv]: https://pipenv.pypa.io/en/latest/
 [pm]: https://en.wikipedia.org/wiki/Package_manager
 [pmtud]: https://en.wikipedia.org/wiki/Path_MTU_Discovery
-[prescient.el]: https://github.com/raxod502/prescient.el
+[prescient.el]: https://github.com/radian-software/prescient.el
 [processing]: https://processing.org/
 [progfolio]: https://github.com/progfolio
-[projectile simulator]: https://github.com/raxod502/ProjectileSimulator
+[projectile simulator]: https://github.com/radian-software/ProjectileSimulator
 [projectile-motion]: https://en.wikipedia.org/wiki/Projectile_motion
 [pset]: https://github.com/raxod502/pset
 [puzzles]: https://github.com/raxod502/puzzles
-[pyrelight]: https://github.com/raxod502/pyrelight
+[pyrelight]: https://github.com/radian-software/pyrelight
 [python]: https://www.python.org/
 [quantcast]: https://www.quantcast.com/
-[radian]: https://github.com/raxod502/radian
+[radian-github]: https://github.com/radian-software
+[radian]: https://github.com/radian-software/radian
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
 [repl.it]: https://repl.it/
 [rh0]: https://tools.ietf.org/html/rfc2460#section-4.4
-[riju-source]: https://github.com/raxod502/riju
+[riju-source]: https://github.com/radian-software/riju
 [riju]: https://riju.codes/
 [roguelike]: https://en.wikipedia.org/wiki/Roguelike
 [ruby]: https://www.ruby-lang.org/en/
 [sat]: https://en.wikipedia.org/wiki/Boolean_satisfiability_problem
 [science-fair]: https://github.com/raxod502/ScienceFair
-[selectrum]: https://github.com/raxod502/selectrum
+[selectrum]: https://github.com/radian-software/selectrum
 [selenium]: https://www.selenium.dev/
 [sfml]: https://www.sfml-dev.org/
 [sg-puzzles]: http://mathworld.wolfram.com/Slothouber-GraatsmaPuzzle.html
 [shannon]: https://www.linkedin.com/in/shannon-collier-631392149/
 [signal]: https://signal.org/
-[smarter-playlist]: https://github.com/raxod502/smarter-playlist
+[smarter-playlist]: https://github.com/radian-software/smarter-playlist
 [smartparens]: https://github.com/Fuco1/smartparens
 [space-grid]: https://github.com/raxod502/space-grid
 [srh]: https://tools.ietf.org/html/rfc8754
 [star relic]: http://www.ifgdb.com/play/star-relic/
 [static site]: https://en.wikipedia.org/wiki/Static_web_page
-[straight.el]: https://github.com/raxod502/straight.el
+[straight.el]: https://github.com/radian-software/straight.el
 [sudoku]: https://en.wikipedia.org/wiki/Sudoku
 [summit]: https://sum.bvsd.org/Pages/default.aspx
 [swiper]: https://github.com/abo-abo/swiper#swiper
 [symlinks]: https://en.wikipedia.org/wiki/Symbolic_link
 [syntax tables]: https://www.gnu.org/software/emacs/manual/html_node/elisp/Syntax-Tables.html
-[tabcrush]: https://github.com/raxod502/tabcrush
+[tabcrush]: https://github.com/radian-software/tabcrush
 [tc-hn]: https://news.ycombinator.com/item?id=15460851
 [terraria]: https://terraria.org/
-[terrariaclone]: https://github.com/raxod502/TerrariaClone
-[tetris-processing]: https://github.com/raxod502/tetris-processing
-[tetris-python]: https://github.com/raxod502/tetris-python
+[terrariaclone]: https://github.com/radian-software/TerrariaClone
+[tetris-processing]: https://github.com/radian-software/tetris-processing
+[tetris-python]: https://github.com/radian-software/tetris-python
 [tetris]: https://en.wikipedia.org/wiki/Tetris
 [ti-84-programs]: https://github.com/raxod502/TI84
 [ti-84]: https://en.wikipedia.org/wiki/TI-84_Plus_series#TI-84_Plus_Silver_Edition
-[tidier]: https://github.com/raxod502/tidier
+[tidier]: https://github.com/radian-software/tidier
 [tikz]: https://en.wikipedia.org/wiki/PGF/TikZ
 [tkinter]: https://docs.python.org/3/library/tkinter.html
 [tmux]: https://tmux.github.io/
 [turing machines]: https://en.wikipedia.org/wiki/Turing_machine
 [unix filesystem]: https://en.wikipedia.org/wiki/Unix_filesystem
 [unix philosophy]: https://en.wikipedia.org/wiki/Unix_philosophy
-[unzuckify]: https://github.com/raxod502/unzuckify
+[unzuckify]: https://github.com/radian-software/unzuckify
 [upm]: https://github.com/replit/upm
-[utunes]: https://github.com/raxod502/utunes
+[utunes]: https://github.com/radian-software/utunes
 [version control]: https://en.wikipedia.org/wiki/Version_control
 [votinglib]: https://github.com/raxod502/VotingLib
 [watching paint dry]: https://github.com/raxod502/Watching-Paint-Dry
@@ -546,7 +553,7 @@ development happened.
 [wdr-slides]: https://docs.google.com/presentation/d/1NTf-VUhs0jjtqVeny3gmdrZZ03Rbv8ZDsLrWiBvHYLk/edit?usp=sharing
 [wdr-source]: https://github.com/raxod502/cs121-hello
 [wdr]: https://drive.google.com/open?id=1J0dQjrrh7Wiio5HlGAtkPKbn5C7GWhG2
-[wdx]: https://github.com/raxod502/wdx
+[wdx]: https://github.com/radian-software/wdx
 [webcomic]: https://en.wikipedia.org/wiki/Webcomic
 [whales.life-source]: https://github.com/raxod502/cs121-whales
 [whales.life]: https://cs121-whales.herokuapp.com/
