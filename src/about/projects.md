@@ -114,12 +114,16 @@ development happened.
   Part of my initiative to stop using the products of companies I
   despise.
 * [Unzuckify] (Winter 2021): Small [Python] application using
-  reverse-engineered Facebook login and GraphQL APIs to exfiltrate
-  message notifications and forward them to email. Replaces Messenger
-  Mirror after Facebook blocked my VPS IP address.
+  [reverse-engineered][rev-eng] [Facebook] login and
+  [GraphQL](https://graphql.org/) APIs to exfiltrate message
+  notifications and forward them to email. Replaces [Messenger
+  Mirror][mm] after Facebook blocked my VPS IP address.
 * [Claremont Spam Disabler] (Summer 2022): Tiny [Google Apps
   Script][gas] project that automatically filters and processes spammy
   emails sent to students by the [Claremont Colleges].
+* [Venmo Auto Transfer] (Summer 2022): Small [Python] application
+  using [reverse-engineered] [Venmo] API to automatically transfer
+  Venmo balance to linked bank account.
 
 ## Writing
 
@@ -400,6 +404,7 @@ development happened.
 [example-website]: https://github.com/raxod502/example-website
 [exthdr]: https://en.wikipedia.org/wiki/IPv6_packet#Extension_headers
 [facebook messenger]: https://www.messenger.com/
+[facebook]: https://www.facebook.com/
 [flask]: https://flask.palletsprojects.com/en/1.1.x/
 [fstunes]: https://github.com/radian-software/fstunes
 [funwithframes]: https://github.com/radian-software/funwithframes
@@ -417,6 +422,7 @@ development happened.
 [gnu]: https://www.gnu.org/home.en.html
 [google calendar]: https://calendar.google.com/
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
+[graphql]: https://graphql.org/
 [gravity]: https://github.com/radian-software/Gravity
 [hakan]: https://www.linkedin.com/in/hakan-alpan-15189615b/
 [hangman2232]: https://github.com/radian-software/Hangman2232
@@ -502,6 +508,7 @@ development happened.
 [radian]: https://github.com/radian-software/radian
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
 [repl.it]: https://repl.it/
+[rev-eng]: https://en.wikipedia.org/wiki/Reverse_engineering
 [rh0]: https://tools.ietf.org/html/rfc2460#section-4.4
 [riju-source]: https://github.com/radian-software/riju
 [riju]: https://riju.codes/
@@ -546,6 +553,8 @@ development happened.
 [unzuckify]: https://github.com/radian-software/unzuckify
 [upm]: https://github.com/replit/upm
 [utunes]: https://github.com/radian-software/utunes
+[venmo auto transfer]: https://github.com/radian-software/venmo-auto-transfer
+[venmo]: https://venmo.com/
 [version control]: https://en.wikipedia.org/wiki/Version_control
 [votinglib]: https://github.com/raxod502/VotingLib
 [watching paint dry]: https://github.com/raxod502/Watching-Paint-Dry
