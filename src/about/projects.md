@@ -122,8 +122,8 @@ development happened.
   Script][gas] project that automatically filters and processes spammy
   emails sent to students by the [Claremont Colleges].
 * [Venmo Auto Transfer] (Summer 2022): Small [Python] application
-  using [reverse-engineered] [Venmo] API to automatically transfer
-  Venmo balance to linked bank account.
+  using [reverse-engineered][rev-eng] [Venmo] API to automatically
+  transfer Venmo balance to linked bank account.
 
 ## Writing
 
