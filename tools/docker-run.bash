@@ -22,7 +22,7 @@ fi
 
 it=()
 if [[ -t 1 ]]; then
-    it=("${it[@]}" "-it")
+    it+=("-it")
 fi
 
 cmd=(
