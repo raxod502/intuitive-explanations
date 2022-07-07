@@ -11,7 +11,7 @@ into your hands, and they all withdraw with an eerie simultaneity,
 leaving you alone in the shaded back room of the Cult of Literary
 Numerology.
 
-Examining the device, you see that it is a dull grey tablet bearing a
+Examining the device, you see that it is a dull grey tablet bearing
 twenty-six lettered keys in antique block lettering, a small lever on
 the side, and a segmented glass panel where, perhaps, text could be
 shown...?
