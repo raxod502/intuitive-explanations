@@ -25,8 +25,15 @@ if [[ -t 1 ]]; then
     it+=("-it")
 fi
 
+net=()
+if [[ "$OSTYPE" != darwin* ]]; then
+    net+=("--network=host")
+else
+    net+=("-p" "127.0.0.1:4000:4000")
+fi
+
 cmd=(
-    "${docker[@]}" run --rm "${it[@]}" -v "${repo}:/src" -w /src --network=host
+    "${docker[@]}" run --rm "${it[@]}" -v "${repo}:/src" -w /src "${net[@]}"
     -e NETLIFY_KEY -e ENABLE_ANALYTICS --entrypoint=/src/tools/docker-pid1.bash
     intuitive-explanations "${cmd_args[@]}"
 )
