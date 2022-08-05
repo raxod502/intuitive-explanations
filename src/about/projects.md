@@ -407,7 +407,7 @@ development happened.
 [facebook]: https://www.facebook.com/
 [flask]: https://flask.palletsprojects.com/en/1.1.x/
 [fstunes]: https://github.com/radian-software/fstunes
-[funwithframes]: https://github.com/radian-software/funwithframes
+[funwithframes]: https://github.com/raxod502/funwithframes
 [gas]: https://developers.google.com/apps-script
 [geb]: https://github.com/radian-software/github-email-backlog
 [generative art]: https://en.wikipedia.org/wiki/Generative_art
