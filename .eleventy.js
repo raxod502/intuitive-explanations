@@ -40,7 +40,7 @@ module.exports = (eleventyConfig) => {
     })
   );
 
-  for (const path of ["assets", "css", "favicons", "js"]) {
+  for (const path of ["assets", "css", "favicons", "fonts", "js"]) {
     eleventyConfig.addPassthroughCopy(path);
   }
 
