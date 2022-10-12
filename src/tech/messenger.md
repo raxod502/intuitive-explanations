@@ -134,7 +134,7 @@ tab](/assets/messenger/login-request-overview.png)
 This is a POST request, which means that data is being submitted to
 the server, which is what we expect for a request to log in. ([Read
 more about HTTP request
-methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods))
+methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods).)
 If we scroll down, Chrome will show us the form data that was
 submitted as part of this request, which indeed includes the email and
 password:
