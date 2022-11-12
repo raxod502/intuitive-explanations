@@ -20,21 +20,11 @@ development happened.
   cross-device synchronization of [YouTube Music][ytm] with the
   flexibility and ownership of a self-hosted open-source solution.
   Attempt #5 at a personal music library manager.
-* Veidt (Summer -- Fall 2021; not yet published): Online [webcomic]
-  aggregator, reader, and notification service.
-* osscount (Fall 2021; not yet published): [Python] application to
-  generate fun graphs and metrics about the composition of my (and
-  your) open-source work.
-* Silhouette (Fall 2021; not yet published): [Python] webapp that
-  shows you visual silhouettes of your code from GitHub and challenges
-  you to guess the language based on the visual appearance of the
-  code.
-* TerrariaCloneClone (Winter 2021; not yet published): Rewrite of
-  [TerrariaClone] in [C++] on [SFML], an experiment to see how much
-  less bad at programming I have gotten since my very first project
-  over a decade ago.
-* Tinyku (Spring 2022 -- Present; not yet published): Miniature
-  educational clone of the [Heroku] platform deployed on [Kubernetes].
+* [Sleeping Beauty] (Winter 2022): Network utility that puts a
+  stateless TCP web server to sleep when not receiving traffic, to
+  minimize resource utilization.
+* [Hypercast] (Winter 2022): Free, no-hassle watch parties on every
+  streaming platform. Implemented as Chrome and Firefox extension.
 
 ## Emacs projects
 
@@ -434,6 +424,7 @@ development happened.
 [heroku-buildpack-git-lfs]: https://github.com/radian-software/heroku-buildpack-git-lfs
 [heroku]: https://www.heroku.com/
 [hmc]: https://www.hmc.edu/
+[hypercast]: https://github.com/radian-software/hypercast
 [hyperschedule-source]: https://github.com/MuddCreates/hyperschedule
 [hyperschedule]: https://hyperschedule.io
 [ie]: https://github.com/raxod502/intuitive-explanations
@@ -522,6 +513,7 @@ development happened.
 [sg-puzzles]: http://mathworld.wolfram.com/Slothouber-GraatsmaPuzzle.html
 [shannon]: https://www.linkedin.com/in/shannon-collier-631392149/
 [signal]: https://signal.org/
+[sleeping beauty]: https://github.com/radian-software/sleeping-beauty
 [smarter-playlist]: https://github.com/radian-software/smarter-playlist
 [smartparens]: https://github.com/Fuco1/smartparens
 [space-grid]: https://github.com/raxod502/space-grid
