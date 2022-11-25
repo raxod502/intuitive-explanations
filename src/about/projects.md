@@ -114,6 +114,9 @@ development happened.
 * [Venmo Auto Transfer] (Summer 2022): Small [Python] application
   using [reverse-engineered][rev-eng] [Venmo] API to automatically
   transfer Venmo balance to linked bank account.
+* [Squeaky Hinge] (Fall 2022): Small [Python] application using
+  [reverse-engineered][rev-eng] [Hinge] API to send more reliable
+  notifications on inbox messages.
 
 ## Writing
 
@@ -423,6 +426,7 @@ development happened.
 [heroku-buildpack-emacs]: https://github.com/radian-software/heroku-buildpack-emacs
 [heroku-buildpack-git-lfs]: https://github.com/radian-software/heroku-buildpack-git-lfs
 [heroku]: https://www.heroku.com/
+[hinge]: https://hinge.co/
 [hmc]: https://www.hmc.edu/
 [hypercast]: https://github.com/radian-software/hypercast
 [hyperschedule-source]: https://github.com/MuddCreates/hyperschedule
@@ -517,6 +521,7 @@ development happened.
 [smarter-playlist]: https://github.com/radian-software/smarter-playlist
 [smartparens]: https://github.com/Fuco1/smartparens
 [space-grid]: https://github.com/raxod502/space-grid
+[squeaky hinge]: https://github.com/radian-software/squeaky-hinge
 [srh]: https://tools.ietf.org/html/rfc8754
 [star relic]: http://www.ifgdb.com/play/star-relic/
 [static site]: https://en.wikipedia.org/wiki/Static_web_page
