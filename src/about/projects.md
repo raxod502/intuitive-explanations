@@ -356,7 +356,7 @@ development happened.
 [clinic-bench]: https://github.com/raxod502/juniper-tools/tree/master/benchmarking
 [clinic-frag-id]: https://tools.ietf.org/html/draft-bonica-intarea-lossless-pmtud-01
 [clinic-frag]: https://github.com/raxod502/juniper-tools/tree/master/fragmentation
-[clinic-slides]: https://docs.google.com/presentation/d/1EES7E0OFQy24dXvpHuuqUpKei186B7zW8glRP0tqRLw/edit?usp=sharing
+[clinic-slides]: https://docs.google.com/presentation/d/1aW5fZ7R83ZRuJcZCJ9QewlHvii99j8-g/edit
 [clinic]: https://www.cs.hmc.edu/clinic/
 [clojure]: https://clojure.org/
 [clojurescript]: https://clojurescript.org/
@@ -556,9 +556,9 @@ development happened.
 [votinglib]: https://github.com/raxod502/VotingLib
 [watching paint dry]: https://github.com/raxod502/Watching-Paint-Dry
 [wd]: https://github.com/mfaerevaag/wd
-[wdr-slides]: https://docs.google.com/presentation/d/1NTf-VUhs0jjtqVeny3gmdrZZ03Rbv8ZDsLrWiBvHYLk/edit?usp=sharing
+[wdr-slides]: https://docs.google.com/presentation/d/1KfqX1GrskHAwkoL-uZJck6ILVEqOMosdWM8E8NJCQ2o/edit
 [wdr-source]: https://github.com/raxod502/cs121-hello
-[wdr]: https://drive.google.com/open?id=1J0dQjrrh7Wiio5HlGAtkPKbn5C7GWhG2
+[wdr]: https://youtube.com/watch?v=3Sjz2ADUZMA
 [wdx]: https://github.com/radian-software/wdx
 [webcomic]: https://en.wikipedia.org/wiki/Webcomic
 [whales.life-source]: https://github.com/raxod502/cs121-whales
