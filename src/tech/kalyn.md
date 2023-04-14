@@ -3044,7 +3044,7 @@ to get some space for the heap.
 
 This brings us to my favorite section of the write-up. You can see
 from [my commit
-messages](https://github.com/raxod502/kalyn/commits/master?after=ec3ab23b20f4cf7147e528fd7fc51be69e839742+0)
+messages](https://github.com/raxod502/kalyn/commits/main?after=ec3ab23b20f4cf7147e528fd7fc51be69e839742+0)
 that there were some "fun" bugs. Compilers are great because when
 there's a bug, it *could* be a bug in the code you're compiling, or
 perhaps in the standard library, or in the code generator, or the
