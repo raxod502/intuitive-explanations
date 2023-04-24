@@ -8,23 +8,31 @@ on my [personal GitHub account][github] and the [Radian LLC GitHub
 organization][radian-github].
 
 All of my open-source projects receive continued maintenance when
-needed. The dates below, however, show when most of the major
-development happened.
+needed, except where otherwise noted. The dates below, however, show
+when most of the major development happened.
+
+Note that most of these projects are owned and operated by [Radian
+LLC], who will be the liable party in the case of legal disputes. A
+subset are my personal work instead. When in doubt, check the license
+notice in the relevant GitHub repository. Obviously, work projects are
+the property and liability of the relevant employer(s), and the same
+applies to some school projects.
 
 ## Currently working on
 
 * [Riju] (Summer 2020 -- Winter 2021; [source][riju-source]):
   Extremely fast online playground for every programming language.
+  Currently working on port to [Kubernetes] to improve
+  maintainability.
 * Shallan (Spring -- Summer 2021; not yet published): Personal music
   library player combining the user-friendly interface and
   cross-device synchronization of [YouTube Music][ytm] with the
   flexibility and ownership of a self-hosted open-source solution.
   Attempt #5 at a personal music library manager.
-* [Sleeping Beauty] (Winter 2022): Network utility that puts a
-  stateless TCP web server to sleep when not receiving traffic, to
-  minimize resource utilization.
 * [Hypercast] (Winter 2022): Free, no-hassle watch parties on every
   streaming platform. Implemented as Chrome and Firefox extension.
+* dontbeevilmirror (Spring 2023): Anonymizing proxy [CDN] for
+  [Android] apps pulled from the [Google Play Store]
 
 ## Emacs projects
 
@@ -38,6 +46,10 @@ development happened.
 * [diary-manager] (Spring 2017 -- Summer 2018): Command-line tool and
   [Emacs] package for managing daily (encrypted, version-controlled)
   diary entries.
+* [elint] (Summer -- Fall 2017): An attempt at deduplicating various
+  [CI] utilities for my [Emacs] packages. It didn't provide enough
+  value to justify the overhead, although there are other projects
+  which provide the same functionality in a more powerful manner.
 * [`prescient.el`][prescient.el] (Fall 2017 -- Winter 2019): Simple
   but effective sorting and filtering for [Emacs].
 * [heroku-buildpack-emacs] (Summer 2018): [Heroku] buildpack to
@@ -58,15 +70,80 @@ development happened.
 * [CTRLF] (Winter 2019 -- Spring 2020): Better single-buffer text
   search interface for [Emacs], replacing [Isearch] and [Swiper].
 
-## Games and apps
+## Reverse engineering and web automation
+
+* [Messenger Mirror][mm] (Fall 2021): Small [Python] application using
+  [Selenium] to bypass Facebook Messenger's anti-bot protections and
+  allow message notifications to be automatically forwarded to email.
+  Part of my initiative to stop using the products of companies I
+  despise. This was eventually blocked by Facebook.
+* [Unzuckify] (Winter 2021): Small [Python] application using
+  [reverse-engineered][rev-eng] [Facebook] login and
+  [GraphQL](https://graphql.org/) APIs to exfiltrate message
+  notifications and forward them to email. Replaces [Messenger
+  Mirror][mm] after Facebook blocked it. This project was blocked too,
+  so I just fully deprecated Messenger ahead of schedule.
+* [Claremont Spam Disabler] (Summer 2022): Tiny [Google Apps
+  Script][gas] project that automatically filters and processes spammy
+  emails sent to students by the [Claremont Colleges].
+* [Venmo Auto Transfer] (Summer 2022): Small [Python] application
+  using [reverse-engineered][rev-eng] [Venmo] API to automatically
+  transfer Venmo balance to linked bank account.
+* [Squeaky Hinge] (Fall 2022): Small [Python] application using
+  [reverse-engineered][rev-eng] [Hinge] API to send more reliable
+  notifications on inbox messages.
+
+## Web apps and services, browser extensions
+
+* [Tidier] (Spring 2019): Small application to auto-close abandoned
+  GitHub issues by label and activity.
+* [Hyperschedule] (Fall 2017 -- Fall 2019;
+  [source][hyperschedule-source]): Fast and powerful course scheduler
+  for the [Claremont Colleges]. *Current maintainer: [Kye Shi][kye].*
+* [GitHub Email Backlog][geb] (Summer 2020): Simple [Chrome
+  extension][chrome-ext] which abuses the [GitHub notifications
+  API][github-notifications] to automatically update my profile status
+  with an estimate of how long you will wait for a response when you
+  report an issue. This is deprecated since I have gotten my personal
+  life in order and can provide a more reliable base response time.
+* [Python in a Box][pib] (Summer 2021; [source][pib-source]):
+  Interactive online Python REPL in 30 lines of JavaScript.
+
+## Technical utilities
+
+* [smarter-playlist] (Fall 2016): [Clojure] application to generate
+  iTunes playlists combining variety, cohesiveness, and novelty.
+* [wdx] (Fall 2017): Simpler and more robust alternative to [wd],
+  written in [Python].
+* [mood-tracker] (Spring 2017): Small [AppleScript] utility to record
+  data about personal mood at regular intervals. This project was
+  abandoned when I realized that trying to systematize everything in
+  my life was actually not making me happier.
+* [Madeline] (Summer 2018): Novel approach to directory syncing, used
+  to maintain complementary mirroring of two filesystem trees via SSH.
+  This idea, while interesting, never served my use case terribly well
+  in the end, and the implementation is terrible. I now use a smaller
+  and better-targeted personal script to serve a similar function.
+* [pass-ln] (Fall 2022): [Pass] extension for creating [symbolic
+  links][symlinks].
+* [Sleeping Beauty] (Winter 2022): Network utility that puts a
+  stateless TCP web server to sleep when not receiving traffic, to
+  minimize resource utilization.
+
+## Research and education
+
+* [Kalyn] (Spring 2020; [blog post][kalyn-post]): Compile a high-level
+  functional programming language, inspired by [Haskell] but with
+  [Lisp] syntax, all the way to [ELF] binaries targeting [x86-64]
+  without using any pre-existing components such as the [GNU][]
+  [linker] or [C standard library][cstdlib].
+
+## Games
 
 * [TerrariaClone] (Spring 2011 -- Spring 2013; [HackerNews
   thread][tc-hn]): My first major project, a clone of [Terraria],
   preserved as an example of how terrible code can be if you don't pay
   attention to its quality.
-* [Chrono Count] (Summer 2013 -- Spring 2014): [iOS] app to manage
-  countdowns and countups under arbitrarily complex schedules,
-  previously available from the iOS App Store.
 * [Mother's Day][mothers-day-2013] (Summer 2013): Small [Java] applet
   that I made for Mother's Day.
 * [Watching Paint Dry: The Game][watching paint dry] (Summer 2013):
@@ -77,8 +154,6 @@ development happened.
 * [funwithframes] (Winter 2013): Simple game in [Processing] where you
   try to dodge certain squares while being distracted by other
   squares.
-* [Gravity] (Winter 2013): Christmas present for my father. [iOS] app
-  that simulates [many-body Newtonian gravity][n-body].
 * [2048] (Spring -- Summer 2014): Simple clone of the game
   [2048][2048-game], implemented in [Java] with graphical and
   command-line interfaces as well as a few auto-solving algorithms.
@@ -88,35 +163,14 @@ development happened.
 * [Christmas Rogue] (Winter 2014): Christmas present for my father.
   [Roguelike] game inspired by [Brogue] and implemented in [Java].
   Likely the most over-the-top Christmas present I will ever give.
-* [Hyperschedule] (Fall 2017 -- Fall 2019;
-  [source][hyperschedule-source]): Fast and powerful course scheduler
-  for the [Claremont Colleges]. *Current maintainer: [Kye Shi][kye].*
-* [GitHub Email Backlog][geb] (Summer 2020): Simple [Chrome
-  extension][chrome-ext] which abuses the [GitHub notifications
-  API][github-notifications] to automatically update my profile status
-  with an estimate of how long you will wait for a response when you
-  report an issue.
-* [Python in a Box][pib] (Summer 2021; [source][pib-source]):
-  Interactive online Python REPL in 30 lines of JavaScript.
-* [Messenger Mirror][mm] (Fall 2021): Small [Python] application using
-  [Selenium] to bypass Facebook Messenger's anti-bot protections and
-  allow message notifications to be automatically forwarded to email.
-  Part of my initiative to stop using the products of companies I
-  despise.
-* [Unzuckify] (Winter 2021): Small [Python] application using
-  [reverse-engineered][rev-eng] [Facebook] login and
-  [GraphQL](https://graphql.org/) APIs to exfiltrate message
-  notifications and forward them to email. Replaces [Messenger
-  Mirror][mm] after Facebook blocked my VPS IP address.
-* [Claremont Spam Disabler] (Summer 2022): Tiny [Google Apps
-  Script][gas] project that automatically filters and processes spammy
-  emails sent to students by the [Claremont Colleges].
-* [Venmo Auto Transfer] (Summer 2022): Small [Python] application
-  using [reverse-engineered][rev-eng] [Venmo] API to automatically
-  transfer Venmo balance to linked bank account.
-* [Squeaky Hinge] (Fall 2022): Small [Python] application using
-  [reverse-engineered][rev-eng] [Hinge] API to send more reliable
-  notifications on inbox messages.
+
+## Mobile apps
+
+* [Chrono Count] (Summer 2013 -- Spring 2014): [iOS] app to manage
+  countdowns and countups under arbitrarily complex schedules,
+  previously available from the iOS App Store.
+* [Gravity] (Winter 2013): Christmas present for my father. [iOS] app
+  that simulates [many-body Newtonian gravity][n-body].
 
 ## Writing
 
@@ -138,7 +192,7 @@ development happened.
   site] similar to my personal website, for my friends who were
   interested in making similar websites for themselves.
 
-## Other personal projects
+## Pure miscellany
 
 * [TI-84 programs][ti-84-programs] (Spring 2010 -- Spring 2016): My
   first programming ever, on the [TI-84 Plus Silver Edition][ti-84] in
@@ -148,19 +202,6 @@ development happened.
 * [empty] (Summer 2016): Absolute bare minimum [Leiningen] template.
 * [conway] (Fall 2016): A simple solver for generalized
   [Slothouber-Graatsma \(Conway\) puzzles][sg-puzzles] in [Clojure].
-* [smarter-playlist] (Fall 2016): [Clojure] application to generate
-  iTunes playlists combining variety, cohesiveness, and novelty.
-* [wdx] (Fall 2017): Simpler and more robust alternative to [wd],
-  written in [Python].
-* [Tidier] (Spring 2019): Small application to auto-close abandoned
-  GitHub issues by label and activity.
-* [Kalyn] (Spring 2020; [blog post][kalyn-post]): Compile a high-level
-  functional programming language, inspired by [Haskell] but with
-  [Lisp] syntax, all the way to [ELF] binaries targeting [x86-64]
-  without using any pre-existing components such as the [GNU][]
-  [linker] or [C standard library][cstdlib].
-* [pass-ln] (Winter 2022): [Pass] extension for creating [symbolic
-  links][symlinks].
 
 ## Work projects
 
@@ -255,23 +296,30 @@ development happened.
   post-graduation plans for the Class of 2020. *Current maintainer:
   [Kye Shi][kye].*
 
-## Deprecated projects
+## Abandoned projects (will never be finished)
 
+* [space-grid] (Spring 2012): An attempt at a clone of the Flash game
+  [Star Relic] in [Python]. It didn't get very far, because I didn't
+  actually know any game programming.
 * [CAS] (Summer 2014): Failed attempt to create a [computer algebra
   system], like [Mathematica].
+* [dfa] (Spring 2016): A quickly-abandoned attempt to use [Clojure] to
+  generate [DFAs] using a [genetic algorithm].
+* [MazeGen Neue] (Summer 2016): An attempt to rewrite [MazeGen] to be
+  slightly less of a mess. Unfortunately, I went much too far in the
+  opposite direction and created some [Enterprise FizzBuzz], and the
+  project was abandoned.
 * [minimal-webapp] (Summer 2016): Noble effort to create a
   [ClojureScript] webapp that did not require a huge number of
   incomprehensible build system configuration files that nobody quite
   understood. It almost worked.
-* [mood-tracker] (Spring 2017): Small [AppleScript] utility to record
-  data about personal mood at regular intervals. This project was
-  abandoned when I realized that trying to systematize everything in
-  my life was actually not making me happier.
 * [acc] (Summer 2017 -- Summer 2018): Command-line accounting tool
   with first-class support for reconciling multiple ledgers
   interactively. This project was abandoned when it was pointed out to
   me by a friend that I didn't actually have to track every single one
-  of my financial transactions.
+  of my financial transactions. I used a manual spreadsheet (reviewed
+  quarterly) for budgeting and cash flow analysis for some time, and
+  am considering migrating to [Lunch Money] moving forward.
 * [Dotman] (Summer 2017 -- Summer 2018): A very silly idea I had to
   write a unified package manager (with [Ruby] DSL) for my entire
   system configuration (e.g. software installation, configuration,
@@ -279,57 +327,48 @@ development happened.
   could just manually write down what I did to configure my laptop. If
   you actually want declarative system configuration, you should
   probably be using [Nix].
-* [elint] (Summer -- Fall 2017): An attempt at deduplicating various
-  [CI] utilities for my [Emacs] packages. It didn't provide enough
-  value to justify the overhead, although there are other projects
-  which provide the same functionality in a more powerful manner.
 * [etunes] (Fall 2017 -- Summer 2018): [Declarative],
   [version-controlled][version control] music library manager for
-  [Emacs]. Attempt #1 at a personal music library manager.
-* [Madeline] (Summer 2018): Novel approach to directory syncing, used
-  to maintain complementary mirroring of two filesystem trees via SSH.
-  This idea, while interesting, never served my use case terribly well
-  in the end, and the implementation is terrible. I now use a smaller
-  and better-targeted personal script to serve a similar function.
+  [Emacs]. Attempt #1 at a personal music library manager. Replaced by
+  [fstunes].
+* [pset] (Fall 2017): Configurable templating system for university
+  problem sets typeset in LaTeX. Will never be finished because I am
+  no longer a college student.
 * [fstunes] (Winter 2018): Extremely minimal music library manager
   leveraging [UNIX filesystem] abstractions. Attempt #2 at a personal
-  music library manager.
+  music library manager. Replaced by [µTunes][utunes].
 * [µTunes][utunes] (Spring -- Winter 2019): Aggressively minimal
   command-line music player and library manager following the [UNIX
   philosophy], with [Emacs] interface. Attempt #3 at a personal music
-  library manager.
+  library manager. Was supposed to be replaced by [Pyrelight] but is
+  still in current use despite being considered deprecated.
+* [Tabcrush] (Summer 2019): High-performance power tool for editing
+  large-scale tabular data in [Emacs], intended for use with
+  [µTunes][utunes]. Deprecated alongside µTunes.
+* [Mercury] (Summer -- Fall 2019): [Emacs] interface to [Facebook
+  Messenger], [Signal], and SMS (via [Google Hangouts][hangouts]).
+  This has been superseded by [Matrix] for me.
 * [Pyrelight] (Spring -- Summer 2020): More sophisticated command-line
   music player and library manager. Attempt #4 at a personal music
-  library manager.
+  library manager. Will be replaced by Shallan.
 
-## Abandoned and on-hiatus projects
+## On-hiatus projects (might be finished someday)
 
-* [space-grid] (Spring 2012): An attempt at a clone of the Flash game
-  [Star Relic] in [Python]. It didn't get very far, because I didn't
-  actually know any game programming.
-* [MazeGen Neue] (Summer 2016): An attempt to rewrite [MazeGen] to be
-  slightly less of a mess. Unfortunately, I went much too far in the
-  opposite direction and created some [Enterprise FizzBuzz], and the
-  project was abandoned.
-* [dfa] (Spring 2016): A quickly-abandoned attempt to use [Clojure] to
-  generate [DFAs] using a [genetic algorithm].
-* [pset] (Fall 2017): Configurable templating system for university
-  problem sets typeset in LaTeX.
 * [Ishikk] (Summer 2018): Read-write [Google Calendar] interface for
-  Emacs, with graphical week view.
-* [Tabcrush] (Summer 2019): High-performance power tool for editing
-  large-scale tabular data in [Emacs], intended for use with µTunes.
-* [Mercury] (Summer -- Fall 2019): [Emacs] interface to [Facebook
-  Messenger], [Signal], and SMS (via [Google Hangouts][hangouts])
+  Emacs, with graphical week view. If finished, this would be
+  repurposed to work with [Fastmail]. However, the 2023 package
+  [calfw-blocks] might supersede the project.
 * [Dumbparens] (Spring 2020): Sane delimiter-matching package for
   [Emacs] with primitives based on [syntax tables], replacing
   [Smartparens], [Paredit], and [Electric Pair
-  mode][electric-pair-mode].
+  mode][electric-pair-mode]. This is still relevant but bandwidth has
+  not been available to drive the project to completion.
 
 [2048-game]: https://play2048.co/
 [2048]: https://github.com/radian-software/2048
 [acc]: https://github.com/raxod502/acc
 [alpine snowboards]: https://www.sgsnowboards.com/
+[android]: https://en.wikipedia.org/wiki/Android_(operating_system)
 [apheleia]: https://github.com/radian-software/apheleia
 [applescript]: https://en.wikipedia.org/wiki/AppleScript
 [ben]: https://www.linkedin.com/in/ben-baral/
@@ -338,7 +377,9 @@ development happened.
 [bradley]: https://www.linkedin.com/in/bnew10/
 [brogue]: https://sites.google.com/site/broguegame/
 [c++]: https://en.wikipedia.org/wiki/C%2B%2B
+[calfw-blocks]: https://github.com/ml729/calfw-blocks
 [cas]: https://github.com/raxod502/CAS
+[cdn]: https://en.wikipedia.org/wiki/Content_delivery_network
 [cf]: https://en.wikipedia.org/wiki/Collaborative_filtering
 [charles]: https://www.linkedin.com/in/charles-gruenwald-phd-150ba13
 [chess]: https://en.wikipedia.org/wiki/Chess
@@ -398,6 +439,7 @@ development happened.
 [exthdr]: https://en.wikipedia.org/wiki/IPv6_packet#Extension_headers
 [facebook messenger]: https://www.messenger.com/
 [facebook]: https://www.facebook.com/
+[fastmail]: https://www.fastmail.com/
 [flask]: https://flask.palletsprojects.com/en/1.1.x/
 [fstunes]: https://github.com/radian-software/fstunes
 [funwithframes]: https://github.com/raxod502/funwithframes
@@ -414,6 +456,7 @@ development happened.
 [gnu-elpa]: https://elpa.gnu.org/
 [gnu]: https://www.gnu.org/home.en.html
 [google calendar]: https://calendar.google.com/
+[google play store]: https://en.wikipedia.org/wiki/Google_Play
 [gradient descent]: https://en.wikipedia.org/wiki/Gradient_descent
 [graphql]: https://graphql.org/
 [gravity]: https://github.com/radian-software/Gravity
@@ -458,11 +501,13 @@ development happened.
 [linear algebra]: https://en.wikipedia.org/wiki/Linear_algebra
 [linker]: https://en.wikipedia.org/wiki/Linker_(computing)
 [lisp]: https://en.wikipedia.org/wiki/Lisp_(programming_language)
+[lunch money]: https://lunchmoney.app/
 [madeline]: https://github.com/radian-software/madeline
 [make]: https://www.gnu.org/software/make/
 [map]: https://en.wikipedia.org/wiki/Associative_array
 [mathematica]: https://www.wolfram.com/mathematica/
 [mathviewers]: https://github.com/raxod502/MathViewers
+[matrix]: https://matrix.org/
 [max]: https://www.linkedin.com/in/max-treutelaar/
 [mazegen neue]: https://github.com/radian-software/MazeGenNeue
 [mazegen]: https://github.com/radian-software/MazeGen
@@ -485,7 +530,7 @@ development happened.
 [pass-ln]: https://github.com/radian-software/pass-ln
 [pass]: https://www.passwordstore.org/
 [pib-source]: https://github.com/radian-software/python-in-a-box
-[pib]: https://python-in-a-box.herokuapp.com/
+[pib]: https://python-in-a-box.radian.codes/
 [pipenv]: https://pipenv.pypa.io/en/latest/
 [pm]: https://en.wikipedia.org/wiki/Package_manager
 [pmtud]: https://en.wikipedia.org/wiki/Path_MTU_Discovery
@@ -499,6 +544,7 @@ development happened.
 [pyrelight]: https://github.com/radian-software/pyrelight
 [python]: https://www.python.org/
 [quantcast]: https://www.quantcast.com/
+[radian llc]: https://radian.codes/
 [radian-github]: https://github.com/radian-software
 [radian]: https://github.com/radian-software/radian
 [rcs patches]: https://tools.ietf.org/doc/tcllib/html/rcs.html#section4
