@@ -41,7 +41,7 @@ class Feed {
         feedUrl: "https://intuitiveexplanations.com/feed.xml",
         author: {
           name: "Radon Rosborough",
-          email: "radon.neon@gmail.com",
+          email: "radon@intuitiveexplanations.com",
         },
       },
       posts: posts,
