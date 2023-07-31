@@ -3427,3 +3427,29 @@ works.
 
 *Mandatory legal notice:* This blog post is maintained by [Radian
 LLC](https://radian.codes/).
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    styles: {
+      ".MathJax .normal": {
+        // These styles should be the same as those applied to
+        // the main text of the site.
+        "color": "#111 !important",
+        "font-family": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default; !important",
+        "font-size": "16px !important",
+      },
+    },
+    TeX: {
+      Macros: {
+        n: ["\\class{normal}{\\text{#1}}", 1],
+      },
+    },
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+    },
+  });
+</script>
