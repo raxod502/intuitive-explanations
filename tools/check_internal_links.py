@@ -45,6 +45,7 @@ for relpath in (
     if relpath.endswith(".md"):
         with open(relpath) as f:
             text = f.read()
+        text = re.sub(r"(?s)<script.*?</script>", "", text)
         anchors_used = get_anchors_used(text)
         anchors_defined = get_anchors_defined(text)
         dedupe_set = set()
