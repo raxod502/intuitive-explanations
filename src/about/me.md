@@ -37,6 +37,7 @@ fantasy; my favorite author is [Brandon
 Sanderson](https://www.brandonsanderson.com/)), playing video games
 (typically indie titles with well-polished aesthetics and tight
 gameplay; favorites include [Celeste](http://www.celestegame.com/) and
-[Hyper Light Drifter](https://heartmachine.com/hyper-light)), and
-going on walks (hey, I wasn't able to stick to any other kind of
-exercise routine).
+[Hyper Light
+Drifter](https://www.heartmachine.com/hyper-light-drifter)), and going
+on walks (hey, I wasn't able to stick to any other kind of exercise
+routine).
