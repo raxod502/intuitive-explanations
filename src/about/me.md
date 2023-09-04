@@ -2,7 +2,7 @@
 title: About Me
 ---
 
-Hi, my name is Radon Rosborough (he/him). I am a software engineer on
+Hi, my name is Radon Rosborough (they/he). I am a software engineer on
 the Infrastructure team at [Plaid](https://plaid.com/) in San
 Francisco, CA, recently graduated from [Harvey Mudd
 College](https://www.hmc.edu/) majoring in computer science. My
