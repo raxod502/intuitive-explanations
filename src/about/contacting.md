@@ -12,12 +12,15 @@ other inbound messaging systems are monitored at this time.
 
 ### Things you should not contact me about
 
-* **Anything related to cryptocurrency, NFTs, Web3, or the Metaverse**
+* **Anything related to AI, cryptocurrency, NFTs, Web3, or the
+  Metaverse**
     * See [Line Goes Up](https://www.youtube.com/watch?v=YQ_xWvX1n9g),
       [Web3 is Going Just Great](https://web3isgoinggreat.com/what),
-      and [The Future is a Dead
-      Mall](https://www.youtube.com/watch?v=EiZhdpLXZ8Q) for reasons
-      why I don't associate with these technologies.
+      [The Future is a Dead
+      Mall](https://www.youtube.com/watch?v=EiZhdpLXZ8Q), and [The
+      ChatGPT revolution is another tech
+      fantasy](https://www.disconnect.blog/p/the-chatgpt-revolution-is-another)
+      for reasons why I don't associate with these technologies.
 * **Working at a trading or defense company**
     * Sorry, I'm not convinced either of these sectors have a positive
       impact on the world.
