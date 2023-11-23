@@ -20,19 +20,10 @@ applies to some school projects.
 
 ## Currently working on
 
-* [Riju] (Summer 2020 -- Winter 2021; [source][riju-source]):
-  Extremely fast online playground for every programming language.
-  Currently working on port to [Kubernetes] to improve
-  maintainability.
-* Shallan (Spring -- Summer 2021; not yet published): Personal music
-  library player combining the user-friendly interface and
-  cross-device synchronization of [YouTube Music][ytm] with the
-  flexibility and ownership of a self-hosted open-source solution.
-  Attempt #5 at a personal music library manager.
-* [Hypercast] (Winter 2022): Free, no-hassle watch parties on every
-  streaming platform. Implemented as Chrome and Firefox extension.
-* dontbeevilmirror (Spring 2023): Anonymizing proxy [CDN] for
-  [Android] apps pulled from the [Google Play Store]
+* regex-accountant: Aggregating personal finance record-keeper based
+  on total control of transaction reconciliation and categorization
+  via interactive rules engine and standard interface for ingesting
+  data from reverse engineered APIs.
 
 ## Emacs projects
 
@@ -363,6 +354,19 @@ applies to some school projects.
   [Smartparens], [Paredit], and [Electric Pair
   mode][electric-pair-mode]. This is still relevant but bandwidth has
   not been available to drive the project to completion.
+* [Riju] (Summer 2020 -- Winter 2021; [source][riju-source]):
+  Extremely fast online playground for every programming language.
+  Currently working on port to [Kubernetes] to improve
+  maintainability.
+* Shallan (Spring -- Summer 2021; not yet published): Personal music
+  library player combining the user-friendly interface and
+  cross-device synchronization of [YouTube Music][ytm] with the
+  flexibility and ownership of a self-hosted open-source solution.
+  Attempt #5 at a personal music library manager.
+* [Hypercast] (Winter 2022): Free, no-hassle watch parties on every
+  streaming platform. Implemented as Chrome and Firefox extension.
+* dontbeevilmirror (Spring 2023): Anonymizing proxy [CDN] for
+  [Android] apps pulled from the [Google Play Store]
 
 [2048-game]: https://play2048.co/
 [2048]: https://github.com/radian-software/2048
