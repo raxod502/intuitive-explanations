@@ -1,71 +1,71 @@
 const puzzles = [
   {
     title: "A Crafty Puzzle",
-    puz: "https://drive.google.com/file/d/1SEdcOGifyvORqrkWqqjVvK6dnBUm-ffI/view?usp=sharing",
+    puz: "https://link.intuitiveexplanations.com/d19bbc2456de4765957cedb81421b3eb",
     hash: "f3af49146b785311f1bc522a2a864ff16b374946e04a0c4f8e23806ed28a99af",
     solCrypt:
-      '{"iv":"0sDLD3Ic3bjHUhTy8IhuSg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"Xwqhwxy7oq4=","ct":"JERoLXwcbnQNlGTOMWr2h98WXtZqAt703Cd42CNlqkhgTvptG9dU6Kop3w123mM9tuUKjBHUtUvrQmL+WCJ9AzhIBInH5qDBuH6oAhh+yDbzLsojpbosMUGa"}',
+      '{"iv":"5YD+xaBOGkeEOfFhcjkiYw==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"/ceaB4fxjk8=","ct":"TxsX9Y1C8pczFU/KSh7ZENB2Kvv+03DsP3H9y2W6CMc61BLQvWh7SlAZbVa4tec6oz1QHU5SNQDxWPMiPfXbcOut70bwgpF5yvwRr9q7bg=="}',
   },
   {
     title: "Basic Arithmetic",
-    puz: "https://drive.google.com/file/d/1uB7IV9R_AAX9TJQyDv9yJIUQcXr51r5-/view?usp=sharing",
+    puz: "https://link.intuitiveexplanations.com/9935841835bc4539879a1cfa104b142b",
     hash: "821f700bb6448793533d6c3699bdb963995fc6372c12c76a2ff7f7fcf9b4f651",
     solCrypt:
-      '{"iv":"lyvX5B/cyy9mkgQ5dZLvnw==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"OUZYJ+HZ1fw=","ct":"IyEcXUbGVw49tuvkewJq4bagbQ9NYeeeSj7BBp7wuMpzs1q3N3cp5xkGJKG6xMupFXg04q+BSpzl7ceQKCI1YHu7SVaYrrCL7gm471UALD7tDZ8Dp4rFDnX5"}',
+      '{"iv":"hSKepVbi2GDI/oL5lXKNvQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"MwadRpM26zk=","ct":"zlIb95KWhACyQ2RithS0a6+d9MXrMa5HRlhfT3kDVoYlIyCZoNv2ev/aPCXYrwOutfJCJzlSO69aLnUCUPmt879kkwYeLSqQLOr4FsA/WA=="}',
   },
   {
     title: "Circle of Life",
-    puz: "https://drive.google.com/file/d/1kQvyhiQgknVg2ftdHWqgFe_3aLpvV_a4/view?usp=sharing",
+    puz: "https://link.intuitiveexplanations.com/b62217fa9a16423bb76bab09514a7e07",
     hash: "a9e7d752c811dc903a17380b8f8c1b3bd979d6c519040c86d8695cb0473b3ad3",
     solCrypt:
-      '{"iv":"IwevYlxnUe5H6DrWc6iSmg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"xi6NrTo/Nt8=","ct":"YmmE3GaivOgCy3dsgjLZUuYPCWIdhoauEZtAwG/tlX4rUkzoFfQZiZMTfXclTi+rUz+yWBEIJxnrO9HzWHK2dWvemm4GJshVCXNXxxTuVRVgfQMsBgpbLPst"}',
+      '{"iv":"Cb9KPOeC/CBl5RxIphLZ8g==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"nQDHwoAxQm0=","ct":"/cX1YoRcRZiqDYiZvF7YyYYknLShxrIxWPpZ9LCR24lI0X/+GmYcjrGifnuQbSTpZKkxPWRoARHQbdwbhrFwiZC7NTujMmlCyZT9lCYbBg=="}',
   },
   {
     title: "Contrary Crossword",
-    puz: "https://drive.google.com/file/d/16QiUAj2S3upg_bxRr9XExjlQrVEbmX45/view?usp=sharing",
+    puz: "https://link.intuitiveexplanations.com/e7fa6bf718704909bda2e46d047bf7c4",
     hash: "42abb7512027c2959f9ec9c5aac3eb5e596c76840768f1bc4502476d56eab87b",
     solCrypt:
-      '{"iv":"JTYOfBCcBGdrc33eunLjKA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"aUE76FMWNLQ=","ct":"Tb3FK1nCAqJvEDPgjJQIUUQB89Q="}',
+      '{"iv":"jQlolUw3G6BR8UloqX+pxQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"iCeTM6r+bkA=","ct":"muTJ64WaezFOvrpXjt8APkDudSE="}',
   },
   {
     title: "Degrees",
-    puz: "https://drive.google.com/file/d/1wxdTwjha5mJgDTyfy5iOZqrsrTAdMVqm/view?usp=sharing",
+    puz: "https://link.intuitiveexplanations.com/857cea409eb24e8aa7368bfd2a80f93b",
     hash: "0ce3c77046694c7d44aed3c3552ceb23e68053f89ba02e03a240fc9f7cb0c7b0",
     solCrypt:
-      '{"iv":"uTIGMBVtYKAM3eqDIvaG/g==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"NysOrMRqfVU=","ct":"t1FsQmGdQtibVst+vrgN64tpCEwRo4aq6hN952WNkhjOZTLJmgw0qhsrWIZ/jVjkE5dKdUxyldR5PBXsq3Cf8vakptxVnx9sD+lSaXk2Dm5yg7ssP5eG6mSb"}',
+      '{"iv":"fsfzJ7ZbK6GvpbEOttSRkA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"IKo8RteNix8=","ct":"fSnvP+azkng/LOx7sVbr9hw8rDMs17m1wFhpM+Cba6CQEgV0WDQtdkZG8uAnBCQKcaDOC3xJNCwJoXyaATfKpYfDg828+Mch+LXAG5NKhQ=="}',
   },
   {
     title: "Endless Castle",
-    puz: "https://drive.google.com/file/d/18bpzcJM9qajDareFqSzLxnjaKFKSbmqT/view?usp=sharing",
+    puz: "https://link.intuitiveexplanations.com/a823b834e97b40e187d4d5800e1fd541",
     hash: "b46dc679cdf57f0db46263c81287060a18cc7cf89a158923f5e21fb6606276cf",
     solCrypt:
-      '{"iv":"/Z2jNCo27gLm8MNKkSbQ8g==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"SvKk79p31fw=","ct":"b74KXeBw+0lA2QPugfIBo4oCcZXMDIVlXbt/gX6Ajja4MuTGEzdJQWBvC6HuAyurY9w8MgUOa6VvWMJu9OC8LSih2mXz7ET2vVeSL6ENgebBE8HvBVA5wbsr"}',
+      '{"iv":"HnjlXSy8KJl+XIqro/Xcfg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"84DQVVhfeGc=","ct":"J54hVfrqQoGIaDCgM04THM627w04oZ3LiGdHPDfKRDh/XkhKFDUzgEMlA4cURcAvFr5IMJQX5UkB19UFcT8LQFDPQ2KY6kjj8MtUOf08UQ=="}',
   },
   {
     title: "Flight Corrections",
-    puz: "https://drive.google.com/file/d/1FWxLDj_Px4HDP6OwE91kXiW582uzjKVg/view?usp=sharing",
+    puz: "https://link.intuitiveexplanations.com/f41a365e61e4403591279d97fa7268e2",
     hash: "49c155caa79be806786b5118ef45ab978d69de3147f6a87c66f96ec760e73db0",
     solCrypt:
-      '{"iv":"QEKuHWttwB1WJ5ykhRdOiA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"gNu2QPYBp/8=","ct":"ZVSZIzobK6cvm7OinK+uAK+QpHOsfzgVq8VoYAi3biH1MxLp4I9eXd4Lv/yLaJZDU9j6Dgv4agZzj85e2sVqTKeB+KUZlqjwm1eIDlHLntR5XHeW0HGMRgh0"}',
+      '{"iv":"AIj7144e5RxiFT9fPe3ySw==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"/NW4CCo/L40=","ct":"+bw1LXxfOorUQYrLU8LIUTR6hRQHlLo4IBFHHbqGHTeMpI17y/s+/mvjANUaq0kT2F1gRQzh5bPD2NIa0NuWY+M+4KJt49xqFMHz5cIJrQ=="}',
   },
   {
     title: "Identification",
-    puz: "https://drive.google.com/file/d/1LpXYJ8EDxlH5EV2d1jvqj0u1LMFyKqXS/view?usp=sharing",
+    puz: "https://link.intuitiveexplanations.com/4754eec5eb7d47989a687442bc3944da",
     hash: "3387d61728cdf0b32daf6776b672b06cf62ce0fe66f21efb3d43dc8a51aa81d5",
     solCrypt:
-      '{"iv":"JJa9sY3QOLfoGDWC9XnBIA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"VpcrZD+Vskw=","ct":"sAFAB7FgPhcM8d6ap/QN09vKMZw01u6/umiNm6iVrM0YqVU2mW0bNUgBkRHaTH4mV7OTIDz/ARwS/X+njMYL9PumLGSnvdmZ+N5/Kf22pbq6NT2R+C/bxJn2"}',
+      '{"iv":"CYEdHH9Znuk6OQbxmyscUw==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"ctjKpyONdPs=","ct":"RRKt+s4s6wge67Lj6r+ZiQj/NclxYJ41G3g86Kogea+3tvImroaNHfo4ZvsVrGNAzFxTksBr11EmBwxryD+Xp/by1KjDsPtc7IsK3cNQHw=="}',
   },
   {
     title: "PriPri",
-    puz: "https://drive.google.com/file/d/1xySk4BD7fLq5Il-x5q1sDV4ZlMlQ2a5t/view?usp=sharing",
+    puz: "https://link.intuitiveexplanations.com/e414555505f343c6a8de2970ac42d509",
     hash: "052886256f2eb5224f013b47ed38b4199e799db211813c24691d588c46248b29",
     solCrypt:
-      '{"iv":"AwrUkU7BK0acyRZIEeknEQ==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"ejPgoRZLX7I=","ct":"IKZtarq/a7tLyJE4+wVvqwgCQTT+MXNZ8YhHiJeXYNv7cZxQfENXrnRziuV6yId+yCpxgxaoXQNQ8khZm3KYKU1rppM1biD4ydFFQK+PmaOUWsyzIXMUbbD3"}',
+      '{"iv":"kVEFHhpOtAP2IsMy7oev+g==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"3eKkIiQKCYY=","ct":"k61jrFZFgDQ+iicu1lVwtlzETpBnbVE/io6gq/kK0hIkM8bi/FFTLSRGi+vCTSMGzILa589vgMvpj5Vs3Xz0/OUyF+tPFtFZ9ScbO4lZQg=="}',
   },
 ];
 
 const metasolCrypt =
-  '{"iv":"Tme3RVCo6m3hTfRj7FnLhg==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"SzWlBQY3144=","ct":"phXZLC8gTytacJLOAHcfx5RTeWOadR+2gxUrWZd9tmxNdcRwKIfXj18NcdVElP8oOCVDdiXbwJxkQAUWQtUsWpCgZPEXlOEqg1WC1JM4MxkJHCwPz28NawTV"}';
+  '{"iv":"3uHW5zqwyfUMTy8WuOwmCA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"EO32MD5JtWY=","ct":"xkWhiOIm64s/s30oA1/WYUVTxUd9GbdhO+ZN8MD7AOmj5jxxxEGj4r9+TQYbQLpQBac6Ltg8AI15O5PgYCl/vOVxIkeip7jpiVEeSNfrTw=="}';
 
 let guesses = {};
 
@@ -185,7 +185,7 @@ function showModal(puzzle) {
         let href = solved[puzzle.title];
         if (href === "[Metapuzzle]" && !metasol) {
           a = document.createTextNode(
-            "solution hidden until all puzzles are solved"
+            "solution hidden until all puzzles are solved",
           );
         } else {
           if (href === "[Metapuzzle]" && metasol) {
