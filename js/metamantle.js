@@ -126,11 +126,11 @@ const submitString = async () => {
   if (cachedResponses.hasOwnProperty(string)) data = cachedResponses[string];
   else {
     const resp = await fetch(
-      `https://faqpgztusmzkwzfhb3sxux6myu0zmfpx.lambda-url.us-west-1.on.aws?string=${string.toLowerCase()}`
+      `https://metamantle.intuitiveexplanations.com?string=${string.toLowerCase()}`,
     );
     if (!resp.ok) {
       throw new Error(
-        `got unexpected response code ${resp.status} from server`
+        `got unexpected response code ${resp.status} from server`,
       );
     }
     data = await resp.json();
@@ -138,7 +138,7 @@ const submitString = async () => {
     cachedResponses[string] = data;
     localStorage.setItem(
       "metamantleCachedResponses",
-      JSON.stringify(cachedResponses)
+      JSON.stringify(cachedResponses),
     );
   }
   eltReport.innerText = getReport(string, data);
@@ -185,7 +185,7 @@ const submitAnswer = () => {
     try {
       eltAnswerResponse.innerText = sjcl.decrypt(
         answer,
-        '{"iv":"PzPX1/8+eSUq2X9czO6xCA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"EvFc+40BRwQ=","ct":"/USfdbRD762N5XIUGUPTBZsgJ+ifnGyv7IYVXGUIjtpGlIthd0F1AW63ayL638PQ5tiZIrWPldlVM2BrubZ3Jgp3sTo5v1xeYjRwRNiQ+tuM/g0B69+m+FQ+kVSD29dpL+XpZVxciXTwi4AlcdbYV80ovAyPZH1SedcfriATOMNVR0dUAsnqHvo8GE+dB7GytRfk5uq/rLUwVDvLbEPMax+qafvTYggzguUAz6yWfyWATMXURp+mlDX9K0C4bg/R10wuOUp3neMb+YDQmUWRwoaS+k/vxPc3NrrCbTLG0dTuFVU9OcfyfpEmBrjAW82rD7iuqYwz9cxgeatNXuQyqmcLhZ4a5kAS8z/8wVtKaXPddprrf/VBu7VyHLAEw23uLMiHIW9hcVABB1wvXChV1nEoepkaWIRadZFu6ou8D3w7IniqW8B4QOqTRqmtjdNSGdrR8vZdCPGU1olIt6crSw5ACPbFqjlD8MKeGxoWyCPd"}'
+        '{"iv":"PzPX1/8+eSUq2X9czO6xCA==","v":1,"iter":10000,"ks":128,"ts":64,"mode":"ccm","adata":"","cipher":"aes","salt":"EvFc+40BRwQ=","ct":"/USfdbRD762N5XIUGUPTBZsgJ+ifnGyv7IYVXGUIjtpGlIthd0F1AW63ayL638PQ5tiZIrWPldlVM2BrubZ3Jgp3sTo5v1xeYjRwRNiQ+tuM/g0B69+m+FQ+kVSD29dpL+XpZVxciXTwi4AlcdbYV80ovAyPZH1SedcfriATOMNVR0dUAsnqHvo8GE+dB7GytRfk5uq/rLUwVDvLbEPMax+qafvTYggzguUAz6yWfyWATMXURp+mlDX9K0C4bg/R10wuOUp3neMb+YDQmUWRwoaS+k/vxPc3NrrCbTLG0dTuFVU9OcfyfpEmBrjAW82rD7iuqYwz9cxgeatNXuQyqmcLhZ4a5kAS8z/8wVtKaXPddprrf/VBu7VyHLAEw23uLMiHIW9hcVABB1wvXChV1nEoepkaWIRadZFu6ou8D3w7IniqW8B4QOqTRqmtjdNSGdrR8vZdCPGU1olIt6crSw5ACPbFqjlD8MKeGxoWyCPd"}',
       );
     } catch (err) {
       alert("internal error with the cryptography");
