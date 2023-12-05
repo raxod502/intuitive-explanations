@@ -463,5 +463,12 @@ Yes! Check it out at <https://riju.codes/>, and join the community on
 GitHub at <https://github.com/raxod502/riju>. I'd love to work on the
 project with you <3
 
+(Please note that Riju is only available on IPv6-enabled networks due
+to the higher financial cost of supporting legacy protocols. If your
+network [does not support IPv6](https://test-ipv6.com/) then please
+consider asking your network administrator or service provider to do
+their part in supporting modern internet standards. You can consider
+accessing Riju through a VPN as a workaround.)
+
 *Mandatory legal notice:* This blog post is maintained by [Radian
 LLC](https://radian.codes/).
