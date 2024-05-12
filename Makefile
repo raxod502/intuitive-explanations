@@ -66,10 +66,6 @@ clean: ## Remove build artifacts
 		| grep -Ev '^(node_modules|\.env)'		\
 		| xargs rm -v
 
-.PHONY: deploy
-deploy: ## Deploy website to Netlify
-	tools/deploy.bash
-
 .PHONY: docker
 docker: ## Start a Docker shell
 	tools/docker-run.bash "$(CMD)"

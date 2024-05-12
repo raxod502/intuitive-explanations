@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Checkout submodules
         env:
           FICTION_WRITING: ${{ secrets.CLONE_URL_FICTION_WRITING }}
@@ -18,8 +18,15 @@ jobs:
           git config -f .gitmodules submodule.doc/resume.url "${RESUME}"
           git config -f .gitmodules submodule.doc/stories.url "${FICTION_WRITING}"
           git submodule update --init --recursive
-      - name: Build and deploy
+      - name: Build website
         env:
           NETLIFY_KEY: ${{ secrets.NETLIFY_KEY }}
         run: |
-          make docker CMD="make checklinks all deploy ENABLE_ANALYTICS=1"
+          make docker CMD="make checklinks all ENABLE_ANALYTICS=1"
+      - name: Deploy to Cloudflare
+        uses: cloudflare/pages-action@1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+          directory: out
