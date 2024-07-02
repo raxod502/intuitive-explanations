@@ -17,9 +17,10 @@ other inbound messaging systems are monitored at this time.
     * See [Line Goes Up](https://www.youtube.com/watch?v=YQ_xWvX1n9g),
       [Web3 is Going Just Great](https://web3isgoinggreat.com/what),
       [The Future is a Dead
-      Mall](https://www.youtube.com/watch?v=EiZhdpLXZ8Q), and [The
-      ChatGPT revolution is another tech
-      fantasy](https://www.disconnect.blog/p/the-chatgpt-revolution-is-another)
+      Mall](https://www.youtube.com/watch?v=EiZhdpLXZ8Q), [Have We
+      Reached Peak AI?](https://www.wheresyoured.at/peakai/), and [I
+      Will Fucking Piledrive You If You Mention AI
+      Again](https://ludic.mataroa.blog/blog/i-will-fucking-piledrive-you-if-you-mention-ai-again/)
       for reasons why I don't associate with these technologies.
 * **Working at a trading or defense company**
     * Sorry, I'm not convinced either of these sectors have a positive
