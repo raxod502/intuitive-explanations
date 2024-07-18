@@ -32,10 +32,10 @@ src = Path("src")
 for node in walk(src):
     if node.suffix != ".md":
         continue
-    if node.parent == src:
-        continue
     path = node.relative_to(src).with_suffix("")
     if path.name == "index":
+        if node.parent == src:
+            continue
         redirects.append(
             {
                 "source": f"/{path.parent}",
