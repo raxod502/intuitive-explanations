@@ -1,7 +1,6 @@
 {
   "redirects": [
     {
-      "$comment": "== Section: Convenience ==",
       "source": "/projects",
       "destination": "/about/projects"
     },
@@ -10,7 +9,6 @@
       "destination": "/assets/Resume.pdf"
     },
     {
-      "$comment": "== Section: Files that still exist ==",
       "source": "/CalculusBowlExpertEdition.pdf",
       "destination": "/assets/CalculusBowlExpertEdition.pdf"
     },
@@ -75,7 +73,6 @@
       "destination": "/assets/ProbabilityDistributionsMeansAndVariances.pdf"
     },
     {
-      "$comment": "== Section: Files that no longer exist ==",
       "source": "/assets/ftc-graph-lines-labeled.png",
       "destination": "/wip/integration/"
     },
@@ -152,7 +149,6 @@
       "destination": "https://github.com/raxod502/intuitive-explanations/tree/8fed15eb6aeeb1c8f373af4f0d434316c557c71c/_src/tex"
     },
     {
-      "$comment": "== Section: Pages that still exist ==",
       "source": "/about-this-site",
       "destination": "/about/site"
     },
@@ -221,7 +217,6 @@
       "destination": "/math/probability-distributions-means-and-variances"
     },
     {
-      "$comment": "== Section: Pages that no longer exist ==",
       "source": "/wip",
       "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/index.md"
     },
@@ -270,7 +265,6 @@
       "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/unix.md"
     },
     {
-      "$comment": "== Section: Matrix ==",
       "source": "/.well-known/matrix/:path*",
       "destination": "https://matrix.intuitiveexplanations.com/.well-known/matrix/:path*"
     }
