@@ -23,10 +23,14 @@ jobs:
           NETLIFY_KEY: ${{ secrets.NETLIFY_KEY }}
         run: |
           make docker CMD="make checklinks all ENABLE_ANALYTICS=1"
-      - name: Deploy to Cloudflare
-        uses: cloudflare/pages-action@1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
-          directory: out
+      - name: Deploy to Vercel
+        env:
+          VERCEL_ORG_ID: ${{ config.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ config.VERCEL_PROJECT_ID }}
+        run: |
+          set -e
+
+          npm install -g vercel
+          vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+          vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+          vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
