@@ -25,8 +25,8 @@ jobs:
           make docker CMD="make checklinks all ENABLE_ANALYTICS=1"
       - name: Deploy to Vercel
         env:
-          VERCEL_ORG_ID: ${{ config.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ config.VERCEL_PROJECT_ID }}
+          VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
         run: |
           set -e
 
