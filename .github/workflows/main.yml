@@ -19,8 +19,6 @@ jobs:
           git config -f .gitmodules submodule.doc/stories.url "${FICTION_WRITING}"
           git submodule update --init --recursive
       - name: Build website
-        env:
-          NETLIFY_KEY: ${{ secrets.NETLIFY_KEY }}
         run: |
           make docker CMD="make checklinks all ENABLE_ANALYTICS=1"
       - name: Deploy to Vercel
