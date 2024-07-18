@@ -25,6 +25,7 @@ serve: ## Run developer server
 
 .PHONY: build
 build: ## Build main website content
+	python3 vercel.py
 	rm -rf out && npx eleventy
 
 .PHONY: tex
@@ -55,6 +56,10 @@ stories: ## Compile Fiction Writing stories
 		ln -s ../../placeholder/Placeholder.pdf doc/stories/roundone/TheGarden.pdf;		\
 		ln -s ../../placeholder/Placeholder.pdf doc/stories/roundtwo/NewYearsDay.pdf;		\
 	fi
+
+.PHONY: vercel
+vercel: ## Generate Vercel configuration file
+	python3 vercel.py
 
 .PHONY: checklinks
 checklinks: ## Check link anchors in Markdown files

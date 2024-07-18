@@ -14,5 +14,6 @@
 auto
 node_modules
 out
+vercel.json
 !assets/*
 !doc/tex/documents/CalculusIntuitiveExplanations/data/*

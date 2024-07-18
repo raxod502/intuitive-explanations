@@ -1,0 +1,82 @@
+# Convenience
+/projects /about/projects
+/Resume.pdf /assets/Resume.pdf
+
+# Files that still exist
+/CalculusBowlExpertEdition.pdf /assets/CalculusBowlExpertEdition.pdf
+/CalculusIntuitiveExplanations.pdf /assets/CalculusIntuitiveExplanations.pdf
+/DifferentialEquationSolutionStrategies.pdf /assets/DifferentialEquationSolutionStrategies.pdf
+/LinearAlgebraSummarySheet.pdf /assets/LinearAlgebraSummarySheet.pdf
+/PicardLindelofTheorem.pdf /assets/PicardLindelofTheorem.pdf
+/ProbabilityDistributionsMeansAndVariances.pdf /assets/ProbabilityDistributionsMeansAndVariances.pdf
+/files/CalcBowl.pdf /CalculusBowlExpertEdition.pdf
+/files/CalculusTextbookCover.pdf https://github.com/raxod502/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf
+/files/ChronoCountDetails.pdf https://github.com/raxod502/chrono-count/blob/b08480eff49f6e3b66ae32fe3bb4afe39dc0ce7a/ChronoCountDetails.pdf
+/files/DifferentialEquationSolutionStrategies.pdf /assets/DifferentialEquationSolutionStrategies.pdf
+/files/ExistenceUniquenessTheorem.pdf /assets/PicardLindelofTheorem.pdf
+/files/Intuition /assets/CalculusIntuitiveExplanations.pdf
+/files/Intuition.pdf /assets/CalculusIntuitiveExplanations.pdf
+/files/IntuitiveExplanations.pdf /assets/CalculusIntuitiveExplanations.pdf
+/files/LinearAlgebraSummarySheet.pdf /assets/LinearAlgebraSummarySheet.pdf
+/files/ProbabilityDistributionProofs.pdf /assets/ProbabilityDistributionsMeansAndVariances.pdf
+
+# Files that no longer exist
+/assets/ftc-graph-lines-labeled.png /wip/integration/
+/assets/ftc-graph-lines-many.png /wip/integration/
+/assets/ftc-graph-lines.png /wip/integration/
+/assets/ftc-graph.png /wip/integration/
+/assets/integration-graph-area-rectangle-single.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-graph-area-rectangle-single.xcf
+/assets/integration-graph-area-rectangles.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-graph-area-rectangles.xcf
+/assets/integration-graph-area.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-graph-area.xcf
+/assets/integration-pizza-function.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-pizza-function.xcf
+/assets/integration-pizza-partition-sizes.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-pizza-partition-sizes.xcf
+/assets/integration-pizza-partition.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-pizza-partition.xcf
+/assets/integration-pizza.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-pizza.xcf
+/assets/integration-slope-graph-tangents.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-slope-graph-tangents.xcf
+/assets/integration-slope-graph.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-slope-graph.xcf
+/assets/integration-triangle-accumulation.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-triangle-accumulation.xcf
+/assets/integration-triangle-difference.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-triangle-difference.xcf
+/assets/integration-triangle-rectangle.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-triangle-rectangle.xcf
+/assets/integration-triangle.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-triangle.xcf
+/assets/limits-increasing-sine.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/limits-increasing-sine.xcf
+/files/LaTeXSource.zip https://github.com/raxod502/intuitive-explanations/tree/8fed15eb6aeeb1c8f373af4f0d434316c557c71c/_src/tex
+
+# Pages that still exist
+/about-this-site /about/site
+/calculus-bowl /math/calculus-bowl-expert-edition
+/calculus-bowl-expert-edition /math/calculus-bowl-expert-edition
+/calculus-intuitive-explanations /math/calculus-intuitive-explanations
+/differential-equation-solution-strategies /math/differential-equation-solution-strategies
+/differential-equations-solution-strategies /math/differential-equation-solution-strategies
+/existence-uniqueness-theorem /math/picard-lindelof-theorem
+/files /
+/intuitive-explanations /math/calculus-intuitive-explanations
+/linear-algebra-summary-sheet /math/linear-algebra-summary-sheet
+/other-projects /about/projects
+/page/1 /
+/picard-lindelof-theorem /math/picard-lindelof-theorem
+/post /
+/post/page/1 /
+/probability-distributions-means-and-variances /math/probability-distributions-means-and-variances
+/probability-distributions-proofs /math/probability-distributions-means-and-variances
+
+# Pages that no longer exist
+/wip https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/index.md
+/wip/etug https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/etug.md
+/wip/integration https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/integration.md
+/wip/limits https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/limits.md
+/wip/tooling https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/index.md
+/wip/tooling/boot https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/boot.md
+/wip/tooling/filesystems https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/filesystems.md
+/wip/tooling/packages https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/packages.md
+/wip/tooling/partitions https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/partitions.md
+/wip/tooling/processes https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/processes.md
+/wip/tooling/shells https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/shells.md
+/wip/tooling/unix https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/unix.md
+
+# Matrix
+/.well-known/matrix/:path* https://matrix.intuitiveexplanations.com/.well-known/matrix/:path*
+
+# Local Variables:
+# mode: conf-space
+# End:
