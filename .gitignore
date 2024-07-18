@@ -10,6 +10,7 @@
 *.toc
 *.xdv
 .env
+.vercel
 auto
 node_modules
 out
