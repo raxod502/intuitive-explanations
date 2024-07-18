@@ -37,14 +37,14 @@ module.exports = (eleventyConfig) => {
     }).use(anchor, {
       // GitHub compatible heading slugs that don't look awful
       slugify: toc.slugify,
-    })
+    }),
   );
 
   for (const path of ["assets", "css", "favicons", "fonts", "js"]) {
     eleventyConfig.addPassthroughCopy(path);
   }
 
-  eleventyConfig.addPassthroughCopy("_redirects");
+  eleventyConfig.addPassthroughCopy("vercel.json");
 
   return {
     dir: {

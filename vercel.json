@@ -1,0 +1,278 @@
+{
+  "redirects": [
+    {
+      "$comment": "== Section: Convenience ==",
+      "source": "/projects",
+      "destination": "/about/projects"
+    },
+    {
+      "source": "/Resume.pdf",
+      "destination": "/assets/Resume.pdf"
+    },
+    {
+      "$comment": "== Section: Files that still exist ==",
+      "source": "/CalculusBowlExpertEdition.pdf",
+      "destination": "/assets/CalculusBowlExpertEdition.pdf"
+    },
+    {
+      "source": "/CalculusIntuitiveExplanations.pdf",
+      "destination": "/assets/CalculusIntuitiveExplanations.pdf"
+    },
+    {
+      "source": "/DifferentialEquationSolutionStrategies.pdf",
+      "destination": "/assets/DifferentialEquationSolutionStrategies.pdf"
+    },
+    {
+      "source": "/LinearAlgebraSummarySheet.pdf",
+      "destination": "/assets/LinearAlgebraSummarySheet.pdf"
+    },
+    {
+      "source": "/PicardLindelofTheorem.pdf",
+      "destination": "/assets/PicardLindelofTheorem.pdf"
+    },
+    {
+      "source": "/ProbabilityDistributionsMeansAndVariances.pdf",
+      "destination": "/assets/ProbabilityDistributionsMeansAndVariances.pdf"
+    },
+    {
+      "source": "/files/CalcBowl.pdf",
+      "destination": "/CalculusBowlExpertEdition.pdf"
+    },
+    {
+      "source": "/files/CalculusTextbookCover.pdf",
+      "destination": "https://github.com/raxod502/layerize/blob/f9d598b5d15c47045729505cc1b7a3d3e077bb11/Inspiration.pdf"
+    },
+    {
+      "source": "/files/ChronoCountDetails.pdf",
+      "destination": "https://github.com/raxod502/chrono-count/blob/b08480eff49f6e3b66ae32fe3bb4afe39dc0ce7a/ChronoCountDetails.pdf"
+    },
+    {
+      "source": "/files/DifferentialEquationSolutionStrategies.pdf",
+      "destination": "/assets/DifferentialEquationSolutionStrategies.pdf"
+    },
+    {
+      "source": "/files/ExistenceUniquenessTheorem.pdf",
+      "destination": "/assets/PicardLindelofTheorem.pdf"
+    },
+    {
+      "source": "/files/Intuition",
+      "destination": "/assets/CalculusIntuitiveExplanations.pdf"
+    },
+    {
+      "source": "/files/Intuition.pdf",
+      "destination": "/assets/CalculusIntuitiveExplanations.pdf"
+    },
+    {
+      "source": "/files/IntuitiveExplanations.pdf",
+      "destination": "/assets/CalculusIntuitiveExplanations.pdf"
+    },
+    {
+      "source": "/files/LinearAlgebraSummarySheet.pdf",
+      "destination": "/assets/LinearAlgebraSummarySheet.pdf"
+    },
+    {
+      "source": "/files/ProbabilityDistributionProofs.pdf",
+      "destination": "/assets/ProbabilityDistributionsMeansAndVariances.pdf"
+    },
+    {
+      "$comment": "== Section: Files that no longer exist ==",
+      "source": "/assets/ftc-graph-lines-labeled.png",
+      "destination": "/wip/integration/"
+    },
+    {
+      "source": "/assets/ftc-graph-lines-many.png",
+      "destination": "/wip/integration/"
+    },
+    {
+      "source": "/assets/ftc-graph-lines.png",
+      "destination": "/wip/integration/"
+    },
+    {
+      "source": "/assets/ftc-graph.png",
+      "destination": "/wip/integration/"
+    },
+    {
+      "source": "/assets/integration-graph-area-rectangle-single.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-graph-area-rectangle-single.xcf"
+    },
+    {
+      "source": "/assets/integration-graph-area-rectangles.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-graph-area-rectangles.xcf"
+    },
+    {
+      "source": "/assets/integration-graph-area.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-graph-area.xcf"
+    },
+    {
+      "source": "/assets/integration-pizza-function.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-pizza-function.xcf"
+    },
+    {
+      "source": "/assets/integration-pizza-partition-sizes.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-pizza-partition-sizes.xcf"
+    },
+    {
+      "source": "/assets/integration-pizza-partition.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-pizza-partition.xcf"
+    },
+    {
+      "source": "/assets/integration-pizza.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-pizza.xcf"
+    },
+    {
+      "source": "/assets/integration-slope-graph-tangents.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-slope-graph-tangents.xcf"
+    },
+    {
+      "source": "/assets/integration-slope-graph.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-slope-graph.xcf"
+    },
+    {
+      "source": "/assets/integration-triangle-accumulation.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-triangle-accumulation.xcf"
+    },
+    {
+      "source": "/assets/integration-triangle-difference.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-triangle-difference.xcf"
+    },
+    {
+      "source": "/assets/integration-triangle-rectangle.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-triangle-rectangle.xcf"
+    },
+    {
+      "source": "/assets/integration-triangle.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-triangle.xcf"
+    },
+    {
+      "source": "/assets/limits-increasing-sine.png",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/limits-increasing-sine.xcf"
+    },
+    {
+      "source": "/files/LaTeXSource.zip",
+      "destination": "https://github.com/raxod502/intuitive-explanations/tree/8fed15eb6aeeb1c8f373af4f0d434316c557c71c/_src/tex"
+    },
+    {
+      "$comment": "== Section: Pages that still exist ==",
+      "source": "/about-this-site",
+      "destination": "/about/site"
+    },
+    {
+      "source": "/calculus-bowl",
+      "destination": "/math/calculus-bowl-expert-edition"
+    },
+    {
+      "source": "/calculus-bowl-expert-edition",
+      "destination": "/math/calculus-bowl-expert-edition"
+    },
+    {
+      "source": "/calculus-intuitive-explanations",
+      "destination": "/math/calculus-intuitive-explanations"
+    },
+    {
+      "source": "/differential-equation-solution-strategies",
+      "destination": "/math/differential-equation-solution-strategies"
+    },
+    {
+      "source": "/differential-equations-solution-strategies",
+      "destination": "/math/differential-equation-solution-strategies"
+    },
+    {
+      "source": "/existence-uniqueness-theorem",
+      "destination": "/math/picard-lindelof-theorem"
+    },
+    {
+      "source": "/files",
+      "destination": "/"
+    },
+    {
+      "source": "/intuitive-explanations",
+      "destination": "/math/calculus-intuitive-explanations"
+    },
+    {
+      "source": "/linear-algebra-summary-sheet",
+      "destination": "/math/linear-algebra-summary-sheet"
+    },
+    {
+      "source": "/other-projects",
+      "destination": "/about/projects"
+    },
+    {
+      "source": "/page/1",
+      "destination": "/"
+    },
+    {
+      "source": "/picard-lindelof-theorem",
+      "destination": "/math/picard-lindelof-theorem"
+    },
+    {
+      "source": "/post",
+      "destination": "/"
+    },
+    {
+      "source": "/post/page/1",
+      "destination": "/"
+    },
+    {
+      "source": "/probability-distributions-means-and-variances",
+      "destination": "/math/probability-distributions-means-and-variances"
+    },
+    {
+      "source": "/probability-distributions-proofs",
+      "destination": "/math/probability-distributions-means-and-variances"
+    },
+    {
+      "$comment": "== Section: Pages that no longer exist ==",
+      "source": "/wip",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/index.md"
+    },
+    {
+      "source": "/wip/etug",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/etug.md"
+    },
+    {
+      "source": "/wip/integration",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/integration.md"
+    },
+    {
+      "source": "/wip/limits",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/limits.md"
+    },
+    {
+      "source": "/wip/tooling",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/index.md"
+    },
+    {
+      "source": "/wip/tooling/boot",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/boot.md"
+    },
+    {
+      "source": "/wip/tooling/filesystems",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/filesystems.md"
+    },
+    {
+      "source": "/wip/tooling/packages",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/packages.md"
+    },
+    {
+      "source": "/wip/tooling/partitions",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/partitions.md"
+    },
+    {
+      "source": "/wip/tooling/processes",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/processes.md"
+    },
+    {
+      "source": "/wip/tooling/shells",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/shells.md"
+    },
+    {
+      "source": "/wip/tooling/unix",
+      "destination": "https://github.com/raxod502/intuitive-explanations/blob/bc72e0dfcff324abedeef188e12ae209e2987c36/wip/tooling/unix.md"
+    },
+    {
+      "$comment": "== Section: Matrix ==",
+      "source": "/.well-known/matrix/:path*",
+      "destination": "https://matrix.intuitiveexplanations.com/.well-known/matrix/:path*"
+    }
+  ]
+}
