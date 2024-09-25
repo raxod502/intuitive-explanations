@@ -612,7 +612,7 @@ applies to some school projects.
 [wdx]: https://github.com/radian-software/wdx
 [webcomic]: https://en.wikipedia.org/wiki/Webcomic
 [whales.life-source]: https://github.com/raxod502/cs121-whales
-[whales.life]: https://cs121-whales.herokuapp.com/
+[whales.life]: https://whales.intuitiveexplanations.com/
 [x86-64]: https://en.wikipedia.org/wiki/X86-64
 [ytm]: https://music.youtube.com/
 [zsh]: http://www.zsh.org/
