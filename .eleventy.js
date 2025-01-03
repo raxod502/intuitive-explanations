@@ -44,6 +44,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy(path);
   }
 
+  eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("vercel.json");
 
   return {
