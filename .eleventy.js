@@ -46,6 +46,9 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy("vercel.json");
+  eleventyConfig.addPassthroughCopy({
+    "webfinger.json": ".well-known/webfinger",
+  });
 
   return {
     dir: {
