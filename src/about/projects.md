@@ -196,8 +196,6 @@ applies to some school projects.
 
 ## Work projects
 
-(See also my [resume](/assets/Resume.pdf).)
-
 * [Ecofasten] and [Alpine Snowboards] pricing calculators (Summer
   2015, ThinkTopic; proprietary): Frontend and backend work on
   existing [Clojure]/[ClojureScript]/[Datomic] web applications for

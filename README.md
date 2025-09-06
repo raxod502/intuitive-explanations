@@ -2,8 +2,8 @@
 
 This is the home of my personal website. Most of it is open-source,
 there are just one or two small pieces which are kept in private
-submodules (such as my resume) to which the deploy system has access.
-You can build the website yourself without these components.
+submodules (such as my fiction writing) to which the deploy system has
+access. You can build the website yourself without these components.
 
 ## Development
 
@@ -29,7 +29,6 @@ installed. Run:
       make build        Build main website content
       make tex          Compile LaTeX
       make placeholder  Compile placeholder document
-      make resume       Compile resume
       make stories      Compile Fiction Writing stories
       make checklinks   Check link anchors in Markdown files
       make clean        Remove build artifacts

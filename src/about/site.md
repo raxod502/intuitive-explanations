@@ -7,11 +7,10 @@ Intuitive Explanations*](/math/calculus-intuitive-explanations) and
 wanted a way to make it accessible to more people. Since then, it has
 grown to feature [more mathematical writing](/math) and other
 miscellany. It now also functions as my personal website, featuring a
-[list of projects](/about/projects) and [my
-resume](/assets/Resume.pdf).
+[list of projects](/about/projects) and some of my technical writing.
 
-This website (aside from my resume, since its version history contains
-personal information) is [open-source on
+This website (aside from my fiction writing, since its version history
+contains personal information) is [open-source on
 GitHub](https://github.com/raxod502/intuitive-explanations), and I
 welcome contributions!
 

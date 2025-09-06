@@ -1,6 +1,5 @@
 # Convenience
 /projects /about/projects
-/Resume.pdf /assets/Resume.pdf
 
 # Files that still exist
 /CalculusBowlExpertEdition.pdf /assets/CalculusBowlExpertEdition.pdf
@@ -39,7 +38,9 @@
 /assets/integration-triangle-rectangle.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-triangle-rectangle.xcf
 /assets/integration-triangle.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/integration-triangle.xcf
 /assets/limits-increasing-sine.png https://github.com/raxod502/intuitive-explanations/blob/0d883a93fd3bd2d6e3d291924d3afa07d428f046/doc/xcf/raw/limits-increasing-sine.xcf
+/assets/Resume.pdf /about/projects
 /files/LaTeXSource.zip https://github.com/raxod502/intuitive-explanations/tree/8fed15eb6aeeb1c8f373af4f0d434316c557c71c/_src/tex
+/Resume.pdf /about/projects
 
 # Pages that still exist
 /about-this-site /about/site

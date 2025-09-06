@@ -14,10 +14,10 @@ help: ## Show this message
 		column -t -s'|' >&2
 
 .PHONY: all
-all: tex resume stories build ## Fully build website
+all: tex stories build ## Fully build website
 
 .PHONY: dev
-dev: tex resume stories serve ## Fully build website and then run dev server
+dev: tex stories serve ## Fully build website and then run dev server
 
 .PHONY: serve
 serve: ## Run developer server
@@ -35,15 +35,6 @@ tex: ## Compile LaTeX
 .PHONY: placeholder
 placeholder: ## Compile placeholder document
 	$(LATEX) doc/placeholder/Placeholder.tex
-
-.PHONY: resume
-resume: ## Compile resume
-	if [ -e doc/resume/.git ]; then								\
-		make -C doc/resume resume-public.pdf;						\
-	else											\
-		make placeholder;								\
-		ln -s ../placeholder/Placeholder.pdf doc/resume/resume-public.pdf;		\
-	fi
 
 .PHONY: stories
 stories: ## Compile Fiction Writing stories

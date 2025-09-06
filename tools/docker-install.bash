@@ -40,9 +40,6 @@ latexmk
 # nb I hate computers
 texlive-fonts-extra
 
-# fonts used in resume
-ttf-mscorefonts-installer
-
 # in case we need superuser
 sudo
 
