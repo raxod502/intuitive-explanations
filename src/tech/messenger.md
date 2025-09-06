@@ -4,6 +4,13 @@ title: |
 date: 2021-12-06
 ---
 
+*Note:* The focus of this article is to explain the process of reverse
+engineering, and it is not continually updated to reflect ongoing
+changes in Facebook APIs. If you are looking for updated details,
+consider basing your work on open-source projects like
+[mautrix/meta](https://github.com/mautrix/meta), which is developed by
+my employer [Beeper](https://www.beeper.com/).
+
 I recently had occasion to reverse engineer the [Facebook
 Messenger](https://www.messenger.com/) API for personal use, and
 realized the case study would make a great tutorial. This blog post
