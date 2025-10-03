@@ -13,8 +13,10 @@ jobs:
       - name: Checkout submodules
         env:
           FICTION_WRITING: ${{ secrets.CLONE_URL_FICTION_WRITING }}
+          PRIVATE: ${{ secrets.CLONE_URL_PRIVATE }}
         run: |
           git config -f .gitmodules submodule.doc/stories.url "${FICTION_WRITING}"
+          git config -f .gitmodules submodule.private.url "${PRIVATE}"
           git submodule update --init --recursive
       - name: Build website
         run: |

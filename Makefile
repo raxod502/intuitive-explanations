@@ -14,7 +14,7 @@ help: ## Show this message
 		column -t -s'|' >&2
 
 .PHONY: all
-all: tex stories build ## Fully build website
+all: tex stories build private ## Fully build website
 
 .PHONY: dev
 dev: tex stories serve ## Fully build website and then run dev server
@@ -46,6 +46,12 @@ stories: ## Compile Fiction Writing stories
 		ln -s ../../placeholder/Placeholder.pdf doc/stories/lipogram/OpportunityForStudy.pdf;	\
 		ln -s ../../placeholder/Placeholder.pdf doc/stories/roundone/TheGarden.pdf;		\
 		ln -s ../../placeholder/Placeholder.pdf doc/stories/roundtwo/NewYearsDay.pdf;		\
+	fi
+
+.PHONY: private
+private: ## Add private files
+	if [ -f private/build.bash ]; then	\
+		./private/build.bash;		\
 	fi
 
 .PHONY: vercel

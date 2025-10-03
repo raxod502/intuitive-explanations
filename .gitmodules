@@ -1,3 +1,6 @@
 [submodule "doc/stories"]
 	path = doc/stories
 	url = git@gitlab.com:raxod502/fiction-writing.git
+[submodule "private"]
+	path = private
+	url = git@gitlab.com:raxod502/intuitive-explanations-private.git
