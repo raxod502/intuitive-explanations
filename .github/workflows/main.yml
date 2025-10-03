@@ -18,7 +18,7 @@ jobs:
           git config -f .gitmodules submodule.doc/stories.url "${FICTION_WRITING}"
           git config -f .gitmodules submodule.private.url "${PRIVATE}"
           git submodule update --init --recursive
-          git -C private reset --hard origin/main
+          git -C private reset --hard origin/main >/dev/null
       - name: Build website
         run: |
           make docker CMD="make checklinks all ENABLE_ANALYTICS=1"
