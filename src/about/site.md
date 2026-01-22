@@ -25,9 +25,11 @@ Most of my mathematical content, on the other hand, is written in
 mathematical and scientific typesetting, and compiled to PDF documents
 available on this site.
 
-My site is deployed on [Netlify](https://www.netlify.com/), an
-extremely fast service for hosting static sites like this one.
-However, since they don't provide infrastructure for complex
-compilation steps (e.g. rendering LaTeX to PDF), I use
-[CircleCI](https://circleci.com/) to do this automatically and then
-deploy every time I push to GitHub.
+My site is deployed on [Vercel](https://vercel.com/), an extremely
+fast service for hosting static sites like this one. However, since
+they don't provide infrastructure for complex compilation steps (e.g.
+rendering LaTeX to PDF), I use [GitHub
+Actions](https://github.com/features/actions) to do this automatically
+and then deploy every time I push to GitHub. (This will be replaced in
+the future, when I deprecate usage of GitHub as part of divestment
+from Microsoft.)
