@@ -6,13 +6,11 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y curl gnupg lsb-release
 
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add -
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor -o /usr/share/keyrings/nodesource.gpg
 
-ubuntu_name="$(lsb_release -cs)"
-
-# Node.js 16.x LTS supported until April 2024
+# Node.js 24.x LTS supported until April 2028
 tee -a /etc/apt/sources.list.d/nodejs.list >/dev/null <<EOF
-deb [arch=amd64] https://deb.nodesource.com/node_16.x ${ubuntu_name} main
+deb [arch=amd64 signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_24.x nodistro main
 EOF
 
 packages="
