@@ -152,7 +152,7 @@ community.
 
 **Security is best achieved through community solidarity, not
 restriction of freedom.** The word "security" as used by both tech
-companies and national governments so broad as to be essentially
+companies and national governments is so broad as to be essentially
 meaningless, and justifies wildly inappropriate behavior in both
 cases. It is of paramount importance to ask: "security *for* whom?
 security *from* whom? and security *to what end?*" Militaristic
@@ -637,4 +637,3 @@ short list.
   possible. For Steam games, an open-source client is in the works.
 * Webcomics: Tracked via [Mihon](https://mihon.app/) with
   [keiyoushi/extensions](https://github.com/keiyoushi/extensions).
-
