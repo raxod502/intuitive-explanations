@@ -41,7 +41,7 @@ infrastructure, and networking engineer. This includes things like:
   management
 
 If you would like to recruit me, please read [contacting
-me](contacting.md), which lists several sectors I refuse to work in.
+me](contacting), which lists several sectors I refuse to work in.
 Unsolicited job offers for those areas will be reported as spam.
 
 ### Skills
