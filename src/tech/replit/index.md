@@ -288,8 +288,8 @@ reasons:
   personal playground / art piece. As proof of this claim, I offer the
   fact that I spent dozens of hours adding languages like
   [Hexagony](https://esolangs.org/wiki/Hexagony) and
-  [SNOBOL](https://www.snobol4.org/) rather making it so you could
-  save your work(!).
+  [SNOBOL](https://www.regressive.org/snobol4/) rather making it so
+  you could save your work(!).
 
 I'm not a business person. I'm just an open-source dev who likes to
 build weird things for fun. (If you doubt my track record of building

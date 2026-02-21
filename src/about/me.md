@@ -378,7 +378,9 @@ short list.
 * Laptop: [Framework](https://frame.work/) for the repairability and
   Linux support. The ones with AMD graphics cards, because fuck
   NVIDIA. I also have a [System 76](https://system76.com/) laptop but
-  find it less robust.
+  find it less robust. For a home server/NAS, I use a cheap [ThinkPad
+  X201](https://wiki.archlinux.org/title/Lenovo_ThinkPad_X201) from
+  eBay.
 * Desktop operating system: [Arch Linux](https://archlinux.org/)
   exclusively due to the greatly superior [packaging
   ecosystem](https://wiki.archlinux.org/title/PKGBUILD) and
@@ -513,7 +515,7 @@ short list.
   Online](https://www.collaboraonline.com/).
 * File synchronization: [Syncthing](https://syncthing.net/) installed
   on my laptops, phone, and a virtual private server for reliability.
-* Flight tracking: [Skyscanner](https://www.skyscanner.com/).
+* Flight planning: [Skyscanner](https://www.skyscanner.com/).
 * Mail provider: [Fastmail](https://www.fastmail.com/), unambiguously
   the best for their excellent standards support and contributions to
   [new standards](https://jmap.io/). I also have a self-hosted mail
@@ -565,6 +567,11 @@ short list.
   [PhotoSync](https://www.photosync-app.com/home), or via self-hosted
   [PhotoPrismProxy](https://github.com/radian-software/photoprismproxy)
   instance.
+* Reminders: Small
+  [Flask](https://flask.palletsprojects.com/en/stable/) server running
+  on a VPS, with a Tasker shortcut to transcribe voice notes to it
+  from my phone. Laptops poll the server for reminders and display
+  them as persistent push notifications.
 * Search engine: [Kagi](https://kagi.com/) for the automated removal
   of AI slop and ability to customize search results to further tune
   quality, or [DuckDuckGo](https://duckduckgo.com/) for untrusted
