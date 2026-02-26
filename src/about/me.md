@@ -417,7 +417,10 @@ short list.
   notifications via [ntfy](https://ntfy.sh/). Keyboard from
   [FUTO](https://keyboard.futo.org/). In the future,
   [/e/OS](https://e.foundation/e-os/) on the
-  [Fairphone](https://en.wikipedia.org/wiki/Fairphone).
+  [Fairphone](https://en.wikipedia.org/wiki/Fairphone). Only apps that
+  have a really good reason to have to be apps physically installed on
+  my phone are supported; anything else I either use via web browser
+  or run in the Android emulator (GrapheneOS build) on desktop.
 * Server hosting: [PikaPods](https://www.pikapods.com/) for
   off-the-shelf open-source applications;
   [Hetzner](https://www.hetzner.com/) for most ad-hoc physical
