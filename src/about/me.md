@@ -540,7 +540,9 @@ short list.
   [beeper/android-sms](https://gitlab.com/beeper/android-sms),
   [mautrix/signal](https://github.com/mautrix/signal),
   [mautrix/telegram](https://github.com/mautrix/telegram),
-  [mautrix/discord](https://github.com/mautrix/discord).
+  [mautrix/discord](https://github.com/mautrix/discord). As a second
+  backup for Signal, I use
+  [carderne/signal-export](https://github.com/carderne/signal-export).
 * Navigation: For now, [HERE
   WeGo](https://en.wikipedia.org/wiki/Here_WeGo) on both desktop and
   mobile.
