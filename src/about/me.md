@@ -386,7 +386,8 @@ short list.
   ecosystem](https://wiki.archlinux.org/title/PKGBUILD) and
   [documentation](https://wiki.archlinux.org/title/Main_page).
   Anything that can be done on another distribution can be ported to
-  Arch with minimal effort; the converse is not true.
+  Arch with minimal effort; the converse is not true. AUR helper is
+  [Yay](https://github.com/Jguer/yay).
 * Desktop environment: [GNOME](https://www.gnome.org/) with some
   minimal configurations.
 * Filesystem: [BTRFS](https://btrfs.readthedocs.io/en/latest/) for
