@@ -15,7 +15,7 @@
   "private": true,
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "liquidjs": "^10.0.0",
+    "liquidjs": "^10.25.0",
     "markdown-it-anchor": "^8.4.1",
     "markdown-toc": "^1.2.0"
   }
