@@ -584,8 +584,7 @@ short list.
   systems. [TinEye](https://tineye.com/) for reverse image search.
 * Social networks: None, I maintain relationships in real life and via
   direct messaging.
-* Translation service: [DeepL](https://www.deepl.com/) for now, though
-  I am looking at alternatives.
+* Translation service: [Kagi](https://translate.kagi.com/).
 * Videoconferencing and calls: Signal, [Jitsi](https://jitsi.org/), or
   direct phone call.
 
