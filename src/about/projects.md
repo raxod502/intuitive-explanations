@@ -176,7 +176,7 @@ applies to some school projects.
   algebra] theorems, grouped so that making connections is easy.
 * [`intuitiveexplanations.com`][ie] (Spring 2017 -- Present): Personal
   website built on [GitHub Actions][gha] using [Make], [Eleventy],
-  [LaTeX], and hosted on [Netlify].
+  [LaTeX], and hosted on [Vercel].
 * [mla-tex] (Spring 2017 -- Fall 2018): [LaTeX][latex] [document
   class] for typesetting papers to [MLA] formatting standards.
 * [example-website] (Summer 2020): Simple template to set up a [static
@@ -523,7 +523,6 @@ applies to some school projects.
 [mood-tracker]: https://github.com/raxod502/mood-tracker
 [mothers-day-2013]: https://github.com/raxod502/mothers-day-2013
 [n-body]: https://en.wikipedia.org/wiki/N-body_simulation
-[netlify]: https://www.netlify.com/
 [neural networks]: https://en.wikipedia.org/wiki/Artificial_neural_network
 [nfas]: https://en.wikipedia.org/wiki/Nondeterministic_finite_automaton
 [nix]: https://nixos.org/
@@ -600,6 +599,7 @@ applies to some school projects.
 [utunes]: https://github.com/radian-software/utunes
 [venmo auto transfer]: https://github.com/radian-software/venmo-auto-transfer
 [venmo]: https://venmo.com/
+[vercel]: https://vercel.com/
 [version control]: https://en.wikipedia.org/wiki/Version_control
 [votinglib]: https://github.com/raxod502/VotingLib
 [watching paint dry]: https://github.com/raxod502/Watching-Paint-Dry

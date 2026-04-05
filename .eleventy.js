@@ -6,7 +6,7 @@ TemplatePassthrough.prototype.copy = function (src, dest, copyOptions) {
   return origCopy.bind(this)(src, dest, { ...copyOptions, expand: true });
 };
 
-// Strip html extension in dev server, like Netlify does in production
+// Strip html extension in dev server, like Vercel does in production
 // https://github.com/BrowserSync/browser-sync/issues/1055
 //
 // Have to do this asynchronously, because otherwise we get a circular

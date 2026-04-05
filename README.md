@@ -30,11 +30,12 @@ installed. Run:
       make tex          Compile LaTeX
       make placeholder  Compile placeholder document
       make stories      Compile Fiction Writing stories
+      make private      Add private files
+      make vercel       Generate Vercel configuration file
       make checklinks   Check link anchors in Markdown files
       make clean        Remove build artifacts
-      make deploy       Deploy website to Netlify
       make docker       Start a Docker shell
 
 When a commit is pushed to `main`, it is deployed automatically by
 [GitHub Actions](https://github.com/features/actions) to
-[Netlify](https://www.netlify.com/) after about ten minutes.
+[Vercel](https://vercel.com/) after about ten minutes.
