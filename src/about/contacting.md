@@ -4,12 +4,15 @@ title: Contacting me
 
 * About my open-source projects: GitHub Issues/Discussions
 * About personal matters: email, [radon@intuitiveexplanations.com](mailto:radon@intuitiveexplanations.com)
-* About business matters: email, [radon@radian.codes](mailto:radon@radian.codes)
+* About business matters (normal): email, [radon@radian.codes](mailto:radon@radian.codes)
+* About business matters (spicy): email, [legal@radian.codes](mailto:legal@radian.codes) and see [privacy policy](https://radian.codes/privacy)
 * As a friend: Signal (preferred), SMS, or personal email
 
 At present, I also maintain accounts on Discord and Telegram for
-limited use cases. Please do not rely on messages being delivered to
-me on those platforms.
+limited use cases, bridged via [Matrix](https://matrix.org/). Please
+do not rely on messages being delivered to me on those platforms. In
+particular, Discord pings outside of direct messages are blackholed
+across the board.
 
 I typically respond to all messages on supported platforms within a
 few days, but do not guarantee constant availability. If you aren't
