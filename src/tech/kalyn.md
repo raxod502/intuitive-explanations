@@ -3425,9 +3425,6 @@ different from the others. And in the process, you can develop a very
 satisfying and thorough knowledge of how modern software *really*
 works.
 
-*Mandatory legal notice:* This blog post is maintained by [Radian
-LLC](https://radian.codes/).
-
 <script
   type="text/javascript"
   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"

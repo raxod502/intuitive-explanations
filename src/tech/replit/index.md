@@ -469,6 +469,3 @@ network [does not support IPv6](https://test-ipv6.com/) then please
 consider asking your network administrator or service provider to do
 their part in supporting modern internet standards. You can consider
 accessing Riju through a VPN as a workaround.)
-
-*Mandatory legal notice:* This blog post is maintained by [Radian
-LLC](https://radian.codes/).

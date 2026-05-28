@@ -714,9 +714,6 @@ may want to start with:
   migration guide for people moving from Google Photos to
   [PhotoPrism].
 
-*Mandatory legal notice:* This page is maintained by [Radian
-LLC](https://radian.codes/).
-
 [2048-game]: https://play2048.co/
 [2048]: https://github.com/radian-software/2048
 [acc]: https://github.com/radian-software/acc
