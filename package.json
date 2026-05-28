@@ -4,14 +4,14 @@
   "description": "Personal website",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raxod502/intuitive-explanations.git"
+    "url": "git+https://github.com/radian-software/intuitive-explanations.git"
   },
-  "author": "Radon Rosborough <radon@intuitiveexplanations.com>",
+  "author": "Radian LLC <contact+intuitive-explanations@radian.codes>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/raxod502/intuitive-explanations/issues"
+    "url": "https://github.com/radian-software/intuitive-explanations/issues"
   },
-  "homepage": "https://github.com/raxod502/intuitive-explanations",
+  "homepage": "https://github.com/radian-software/intuitive-explanations",
   "private": true,
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
