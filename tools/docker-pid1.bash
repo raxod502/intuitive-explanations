@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+userdel ubuntu
+rm -rf /home/ubuntu
+
 cat <<"EOF" > /etc/sudoers.d/intuitive-explanations
 docker ALL=(ALL:ALL) NOPASSWD: ALL
 EOF

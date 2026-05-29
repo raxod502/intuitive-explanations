@@ -34,6 +34,7 @@ fi
 
 cmd=(
     "${docker[@]}" run --rm "${it[@]}" -v "${repo}:/src" -w /src "${net[@]}"
+    -h intuitive-explanations
     -e ENABLE_ANALYTICS --entrypoint=/src/tools/docker-pid1.bash
     intuitive-explanations "${cmd_args[@]}"
 )

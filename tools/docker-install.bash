@@ -8,9 +8,9 @@ apt-get install -y curl gnupg lsb-release
 
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | gpg --dearmor -o /usr/share/keyrings/nodesource.gpg
 
-# Node.js 24.x LTS supported until April 2028
+# Node.js 26.x LTS supported until April 2029
 tee -a /etc/apt/sources.list.d/nodejs.list >/dev/null <<EOF
-deb [arch=amd64 signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_24.x nodistro main
+deb [arch=amd64 signed-by=/usr/share/keyrings/nodesource.gpg] https://deb.nodesource.com/node_26.x nodistro main
 EOF
 
 packages="
@@ -66,5 +66,10 @@ echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula \
 apt-get update
 apt-get install -y $(grep -v "^#" <<< "$packages")
 rm -rf /var/lib/apt/lists/*
+
+# https://tug.org/pipermail/dvipdfmx/2026-January/000399.html
+# https://github.com/TeX-Live/texlive-source/commit/00f27c6d3b1ee13afba6739d94af2837c36bdbd8
+curl -fsSL https://github.com/TeX-Live/texlive-source/releases/download/svn77609/texlive-bin-x86_64-linux.tar.gz | \
+     tar -xzf- -C /usr/bin --strip-components=1 x86_64-linux/xdvipdfmx
 
 rm "$0"
