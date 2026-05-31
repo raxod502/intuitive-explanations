@@ -540,9 +540,12 @@ may want to start with:
   client that can actually run games, including save data
   synchronization and online play. No dependencies on the proprietary
   client.
-* [Blue Rover] (Fall 2026; unfinished): Automatically accept
+* [Blue Rover] (Spring 2026; unfinished): Automatically accept
   substitute teaching positions listed on [Red Rover] depending on
   availability.
+* [Adobe File Downloader] (Summer 2026): Extract and synchronize files
+  from Adobe's terrible "Your files" web interface, which doesn't
+  provide a download option.
 
 ## System administration
 
@@ -717,6 +720,7 @@ may want to start with:
 [2048-game]: https://play2048.co/
 [2048]: https://github.com/radian-software/2048
 [acc]: https://github.com/radian-software/acc
+[adobe file downloader]: https://github.com/radian-software/adobe-file-downloader
 [alertmanager]: https://prometheus.io/docs/alerting/latest/alertmanager/
 [alpine snowboards]: https://www.sgsnowboards.com/
 [android]: https://en.wikipedia.org/wiki/Android_(operating_system)
